@@ -1,0 +1,33 @@
+% !TEX root = ../main.tex
+
+\begin{abstract}[zh]
+
+手势是交流中重要的细节补充与情感表达载体。随着图像识别技术发展，计算机可通过相机识别用户手势指令，手势输入摆脱了对穿戴式检测设备的依赖。随后，手势与语言的关系被进一步分析，使得计算机能从语音生成手势，这让计算机控制的数字人物可在其发言中融入生动的手势动画，满足人类的交流习惯。
+
+然而，手势动作存在空间与体力消耗需求。作为情感表达工具时，人们需耗费较多精力活动肢体以增强说服力或情感表达效果。近年来元宇宙技术的发展，让人们可操控数字人开展远程交流，但受当前技术限制，该场景下的手势生成需依赖穿戴式检测设备，这使得用户在虚拟世界的手势表达较为繁琐。
+
+当前协同语音手势生成技术以获取完整文本为前提，通过语义分析高精度生成对应手势。但对于逐字输入的用户语音，该方式难以提供在线实时的解决方案。考虑到面向用户的应用场景，可同时利用麦克风与相机获取面部表情、头部旋转等其他信息，提供多角度的分析辅助。面部表情可辅助补充文本的情感信息，头部旋转能为手势生成提供朝向指导。这两种信息随语音自然产生，用户负担远低于实际做手势。此外，面部表情与头部旋转的实时获取技术已较为成熟，且具备良好的实时运行性能。
+
+因此，本论文提出 FaceCapGes 方法，基于语音、面部表情、头部旋转三种实时信息，生成在线实时的 3D 手势骨骼动画。该方法可给用户的实时数字形象添加手势动画，无需用户实际做出手势动作。且模型不依赖用户的未来输入，能在实时环境中丰富用户虚拟形象的表达能力。
+
+以往研究已对面部表情、语音与手势的关系进行分析，并提出成熟的学习方法。本模型在现有级联架构基础上，增加头部姿态特征分析模块，同时引入滑动窗口机制以实现架构的实时运行。本模型所依赖的框架及额外添加模块性能开销低，与面部捕捉和头部姿态计算任务同时运行时，仍具备良好的实时性能。
+
+主观评价结果表明，在自然性方面，本方法与当前主流方法相当；在响应速度上，具有显著优势。生成的手势与语音高度对齐，且具备良好的实时交互表现。此外，本模型可部署在 iPhone 等轻量设备上，只要输入格式兼容 ARKit 面部捕捉标准，就能广泛应用于各类实时互动场景。
+
+\end{abstract}
+
+\begin{abstract}[en]
+
+Gesture is an important carrier for supplementary details and emotional expression in communication. With the development of image recognition technology, computers can recognize users' gesture commands through cameras, freeing gesture input from the dependence on wearable detection devices. Subsequently, the relationship between gestures and language has been further analyzed, enabling computers to generate gestures from speech. This allows computer - controlled digital characters to incorporate vivid gesture animations into their speeches, meeting human communication habits.
+
+However, gesture movements have spatial and physical energy consumption requirements. When used as an emotional expression tool, people need to spend a lot of energy moving their limbs to enhance persuasion or emotional expression effects. In recent years, the development of meta - universe technology has allowed people to control digital humans for remote communication. But due to current technical limitations, gesture generation in this scenario needs to rely on wearable detection devices, which makes gesture expression in the virtual world rather cumbersome for users.
+
+The current collaborative speech - gesture generation technology takes the acquisition of complete text as a prerequisite and generates corresponding gestures with high precision through semantic analysis. However, for user speech input word by word, this method is difficult to provide an online real - time solution. Considering the application scenarios for users, other information such as facial expressions and head rotation can be acquired by using microphones and cameras at the same time to provide multi - angle analysis assistance. Facial expressions can assist in supplementing the emotional information of text, and head rotation can provide orientation guidance for gesture generation. These two kinds of information are naturally generated along with speech, and the burden on users is much lower than that of actually making gestures. In addition, the real - time acquisition technology for facial expressions and head rotation is quite mature and has good real - time operation performance.
+
+Therefore, this paper proposes the FaceCapGes method, which generates online real - time 3D gesture skeleton animations based on three kinds of real - time information: speech, facial expressions, and head rotation. This method can add gesture animations to users' real - time digital images without users actually making gesture movements. Moreover, the model does not rely on users' future input and can enrich the expressive ability of users' virtual images in real - time environments.
+
+Previous studies have analyzed the relationships among facial expressions, speech, and gestures and proposed mature learning methods. On the basis of the existing cascaded architecture, this model adds a head posture feature analysis module and introduces a sliding window mechanism to realize the real - time operation of the architecture. The framework relied on by this model and the additionally added modules have low performance overhead. When running simultaneously with facial capture and head posture calculation tasks, it still has good real - time performance.
+
+Subjective evaluation results show that in terms of naturalness, this method is comparable to current mainstream methods; in terms of response speed, it has significant advantages. The generated gestures are highly aligned with speech and have good real - time interaction performance. In addition, this model can be deployed on lightweight devices such as iPhones. As long as the input format is compatible with the ARKit facial capture standard, it can be widely applied to various real - time interaction scenarios.
+
+\end{abstract}
