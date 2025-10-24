@@ -417,8 +417,8 @@
       \strng{nameanamehash}{08e3cbd50ab93714598da16cf92b09dc}
       \strng{nameafullhash}{81badc86d4223475121570eac0d378b7}
       \strng{nameafullhashraw}{81badc86d4223475121570eac0d378b7}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Speech Communication}
@@ -440,101 +440,464 @@
       \endverb
       \keyw{gesture_and_speech_in_interaction}
     \endentry
-    \entry{busso2007rigidheadmotion}{article}{}{}
-      \name{author}{5}{}{%
-        {{hash=4683a4fe891118929262807465faf90e}{%
-           family={Busso},
-           familyi={B\bibinitperiod},
-           given={Carlos},
-           giveni={C\bibinitperiod}}}%
-        {{hash=98007b8b89504bd68eb54cdebddc3e81}{%
-           family={Deng},
-           familyi={D\bibinitperiod},
-           given={Zhigang},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=a31d9483ea3e118782440add5b5fc180}{%
-           family={Grimm},
-           familyi={G\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=634fbfab770c4abcff66d26340b632d0}{%
-           family={Neumann},
-           familyi={N\bibinitperiod},
-           given={Ulrich},
+    \entry{hadar_1989_headmovement}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=86a033ccfc435d620fa286a2b93e2dab}{%
+           family={Hadar},
+           familyi={H\bibinitperiod},
+           given={Uri},
            giveni={U\bibinitperiod}}}%
-        {{hash=5d734f644f162ae4089fdaf1005417ce}{%
-           family={Narayanan},
-           familyi={N\bibinitperiod},
-           given={Shrikanth},
-           giveni={S\bibinitperiod}}}%
+        {{hash=dc313ab9064d1f0ea1c7bf81a8d0a043}{%
+           family={Butterworth},
+           familyi={B\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
       }
-      \name{namea}{5}{}{%
-        {{hash=4683a4fe891118929262807465faf90e}{%
-           family={Busso},
-           familyi={B\bibinitperiod},
-           given={Carlos},
-           giveni={C\bibinitperiod}}}%
-        {{hash=98007b8b89504bd68eb54cdebddc3e81}{%
-           family={Deng},
-           familyi={D\bibinitperiod},
-           given={Zhigang},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=a31d9483ea3e118782440add5b5fc180}{%
-           family={Grimm},
-           familyi={G\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=634fbfab770c4abcff66d26340b632d0}{%
-           family={Neumann},
-           familyi={N\bibinitperiod},
-           given={Ulrich},
+      \name{namea}{2}{}{%
+        {{hash=86a033ccfc435d620fa286a2b93e2dab}{%
+           family={Hadar},
+           familyi={H\bibinitperiod},
+           given={Uri},
            giveni={U\bibinitperiod}}}%
-        {{hash=5d734f644f162ae4089fdaf1005417ce}{%
-           family={Narayanan},
-           familyi={N\bibinitperiod},
-           given={Shrikanth},
-           giveni={S\bibinitperiod}}}%
+        {{hash=dc313ab9064d1f0ea1c7bf81a8d0a043}{%
+           family={Butterworth},
+           familyi={B\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
       }
       \list{language}{1}{%
         {english}%
       }
-      \strng{namehash}{57b7639013f0fa11cd0b31391728722b}
-      \strng{fullhash}{812760cd083ec5f48d5da88e04071144}
-      \strng{fullhashraw}{812760cd083ec5f48d5da88e04071144}
-      \strng{bibnamehash}{2d33a8e3dffa621b5c4da5701542e3b9}
-      \strng{authorbibnamehash}{2d33a8e3dffa621b5c4da5701542e3b9}
-      \strng{authornamehash}{57b7639013f0fa11cd0b31391728722b}
-      \strng{authorfullhash}{812760cd083ec5f48d5da88e04071144}
-      \strng{authorfullhashraw}{812760cd083ec5f48d5da88e04071144}
-      \strng{nameabibnamehash}{2d33a8e3dffa621b5c4da5701542e3b9}
-      \strng{nameanamehash}{57b7639013f0fa11cd0b31391728722b}
-      \strng{nameafullhash}{812760cd083ec5f48d5da88e04071144}
-      \strng{nameafullhashraw}{812760cd083ec5f48d5da88e04071144}
+      \strng{namehash}{a9ef9e01277d09c7f2c499110ee651e4}
+      \strng{fullhash}{f0b19dceb7ac924c291a285c492579ff}
+      \strng{fullhashraw}{f0b19dceb7ac924c291a285c492579ff}
+      \strng{bibnamehash}{f0b19dceb7ac924c291a285c492579ff}
+      \strng{authorbibnamehash}{f0b19dceb7ac924c291a285c492579ff}
+      \strng{authornamehash}{a9ef9e01277d09c7f2c499110ee651e4}
+      \strng{authorfullhash}{f0b19dceb7ac924c291a285c492579ff}
+      \strng{authorfullhashraw}{f0b19dceb7ac924c291a285c492579ff}
+      \strng{nameabibnamehash}{f0b19dceb7ac924c291a285c492579ff}
+      \strng{nameanamehash}{a9ef9e01277d09c7f2c499110ee651e4}
+      \strng{nameafullhash}{f0b19dceb7ac924c291a285c492579ff}
+      \strng{nameafullhashraw}{f0b19dceb7ac924c291a285c492579ff}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Audio, Speech, and Language Processing}
+      \field{journaltitle}{Semiotica}
       \field{langid}{english}
       \field{languageid}{english}
       \field{lansortorder}{4}
-      \field{number}{3}
-      \field{title}{Rigid Head Motion in Expressive Speech Animation: Analysis and Synthesis}
+      \field{number}{1/2}
+      \field{title}{Iconic gestures, imagery, and word retrieval in speech}
       \field{usera}{J}
       \field{userd}{english}
       \field{userf}{english}
-      \field{volume}{15}
-      \field{year}{2007}
+      \field{volume}{75}
+      \field{year}{1989}
       \field{dateera}{ce}
-      \field{pages}{1075\bibrangedash 1086}
-      \range{pages}{12}
-      \verb{urlraw}
-      \verb https://msp.utdallas.edu/publications/Busso_2007.pdf
+      \field{pages}{63\bibrangedash 83}
+      \range{pages}{21}
+      \keyw{hadar_1989_headmovement}
+    \endentry
+    \entry{esteve2017timing}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=ce4e8de5476b999517f816ac5a02440f}{%
+           family={Esteve-Gibert},
+           familyi={E\bibinithyphendelim G\bibinitperiod},
+           given={Núria},
+           giveni={N\bibinitperiod}}}%
+        {{hash=307fc45fc6ded92d3ce72bc728c47acc}{%
+           family={Prieto},
+           familyi={P\bibinitperiod},
+           given={Pilar},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f7a3113bc114bcc48f7f1e9da25f59f4}{%
+           family={Pons},
+           familyi={P\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod}}}%
+        {{hash=b27c8f0a0d66f38f99ecdeebe689ad40}{%
+           family={Lœvenbruck},
+           familyi={L\bibinitperiod},
+           given={Hélène},
+           giveni={H\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=ce4e8de5476b999517f816ac5a02440f}{%
+           family={Esteve-Gibert},
+           familyi={E\bibinithyphendelim G\bibinitperiod},
+           given={Núria},
+           giveni={N\bibinitperiod}}}%
+        {{hash=307fc45fc6ded92d3ce72bc728c47acc}{%
+           family={Prieto},
+           familyi={P\bibinitperiod},
+           given={Pilar},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f7a3113bc114bcc48f7f1e9da25f59f4}{%
+           family={Pons},
+           familyi={P\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod}}}%
+        {{hash=b27c8f0a0d66f38f99ecdeebe689ad40}{%
+           family={Lœvenbruck},
+           familyi={L\bibinitperiod},
+           given={Hélène},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Acoustical Society of America}%
+      }
+      \strng{namehash}{d827acd9c4b3d560fa9109d3c4d18796}
+      \strng{fullhash}{aeb448ffb4e0892323a5fe1db002b31c}
+      \strng{fullhashraw}{aeb448ffb4e0892323a5fe1db002b31c}
+      \strng{bibnamehash}{b8ee4975a479996f1f51a0abfe9bf53f}
+      \strng{authorbibnamehash}{b8ee4975a479996f1f51a0abfe9bf53f}
+      \strng{authornamehash}{d827acd9c4b3d560fa9109d3c4d18796}
+      \strng{authorfullhash}{aeb448ffb4e0892323a5fe1db002b31c}
+      \strng{authorfullhashraw}{aeb448ffb4e0892323a5fe1db002b31c}
+      \strng{nameabibnamehash}{b8ee4975a479996f1f51a0abfe9bf53f}
+      \strng{nameanamehash}{d827acd9c4b3d560fa9109d3c4d18796}
+      \strng{nameafullhash}{aeb448ffb4e0892323a5fe1db002b31c}
+      \strng{nameafullhashraw}{aeb448ffb4e0892323a5fe1db002b31c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of the Acoustical Society of America}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{6}
+      \field{title}{The timing of head movements: The role of prosodic heads and edges}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{french}
+      \field{volume}{141}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{4727\bibrangedash 4739}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1121/1.4986649
       \endverb
-      \verb{url}
-      \verb https://msp.utdallas.edu/publications/Busso_2007.pdf
-      \endverb
-      \keyw{busso2007rigidheadmotion}
+      \keyw{esteve2017timing}
+    \endentry
+    \entry{AMASS:2019}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{hash=2f5f7c5049dc118abe7fc03f70e822d0}{%
+           family={Mahmood},
+           familyi={M\bibinitperiod},
+           given={Naureen},
+           giveni={N\bibinitperiod}}}%
+        {{hash=ebf742da48550de93872d810cd833b47}{%
+           family={Ghorbani},
+           familyi={G\bibinitperiod},
+           given={Nima},
+           giveni={N\bibinitperiod}}}%
+        {{hash=4da3e853a67bf8dbfe35a4e9bb3561fe}{%
+           family={Troje},
+           familyi={T\bibinitperiod},
+           given={Nikolaus\bibnamedelima F.},
+           giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=ad16f6eab34f1f33393889dcaac427d6}{%
+           family={Pons-Moll},
+           familyi={P\bibinithyphendelim M\bibinitperiod},
+           given={Gerard},
+           giveni={G\bibinitperiod}}}%
+        {{hash=54960bfd1d66de256b111681241131bb}{%
+           family={Black},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \name{namea}{5}{}{%
+        {{hash=2f5f7c5049dc118abe7fc03f70e822d0}{%
+           family={Mahmood},
+           familyi={M\bibinitperiod},
+           given={Naureen},
+           giveni={N\bibinitperiod}}}%
+        {{hash=ebf742da48550de93872d810cd833b47}{%
+           family={Ghorbani},
+           familyi={G\bibinitperiod},
+           given={Nima},
+           giveni={N\bibinitperiod}}}%
+        {{hash=4da3e853a67bf8dbfe35a4e9bb3561fe}{%
+           family={Troje},
+           familyi={T\bibinitperiod},
+           given={Nikolaus\bibnamedelima F.},
+           giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=ad16f6eab34f1f33393889dcaac427d6}{%
+           family={Pons-Moll},
+           familyi={P\bibinithyphendelim M\bibinitperiod},
+           given={Gerard},
+           giveni={G\bibinitperiod}}}%
+        {{hash=54960bfd1d66de256b111681241131bb}{%
+           family={Black},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{324e9e597ff3f27e92e315b5e90def3b}
+      \strng{fullhash}{41078965930fbb31d10cfcd75a17e2d9}
+      \strng{fullhashraw}{41078965930fbb31d10cfcd75a17e2d9}
+      \strng{bibnamehash}{b9eb8aefddc94c9e683942141d6d8267}
+      \strng{authorbibnamehash}{b9eb8aefddc94c9e683942141d6d8267}
+      \strng{authornamehash}{324e9e597ff3f27e92e315b5e90def3b}
+      \strng{authorfullhash}{41078965930fbb31d10cfcd75a17e2d9}
+      \strng{authorfullhashraw}{41078965930fbb31d10cfcd75a17e2d9}
+      \strng{nameabibnamehash}{b9eb8aefddc94c9e683942141d6d8267}
+      \strng{nameanamehash}{324e9e597ff3f27e92e315b5e90def3b}
+      \strng{nameafullhash}{41078965930fbb31d10cfcd75a17e2d9}
+      \strng{nameafullhashraw}{41078965930fbb31d10cfcd75a17e2d9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{AMASS: Archive of Motion Capture as Surface Shapes}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{5442\bibrangedash 5451}
+      \range{pages}{10}
+      \keyw{AMASS:2019}
+    \endentry
+    \entry{SMPL:2015}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=26143f0e649e76972c3d235e17a85988}{%
+           family={Loper},
+           familyi={L\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2f5f7c5049dc118abe7fc03f70e822d0}{%
+           family={Mahmood},
+           familyi={M\bibinitperiod},
+           given={Naureen},
+           giveni={N\bibinitperiod}}}%
+        {{hash=586007140096e6d78832f56de1edf859}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ad16f6eab34f1f33393889dcaac427d6}{%
+           family={Pons-Moll},
+           familyi={P\bibinithyphendelim M\bibinitperiod},
+           given={Gerard},
+           giveni={G\bibinitperiod}}}%
+        {{hash=54960bfd1d66de256b111681241131bb}{%
+           family={Black},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \name{namea}{5}{}{%
+        {{hash=26143f0e649e76972c3d235e17a85988}{%
+           family={Loper},
+           familyi={L\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2f5f7c5049dc118abe7fc03f70e822d0}{%
+           family={Mahmood},
+           familyi={M\bibinitperiod},
+           given={Naureen},
+           giveni={N\bibinitperiod}}}%
+        {{hash=586007140096e6d78832f56de1edf859}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={Javier},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ad16f6eab34f1f33393889dcaac427d6}{%
+           family={Pons-Moll},
+           familyi={P\bibinithyphendelim M\bibinitperiod},
+           given={Gerard},
+           giveni={G\bibinitperiod}}}%
+        {{hash=54960bfd1d66de256b111681241131bb}{%
+           family={Black},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{054fc18b0dcfa2ecc2d588914350aacd}
+      \strng{fullhash}{7439f4794dd5b0f8a3e961d9df1b99e0}
+      \strng{fullhashraw}{7439f4794dd5b0f8a3e961d9df1b99e0}
+      \strng{bibnamehash}{f970c4c053512373326d5fb2cbb44cfa}
+      \strng{authorbibnamehash}{f970c4c053512373326d5fb2cbb44cfa}
+      \strng{authornamehash}{054fc18b0dcfa2ecc2d588914350aacd}
+      \strng{authorfullhash}{7439f4794dd5b0f8a3e961d9df1b99e0}
+      \strng{authorfullhashraw}{7439f4794dd5b0f8a3e961d9df1b99e0}
+      \strng{nameabibnamehash}{f970c4c053512373326d5fb2cbb44cfa}
+      \strng{nameanamehash}{054fc18b0dcfa2ecc2d588914350aacd}
+      \strng{nameafullhash}{7439f4794dd5b0f8a3e961d9df1b99e0}
+      \strng{nameafullhashraw}{7439f4794dd5b0f8a3e961d9df1b99e0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Transactions on Graphics (TOG)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{6}
+      \field{title}{SMPL: A Skinned Multi-Person Linear Model}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{34}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{pages}{248:1\bibrangedash 248:16}
+      \range{pages}{-1}
+      \keyw{SMPL:2015}
+    \endentry
+    \entry{GleicherRetargetting1998}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=0a3ad5a9638eaabc69b2be7afc0773f8}{%
+           family={Gleicher},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=0a3ad5a9638eaabc69b2be7afc0773f8}{%
+           family={Gleicher},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{0a3ad5a9638eaabc69b2be7afc0773f8}
+      \strng{fullhash}{0a3ad5a9638eaabc69b2be7afc0773f8}
+      \strng{fullhashraw}{0a3ad5a9638eaabc69b2be7afc0773f8}
+      \strng{bibnamehash}{0a3ad5a9638eaabc69b2be7afc0773f8}
+      \strng{authorbibnamehash}{0a3ad5a9638eaabc69b2be7afc0773f8}
+      \strng{authornamehash}{0a3ad5a9638eaabc69b2be7afc0773f8}
+      \strng{authorfullhash}{0a3ad5a9638eaabc69b2be7afc0773f8}
+      \strng{authorfullhashraw}{0a3ad5a9638eaabc69b2be7afc0773f8}
+      \strng{nameabibnamehash}{0a3ad5a9638eaabc69b2be7afc0773f8}
+      \strng{nameanamehash}{0a3ad5a9638eaabc69b2be7afc0773f8}
+      \strng{nameafullhash}{0a3ad5a9638eaabc69b2be7afc0773f8}
+      \strng{nameafullhashraw}{0a3ad5a9638eaabc69b2be7afc0773f8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 25th Annual Conference on Computer Graphics \& Interactive Techniques (SIGGRAPH ’98)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Retargetting Motion to New Characters}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{1998}
+      \field{dateera}{ce}
+      \field{pages}{33\bibrangedash 42}
+      \range{pages}{10}
+      \keyw{GleicherRetargetting1998}
+    \endentry
+    \entry{MartinelliSkeleton-AwareRetargeting2024}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=76a8297703ddc6112ff47f382afe8259}{%
+           family={Martinelli},
+           familyi={M\bibinitperiod},
+           given={Giulia},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e4411c930e441016c4d0ecf1d77ce2dd}{%
+           family={Garau},
+           familyi={G\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=e916b3aebf6ea2d7f41cbef25cab29e1}{%
+           family={Bisagno},
+           familyi={B\bibinitperiod},
+           given={Niccoló},
+           giveni={N\bibinitperiod}}}%
+        {{hash=298748fbf6259b3aca7a68872df3fc31}{%
+           family={Conci},
+           familyi={C\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=76a8297703ddc6112ff47f382afe8259}{%
+           family={Martinelli},
+           familyi={M\bibinitperiod},
+           given={Giulia},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e4411c930e441016c4d0ecf1d77ce2dd}{%
+           family={Garau},
+           familyi={G\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod}}}%
+        {{hash=e916b3aebf6ea2d7f41cbef25cab29e1}{%
+           family={Bisagno},
+           familyi={B\bibinitperiod},
+           given={Niccoló},
+           giveni={N\bibinitperiod}}}%
+        {{hash=298748fbf6259b3aca7a68872df3fc31}{%
+           family={Conci},
+           familyi={C\bibinitperiod},
+           given={Nicola},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{2f517d63d7a998106f39c80e8191f804}
+      \strng{fullhash}{3e98957dfda6e97a3dec4c2271a312e2}
+      \strng{fullhashraw}{3e98957dfda6e97a3dec4c2271a312e2}
+      \strng{bibnamehash}{10a5cd7650289f139489634c6dae8a94}
+      \strng{authorbibnamehash}{10a5cd7650289f139489634c6dae8a94}
+      \strng{authornamehash}{2f517d63d7a998106f39c80e8191f804}
+      \strng{authorfullhash}{3e98957dfda6e97a3dec4c2271a312e2}
+      \strng{authorfullhashraw}{3e98957dfda6e97a3dec4c2271a312e2}
+      \strng{nameabibnamehash}{10a5cd7650289f139489634c6dae8a94}
+      \strng{nameanamehash}{2f517d63d7a998106f39c80e8191f804}
+      \strng{nameafullhash}{3e98957dfda6e97a3dec4c2271a312e2}
+      \strng{nameafullhashraw}{3e98957dfda6e97a3dec4c2271a312e2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{European Conference on Computer Vision (ECCV) Workshops, LNCS 15624}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Skeleton-Aware Motion Retargeting Using Masked Pose Modeling}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{pages}{287\bibrangedash 303}
+      \range{pages}{17}
+      \keyw{MartinelliSkeleton-AwareRetargeting2024}
     \endentry
     \entry{rot6d}{article}{}{}
       \name{author}{5}{}{%
@@ -702,8 +1065,8 @@
       \strng{nameanamehash}{883589bbd6c639aa48df9463bccdda31}
       \strng{nameafullhash}{da2b55b701f0060a72655706924fd984}
       \strng{nameafullhashraw}{da2b55b701f0060a72655706924fd984}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{CVPR}
@@ -839,8 +1202,8 @@
       \strng{nameafullhash}{99909fb45f8130a03521c3d889f872a2}
       \strng{nameafullhashraw}{99909fb45f8130a03521c3d889f872a2}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv:2401.00374}
@@ -855,6 +1218,67 @@
       \field{dateera}{ce}
       \keyw{emage}
     \endentry
+    \entry{EkmanFriesenFACS1978}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=f57fd5f1b9feec71b7d8f0ce35b57dbc}{%
+           family={Ekman},
+           familyi={E\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=cddd249b8d4a78b56d625f20556bcc88}{%
+           family={Friesen},
+           familyi={F\bibinitperiod},
+           given={Wallace\bibnamedelima V.},
+           giveni={W\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=f57fd5f1b9feec71b7d8f0ce35b57dbc}{%
+           family={Ekman},
+           familyi={E\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=cddd249b8d4a78b56d625f20556bcc88}{%
+           family={Friesen},
+           familyi={F\bibinitperiod},
+           given={Wallace\bibnamedelima V.},
+           giveni={W\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{location}{1}{%
+        {Palo Alto, California}%
+      }
+      \list{publisher}{1}{%
+        {Consulting Psychologists Press}%
+      }
+      \strng{namehash}{2264451b1d0e4a076c364ce7ff6ef834}
+      \strng{fullhash}{7c96d5c8319baea6fb804debef7b7748}
+      \strng{fullhashraw}{7c96d5c8319baea6fb804debef7b7748}
+      \strng{bibnamehash}{7c96d5c8319baea6fb804debef7b7748}
+      \strng{authorbibnamehash}{7c96d5c8319baea6fb804debef7b7748}
+      \strng{authornamehash}{2264451b1d0e4a076c364ce7ff6ef834}
+      \strng{authorfullhash}{7c96d5c8319baea6fb804debef7b7748}
+      \strng{authorfullhashraw}{7c96d5c8319baea6fb804debef7b7748}
+      \strng{nameabibnamehash}{7c96d5c8319baea6fb804debef7b7748}
+      \strng{nameanamehash}{2264451b1d0e4a076c364ce7ff6ef834}
+      \strng{nameafullhash}{7c96d5c8319baea6fb804debef7b7748}
+      \strng{nameafullhashraw}{7c96d5c8319baea6fb804debef7b7748}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Facial Action Coding System: A Technique for the Measurement of Facial Movement}
+      \field{usera}{M}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{1978}
+      \field{dateera}{ce}
+      \keyw{EkmanFriesenFACS1978}
+    \endentry
     \entry{ARKitDocumentation}{webpage}{}{}
       \list{language}{1}{%
         {english}%
@@ -862,8 +1286,8 @@
       \list{organization}{1}{%
         {Apple Developer}%
       }
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labeltitlesource}{title}
       \field{langid}{english}
       \field{languageid}{english}
@@ -910,8 +1334,8 @@
       \strng{nameanamehash}{9bf65c330af7c9f258939c38f5d93191}
       \strng{nameafullhash}{9bf65c330af7c9f258939c38f5d93191}
       \strng{nameafullhashraw}{9bf65c330af7c9f258939c38f5d93191}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
@@ -1011,8 +1435,8 @@
       \strng{nameanamehash}{88ea2f6db73568911b3c10a264278e8f}
       \strng{nameafullhash}{cf279010dcfd61f6fcbbadde65bb8f60}
       \strng{nameafullhashraw}{cf279010dcfd61f6fcbbadde65bb8f60}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}
@@ -1106,8 +1530,8 @@
       \strng{nameafullhash}{c6f4fa4a470b06fa7909787eaec5bf3e}
       \strng{nameafullhashraw}{c6f4fa4a470b06fa7909787eaec5bf3e}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Frontiers in Computer Science}
@@ -1181,8 +1605,8 @@
       \strng{nameanamehash}{4ccc7e53e6f21e88b8f4289cb19d3d80}
       \strng{nameafullhash}{12ef2730fa0eb97c944852a1b1429e12}
       \strng{nameafullhashraw}{12ef2730fa0eb97c944852a1b1429e12}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 28th Annual Conference on Computer Graphics and Interactive Techniques}
@@ -1250,8 +1674,8 @@
       \strng{nameanamehash}{7534b799076d8d377b1071d93a9e3d2f}
       \strng{nameafullhash}{8f5f14021c3f413a61fbd900f4977553}
       \strng{nameafullhashraw}{8f5f14021c3f413a61fbd900f4977553}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the Seventh Annual ACM/IEEE International Conference on Human-Robot Interaction}
@@ -1309,8 +1733,8 @@
       \strng{nameanamehash}{510c22fbf25f686259080bc2bba165ef}
       \strng{nameafullhash}{510c22fbf25f686259080bc2bba165ef}
       \strng{nameafullhashraw}{510c22fbf25f686259080bc2bba165ef}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
@@ -1420,8 +1844,8 @@
       \strng{nameanamehash}{92f6557b0905c32dff5283e7e273f40b}
       \strng{nameafullhash}{3fe44a7a548a0e358bba09a4fa57d34b}
       \strng{nameafullhashraw}{3fe44a7a548a0e358bba09a4fa57d34b}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}
@@ -1638,8 +2062,8 @@
       \strng{nameanamehash}{02097d812fc3c9a5f66675e55239b1b6}
       \strng{nameafullhash}{fe6be3f9201e2f558920d03c09a85fb1}
       \strng{nameafullhashraw}{fe6be3f9201e2f558920d03c09a85fb1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}
@@ -1756,8 +2180,8 @@
       \strng{nameanamehash}{1027738af091389081d6faebf068d260}
       \strng{nameafullhash}{3798646f4edec3c5155684e57baf85ec}
       \strng{nameafullhashraw}{3798646f4edec3c5155684e57baf85ec}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence, {IJCAI-23}}
@@ -1854,8 +2278,8 @@
       \strng{nameanamehash}{cad487b17ca2aa59f98bf738d509a6b4}
       \strng{nameafullhash}{79ea90570426e952592dc09c13f0237d}
       \strng{nameafullhashraw}{79ea90570426e952592dc09c13f0237d}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops}
@@ -1933,8 +2357,8 @@
       \strng{nameanamehash}{73fa768409b15075f4120d59e36f4986}
       \strng{nameafullhash}{9f8e6ab6aa6e3344a3727bb5ba343b16}
       \strng{nameafullhashraw}{9f8e6ab6aa6e3344a3727bb5ba343b16}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 25th International Conference on Multimodal Interaction}
@@ -1961,6 +2385,94 @@
       \verb https://doi.org/10.1145/3577190.3616117
       \endverb
       \keyw{diffusion-self-supervised2023}
+    \endentry
+    \entry{alexanderson2023diffgesture}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=a0fb79189832a3e05b717cc13cefb697}{%
+           family={Alexanderson},
+           familyi={A\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0c86af87f1864ca80d613fec481fecfe}{%
+           family={Kucherenko},
+           familyi={K\bibinitperiod},
+           given={Taras},
+           giveni={T\bibinitperiod}}}%
+        {{hash=ab3459afd8b47494ddfdd243147c4fca}{%
+           family={Henter},
+           familyi={H\bibinitperiod},
+           given={Gustav\bibnamedelima Eje},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=360375b5fce1d04c3e8e15b273de2833}{%
+           family={Beskow},
+           familyi={B\bibinitperiod},
+           given={Jonas},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=a0fb79189832a3e05b717cc13cefb697}{%
+           family={Alexanderson},
+           familyi={A\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0c86af87f1864ca80d613fec481fecfe}{%
+           family={Kucherenko},
+           familyi={K\bibinitperiod},
+           given={Taras},
+           giveni={T\bibinitperiod}}}%
+        {{hash=ab3459afd8b47494ddfdd243147c4fca}{%
+           family={Henter},
+           familyi={H\bibinitperiod},
+           given={Gustav\bibnamedelima Eje},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=360375b5fce1d04c3e8e15b273de2833}{%
+           family={Beskow},
+           familyi={B\bibinitperiod},
+           given={Jonas},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{d0f3ba778d44f98a792ff709a847cc49}
+      \strng{fullhash}{e16e786b3feb95c6552bfbc9ed1a22da}
+      \strng{fullhashraw}{e16e786b3feb95c6552bfbc9ed1a22da}
+      \strng{bibnamehash}{9132738ccaa078a6d35db6ef83012708}
+      \strng{authorbibnamehash}{9132738ccaa078a6d35db6ef83012708}
+      \strng{authornamehash}{d0f3ba778d44f98a792ff709a847cc49}
+      \strng{authorfullhash}{e16e786b3feb95c6552bfbc9ed1a22da}
+      \strng{authorfullhashraw}{e16e786b3feb95c6552bfbc9ed1a22da}
+      \strng{nameabibnamehash}{9132738ccaa078a6d35db6ef83012708}
+      \strng{nameanamehash}{d0f3ba778d44f98a792ff709a847cc49}
+      \strng{nameafullhash}{e16e786b3feb95c6552bfbc9ed1a22da}
+      \strng{nameafullhashraw}{e16e786b3feb95c6552bfbc9ed1a22da}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 23rd ACM International Conference on Intelligent Virtual Agents (IVA 2023)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{DiffGesture: Diffusion-based Co-Speech Gesture Generation}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1145/3570945.3607282
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3570945.3607282
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3570945.3607282
+      \endverb
+      \keyw{alexanderson2023diffgesture}
     \endentry
     \entry{yoon2020speechgesturebert}{inproceedings}{}{}
       \name{author}{6}{}{%
@@ -2043,8 +2555,8 @@
       \strng{nameafullhash}{13c29dfd1ba1cb3eb843628757a3aaf0}
       \strng{nameafullhashraw}{13c29dfd1ba1cb3eb843628757a3aaf0}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 2020 ACM International Conference on Multimodal Interaction (ICMI)}
@@ -2069,94 +2581,6 @@
       \verb https://dl.acm.org/doi/10.1145/3382507.3418838
       \endverb
       \keyw{yoon2020speechgesturebert}
-    \endentry
-    \entry{alexanderson2023diffgesture}{inproceedings}{}{}
-      \name{author}{4}{}{%
-        {{hash=a0fb79189832a3e05b717cc13cefb697}{%
-           family={Alexanderson},
-           familyi={A\bibinitperiod},
-           given={Simon},
-           giveni={S\bibinitperiod}}}%
-        {{hash=0c86af87f1864ca80d613fec481fecfe}{%
-           family={Kucherenko},
-           familyi={K\bibinitperiod},
-           given={Taras},
-           giveni={T\bibinitperiod}}}%
-        {{hash=ab3459afd8b47494ddfdd243147c4fca}{%
-           family={Henter},
-           familyi={H\bibinitperiod},
-           given={Gustav\bibnamedelima Eje},
-           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=360375b5fce1d04c3e8e15b273de2833}{%
-           family={Beskow},
-           familyi={B\bibinitperiod},
-           given={Jonas},
-           giveni={J\bibinitperiod}}}%
-      }
-      \name{namea}{4}{}{%
-        {{hash=a0fb79189832a3e05b717cc13cefb697}{%
-           family={Alexanderson},
-           familyi={A\bibinitperiod},
-           given={Simon},
-           giveni={S\bibinitperiod}}}%
-        {{hash=0c86af87f1864ca80d613fec481fecfe}{%
-           family={Kucherenko},
-           familyi={K\bibinitperiod},
-           given={Taras},
-           giveni={T\bibinitperiod}}}%
-        {{hash=ab3459afd8b47494ddfdd243147c4fca}{%
-           family={Henter},
-           familyi={H\bibinitperiod},
-           given={Gustav\bibnamedelima Eje},
-           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=360375b5fce1d04c3e8e15b273de2833}{%
-           family={Beskow},
-           familyi={B\bibinitperiod},
-           given={Jonas},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \strng{namehash}{d0f3ba778d44f98a792ff709a847cc49}
-      \strng{fullhash}{e16e786b3feb95c6552bfbc9ed1a22da}
-      \strng{fullhashraw}{e16e786b3feb95c6552bfbc9ed1a22da}
-      \strng{bibnamehash}{9132738ccaa078a6d35db6ef83012708}
-      \strng{authorbibnamehash}{9132738ccaa078a6d35db6ef83012708}
-      \strng{authornamehash}{d0f3ba778d44f98a792ff709a847cc49}
-      \strng{authorfullhash}{e16e786b3feb95c6552bfbc9ed1a22da}
-      \strng{authorfullhashraw}{e16e786b3feb95c6552bfbc9ed1a22da}
-      \strng{nameabibnamehash}{9132738ccaa078a6d35db6ef83012708}
-      \strng{nameanamehash}{d0f3ba778d44f98a792ff709a847cc49}
-      \strng{nameafullhash}{e16e786b3feb95c6552bfbc9ed1a22da}
-      \strng{nameafullhashraw}{e16e786b3feb95c6552bfbc9ed1a22da}
-      \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 23rd ACM International Conference on Intelligent Virtual Agents (IVA 2023)}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{DiffGesture: Diffusion-based Co-Speech Gesture Generation}
-      \field{usera}{C}
-      \field{userd}{english}
-      \field{userf}{english}
-      \field{year}{2023}
-      \field{dateera}{ce}
-      \field{pages}{1\bibrangedash 8}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.1145/3570945.3607282
-      \endverb
-      \verb{urlraw}
-      \verb https://dl.acm.org/doi/10.1145/3570945.3607282
-      \endverb
-      \verb{url}
-      \verb https://dl.acm.org/doi/10.1145/3570945.3607282
-      \endverb
-      \keyw{alexanderson2023diffgesture}
     \endentry
     \entry{alexanderson2020stylegestures}{inproceedings}{}{}
       \name{author}{4}{}{%
@@ -2552,8 +2976,8 @@
       \strng{nameanamehash}{c2b621d57ddde29f176fd27ecf39637d}
       \strng{nameafullhash}{1c27d7d6b7b0c48adafd77f3c7a90685}
       \strng{nameafullhashraw}{1c27d7d6b7b0c48adafd77f3c7a90685}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems (CHI EA '23)}
@@ -2574,9 +2998,6 @@
       \keyw{LatinSquareToolkit}
     \endentry
   \enddatalist
-  \missing{kendon2004gesture}
-  \missing{liu2022beat}
-  \missing{mcneill1992hand}
 \endrefsection
 \endinput
 

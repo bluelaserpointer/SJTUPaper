@@ -1,10 +1,6 @@
-\contentsline {table}{\numberline {2.1}{\ignorespaces 不同旋转表示方式的空间连续性与使用示例}}{7}{table.caption.17}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces 两类手势生成任务在约束与可利用条件上的对比}}{10}{table.caption.25}%
-\contentsline {table}{\numberline {3.1}{\ignorespaces 输入输出模态符号与维度}}{20}{table.caption.31}%
-\contentsline {table}{\numberline {4.1}{\ignorespaces 各模型使用的输入与输出模态。$\text {$\mathsurround \z@ \mathchar "5D8$}$：使用；$\times $：未使用；$\ast $：未显式使用说话人 ID，但为每个说话人单独训练模型。}}{35}{table.caption.55}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces 在 BEAT 四位说话人测试集上的定量评估结果。FaceCapGes 在所有指标上优于 CaMN，且与 DiffSHEG 表现相当。}}{40}{table.caption.70}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces 说话人 2 的消融实验结果。头部姿态对提升手势自然性与表达力有显著作用。}}{41}{table.caption.71}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces 在 RTX 4090 上的帧级推理速度评估结果。}}{41}{table.caption.72}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces 不同旋转表示方式的空间连续性与使用示例}}{7}{table.caption.19}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces 两类手势生成任务在约束与可利用条件上的对比}}{10}{table.caption.27}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces 输入输出模态符号与维度}}{20}{table.caption.34}%
 \contentsfinish 
 \contentsfinish 
 \contentsfinish 

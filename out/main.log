@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.7.15)  18 OCT 2025 10:17
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.7.15)  24 OCT 2025 19:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2062,20 +2062,14 @@ h' as default language. on input line 17.
 \c@currsolutionctr=\count602
 \c@endsolutionctr=\count603
 \c@solution=\count604
-(f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.aux
-
-LaTeX Warning: Label `fig:userstudy_latin_square' multiply defined.
-
-
-LaTeX Warning: Label `fig:userstudy_app' multiply defined.
-
-)
+(f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 17.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
  17.
- (D:\MiKTeX\tex/latex/newtx\omlntxmi.fd
+
+(D:\MiKTeX\tex/latex/newtx\omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
 LaTeX Font Info:    ... okay on input line 17.
@@ -2101,15 +2095,15 @@ LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 17.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
  17.
- (D:\MiKTeX\tex/latex/newtx\lmsntxsy.fd
+
+(D:\MiKTeX\tex/latex/newtx\lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 17.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
 e 17.
-
-(D:\MiKTeX\tex/latex/newtx\lmxntxexx.fd
+ (D:\MiKTeX\tex/latex/newtx\lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
 LaTeX Font Info:    ... okay on input line 17.
@@ -2181,29 +2175,7 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
-(f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                kendon2004gesture
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                liu2022beat
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                mcneill1992hand
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+(f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.bbl)
 Package biblatex Info: Reference section=0 on input line 17.
 Package biblatex Info: Reference segment=0 on input line 17.
 \c@lstlisting=\count605
@@ -2212,7 +2184,8 @@ Package tocbasic Info: omitting babel extension for `lol'
 Package translations Info: no dictionary file `translations-basic-dictionary-ch
 inese.trsl' found. on input line 17.
 Package hyperref Info: Link coloring OFF on input line 17.
- (f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.out)
+
+(f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.out)
 (f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -2479,9 +2452,7 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 
 ]
 
-[2
-
-]
+[2]
 Overfull \hbox (0.37933pt too wide) in paragraph at lines 23--24
 []\TU/TeXGyreTermesX(0)/m/n/12.045 However, gesture movements have spatial and 
 physical energy consumption requirements.
@@ -2490,6 +2461,7 @@ physical energy consumption requirements.
 
 
 [3
+
 
 ])
 
@@ -2504,13 +2476,7 @@ physical energy consumption requirements.
 
 
 
-[6]
-
-[7]
-
-[8
-
-] (f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.lof
+[6] (f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.lof
 
 Package fontspec Info: 
 (fontspec)             Could not resolve font "FangSong/BI" (it probably
@@ -2543,22 +2509,24 @@ Package fontspec Info:
 
 
 
-[9
+[7
+
 
 ]
 
-[10] (f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.lot)
+[8
+
+] (f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
 
 
-[11
-
+[9
 
 ]
 
-[12
+[10
 
 ] (f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.loa)
 \tf@loa=\write9
@@ -2607,11 +2575,11 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 (Font)              scaled to size 5.0pt on input line 7.
 )
 
-[13
+[11
 
 ]
 
-[14
+[12
 
 ] (contents/intro.tex
 第 1 章
@@ -2634,13 +2602,13 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 [5]
 
 [6]
+
+[7]
 File: figures/Fig_AUSample.png Graphic file (type bmp)
 <figures/Fig_AUSample.png>
 File: figures/Fig_blendshapeEyeBlink.png Graphic file (type bmp)
 <figures/Fig_blendshapeEyeBlink.png>
 
-
-[7]
 
 [8]
 File: figures/Fig_MediaPipeLandmark.png Graphic file (type bmp)
@@ -2663,8 +2631,8 @@ File: figures/Fig_MediaPipeLandmark.png Graphic file (type bmp)
 
 [16]
 第 3 章
-File: figures/FigOverallFramework.png Graphic file (type bmp)
-<figures/FigOverallFramework.png>
+File: figures/SystemArchitecture.png Graphic file (type bmp)
+<figures/SystemArchitecture.png>
 
 
 [17
@@ -2674,40 +2642,17 @@ File: figures/FigOverallFramework.png Graphic file (type bmp)
 [18]
 
 [19]
-Overfull \hbox (17.11595pt too wide) in paragraph at lines 105--115
- [][] 
- []
-
-
 
 [20]
-
-LaTeX Warning: Citation 'liu2022beat' on page 21 undefined on input line 146.
-
-
-LaTeX Warning: Citation 'mcneill1992hand' on page 21 undefined on input line 14
-8.
-
-
-LaTeX Warning: Citation 'kendon2004gesture' on page 21 undefined on input line 
-148.
-
-
-Overfull \hbox (54.15517pt too wide) in paragraph at lines 148--149
-[]\TU/SimSun(0)/m/n/12.045 这 种 设 计 符 合 人 类 交 流 中  |“语 言  |—|  表 情  |—|  动 作”|  
-一 体 化 的 认 知 规 律$[]$。|
- []
-
-
 
 [21]
 
 [22]
+
+[23]
 File: figures/Fig_lstmcompare.png Graphic file (type bmp)
 <figures/Fig_lstmcompare.png>
 
-
-[23]
 
 [24]
 File: figures/Fig2.png Graphic file (type bmp)
@@ -2715,34 +2660,28 @@ File: figures/Fig2.png Graphic file (type bmp)
 
 
 [25]
+
+[26]
 File: figures/Fig_headencoder.png Graphic file (type bmp)
 <figures/Fig_headencoder.png>
-
-
-LaTeX Warning: Reference `sec:eval' on page 26 undefined on input line 340.
-
 File: figures/Fig1.png Graphic file (type bmp)
 <figures/Fig1.png>
 
 
-[26]
-
 [27]
+
+[28]
 File: figures/Fig_BEATBones.png Graphic file (type bmp)
 <figures/Fig_BEATBones.png>
 
 
-LaTeX Warning: Reference `sec:loss' on page 28 undefined on input line 430.
+LaTeX Warning: Reference `sec:loss' on page 29 undefined on input line 480.
 
 
 
-[28]) (contents/evaluation.tex
+[29]) (contents/evaluation.tex
 
-[29]
-
-[30
-
-]
+[30]
 第 4 章
 
 Overfull \hbox (2.31146pt too wide) in paragraph at lines 7--8
@@ -2753,121 +2692,207 @@ TeXGyreTermesX(0)/m/n/12.045 FGD\TU/SimSun(0)/m/n/12.045 ）|$[]$、|
 
 
 
-[31]
+[31
+
+]
 
 [32]
 
 [33]
 
-[34]
+LaTeX Warning: Reference `tab:modalitycomparison' on page 34 undefined on input
+ line 186.
 
-[35]
 
-[36]
+LaTeX Warning: Reference `fig:userstudy_app' on page 34 undefined on input line
+ 266.
+
+
+contents/evaluation.tex:324: LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.324 \begin{figure}[h!t]
+                         
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: figures/UserStudyImage.png Graphic file (type bmp)
 <figures/UserStudyImage.png>
 
+LaTeX Warning: Reference `fig:userstudy' on page 34 undefined on input line 359
+.
 
-[37]
+
+contents/evaluation.tex:366: LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.366 \begin{figure}[h!t]
+                         
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: figures/UserStudy_All.png Graphic file (type bmp)
 <figures/UserStudy_All.png>
+
+LaTeX Warning: Reference `fig:userstudy_latin_square' on page 34 undefined on i
+nput line 374.
+
+
+contents/evaluation.tex:382: LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.382 \begin{figure}[h!t]
+                         
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: figures/UserStudy_LatinSquare.png Graphic file (type bmp)
 <figures/UserStudy_LatinSquare.png>
 
+LaTeX Warning: Reference `fig3' on page 34 undefined on input line 431.
 
-[38]
 
-[39]
+contents/evaluation.tex:433: LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.433 \begin{figure*}[h!t]
+                          
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: figures/GeneratedPoseOverview.png Graphic file (type bmp)
 <figures/GeneratedPoseOverview.png>
 
+contents/evaluation.tex:442: LaTeX Error: Not in outer par mode.
 
-[40]
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.442 \begin{table*}[h]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-[41]) (contents/conclusions.tex
 
-[42]
+LaTeX Warning: Reference `tab1' on page 34 undefined on input line 463.
+
+
+contents/evaluation.tex:469: LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.469 \begin{table*}[h]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `tab2' on page 34 undefined on input line 486.
+
+
+contents/evaluation.tex:492: LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.492 \begin{table}[h]
+                      
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Reference `tab3' on page 34 undefined on input line 507.
+
+) (contents/conclusions.tex
 第 5 章
 )
-
-[43
-
-]
-
-[44
-
-]
 
 Package biblatex Warning: No driver for 'webpage'.
 (biblatex)                Using fallback driver on input line 66.
 
 
-
-[45]
-
-[46]
 Underfull \hbox (badness 6625) in paragraph at lines 66--66
 \TU/TeXGyreTermesX(0)/m/n/12.045 Speech-Driven Gesture Synthesis Using Normalis
 ing Flows[]C/OL[]//Computer
  []
 
-
-
-[47] (contents/app_balanced_latin_square_setup.tex
-
-[48]
+(contents/app_balanced_latin_square_setup.tex
 附录 A
+
+LaTeX Warning: Reference `fig:userstudy_latin_square' on page 34 undefined on i
+nput line 5.
+
+
+contents/app_balanced_latin_square_setup.tex:7: LaTeX Error: Not in outer par m
+ode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \begin{figure}[h]
+                     
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: figures/UserStudy_LatinSquare.png Graphic file (type bmp)
 <figures/UserStudy_LatinSquare.png>
+
+LaTeX Warning: Reference `fig:userstudy_app' on page 34 undefined on input line
+ 14.
+
+
+contents/app_balanced_latin_square_setup.tex:16: LaTeX Error: Not in outer par 
+mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \begin{figure}[h]
+                      
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: figures/UserStudyImage.png Graphic file (type bmp)
 <figures/UserStudyImage.png>
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-)
-
-[49
-
-]
-
-[50] (contents/acknowledgements.tex) (contents/achievements.tex
-
-[51
-
-
-
-]
-
-[52
-
-]) (contents/resume.tex
-
-[53
-
-]
-
-[54
-
-]) (contents/digest.tex)
+) (contents/acknowledgements.tex) (contents/achievements.tex)
+(contents/resume.tex) (contents/digest.tex)
 \tf@thm=\write10
 \openout10 = `main.thm'.
 
 
 
-[55
+main.tex:99: LaTeX Error: \begin{table} on input line 188 ended by \end{documen
+t}.
 
-]
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.99 \end{document}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
-[56
-
-]
-
-[1
-
-
-]
-
-[2] (f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.aux)
+(f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -2877,21 +2902,61 @@ L3 programming layer <2022/08/05>
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B1B4C510389C477C998FD766C8583520;9157.
+(rerunfilecheck)             Checksum: 3D343FEFD79FEF52FEB8C864EB14D05A;7088.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
- ) 
-Here is how much of TeX's memory you used:
- 52116 strings out of 403336
- 1113495 string characters out of 5470263
- 2046868 words of memory out of 5000000
- 79712 multiletter control sequences out of 15000+600000
- 705824 words of font info for 263 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 115i,16n,124p,1183b,7446s stack positions out of 10000i,1000n,20000p,200000b,200000s
+main.tex:99: You can't use `\end' in internal vertical mode.
+\enddocument ...cument/end}\deadcycles \z@ \@@end 
+                                                  
+l.99 \end{document}
+                   
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
-Output written on f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.pdf (78 pages).
+
+main.tex:99: LaTeX Error: \begin{table} on input line 188 ended by \end{documen
+t}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.99 \end{document}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+main.tex:99: Missing } inserted.
+<inserted text> 
+                }
+l.99 \end{document}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+)
+! Emergency stop.
+<*> ./main.tex
+              
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 52160 strings out of 403336
+ 1116353 string characters out of 5470263
+ 2145562 words of memory out of 5000000
+ 79757 multiletter control sequences out of 15000+600000
+ 705816 words of font info for 262 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 115i,16n,124p,1209b,5602s stack positions out of 10000i,1000n,20000p,200000b,200000s
+Output written on f:\CLASS\论文归档\学校论文\SJTUPaper\out\main.pdf (51 pages).

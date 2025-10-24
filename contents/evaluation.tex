@@ -22,7 +22,7 @@
 \subsection{Fréchet Gesture Distance (FGD)}
 \label{subsec:fgd}
 
-FGD 用于衡量生成手势分布与真实手势分布之间的统计距离，
+FGD\cite{speech_gesture_generation}用于衡量生成手势分布与真实手势分布之间的统计距离，
 灵感源自图像生成领域的 Fréchet Inception Distance (FID)。
 不同于图像任务直接利用 Inception 网络特征，
 在动作生成领域，特征空间需由单独训练的动作自编码器定义。
@@ -87,10 +87,9 @@ $\mathcal{N}(\bm{\mu}_r, \bm{\Sigma}_r)$ 与 $\mathcal{N}(\bm{\mu}_g, \bm{\Sigma
 \subsection{Speech–Gesture Rhythm Correlation (SRGR)}
 \label{subsec:srgr}
 
-SRGR 指标用于衡量生成手势与语音韵律在节奏层面的同步性，
+SRGR 指标\cite{beatcamn}用于衡量生成手势与语音韵律在节奏层面的同步性，
 其核心思想是比较语音能量包络与手势运动速度包络的时间相关程度。
-与整句级语义匹配不同，
-SRGR 反映的是语音与手势在局部时间尺度上的\textbf{节奏耦合强度（rhythmic coupling）}。
+与整句级语义匹配不同，SRGR 反映的是语音与手势在局部时间尺度上的节奏耦合强度。
 
 \paragraph{定义与原理.}
 设语音能量序列为 $\bm{e} = \{ e_t \}$，
@@ -123,7 +122,7 @@ SRGR 值越高，表示手势运动节奏与语音节奏的同步程度越强，
 \subsection{Beat Alignment (BA)}
 \label{subsec:ba}
 
-BA（Beat Alignment）指标用于衡量手势关键动作与语音重读节拍的时间对齐程度，
+BA（Beat Alignment）指标\cite{beatcamn}用于衡量手势关键动作与语音重读节拍的时间对齐程度，
 反映模型在\textbf{时序同步性（temporal synchronization）}方面的性能。
 与 SRGR 的全局相关性不同，BA 更注重\textbf{事件级的对齐精度}。
 
@@ -154,7 +153,7 @@ BA（Beat Alignment）指标用于衡量手势关键动作与语音重读节拍�
 \subsection{L1-based Diversity (L1DIV)}
 \label{subsec:l1div}
 
-L1DIV 指标衡量生成手势序列的多样性（diversity），
+L1DIV 指标\cite{beatcamn}衡量生成手势序列的多样性（diversity），
 即不同语音输入下模型生成结果的动作差异程度。
 该指标反映模型在保持自然性的同时，
 能否避免生成收敛到平均动作模式（mode collapse）的倾向。
@@ -180,7 +179,7 @@ $\{\bm{g}^{(1)}, \bm{g}^{(2)}, \dots, \bm{g}^{(N)}\}$，
 但过高可能意味着动作不稳定或噪声放大。
 因此，L1DIV 通常与 FGD 联合分析：  
 FGD 反映真实度，L1DIV 反映丰富度，
-两者共同平衡模型在\textbf{自然性—多样性}维度上的表现。
+两者共同平衡模型在自然性—多样性维度上的表现。
 
 \section{模型对比概览}
 
@@ -189,19 +188,18 @@ FGD 反映真实度，L1DIV 反映丰富度，
 \begin{table}[h]
 \centering
 \resizebox{\linewidth}{!}{%
-\begin{tabular}{@{}lccccccc@{}}
+\begin{tabular}{@{}lccccc|c|c@{}}
 \toprule
-模型 & 音频 & 面部捕捉 & 头部姿态 & 说话人ID & 情绪 & 未来信息 & 输出 \\
+\multirow{2}{*}{模型} & \multicolumn{5}{c|}{输入模态} & \multirow{2}{*}{未来信息} & \multirow{2}{*}{输出} \\ 
+\cmidrule(lr){2-6}
+ & 音频 & 面部捕捉 & 头部姿态 & 说话人ID & 情绪 &  &  \\ 
 \midrule
 CaMN       & $\checkmark$ & $\checkmark$ & $\times$ & $\checkmark$ & $\checkmark$ & $\checkmark$ & 身体 \\
-DiffSHEG   & $\checkmark$ & $\times$     & $\times$ & $\checkmark$ & $\times$     & $\checkmark$ & 身体+面部 \\
-本方法     & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\ast$ & $\times$     & $\times$     & 身体 \\
+DiffSHEG   & $\checkmark$ & $\times$ & $\times$ & $\checkmark$ & $\times$ & $\checkmark$ & 身体+面部 \\
+本方法     & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\ast$ & $\times$ & $\times$ & 身体 \\ 
 \bottomrule
 \end{tabular}%
 }
-\caption{各模型使用的输入与输出模态。$\checkmark$：使用；$\times$：未使用；$\ast$：未显式使用说话人 ID，但为每个说话人单独训练模型。}
-\label{tab:modalitycomparison}
-\end{table}
 
 \section{用户调研}
 \label{sec:userstudy}
@@ -216,9 +214,9 @@ DiffSHEG   & $\checkmark$ & $\times$     & $\times$ & $\checkmark$ & $\times$   
 
 \paragraph{实验材料与呈现方式.}
 用户评估所使用的手势动画均基于测试集语音片段生成，
-并以 \textbf{BVH（Biovision Hierarchy）文件}形式保存。
+并以BVH（Biovision Hierarchy）文件形式保存。
 BVH 是一种通用的动作捕捉数据格式，
-通过层级化定义骨骼结构（skeleton hierarchy）与帧级旋转参数，
+通过层级化定义骨骼结构与帧级旋转参数，
 可直接导入 3D 动画与虚拟人系统。
 本文使用的 BVH 文件采用欧拉角旋转表示，以保证与 Unity 的骨骼系统兼容。
 
@@ -233,15 +231,12 @@ DiffSHEG 输出 Axis-Angle，
 所有对比模型（FaceCapGes、CaMN、DiffSHEG）均使用相同的训练集与骨骼定义，
 其中 CaMN 与 DiffSHEG 采用各自论文公开的原版参数。
 虚拟人角色选自 BEAT 数据集提供的公开演讲者模型集合，
-并经过 Unity 的 \textbf{Mecanim 自动骨骼绑定系统}（Automatic Rigging）匹配。
+并经过 Unity 的 Mecanim 自动骨骼绑定系统匹配。
 该系统会自动配对 BVH 文件中定义的骨骼层级与虚拟人模型的骨骼节点，
-从而在不依赖手动权重绘制的情况下完成动作重定向（retargeting）。
+从而在不依赖手动权重绘制的情况下完成动作重定向。
 
-需要指出的是，
-当前播放系统仅支持同时具备骨骼绑定（Rigged Skeleton）
-与兼容 ARKit 标准的 BlendShape 表情参数的虚拟人模型。
-因此，本文实验中使用的虚拟人模型为 CaMN 论文所公开的男女各一名演讲者，
-两者均满足上述条件，可在系统中实现身体与面部的联合驱动。
+本系统当前支持的虚拟人模型需同时具备骨骼绑定与 ARKit 兼容的 BlendShape 参数。
+基于此约束，实验选用了 CaMN 论文公开的男女两名演讲者模型，二者均满足兼容要求，可实现身体与面部的联合驱动。
 
 \paragraph{播放系统实现.}
 我们基于 Unity 自行编写播放脚本，
@@ -256,7 +251,7 @@ DiffSHEG 输出 Axis-Angle，
 节奏响应与语音同步性方面的差异。
 
 为确保主观评价的公正性与可重复性，
-系统在每次实验开始前会\textbf{随机分配三种模型的位置（左、中、右）}，
+系统在每次实验开始前会随机分配三种模型的位置（左、中、右），
 界面上不会显示模型名称，
 从而避免潜在偏向。
 各测试片段的播放顺序在实验前统一设定，
