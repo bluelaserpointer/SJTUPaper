@@ -2,7 +2,7 @@
   "latex-workshop.latex.tools": [
     {
       "name": "xelatex",
-      "command": "D:\\MiKTeX\\miktex\\bin\\x64\\xelatex.exe",
+      "command": "D:\\Programs\\MiKTeX\\miktex\\bin\\x64\\xelatex.exe",
       "args": [
         "-synctex=1",
         "-interaction=nonstopmode",
