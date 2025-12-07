@@ -2957,8 +2957,9 @@
     <bcf:citekey order="5" intorder="1">mediapipefacemesh</bcf:citekey>
     <bcf:citekey order="5" intorder="2">AppleARKitTrackingGuide</bcf:citekey>
     <bcf:citekey order="6" intorder="1">beatcamn</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">mcneill_1992_hand</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">kendon_2004_gesture</bcf:citekey>
     <bcf:citekey order="8" intorder="1">kendon_2004_gesture</bcf:citekey>
+    <bcf:citekey order="8" intorder="2">mcneill_1992_hand</bcf:citekey>
     <bcf:citekey order="9" intorder="1">mcneill_1992_hand</bcf:citekey>
     <bcf:citekey order="10" intorder="1">gesture_and_speech_in_interaction</bcf:citekey>
     <bcf:citekey order="11" intorder="1">hadar_1989_headmovement</bcf:citekey>

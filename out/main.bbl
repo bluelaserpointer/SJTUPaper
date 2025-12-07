@@ -263,58 +263,6 @@
       \field{dateera}{ce}
       \keyw{beatcamn}
     \endentry
-    \entry{mcneill_1992_hand}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=3ccf5b8aeb22bbe688614d1e72c13c21}{%
-           family={McNeill},
-           familyi={M\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-      }
-      \name{namea}{1}{}{%
-        {{hash=3ccf5b8aeb22bbe688614d1e72c13c21}{%
-           family={McNeill},
-           familyi={M\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \list{location}{1}{%
-        {Chicago, IL}%
-      }
-      \list{publisher}{1}{%
-        {University of Chicago Press}%
-      }
-      \strng{namehash}{3ccf5b8aeb22bbe688614d1e72c13c21}
-      \strng{fullhash}{3ccf5b8aeb22bbe688614d1e72c13c21}
-      \strng{fullhashraw}{3ccf5b8aeb22bbe688614d1e72c13c21}
-      \strng{bibnamehash}{3ccf5b8aeb22bbe688614d1e72c13c21}
-      \strng{authorbibnamehash}{3ccf5b8aeb22bbe688614d1e72c13c21}
-      \strng{authornamehash}{3ccf5b8aeb22bbe688614d1e72c13c21}
-      \strng{authorfullhash}{3ccf5b8aeb22bbe688614d1e72c13c21}
-      \strng{authorfullhashraw}{3ccf5b8aeb22bbe688614d1e72c13c21}
-      \strng{nameabibnamehash}{3ccf5b8aeb22bbe688614d1e72c13c21}
-      \strng{nameanamehash}{3ccf5b8aeb22bbe688614d1e72c13c21}
-      \strng{nameafullhash}{3ccf5b8aeb22bbe688614d1e72c13c21}
-      \strng{nameafullhashraw}{3ccf5b8aeb22bbe688614d1e72c13c21}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9780226561325}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{Hand and Mind: What Gestures Reveal about Thought}
-      \field{usera}{M}
-      \field{userd}{english}
-      \field{userf}{english}
-      \field{year}{1992}
-      \field{dateera}{ce}
-      \keyw{mcneill_1992_hand}
-    \endentry
     \entry{kendon_2004_gesture}{book}{}{}
       \name{author}{1}{}{%
         {{hash=2512b39e214f27cb2b9e3dc6913f7f9a}{%
@@ -351,8 +299,8 @@
       \strng{nameanamehash}{2512b39e214f27cb2b9e3dc6913f7f9a}
       \strng{nameafullhash}{2512b39e214f27cb2b9e3dc6913f7f9a}
       \strng{nameafullhashraw}{2512b39e214f27cb2b9e3dc6913f7f9a}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780521542937}
@@ -366,6 +314,58 @@
       \field{year}{2004}
       \field{dateera}{ce}
       \keyw{kendon_2004_gesture}
+    \endentry
+    \entry{mcneill_1992_hand}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=3ccf5b8aeb22bbe688614d1e72c13c21}{%
+           family={McNeill},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=3ccf5b8aeb22bbe688614d1e72c13c21}{%
+           family={McNeill},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{location}{1}{%
+        {Chicago, IL}%
+      }
+      \list{publisher}{1}{%
+        {University of Chicago Press}%
+      }
+      \strng{namehash}{3ccf5b8aeb22bbe688614d1e72c13c21}
+      \strng{fullhash}{3ccf5b8aeb22bbe688614d1e72c13c21}
+      \strng{fullhashraw}{3ccf5b8aeb22bbe688614d1e72c13c21}
+      \strng{bibnamehash}{3ccf5b8aeb22bbe688614d1e72c13c21}
+      \strng{authorbibnamehash}{3ccf5b8aeb22bbe688614d1e72c13c21}
+      \strng{authornamehash}{3ccf5b8aeb22bbe688614d1e72c13c21}
+      \strng{authorfullhash}{3ccf5b8aeb22bbe688614d1e72c13c21}
+      \strng{authorfullhashraw}{3ccf5b8aeb22bbe688614d1e72c13c21}
+      \strng{nameabibnamehash}{3ccf5b8aeb22bbe688614d1e72c13c21}
+      \strng{nameanamehash}{3ccf5b8aeb22bbe688614d1e72c13c21}
+      \strng{nameafullhash}{3ccf5b8aeb22bbe688614d1e72c13c21}
+      \strng{nameafullhashraw}{3ccf5b8aeb22bbe688614d1e72c13c21}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780226561325}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Hand and Mind: What Gestures Reveal about Thought}
+      \field{usera}{M}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{1992}
+      \field{dateera}{ce}
+      \keyw{mcneill_1992_hand}
     \endentry
     \entry{gesture_and_speech_in_interaction}{article}{}{}
       \name{author}{3}{}{%

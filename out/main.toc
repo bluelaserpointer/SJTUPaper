@@ -5,38 +5,39 @@
 \contentsline {chapter}{\numberline {第 2 章}相关工作}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}手势的定义与身体姿态的参数化表示}{5}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}手势的定义与范围}{5}{subsection.2.1.1}%
-\contentsline {paragraph}{手部手势的分类}{5}{paragraph*.15}%
-\contentsline {paragraph}{头部手势的分类}{5}{paragraph*.16}%
+\contentsline {paragraph}{Kendon连续体}{5}{paragraph*.15}%
+\contentsline {paragraph}{随语手势的分类}{5}{paragraph*.16}%
+\contentsline {paragraph}{头部手势的分类}{6}{paragraph*.17}%
 \contentsline {subsection}{\numberline {2.1.2}身体姿态的参数化表示}{6}{subsection.2.1.2}%
-\contentsline {paragraph}{骨架结构的定义}{6}{paragraph*.17}%
-\contentsline {paragraph}{旋转参数的选取}{6}{paragraph*.18}%
-\contentsline {section}{\numberline {2.2}面部表情的定义与参数化表示}{7}{section.2.2}%
-\contentsline {paragraph}{BlendShape 权重模型}{7}{paragraph*.20}%
-\contentsline {paragraph}{关键点坐标模型（Landmark-based Representation）}{9}{paragraph*.23}%
-\contentsline {section}{\numberline {2.3}国内外研究现状}{9}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}手势生成的研究目标}{9}{subsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.1.1}研究目标类型的差异}{9}{subsubsection.2.3.1.1}%
-\contentsline {paragraph}{为AI的虚拟形象生成手势}{9}{paragraph*.25}%
-\contentsline {paragraph}{为用户的虚拟人生成实时手势}{10}{paragraph*.26}%
-\contentsline {subsubsection}{\numberline {2.3.1.2}任务约束与可利用条件的差异}{10}{subsubsection.2.3.1.2}%
+\contentsline {paragraph}{骨架结构的定义}{7}{paragraph*.18}%
+\contentsline {paragraph}{旋转参数的选取}{7}{paragraph*.19}%
+\contentsline {section}{\numberline {2.2}面部表情的定义与参数化表示}{8}{section.2.2}%
+\contentsline {paragraph}{BlendShape 权重模型}{8}{paragraph*.21}%
+\contentsline {paragraph}{关键点坐标模型（Landmark-based Representation）}{8}{paragraph*.24}%
+\contentsline {section}{\numberline {2.3}国内外研究现状}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}手势生成的研究目标}{10}{subsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.1.1}研究目标类型的差异}{10}{subsubsection.2.3.1.1}%
+\contentsline {paragraph}{为AI的虚拟形象生成手势}{10}{paragraph*.26}%
+\contentsline {paragraph}{为用户的虚拟人生成实时手势}{10}{paragraph*.27}%
+\contentsline {subsubsection}{\numberline {2.3.1.2}任务约束与可利用条件的差异}{11}{subsubsection.2.3.1.2}%
 \contentsline {subsubsection}{\numberline {2.3.1.3}评估方法}{11}{subsubsection.2.3.1.3}%
-\contentsline {subsection}{\numberline {2.3.2}手势生成的演变}{11}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.2}手势生成的演变}{12}{subsection.2.3.2}%
 \contentsline {subsubsection}{\numberline {2.3.2.1}规则驱动阶段}{12}{subsubsection.2.3.2.1}%
 \contentsline {subsubsection}{\numberline {2.3.2.2}数据驱动阶段}{12}{subsubsection.2.3.2.2}%
-\contentsline {subsubsection}{\numberline {2.3.2.3}多模态扩展阶段}{12}{subsubsection.2.3.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.2.3}多模态扩展阶段}{13}{subsubsection.2.3.2.3}%
 \contentsline {subsection}{\numberline {2.3.3}当代生成研究的策略趋势}{13}{subsection.2.3.3}%
-\contentsline {section}{\numberline {2.4}实时生成的理论基础与可行性分析}{13}{section.2.4}%
-\contentsline {paragraph}{头部姿态对手势预测的贡献}{14}{paragraph*.28}%
-\contentsline {paragraph}{头部姿态对空间锚定与视角一致性的贡献}{14}{paragraph*.29}%
+\contentsline {section}{\numberline {2.4}实时生成的理论基础与可行性分析}{14}{section.2.4}%
+\contentsline {paragraph}{头部姿态对手势预测的贡献}{14}{paragraph*.29}%
+\contentsline {paragraph}{头部姿态对空间锚定与视角一致性的贡献}{14}{paragraph*.30}%
 \contentsline {section}{\numberline {2.5}本文的工作与创新点}{15}{section.2.5}%
-\contentsline {section}{\numberline {2.6}本章小结}{15}{section.2.6}%
+\contentsline {section}{\numberline {2.6}本章小结}{16}{section.2.6}%
 \contentsline {chapter}{\numberline {第 3 章}方法}{17}{chapter.3}%
 \contentsline {section}{\numberline {3.1}研究定位与总体设计思路}{17}{section.3.1}%
 \contentsline {section}{\numberline {3.2}系统整体框架与模块定位}{17}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}信号采集与系统配置层}{18}{subsection.3.2.1}%
-\contentsline {paragraph}{设备层}{18}{paragraph*.31}%
-\contentsline {paragraph}{中间件层}{18}{paragraph*.32}%
-\contentsline {paragraph}{用户配置层}{19}{paragraph*.33}%
+\contentsline {paragraph}{设备层}{18}{paragraph*.32}%
+\contentsline {paragraph}{中间件层}{18}{paragraph*.33}%
+\contentsline {paragraph}{用户配置层}{19}{paragraph*.34}%
 \contentsline {subsection}{\numberline {3.2.2}手势生成模型层（FaceCapGes）}{19}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}渲染驱动层}{19}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}问题定义}{19}{section.3.3}%
@@ -52,59 +53,59 @@
 \contentsline {subsubsection}{\numberline {3.4.2.4}时间建模结构改动与因果性约束}{23}{subsubsection.3.4.2.4}%
 \contentsline {subsubsection}{\numberline {3.4.2.5}滑动窗口式自回归训练}{24}{subsubsection.3.4.2.5}%
 \contentsline {subsection}{\numberline {3.4.3}头部姿态模态的引入与结构位置}{26}{subsection.3.4.3}%
-\contentsline {paragraph}{输入特征与表示}{26}{paragraph*.37}%
-\contentsline {paragraph}{编码器结构}{27}{paragraph*.38}%
-\contentsline {paragraph}{架构位置与实验依据}{27}{paragraph*.40}%
+\contentsline {paragraph}{输入特征与表示}{26}{paragraph*.38}%
+\contentsline {paragraph}{编码器结构}{27}{paragraph*.39}%
+\contentsline {paragraph}{架构位置与实验依据}{27}{paragraph*.41}%
 \contentsline {subsection}{\numberline {3.4.4}小结：从语义驱动到反应调节的信号层级}{27}{subsection.3.4.4}%
 \contentsline {section}{\numberline {3.5}训练与损失函数设计}{27}{section.3.5}%
-\contentsline {paragraph}{手势重构损失}{28}{paragraph*.42}%
-\contentsline {paragraph}{对抗损失}{28}{paragraph*.43}%
-\contentsline {paragraph}{总体损失}{28}{paragraph*.44}%
+\contentsline {paragraph}{手势重构损失}{28}{paragraph*.43}%
+\contentsline {paragraph}{对抗损失}{28}{paragraph*.44}%
+\contentsline {paragraph}{总体损失}{28}{paragraph*.45}%
 \contentsline {section}{\numberline {3.6}实现与训练配置}{28}{section.3.6}%
-\contentsline {paragraph}{训练配置}{29}{paragraph*.46}%
-\contentsline {paragraph}{姿态表示}{29}{paragraph*.47}%
-\contentsline {paragraph}{运行性能}{29}{paragraph*.48}%
+\contentsline {paragraph}{训练配置}{29}{paragraph*.47}%
+\contentsline {paragraph}{姿态表示}{29}{paragraph*.48}%
+\contentsline {paragraph}{运行性能}{29}{paragraph*.49}%
 \contentsline {section}{\numberline {3.7}本章小结}{30}{section.3.7}%
 \contentsline {chapter}{\numberline {第 4 章}评估}{31}{chapter.4}%
 \contentsline {section}{\numberline {4.1}评估设置}{31}{section.4.1}%
 \contentsline {section}{\numberline {4.2}客观评估指标与实现细节}{31}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Fréchet Gesture Distance (FGD)}{31}{subsection.4.2.1}%
-\contentsline {paragraph}{评估模型结构与训练配置.}{32}{paragraph*.49}%
-\contentsline {paragraph}{骨架拓扑敏感的自编码器.}{32}{paragraph*.50}%
-\contentsline {paragraph}{指标计算流程.}{32}{paragraph*.51}%
+\contentsline {paragraph}{评估模型结构与训练配置.}{32}{paragraph*.50}%
+\contentsline {paragraph}{骨架拓扑敏感的自编码器.}{32}{paragraph*.51}%
+\contentsline {paragraph}{指标计算流程.}{32}{paragraph*.52}%
 \contentsline {subsection}{\numberline {4.2.2}Speech–Gesture Rhythm Correlation (SRGR)}{33}{subsection.4.2.2}%
-\contentsline {paragraph}{定义与原理.}{33}{paragraph*.52}%
-\contentsline {paragraph}{计算流程.}{33}{paragraph*.53}%
+\contentsline {paragraph}{定义与原理.}{33}{paragraph*.53}%
+\contentsline {paragraph}{计算流程.}{33}{paragraph*.54}%
 \contentsline {subsection}{\numberline {4.2.3}Beat Alignment (BA)}{33}{subsection.4.2.3}%
-\contentsline {paragraph}{定义与原理.}{33}{paragraph*.54}%
-\contentsline {paragraph}{计算流程.}{34}{paragraph*.55}%
+\contentsline {paragraph}{定义与原理.}{33}{paragraph*.55}%
+\contentsline {paragraph}{计算流程.}{34}{paragraph*.56}%
 \contentsline {subsection}{\numberline {4.2.4}L1-based Diversity (L1DIV)}{34}{subsection.4.2.4}%
-\contentsline {paragraph}{定义与原理.}{34}{paragraph*.56}%
-\contentsline {paragraph}{计算流程.}{34}{paragraph*.57}%
+\contentsline {paragraph}{定义与原理.}{34}{paragraph*.57}%
+\contentsline {paragraph}{计算流程.}{34}{paragraph*.58}%
 \contentsline {section}{\numberline {4.3}模型对比概览}{35}{section.4.3}%
 \contentsline {section}{\numberline {4.4}用户调研}{35}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}评估系统与实验配置}{35}{subsection.4.4.1}%
-\contentsline {paragraph}{实验材料与呈现方式.}{35}{paragraph*.59}%
-\contentsline {paragraph}{播放系统实现.}{36}{paragraph*.60}%
-\contentsline {paragraph}{实验界面与设备.}{36}{paragraph*.61}%
-\contentsline {paragraph}{实验流程与指导.}{36}{paragraph*.62}%
-\contentsline {paragraph}{实验材料与任务设计.}{37}{paragraph*.63}%
-\contentsline {paragraph}{实验参与者.}{37}{paragraph*.65}%
+\contentsline {paragraph}{实验材料与呈现方式.}{35}{paragraph*.60}%
+\contentsline {paragraph}{播放系统实现.}{36}{paragraph*.61}%
+\contentsline {paragraph}{实验界面与设备.}{36}{paragraph*.62}%
+\contentsline {paragraph}{实验流程与指导.}{36}{paragraph*.63}%
+\contentsline {paragraph}{实验材料与任务设计.}{37}{paragraph*.64}%
+\contentsline {paragraph}{实验参与者.}{37}{paragraph*.66}%
 \contentsline {subsection}{\numberline {4.4.2}平衡拉丁方排序设计}{38}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}结果与分析}{38}{subsection.4.4.3}%
-\contentsline {paragraph}{电脑用户测评结果.}{38}{paragraph*.66}%
-\contentsline {paragraph}{平衡拉丁方实验结果.}{38}{paragraph*.68}%
-\contentsline {paragraph}{用户反馈分析.}{39}{paragraph*.70}%
-\contentsline {paragraph}{结果讨论.}{39}{paragraph*.71}%
+\contentsline {paragraph}{电脑用户测评结果.}{38}{paragraph*.67}%
+\contentsline {paragraph}{平衡拉丁方实验结果.}{38}{paragraph*.69}%
+\contentsline {paragraph}{用户反馈分析.}{39}{paragraph*.71}%
+\contentsline {paragraph}{结果讨论.}{39}{paragraph*.72}%
 \contentsline {section}{\numberline {4.5}定性分析}{40}{section.4.5}%
 \contentsline {section}{\numberline {4.6}定量分析}{40}{section.4.6}%
 \contentsline {section}{\numberline {4.7}消融实验分析}{41}{section.4.7}%
 \contentsline {section}{\numberline {4.8}性能评估}{41}{section.4.8}%
 \contentsline {chapter}{\numberline {第 5 章}结论}{43}{chapter.5}%
-\contentsline {chapter}{参考文献}{45}{chapter*.76}%
+\contentsline {chapter}{参考文献}{45}{chapter*.77}%
 \contentsline {chapter}{\numberline {附录 A}平衡拉丁方排序设计}{49}{appendix.A}%
-\contentsline {chapter}{致\quad 谢}{51}{section*.79}%
-\contentsline {chapter}{学术论文和科研成果目录}{53}{section*.81}%
-\contentsline {chapter}{个人简历}{55}{section*.85}%
+\contentsline {chapter}{致\quad 谢}{51}{section*.80}%
+\contentsline {chapter}{学术论文和科研成果目录}{53}{section*.82}%
+\contentsline {chapter}{个人简历}{55}{section*.86}%
 \contentsfinish 
 \contentsfinish 
