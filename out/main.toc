@@ -13,22 +13,22 @@
 \contentsline {paragraph}{旋转参数的选取}{7}{paragraph*.19}%
 \contentsline {section}{\numberline {2.2}面部表情的定义与参数化表示}{8}{section.2.2}%
 \contentsline {paragraph}{BlendShape 权重模型}{8}{paragraph*.21}%
-\contentsline {paragraph}{关键点坐标模型（Landmark-based Representation）}{8}{paragraph*.24}%
+\contentsline {paragraph}{关键点坐标模型（Landmark-based Representation）}{9}{paragraph*.24}%
 \contentsline {section}{\numberline {2.3}国内外研究现状}{10}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}手势生成的研究目标}{10}{subsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.1.1}研究目标类型的差异}{10}{subsubsection.2.3.1.1}%
 \contentsline {paragraph}{为AI的虚拟形象生成手势}{10}{paragraph*.26}%
-\contentsline {paragraph}{为用户的虚拟人生成实时手势}{10}{paragraph*.27}%
+\contentsline {paragraph}{为用户的虚拟人生成实时手势}{11}{paragraph*.27}%
 \contentsline {subsubsection}{\numberline {2.3.1.2}任务约束与可利用条件的差异}{11}{subsubsection.2.3.1.2}%
-\contentsline {subsubsection}{\numberline {2.3.1.3}评估方法}{11}{subsubsection.2.3.1.3}%
+\contentsline {subsubsection}{\numberline {2.3.1.3}评估方法}{12}{subsubsection.2.3.1.3}%
 \contentsline {subsection}{\numberline {2.3.2}手势生成的演变}{12}{subsection.2.3.2}%
 \contentsline {subsubsection}{\numberline {2.3.2.1}规则驱动阶段}{12}{subsubsection.2.3.2.1}%
-\contentsline {subsubsection}{\numberline {2.3.2.2}数据驱动阶段}{12}{subsubsection.2.3.2.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.2}数据驱动阶段}{13}{subsubsection.2.3.2.2}%
 \contentsline {subsubsection}{\numberline {2.3.2.3}多模态扩展阶段}{13}{subsubsection.2.3.2.3}%
 \contentsline {subsection}{\numberline {2.3.3}当代生成研究的策略趋势}{13}{subsection.2.3.3}%
 \contentsline {section}{\numberline {2.4}实时生成的理论基础与可行性分析}{14}{section.2.4}%
 \contentsline {paragraph}{头部姿态对手势预测的贡献}{14}{paragraph*.29}%
-\contentsline {paragraph}{头部姿态对空间锚定与视角一致性的贡献}{14}{paragraph*.30}%
+\contentsline {paragraph}{头部姿态对空间锚定与视角一致性的贡献}{15}{paragraph*.30}%
 \contentsline {section}{\numberline {2.5}本文的工作与创新点}{15}{section.2.5}%
 \contentsline {section}{\numberline {2.6}本章小结}{16}{section.2.6}%
 \contentsline {chapter}{\numberline {第 3 章}方法}{17}{chapter.3}%

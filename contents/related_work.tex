@@ -83,13 +83,13 @@ McNeill\cite{mcneill_1992_hand}将随语手势进一步划分为四种基本类�
       \item 欧拉角（Euler Angles）：
       通过三个顺序旋转角表示姿态，直观且参数维度低（3 维），适合存储，但运算存在万向节锁（Gimbal Lock）问题，导致特定姿态下自由度丢失，且插值过程易产生非物理运动；
       \item 四元数（Quaternion）：
-      以四维单位向量（\(q_0^2 + q_1^2 + q_2^2 + q_3^2 = 1\)）表示旋转，既避免欧拉角的奇异性，又能实现平滑插值。
-      但需要通过额外的正则化项或后处理强制满足单位长度约束，增加优化复杂度；
-      \item Axis-Angle：以旋转轴（三维单位向量）与旋转角度（标量）的组合表示旋转，参数紧凑（4 维）且无奇异点，
-      但角度取值范围存在周期性（\([0, 2\pi)\)），导致参数空间不连续，神经网络难以学习连续的姿态映射关系；
+      以四维单位向量（\(q_0^2 + q_1^2 + q_2^2 + q_3^2 = 1\)）表示旋转，避免欧拉角的奇异性的同时，实现平滑插值。
+      然而在神经网络回归中通常需要显式处理单位长度约束，且同一旋转存在双覆盖（$q$ 与 $-q$ 等价），优化不稳定。
+      \item Axis-Angle：以旋转轴（三维单位向量）与旋转角度（标量）的乘积表示旋转，参数紧凑（3维），是参数化人体模型SMPL\cite{SMPL:2015}的主要姿态存储格式。
+      但角度取值范围存在周期性（\([0, 2\pi)\)），导致参数空间不连续，影响神经网络学习；
       \item 旋转矩阵：
       以3x3的正交矩阵，表示坐标系或物体绕某个轴旋转一定角度后的新姿态。
-      常用于计算机图形学、机器人学和物理仿真中，但正交约束（\(R^T R = I\)且\(\det(R) = 1\)）不利于神经网络的直接学习。
+      常用于计算机图形学、机器人学和物理仿真中，但正交约束（\(R^T R = I\)且\(\det(R) = 1\)）提高神经网络的学习难度。
       \item Rot6d\cite {rot6d}：将3×3旋转矩阵的前两列展开为六维向量，
       通过 Gram-Schmidt 正交化过程自动保持列向量的正交性与单位长度，无需额外约束。
       该表示既继承了旋转矩阵的数值稳定性，又解决了其参数冗余和正交性约束难题，同时具备连续性优势。
@@ -97,13 +97,12 @@ McNeill\cite{mcneill_1992_hand}将随语手势进一步划分为四种基本类�
 
 在计算机图形与实时渲染中，通常采用四元数或旋转矩阵进行骨骼变换与插值，以保证数值稳定性和计算效率。
 然而，在深度学习任务中，这些表示方式的约束会对训练效率造成影响：
-旋转矩阵需满足元素的正交约束；四元数则存在单位长度约束。
+四元数需满足单位长度约束；旋转矩阵则需满足元素的正交约束。
 近年来的研究表明\cite {rot6d}，Rot6d既规避了上述两种表示的约束难题，又保持了姿态空间的连续性与物理合理性，
 在动作生成与姿态预测任务中展现出更优的可学习性。
-因此，本文在姿态生成模型中统一使用Rot6d表示每个关节的旋转状态，以确保训练阶段的平滑收敛与推理阶段的稳定性。
 
-手势生成方法对旋转参数的选取经历了一个演变过程。早期工作采用的方法各异（如欧拉角、轴角），多受限于特定框架或历史因素；
-而近期研究，出于对神经网络训练稳定性和姿态空间连续性的共同追求，已显著趋向于采用Rot6d等更优表示。
+手势生成方法对旋转参数的选取经历了一个演变过程。早期工作采用的方法各异（如欧拉角、Axis-Angle），多受限于特定框架或历史因素；
+而近期研究，出于对神经网络训练稳定性的追求，已显著趋向于采用Rot6d表示。
 这一趋势的实例对比见表~\ref{fig:rotation_comparison}。
 
 \begin{table}[htbp]
@@ -112,14 +111,16 @@ McNeill\cite{mcneill_1992_hand}将随语手势进一步划分为四种基本类�
 \label{fig:rotation_comparison}
 \begin{tabular}{@{}lcccc@{}}
 \toprule
-\textbf{表示方式} & \textbf{维度} & \textbf{连续性} & \textbf{典型应用场景} & \textbf{使用示例} \\ \midrule
-欧拉角 & 3 & 存在万向节锁 & 旋转姿态存储 & CaMN\cite{beatcamn} \\
+\textbf{表示方式} & \textbf{维度} & \textbf{连续性} & \textbf{典型应用场景} & \textbf{训练使用示例} \\ \midrule
+欧拉角 & 3 & 存在万向节锁 & 姿态存储 & CaMN\cite{beatcamn} \\
 四元数 & 4 & 连续，但存在单位长度约束 & 图形学 & — \\
-Axis-Angle & 4 & 角度部分不连续 & 神经网络 & DiffSHEG\cite{diffsheg} \\
-旋转矩阵 & 9 & 连续，但存在正交约束 & 图形学、机器人学 & — \\
-Rot6d & 6 & 连续 & 神经网络 & 近期多数\cite{emage, diffgesture, gestureDiffCLIP, talkshow} \\ \bottomrule
+Axis-Angle & 3 & 角度部分不连续 & 神经网络 & DiffSHEG\cite{diffsheg} \\
+旋转矩阵 & 9 & 连续，但存在正交约束 & 图形学、机器人学 & MambaGesture\cite{fu2024mambagesture} \\
+Rot6d & 6 & 连续 & 神经网络 & 近期多数\cite{emage, Ao2023GestureDiffuCLIP,AMUSE2024} \\ \bottomrule
 \end{tabular}
 \end{table}
+
+因此，本文在姿态生成模型中统一使用Rot6d表示每个关节的旋转状态，以确保训练阶段的平滑收敛与推理阶段的稳定性。
 
 \section{面部表情的定义与参数化表示}
 
@@ -269,7 +270,7 @@ FACS（Facial Action Coding System）\cite{EkmanFriesenFACS1978} 提出复杂表
 典型代表如 CaMN 模型 \cite{beatcamn}，其基于 BEAT 数据集 \cite{beatcamn} 训练级联网络，将 LSTM、全连接网络与 GAN 结构相结合，实现从语音到动作的端到端预测。
 
 然而，该类模型多使用欧拉角或离散旋转参数作为手势表示，生成结果容易出现抖动与不连续。
-后续工作引入更平滑的表示方式，如 Rot6d \cite{rot6d,emage,AMUSE2024} 或 Axis-Angle \cite{diffsheg}，显著提升了动作流畅性。
+后续工作引入更平滑的表示方式，如 Rot6d \cite{rot6d,emage,Ao2023GestureDiffuCLIP, AMUSE2024} 或 Axis-Angle \cite{diffsheg}，显著提升了动作流畅性。
 与此同时，为解决语音与手势间的多对多映射问题，研究者引入了 VQ-VAE \cite{emage,zhang2024SemanticGesticulator} 与扩散模型 \cite{tamingDiffgesture,diffsheg,diffstylegesture,DiffTED2024,diffusion-self-supervised2023}，
 在保持自然性的同时提升了生成多样性与表现力。
 
