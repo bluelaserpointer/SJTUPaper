@@ -129,40 +129,40 @@ Rot6d & 6 & 连续 & 神经网络 & 近期多数\cite{emage, Ao2023GestureDiffuC
 目前常见的面部状态描述方法主要有两类：
 
 \paragraph{BlendShape 权重模型}
-FACS（Facial Action Coding System）\cite{EkmanFriesenFACS1978} 提出复杂表情可分解为若干可组合的基本动作单元（Action Units, AU），为表情的参数化表示提供了理论基础。
-受此启发，BlendShape 模型将面部表情表示为一组可线性叠加的形变基（morph targets），每个基形对应一个权重控制的局部表情变化。复杂表情由多个基形的组合生成，其思想与 FACS 的动作单元体系相呼应。
+FACS（Facial Action Coding System）\cite{EkmanFriesenFACS1978}提出复杂表情可分解为若干可组合的基本动作单元（Action Units, AU），为表情的参数化表示提供了理论基础。
+受此启发，BlendShape 模型将面部表情表示为一组可线性叠加的形变基，每个基形对应一个权重控制的局部表情变化。复杂表情由多个基形的组合生成，其思想与FACS的动作单元体系相呼应。
 
-与基于骨骼的形变不同，BlendShape 直接在顶点层面定义几何偏移量，因此对网格拓扑结构高度依赖：每个基形的顶点偏移需与基础网格逐点对应。在具有相同网格结构的角色模型之间，BlendShape 集合可以直接复用；但若拓扑（如顶点数量、索引或连线关系）发生变化，偏移数据将无法一一对应，从而难以在不同模型间映射或重定向。这种拓扑依赖性限制了其跨模型的通用性。
+与基于骨骼的形变不同，BlendShape 直接在顶点层面定义几何偏移量，因此对网格拓扑结构高度依赖：每个基形的顶点偏移需与基础网格逐点对应。在具有相同网格结构的角色模型之间，BlendShape 集合可以直接复用；但若拓扑发生变化，偏移数据将无法一一对应，从而难以在不同模型间映射或重定向。这种拓扑依赖性限制了其跨模型的通用性。
 
-尽管如此，BlendShape 在表现精细面部表情和软组织形变方面具有显著优势。其标准化权重接口、实时可驱动性与渲染兼容性，使其成为虚拟人和表情捕捉系统的主流表示形式，并被广泛应用于如 ARKit \cite{ARKitDocumentation} 等实时动画框架，以及主流渲染引擎中。
+尽管如此，BlendShape 在表现精细面部表情和软组织形变方面具有显著优势。其标准化权重接口、实时可驱动性与渲染兼容性，使其成为虚拟人和表情捕捉系统的主流表示形式，并被广泛应用于如ARKit\cite{ARKitDocumentation} 等实时动画框架，以及主流渲染引擎中。
 
 \begin{figure}[h!t]
 \centering
 \includegraphics[width=0.95\linewidth]{figures/Fig_AUSample.png}
-\caption{示例图来自~\cite{ozel_arkit_facs_cheatsheet}，展示 FACS AU45（blink）对应的 ARKit 中的两种 BlendShape 基形：\texttt{eyeBlinkLeft}（闭左眼）与 \texttt{eyeBlinkRight}（闭右眼）。}
+\caption{示例图来自~\cite{ozel_arkit_facs_cheatsheet}，展示FACS AU45（blink）对应的ARKit中的两种BlendShape基形：\texttt{eyeBlinkLeft}（闭左眼）与\texttt{eyeBlinkRight}（闭右眼）。}
 \label{fig:au_sample}
 \end{figure}
 
-图~\ref{fig:bs_eyeblink} 展示了 \texttt{eyeBlinkLeft}、\texttt{eyeBlinkRight} 的ARKit BlendShape基形在权重 $w\!\in\![0,1]$ 下的线性插值效果（从张眼到闭眼）。
+图~\ref{fig:bs_eyeblink}展示了\texttt{eyeBlinkLeft}、\texttt{eyeBlinkRight}的ARKit BlendShape基形在权重$w\!\in\![0,1]$下的线性插值效果（从张眼到闭眼）。
 
 \begin{figure}[h!t]
 \centering
 \includegraphics[width=0.95\linewidth]{figures/Fig_blendshapeEyeBlink.png}
-\caption{BlendShape 线性插值效果示例：\texttt{eyeBlink} 从 $w{=}0$（左）到 $w{=}1$（右）的连续变化，中图为中间值。BS 权重可直接用于实时渲染驱动。}
+\caption{BlendShape线性插值效果示例：\texttt{eyeBlink} 从 $w{=}0$（左）到 $w{=}1$（右）的连续变化，中图为中间值。BS权重可直接用于实时渲染驱动。}
 \label{fig:bs_eyeblink}
 \end{figure}
 
 \paragraph{关键点坐标模型（Landmark-based Representation）}
-关键点模型通过检测面部若干语义特征点（2D 或 3D 坐标）来描述几何结构变化。典型实现包括 MediaPipe Face Mesh \cite{mediapipefacemesh} 与 OpenFace 系列。
+关键点模型通过检测面部若干语义特征点（2D 或 3D 坐标）来描述几何结构变化。典型实现包括MediaPipe Face Mesh\cite{mediapipefacemesh}与OpenFace\cite{amos2016openface}系列。
 
-与基于网格形变的 BlendShape 不同，关键点模型并不依附于任何具体网格拓扑，而是在几何空间中以语义一致的特征点集合形式定义面部结构。这种表示方式并不描述模型的形变，而是对“人脸几何”的抽象建模，因此常用于表情识别、头部姿态估计等分析任务，而较少用于驱动渲染。
+与基于网格形变的BlendShape不同，关键点模型并不依附于任何具体网格拓扑，而是在几何空间中以语义一致的特征点集合形式定义面部结构。这种表示方式并不描述模型的形变，而是对人脸几何的抽象建模，因此常用于表情识别、头部姿态估计等分析任务，而较少用于驱动渲染。
 
-在多模态学习与特征分析中，BlendShape 表示具有较高的统一性和可量化性，适合以固定维度向量作为模型输入，并易于应用于不同虚拟角色的动画驱动。因此，本文在系统设计中采用与 ARKit 兼容的 BlendShape 参数作为面部模态输入特征。
+在多模态学习与特征分析中，BlendShape表示具有较高的统一性和可量化性，适合以固定维度向量作为模型输入，并易于应用于不同虚拟角色的动画驱动。因此，本文在系统设计中采用与ARKit兼容的BlendShape参数作为面部模态输入特征。
 
 \begin{figure}[h!t]
 \centering
 \includegraphics[width=0.4\linewidth]{figures/Fig_MediaPipeLandmark.png}
-\caption{MediaPipe Face Mesh 关键点结构示意图，截取自 \cite{mediapipefacemesh}。}
+\caption{MediaPipe Face Mesh 关键点结构示意图，截取自\cite{mediapipefacemesh}。}
 \label{fig_mediapipe_landmark}
 \end{figure}
 
@@ -187,13 +187,12 @@ FACS（Facial Action Coding System）\cite{EkmanFriesenFACS1978} 提出复杂表
 这类方法适合AI驱动的系统或离线生成的应用场景，如合成视频。
 
 \paragraph{为用户的虚拟人生成实时手势}
+
 本文所聚焦的目标类型属于第二类。
 
 在用户实时说话的过程中，系统需根据当前语音流（以及可选的面部表情与头部姿态）即时生成同步手势。
 
 此任务具有严格的实时性约束与因果性限制：模型在每一时刻只能使用当前及过去的信息，而不能访问未来语音或文本内容。
-
-因此，常见的整句式规划或滑动预测方法不再适用。
 
 该任务更接近实时交互系统，而非内容生成系统。
 
@@ -236,10 +235,10 @@ FACS（Facial Action Coding System）\cite{EkmanFriesenFACS1978} 提出复杂表
     \item \textbf{自然性（Naturalness）} —— 衡量生成动作在运动平滑性、速度变化及能量分布上的合理性，常采用 FGD（Fréchet Gesture Distance）\cite{ginosar2019speech2gesture}、
           运动速度统计、或主观“自然度”评分等指标。
     \item \textbf{同步性（Synchronization）} —— 评估手势在时间上与语音重音或韵律事件的对齐程度，
-          常用 BA（Beat Alignment）\cite{kucherenko2021predictability}、DTW（Dynamic Time Warping）等方法，
+          常用BA（Beat Alignment）\cite{kucherenko2021predictability}等方法，
           以及基于重读检测的主观同步性评价。
     \item \textbf{多样性（Diversity）} —— 衡量模型在不同语音输入下生成的动作变化程度，
-          通常以轨迹分布的方差、速度曲线差异或 L1DIV 等指标度量，
+          通常以轨迹分布的方差、速度曲线差异或L1范数等指标度量，
           以防止模型陷入单一模式或过度平滑。
     \item \textbf{语义相关性（Semantic Relevance）} —— 反映生成动作与语义关键词或情绪类别的一致性，
           可通过 SRGR（Semantic Relevance to Gesture Ratio）\cite{beatcamn} 等指标或人工标注语义标签对齐评估。
@@ -279,41 +278,38 @@ FACS（Facial Action Coding System）\cite{EkmanFriesenFACS1978} 提出复杂表
 \subsubsection{多模态扩展阶段}
 
 为进一步提升动作表现力与语音理解能力，部分研究引入视觉模态或语言语义特征。
-例如，CaMN \cite{beatcamn} 在语音输入的基础上融合面部捕捉信息以增强表现；
-EMAGE \cite{emage} 与 DiffSHEG \cite{diffsheg} 同时生成手势与面部动作；
-DiffTED \cite{DiffTED2024} 实现了端到端的视频合成。
+例如，CaMN\cite{beatcamn}在语音输入的基础上融合面部捕捉信息以增强表现；
+EMAGE\cite{emage}与DiffSHEG\cite{diffsheg}同时生成手势与面部动作；
+DiffTED\cite{DiffTED2024}实现了端到端的视频合成。
 
-这些多模态生成方法在提升虚拟智能体的自然感与沉浸感方面表现优异，但其任务假设仍基于整句输入，因此主要用于AI 虚拟形象生成或离线内容创作场景，而非实时用户交互。
+这些多模态生成方法在提升虚拟智能体的自然感与沉浸感方面表现优异，但其任务假设仍基于整句输入，因此主要用于AI虚拟形象生成或离线内容创作场景，而非实时用户交互。
 
 \subsection{当代生成研究的策略趋势}
-近年来的研究主要呈现以下两类技术趋势：
+近年来的研究主要呈现以下两类技术趋势。
 
 \begin{enumerate}
-  \item \textbf{扩散模型与高保真生成（Diffusion-based generation）}：
+  \item \textbf{扩散模型（Diffusion-based generation）}：
   近年来扩散模型在手势生成任务中表现出卓越的动作自然度与多样性\cite{diffsheg,diffstylegesture,DiffTED2024,tamingDiffgesture,alexanderson2023diffgesture}。
   这类模型通常以完整语音或文本片段为条件，%
   在多阶段去噪过程中逐步生成高保真手势序列。
-  然而，其生成过程依赖未来信息与整句上下文，
-  因此主要用于离线生成或虚拟形象合成。
-  本文的研究目标与之互补，%
-  聚焦于在实时约束下实现低延迟、因果一致的动作生成。%
+  然而，其迭代式采样与对全局上下文的依赖往往导致较高的算法性延迟，使其在线部署需要额外的加速与流式化设计。
 
-  \item \textbf{语义增强方向（Semantic-aware generation）}：部分研究尝试通过语义或文本特征扩展生成范围，以覆盖 \emph{iconic} 或 \emph{metaphoric} 手势。
-  例如，Yoon 等（2020）\cite{yoon2020speechgesturebert} 将语音与文本嵌入结合，
-  Alexanderson 等（2023）\cite{alexanderson2023diffgesture} 引入上下文风格控制，实现了语义相关的动作变化。
-  这一方向旨在增强生成结果的语义一致性与表现力，%
-  与本文关注的实时性问题互为补充：%
-  前者通过丰富输入语义扩展表达范围，%
-  而本文则探索在严格因果条件下通过多模态信号增强空间与时间表达。
+  \item \textbf{语义增强方向（Semantic-aware generation）}：
+  部分研究尝试通过语义或文本特征扩展生成范围，以覆盖\emph{iconic}或\emph{metaphoric}手势。
+  例如，Yoon等（2020）的研究\cite{yoon2020speechgesturebert}将语音与文本嵌入结合，
+  DiffGesture\cite{alexanderson2023diffgesture}引入上下文风格控制，实现了语义相关的动作变化。
+  该方向旨在提升生成的语义一致性与表现力，但在在线场景下常需要处理文本增量到达与未来上下文依赖所带来的缓冲延迟。
 \end{enumerate}
 
+这些方法多数在离线设定下取得最佳效果；在严格低延迟的在线实时场景中，通常还需引入流式条件建模、有限前瞻等机制，因此更适合作为后续工作的参考方向。
+
 \section{实时生成的理论基础与可行性分析}
-从生成可行性的角度，现有研究普遍认为 \emph{beat} 手势可在无语义理解的条件下由语音韵律直接驱动生成。
+从生成可行性的角度，现有研究普遍认为节奏型手势可在无语义理解的条件下由语音韵律直接驱动生成。
 大量语音驱动手势研究证实，仅凭语音的能量、时长与音高变化即可合成自然的节奏性上肢动作\cite{ginosar2019speech2gesture,alexanderson2020stylegestures,kucherenko2021movingfastslow}。
 这些研究所生成的动作在时间结构上与语音重音同步，体现了语音与手势共享的时间规划机制。
 
-相比之下，\emph{iconic}（形象性）、\emph{metaphoric}（隐喻性）与 \emph{deictic}（指向性）手势均依赖语义或指向关系，需要从上下文分析语义与语境，
-难以在严格实时的因果条件下生成。Kucherenko 等\cite{kucherenko2021predictability} 的可预测性分析进一步验证了这一点：
+相比之下，\emph{iconic}（形象性）、\emph{metaphoric}（隐喻性）与\emph{deictic}（指向性）手势均依赖语义或指向关系，需要从上下文分析语义与语境，
+难以在严格实时的因果条件下生成。Kucherenko等\cite{kucherenko2021predictability}的可预测性分析进一步验证了这一点：
 他们发现手势的语义类别和空间指向性在语音特征中几乎不可预测，即便结合文本特征，预测性能也相当有限，
 而节奏阶段（phase）相关特征在音频中则具有显著更高的可预测性。
 这表明，在缺乏未来语义与全局上下文的实时场景中，仅凭语音模态，模型只能稳定生成节奏层面的动作。
@@ -337,31 +333,31 @@ DiffTED \cite{DiffTED2024} 实现了端到端的视频合成。
 这一机制使系统能够在时间与空间两个维度上同步对齐语音与动作，%
 让生成的手势在视觉上更具互动感与表达意图。
 
-在 McNeill 的四类手势体系中，头部姿态的引入主要强化了两类动作的生成：  
-(1) 对 beat 手势而言，它为语音重读和节奏段落提供显式的时间协同信号，使手部与头部动作在韵律层面更加一致；  
-(2) 对 iconic 手势而言，它在具有路径与方向特征的动作中提供空间参考，使模型能够在叙事空间中更稳定地确定动作的方位与轨迹方向。  
+在McNeill的四类手势体系中，头部姿态的引入主要强化了两类动作的生成：  
+(1) 对beat手势而言，它为语音重读和节奏段落提供显式的时间协同信号，使手部与头部动作在韵律层面更加一致；  
+(2) 对iconic手势而言，它在具有路径与方向特征的动作中提供空间参考，使模型能够在叙事空间中更稳定地确定动作的方位与轨迹方向。  
 通过这两方面的强化，系统在保持实时性的同时获得了更自然的节奏衔接与空间表达。
 
-与此同时，本文亦明确头部姿态模态的作用边界：其核心优势在于捕捉方向、焦点与时序节奏，而非手型语义或复杂形态描摹等细粒度语义特征。换言之，它主要改善手势的位置、方向与视角依附，而非手势的形状描绘或语义内容。对于依赖抽象语义或外指参照的\emph{metaphoric} 与 \emph{deictic} 手势，仍需语言或上下文模态的补充。
+与此同时，本文明确头部姿态模态的作用边界：其核心优势在于捕捉方向、焦点与时序节奏，而非手型语义或复杂形态描摹等细粒度语义特征。换言之，它主要改善手势的位置、方向与视角依附，而非手势的形状描绘或语义内容。对于依赖抽象语义或外指参照的\emph{metaphoric}与\emph{deictic}手势，仍需语言或上下文模态的补充。
 
 总体而言，头部姿态为实时生成提供了介于韵律与语义之间的关键中层约束。%
 其时间上的前瞻性与空间上的指向性共同帮助模型在低延迟条件下保持自然、连贯且空间协调的动作表现，%
-从而在因果生成框架内有效拓展了语音驱动手势的可表达范围，并为节奏主导型（beat-like）动作的实时生成提供了结构的支持。
+从而在因果生成框架内有效拓展了语音驱动手势的可表达范围，并为节奏主导型动作的实时生成提供了结构的支持。
 
 \section{本文的工作与创新点}
 
-本文研究的目标是设计一种能够在实时条件下运行的语音驱动手势生成模型，使用户无需动作捕捉设备或特定硬件，仅通过语音输入即可驱动虚拟人的上肢与头部动作。与以往主要面向离线生成或 AI 虚拟形象生成的研究不同，本文关注的任务场景是“用户实时交互”，因此系统必须在严格因果的条件下运行，即只能利用当前与过去的输入帧信息，无法依赖未来语音或文本内容进行整体规划。
+本文研究的目标是设计一种能够在实时条件下运行的语音驱动手势生成模型，使用户无需动作捕捉设备或特定硬件，仅通过语音输入即可驱动虚拟人的上肢与头部动作。与以往主要面向离线生成或AI虚拟形象生成的研究不同，本文关注的任务场景是“用户实时交互”，因此系统必须在严格因果的条件下运行，即只能利用当前与过去的输入帧信息，无法依赖未来语音或文本内容进行整体规划。
 
-现有的高精度手势生成模型在离线场景中表现优异，特别是基于扩散模型或 VQ-VAE 的方法 \cite{tamingDiffgesture, diffsheg, emage, DiffTED2024}， 能够生成自然、连贯且语义相关的手势序列。然而，这些模型通常需要整句语音或文本作为输入，推理过程依赖未来信息以分析语义结构与节奏特征，  
+现有的高精度手势生成模型在离线场景中表现优异，特别是基于扩散模型或VQ-VAE的方法\cite{tamingDiffgesture, diffsheg, emage, DiffTED2024}， 能够生成自然、连贯且语义相关的手势序列。然而，这些模型通常需要整句语音或文本作为输入，推理过程依赖未来信息以分析语义结构与节奏特征，  
 因此难以直接应用于实时交互系统。在无未来信息约束下，模型必须在信息不完整的情况下进行预测，这会显著影响动作生成的自然性与语义一致性。
 
 为缓解上述问题，本文提出利用用户的面部表情与头部姿态作为辅助输入模态，为手势生成过程提供额外的非语言信号。面部表情能反映说话者的情绪与语气变化，在语义模糊的情况下有助于生成更具情感表达的动作；头部姿态则能反映注意方向与交互焦点，在语音节奏变化时为手势生成提供时序上的参考。  
 通过将这两种模态与语音信号联合输入模型，系统能够在实时条件下获得更多上下文线索，从而在保持低延迟的同时提升手势生成的自然度与一致性。
 
-本文以 CaMN 模型 \cite{beatcamn} 为基础进行扩展。CaMN 原为离线级联结构，输入包括语音与面部捕捉特征，输出包含手部与头部姿态。本文首先将其输入机制改写为逐帧输入流形式，并引入新的头部特征分析模块，将头部姿态信号作为独立通道输入至级联网络的末端层，以强化模型的时序响应能力。  
+本文以CaMN模型\cite{beatcamn}为基础进行扩展。CaMN原为离线级联结构，输入包括语音与面部捕捉特征，输出包含手部与头部姿态。本文首先将其输入机制改写为逐帧输入流形式，并引入新的头部特征分析模块，将头部姿态信号作为独立通道输入至级联网络的末端层，以强化模型的时序响应能力。  
 在这一结构下，系统可在实时语音流输入条件下逐帧生成动作输出，实现语音、面部与头部信号的联合驱动。
 
-实验结果表明，本文提出的模型在实时性与动作自然性之间取得良好平衡。在典型的桌面端环境下，单帧推理时间约为1毫秒之内，能够满足实时交互需求；同时在 FGD、BA 与主观评测中表现出与离线模型相近的手势自然度与同步性。由此，本文的方法证明了在严格因果条件下，通过多模态输入融合可以有效提升实时手势生成的表现力与稳定性。
+实验结果表明，本文提出的模型在实时性与动作自然性之间取得良好平衡。在典型的桌面端环境下，单帧推理时间约为1毫秒之内，能够满足实时交互需求；同时在FGD、BA与主观评测中表现出与离线模型相近的手势自然度与同步性。由此，本文的方法证明了在严格因果条件下，通过多模态输入融合可以有效提升实时手势生成的表现力与稳定性。
 
 \section{本章小结}
 本章综述了语音驱动手势生成领域的相关研究现状与发展脉络。  

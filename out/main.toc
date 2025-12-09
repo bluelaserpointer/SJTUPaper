@@ -69,34 +69,34 @@
 \contentsline {chapter}{\numberline {第 4 章}评估}{31}{chapter.4}%
 \contentsline {section}{\numberline {4.1}评估设置}{31}{section.4.1}%
 \contentsline {section}{\numberline {4.2}客观评估指标与实现细节}{31}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Fréchet Gesture Distance (FGD)}{31}{subsection.4.2.1}%
-\contentsline {paragraph}{评估模型结构与训练配置.}{32}{paragraph*.50}%
-\contentsline {paragraph}{骨架拓扑敏感的自编码器.}{32}{paragraph*.51}%
-\contentsline {paragraph}{指标计算流程.}{32}{paragraph*.52}%
+\contentsline {subsection}{\numberline {4.2.1}Fréchet Gesture Distance(FGD)}{31}{subsection.4.2.1}%
+\contentsline {paragraph}{评估模型结构与训练配置}{32}{paragraph*.50}%
+\contentsline {paragraph}{骨架拓扑敏感的自编码器}{32}{paragraph*.51}%
+\contentsline {paragraph}{指标计算流程}{32}{paragraph*.52}%
 \contentsline {subsection}{\numberline {4.2.2}Speech–Gesture Rhythm Correlation (SRGR)}{33}{subsection.4.2.2}%
-\contentsline {paragraph}{定义与原理.}{33}{paragraph*.53}%
-\contentsline {paragraph}{计算流程.}{33}{paragraph*.54}%
+\contentsline {paragraph}{定义与原理}{33}{paragraph*.53}%
+\contentsline {paragraph}{计算流程}{33}{paragraph*.54}%
 \contentsline {subsection}{\numberline {4.2.3}Beat Alignment (BA)}{33}{subsection.4.2.3}%
-\contentsline {paragraph}{定义与原理.}{33}{paragraph*.55}%
-\contentsline {paragraph}{计算流程.}{34}{paragraph*.56}%
-\contentsline {subsection}{\numberline {4.2.4}L1-based Diversity (L1DIV)}{34}{subsection.4.2.4}%
-\contentsline {paragraph}{定义与原理.}{34}{paragraph*.57}%
-\contentsline {paragraph}{计算流程.}{34}{paragraph*.58}%
+\contentsline {paragraph}{定义与原理}{33}{paragraph*.55}%
+\contentsline {paragraph}{计算流程}{34}{paragraph*.56}%
+\contentsline {subsection}{\numberline {4.2.4}L1范数}{34}{subsection.4.2.4}%
+\contentsline {paragraph}{定义与原理}{34}{paragraph*.57}%
+\contentsline {paragraph}{计算流程}{34}{paragraph*.58}%
 \contentsline {section}{\numberline {4.3}模型对比概览}{35}{section.4.3}%
 \contentsline {section}{\numberline {4.4}用户调研}{35}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}评估系统与实验配置}{35}{subsection.4.4.1}%
-\contentsline {paragraph}{实验材料与呈现方式.}{35}{paragraph*.60}%
-\contentsline {paragraph}{播放系统实现.}{36}{paragraph*.61}%
-\contentsline {paragraph}{实验界面与设备.}{36}{paragraph*.62}%
-\contentsline {paragraph}{实验流程与指导.}{36}{paragraph*.63}%
-\contentsline {paragraph}{实验材料与任务设计.}{37}{paragraph*.64}%
-\contentsline {paragraph}{实验参与者.}{37}{paragraph*.66}%
+\contentsline {paragraph}{实验材料与呈现方式}{35}{paragraph*.60}%
+\contentsline {paragraph}{播放系统实现}{36}{paragraph*.61}%
+\contentsline {paragraph}{实验界面与设备}{36}{paragraph*.62}%
+\contentsline {paragraph}{实验流程与指导}{36}{paragraph*.63}%
+\contentsline {paragraph}{实验材料与任务设计}{37}{paragraph*.64}%
+\contentsline {paragraph}{实验参与者}{37}{paragraph*.66}%
 \contentsline {subsection}{\numberline {4.4.2}平衡拉丁方排序设计}{38}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}结果与分析}{38}{subsection.4.4.3}%
-\contentsline {paragraph}{电脑用户测评结果.}{38}{paragraph*.67}%
-\contentsline {paragraph}{平衡拉丁方实验结果.}{38}{paragraph*.69}%
-\contentsline {paragraph}{用户反馈分析.}{39}{paragraph*.71}%
-\contentsline {paragraph}{结果讨论.}{39}{paragraph*.72}%
+\contentsline {paragraph}{电脑用户测评结果}{38}{paragraph*.67}%
+\contentsline {paragraph}{平衡拉丁方实验结果}{38}{paragraph*.69}%
+\contentsline {paragraph}{用户反馈分析}{39}{paragraph*.71}%
+\contentsline {paragraph}{结果讨论}{39}{paragraph*.72}%
 \contentsline {section}{\numberline {4.5}定性分析}{40}{section.4.5}%
 \contentsline {section}{\numberline {4.6}定量分析}{40}{section.4.6}%
 \contentsline {section}{\numberline {4.7}消融实验分析}{41}{section.4.7}%

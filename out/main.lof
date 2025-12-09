@@ -1,6 +1,6 @@
-\contentsline {figure}{\numberline {2.1}{\ignorespaces 示例图来自~\blx@tocontentsinit {0}\cite {ozel_arkit_facs_cheatsheet}，展示 FACS AU45（blink）对应的 ARKit 中的两种 BlendShape 基形：\texttt {eyeBlinkLeft}（闭左眼）与 \texttt {eyeBlinkRight}（闭右眼）。}}{9}{figure.caption.22}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces BlendShape 线性插值效果示例：\texttt {eyeBlink} 从 $w{=}0$（左）到 $w{=}1$（右）的连续变化，中图为中间值。BS 权重可直接用于实时渲染驱动。}}{9}{figure.caption.23}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces MediaPipe Face Mesh 关键点结构示意图，截取自 \blx@tocontentsinit {0}\cite {mediapipefacemesh}。}}{10}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 示例图来自~\blx@tocontentsinit {0}\cite {ozel_arkit_facs_cheatsheet}，展示FACS AU45（blink）对应的ARKit中的两种BlendShape基形：\texttt {eyeBlinkLeft}（闭左眼）与\texttt {eyeBlinkRight}（闭右眼）。}}{9}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces BlendShape线性插值效果示例：\texttt {eyeBlink} 从 $w{=}0$（左）到 $w{=}1$（右）的连续变化，中图为中间值。BS权重可直接用于实时渲染驱动。}}{9}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces MediaPipe Face Mesh 关键点结构示意图，截取自\blx@tocontentsinit {0}\cite {mediapipefacemesh}。}}{10}{figure.caption.25}%
 \contentsline {figure}{\numberline {3.1}{\ignorespaces 系统整体架构与数据流示意图}}{18}{figure.caption.31}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces 双向与单向 LSTM 对比示意图。 双向结构（上）在每个时间步同时利用历史与未来帧特征进行建模； 单向结构（下）仅基于历史帧进行递推，以保持因果性并支持流式推理。}}{24}{figure.caption.36}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces 滑动窗口训练机制：模型通过自回归循环预测 $M$ 帧，每步使用 $N$ 帧上下文并预测第 $N+1$ 帧。损失函数累计所有预测帧的误差，保证因果性与时间平滑性。}}{26}{figure.caption.37}%
