@@ -258,25 +258,23 @@ FACS（Facial Action Coding System）\cite{EkmanFriesenFACS1978} 提出复杂表
 
 \subsubsection{规则驱动阶段}
 
-早期的手势生成系统主要依赖语言学规则与专家知识构建 \cite{behavior_expression_animation_toolkit,robot_behavior_toolkit,gesture_generation_by_imitation,gesture_and_speech_in_interaction}。
+早期的手势生成系统主要依赖语言学规则与专家知识构建\cite{behavior_expression_animation_toolkit,robot_behavior_toolkit,gesture_generation_by_imitation,gesture_and_speech_in_interaction}。
 这类方法通过语义分类或韵律规则将语音片段映射为预定义的手势模板（如指示、肯定、节奏性动作），并以有限的动作库组合出手势序列。
-典型代表如 BEAT toolkit 与 Robot Behavior Toolkit，它们可在虚拟代理或机器人中实现基于语音的同步动作。
+它们可在虚拟代理或机器人中实现基于语音的同步动作。
 然而，手势词典与语法规则的人工设计成本较高，难以覆盖自然语音中的多样变化，导致生成结果缺乏自然性与个体差异。
 
 \subsubsection{数据驱动阶段}
 
 随着大规模语音与动作配对数据的出现，研究者开始采用统计学习和深度神经网络模型学习语音—手势映射关系。
-在此阶段，语音通常作为唯一输入模态，模型通过 LSTM、GRU 或 MLP 等结构预测连续手势序列。
-典型代表如 CaMN 模型 \cite{beatcamn}，其基于 BEAT 数据集 \cite{beatcamn} 训练级联网络，将 LSTM、全连接网络与 GAN 结构相结合，实现从语音到动作的端到端预测。
+在此阶段，语音通常作为唯一输入模态，模型通过LSTM、MLP等结构预测连续手势序列。
+典型代表如CaMN模型\cite{beatcamn}，其基于BEAT数据集\cite{beatcamn}训练级联网络，将LSTM、全连接网络与GAN结构相结合，实现从语音到动作的端到端预测。
 
 然而，该类模型多使用欧拉角或离散旋转参数作为手势表示，生成结果容易出现抖动与不连续。
-后续工作引入更平滑的表示方式，如 Rot6d \cite{rot6d,emage,Ao2023GestureDiffuCLIP, AMUSE2024} 或 Axis-Angle \cite{diffsheg}，显著提升了动作流畅性。
-与此同时，为解决语音与手势间的多对多映射问题，研究者引入了 VQ-VAE \cite{emage,zhang2024SemanticGesticulator} 与扩散模型 \cite{tamingDiffgesture,diffsheg,diffstylegesture,DiffTED2024,diffusion-self-supervised2023}，
+后续工作引入更平滑的表示方式，如Rot6d\cite{rot6d,emage,Ao2023GestureDiffuCLIP, AMUSE2024}或Axis-Angle\cite{diffsheg}，显著提升了动作流畅性。
+与此同时，为解决语音与手势间的多对多映射问题，研究者引入了VQ-VAE\cite{emage,zhang2024SemanticGesticulator}与扩散模型\cite{tamingDiffgesture,diffsheg,diffstylegesture,DiffTED2024,diffusion-self-supervised2023}，
 在保持自然性的同时提升了生成多样性与表现力。
 
-尽管这些方法在客观指标与视觉效果上均优于传统模型，但它们普遍假设可访问完整语音或文本上下文，
-属于“整句式（non-streaming）”生成，推理延迟较高，不适用于实时应用。
-即便是推理效率较高的模型（如 CaMN、DiffSHEG），也因上下文缓冲机制而引入明显延迟。
+尽管这些方法在客观指标与视觉效果上优于传统模型，但通常依赖完整语句级上下文。在用户语音下的流式逐字输入场景中，为获取未来上下文以进行语义判别与韵律对齐，需引入缓冲机制，因此即使推理较快的模型\cite{diffsheg}，整体延迟也因上下文缓冲造成端到端的显著延迟。
 
 \subsubsection{多模态扩展阶段}
 
