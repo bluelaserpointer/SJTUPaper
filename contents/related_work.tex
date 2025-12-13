@@ -150,7 +150,7 @@ Rot6d & 6 & 连续 & 神经网络 & 近期多数\cite{emage, Ao2023GestureDiffuC
 
 目前常见的面部状态描述方法主要有两类：
 
-\paragraph{BlendShape 权重模型}
+\paragraph{BlendShape权重模型}
 FACS（Facial Action Coding System）\cite{EkmanFriesenFACS1978}提出复杂表情可分解为若干可组合的基本动作单元（Action Units, AU），为表情的参数化表示提供了理论基础。
 受此启发，BlendShape 模型将面部表情表示为一组可线性叠加的形变基，每个基形对应一个权重控制的局部表情变化。复杂表情由多个基形的组合生成，其思想与FACS的动作单元体系相呼应。
 
@@ -161,20 +161,20 @@ FACS（Facial Action Coding System）\cite{EkmanFriesenFACS1978}提出复杂表�
 \begin{figure}[h!t]
 \centering
 \includegraphics[width=0.95\linewidth]{figures/Fig_AUSample.png}
-\caption{示例图来自~\cite{ozel_arkit_facs_cheatsheet}，展示FACS AU45（blink）对应的ARKit中的两种BlendShape基形：\texttt{eyeBlinkLeft}（闭左眼）与\texttt{eyeBlinkRight}（闭右眼）。}
+\caption{示例图来自~\cite{ozel_arkit_facs_cheatsheet}，展示FACS AU45（blink）对应的ARKit中的两种BlendShape基形：eyeBlinkLeft（闭左眼）与eyeBlinkRight（闭右眼）。}
 \label{fig:au_sample}
 \end{figure}
 
-图~\ref{fig:bs_eyeblink}展示了\texttt{eyeBlinkLeft}、\texttt{eyeBlinkRight}的ARKit BlendShape基形在权重$w\!\in\![0,1]$下的线性插值效果（从张眼到闭眼）。
+图~\ref{fig:bs_eyeblink}展示了eyeBlinkLeft、eyeBlinkRight的ARKit BlendShape基形在权重$w\!\in\![0,1]$下的线性插值效果（从张眼到闭眼）。
 
 \begin{figure}[h!t]
 \centering
 \includegraphics[width=0.95\linewidth]{figures/Fig_blendshapeEyeBlink.png}
-\caption{BlendShape线性插值效果示例：\texttt{eyeBlink} 从 $w{=}0$（左）到 $w{=}1$（右）的连续变化，中图为中间值。BS权重可直接用于实时渲染驱动。}
+\caption{BlendShape线性插值效果示例：eyeBlink从 $w{=}0$（左）到 $w{=}1$（右）的连续变化，中图为中间值。BS权重可直接用于实时渲染驱动。}
 \label{fig:bs_eyeblink}
 \end{figure}
 
-\paragraph{关键点坐标模型（Landmark-based Representation）}
+\paragraph{关键点坐标模型}
 关键点模型通过检测面部若干语义特征点（2D 或 3D 坐标）来描述几何结构变化。典型实现包括MediaPipe Face Mesh\cite{mediapipefacemesh}与OpenFace\cite{amos2016openface}系列。
 
 与基于网格形变的BlendShape不同，关键点模型并不依附于任何具体网格拓扑，而是在几何空间中以语义一致的特征点集合形式定义面部结构。这种表示方式并不描述模型的形变，而是对人脸几何的抽象建模，因此常用于表情识别、头部姿态估计等分析任务，而较少用于驱动渲染。

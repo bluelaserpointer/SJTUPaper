@@ -2,22 +2,16 @@
 
 \chapter{评估}
 
-\section{评估设置}
-
-我们使用四种广泛采用的指标对模型进行评估：Fréchet Gesture Distance（FGD）\cite{speech_gesture_generation}、L1范数（L1DIV）\cite{beatcamn}、节奏对齐度（Beat Alignment, BA）\cite{beatcamn}，以及语义相关动作召回率（SRGR）\cite{beatcamn}。所有评估均在BEAT数据集上进行，选用说话人编号为 2、4、6 和 8。生成的身体姿态与真实标签均采用相同骨架拓扑的BVH格式。FGD特征由EMAGE模型\cite{emage}提取，L1范数、BA和SRGR的实现使用BEAT官方提供的代码。所有指标在四位说话人上取平均，以减少个体差异带来的偏差。
+为评估生成手势的质量，我们将生成的手势动画与其它研究方法做对比，展开客观指标测量与主观评测。
+此外，我们还对本文模型的性能进行了分析。
 
 \section{客观评估指标与实现细节}
 \label{sec:objective_metrics}
 
 为全面评价模型在动作自然性、节奏同步性与多样性等方面的表现，
-本文在客观指标层面采用四项度量：Fréchet Gesture Distance(FGD)、Speech–Gesture Rhythm Correlation(SRGR)、Beat Alignment(BA)以及L1范数(L1DIV)。
+本文在客观指标层面采用四项度量：Fréchet Gesture Distance(FGD)、语义相关动作召回率(Speech–Gesture Rhythm Correlation, SRGR)、节奏对齐度(Beat Alignment, BA)以及L1范数(L1DIV)。
 这些指标分别对应生成动作在分布一致性、语音同步性与变化丰富性等不同维度，
 共同构成对模型质量的综合评估体系。
-
-其中，FGD作为生成分布的核心统计指标，需要训练额外的动作自编码器（AutoEncoder, AE）作为特征提取器；
-其余指标则直接基于生成序列与语音信号的时间对应关系进行计算。
-本节首先介绍 FGD 的计算原理与评估模型结构，
-随后依次阐述其它三项指标的定义与计算方法。
 
 \subsection{Fréchet Gesture Distance(FGD)}
 \label{subsec:fgd}
@@ -29,19 +23,19 @@ FGD\cite{speech_gesture_generation}用于衡量生成手势分布与真实手势
 该自编码器通过重构任务学习手势的潜在表示，使潜在空间具备对运动模式的压缩与区分能力。
 在该潜在空间中，假设真实分布与生成分布的高维嵌入向量分别为
 $\mathcal{N}(\bm{\mu}_r, \bm{\Sigma}_r)$ 与 $\mathcal{N}(\bm{\mu}_g, \bm{\Sigma}_g)$，
-则 FGD 定义为：
+则FGD定义为：
 \begin{equation}
 \mathrm{FGD} = 
 \|\bm{\mu}_r - \bm{\mu}_g\|_2^2 +
 \mathrm{Tr}(\bm{\Sigma}_r + \bm{\Sigma}_g - 2(\bm{\Sigma}_r \bm{\Sigma}_g)^{1/2}).
 \end{equation}
 
-较小的 FGD 值表示生成动作的统计分布更接近真实数据，
+较小的FGD值表示生成动作的统计分布更接近真实数据，
 可反映动作的整体自然度与风格一致性。
 
 \paragraph{评估模型结构与训练配置}
 本文在每位说话人的训练集上分别训练一组评估用自编码器，以避免跨说话人分布差异对指标的干扰。
-自编码器输入为以 Rot6d 表示的上半身骨架序列，
+自编码器输入为以Rot6d表示的上半身骨架序列，
 训练目标为最小化位置、速度与加速度的多尺度重构误差：
 \begin{equation}
 \mathcal{L}_{AE} = 
@@ -49,21 +43,21 @@ $\mathcal{N}(\bm{\mu}_r, \bm{\Sigma}_r)$ 与 $\mathcal{N}(\bm{\mu}_g, \bm{\Sigma
 \lambda_v \|\hat{\bm{g}}' - \bm{g}'\|_2^2 +
 \lambda_a \|\hat{\bm{g}}'' - \bm{g}''\|_2^2,
 \end{equation}
-其中 $\lambda_v = 0.1$, $\lambda_a = 0.1$，$\bm{g}'$、$\bm{g}''$分别为速度与加速度序列。
+其中$\lambda_v = 0.1$, $\lambda_a = 0.1$，$\bm{g}'$、$\bm{g}''$分别为速度与加速度序列。
 
 训练配置如下：
-输入片段长度为 32 帧，批大小 256，隐藏层维度 128，学习率 $1.2\times10^{-4}$，优化器为 Adam；
-共训练 400 轮。
-训练片段步长设为 10，以增加样本数量并保持时间连续性。
+输入片段长度为32帧，批大小256，隐藏层维度128，学习率$1.2\times10^{-4}$，优化器为Adam；
+共训练400轮。
+训练片段步长设为10，以增加样本数量并保持时间连续性。
 
 \paragraph{骨架拓扑敏感的自编码器}
-在基线模型 CaMN 的 FGD 评估中，使用了基于时间卷积的平铺向量编码器（Embedding-based AutoEncoder）。
+在基线模型CaMN的FGD评估中，使用了基于时间卷积的平铺向量编码器（Embedding-based AutoEncoder）。
 该结构将整帧姿态作为高维向量输入，对旋转参数的数值尺度高度敏感，
-当使用 Rot6d 表示时，各关节分量的方差差异会在潜在空间中被放大，
-导致潜在分布协方差矩阵奇异，从而引起 FGD 数值爆炸。
+当使用Rot6d表示时，各关节分量的方差差异会在潜在空间中被放大，
+导致潜在分布协方差矩阵奇异，从而引起FGD数值爆炸。
 
 为避免此问题，本文采用基于骨架拓扑卷积的自编码器（Skeleton-aware AutoEncoder）作为 FGD 特征提取器。
-该模型在编码层中引入骨架邻接矩阵 $A$，
+该模型在编码层中引入骨架邻接矩阵$A$，
 通过局部卷积核在相邻关节之间共享权重：
 \begin{equation}
 \mathbf{h}_i^{(l+1)} = 
@@ -73,53 +67,49 @@ $\mathcal{N}(\bm{\mu}_r, \bm{\Sigma}_r)$ 与 $\mathcal{N}(\bm{\mu}_g, \bm{\Sigma
 \end{equation}
 从而在空间上实现局部归一与结构平滑。
 这一设计使特征提取对旋转表示形式不敏感，
-可在欧拉角、Axis-Angle 与 Rot6d 等不同表示下保持稳定的潜在分布。
-在本文的实验中，该结构显著提高了 FGD 的鲁棒性，
-避免了 EmbeddingNet 评估器在 Rot6d 表示下协方差爆炸的现象。
+可在欧拉角、Axis-Angle与Rot6d等不同表示下保持稳定的潜在分布。
+在本文的实验中，该结构显著提高了FGD的鲁棒性，
+避免了评估器在Rot6d表示下发生协方差爆炸的现象。
 
 \paragraph{指标计算流程}
 在获得评估模型后，
 分别将生成序列与真实序列输入自编码器的编码器部分，
-提取潜在特征 $\bm{z}_g$ 与 $\bm{z}_r$，
+提取潜在特征$\bm{z}_g$与$\bm{z}_r$，
 再计算两者的均值与协方差以求得 FGD。
 评估时按说话人独立计算，再取平均值作为总体指标。
 
 \subsection{Speech–Gesture Rhythm Correlation (SRGR)}
 \label{subsec:srgr}
 
-SRGR 指标\cite{beatcamn}用于衡量生成手势与语音韵律在节奏层面的同步性，
+SRGR指标\cite{beatcamn}用于衡量生成手势与语音韵律在节奏层面的同步性，
 其核心思想是比较语音能量包络与手势运动速度包络的时间相关程度。
-与整句级语义匹配不同，SRGR 反映的是语音与手势在局部时间尺度上的节奏耦合强度。
+与整句级语义匹配不同，SRGR反映的是语音与手势在局部时间尺度上的节奏耦合强度。
 
 \paragraph{定义与原理}
-设语音能量序列为 $\bm{e} = \{ e_t \}$，
-通过对语音短时能量（Short-Time Energy, STE）进行平滑得到；
+设语音能量序列为$\bm{e} = \{ e_t \}$，
+通过对语音短时能量（Short-Time Energy）进行平滑得到；
 手势运动速度定义为各关节旋转向量的一阶差分模长的平均值：
 \begin{equation}
 v_t = \frac{1}{J}\sum_{j=1}^{J} \|\bm{r}_{t,j} - \bm{r}_{t-1,j}\|_2,
 \end{equation}
-其中 $J$ 为关节数量，$\bm{r}_{t,j}$ 为第 $j$ 个关节在帧 $t$ 的旋转向量。
+其中$J$为关节数量，$\bm{r}_{t,j}$为第$j$个关节在帧$t$的旋转向量。
 
-对两条时间序列 $\bm{e}$ 与 $\bm{v}$ 进行标准化后，
+对两条时间序列$\bm{e}$与$\bm{v}$进行标准化后，
 定义其皮尔逊相关系数（Pearson Correlation）为：
 \begin{equation}
 \mathrm{SRGR} = \frac{\mathrm{Cov}(\bm{e}, \bm{v})}{\sigma_{\bm{e}}\sigma_{\bm{v}}}.
 \end{equation}
-SRGR 值越高，表示手势运动节奏与语音节奏的同步程度越强，
-通常取值范围在 $[-1, 1]$。
-在实际实验中，为减少局部异常的影响，
-本文在 1.5 秒滑动窗口内计算局部相关系数并取平均作为最终结果。
+SRGR值越高，表示手势运动节奏与语音节奏的同步程度越强。
 
 \paragraph{计算流程}
-1. 对语音信号计算短时能量，采用窗口长度 50\,ms、步长 10\,ms；  
-2. 对生成与真实手势分别计算全身平均运动速度曲线；  
+1. 对语音信号计算短时能量；  
+2. 对生成与真实手势分别计算全身平均运动速度曲线；
 3. 将两条曲线统一至相同时间分辨率并进行归一化；  
-4. 滑动计算局部皮尔逊相关系数，最后取平均值作为 SRGR。
+4. 滑动计算局部皮尔逊相关系数，最后取平均值作为SRGR。
 
-该指标能客观反映模型在语音驱动节奏一致性方面的表现，
-在主观实验中也与“同步性”评分显著相关。
+该指标能客观反映模型在语音驱动节奏一致性方面的表现。
 
-\subsection{Beat Alignment (BA)}
+\subsection{Beat Alignment(BA)}
 \label{subsec:ba}
 
 BA（Beat Alignment）指标\cite{beatcamn}用于衡量手势关键动作与语音重读节拍的时间对齐程度，
@@ -181,9 +171,14 @@ $\{\bm{g}^{(1)}, \bm{g}^{(2)}, \dots, \bm{g}^{(N)}\}$，
 FGD 反映真实度，L1范数反映丰富度，
 两者共同平衡模型在自然性—多样性维度上的表现。
 
+\subsection{客观评估设置}
+所有评估均在BEAT数据集上进行，选用说话人编号为 2、4、6 和 8。生成的身体姿态与真实标签均采用相同骨架拓扑的BVH格式。
+FGD特征由EMAGE模型\cite{emage}提取，L1范数、BA和SRGR的实现使用BEAT官方提供的代码。
+各指标结果在四位说话人上取平均，以减少个体差异带来的偏差。
+
 \section{模型对比概览}
 
-表~\ref{tab:modalitycomparison} 总结了各模型的输入输出模态特征。值得注意的是，我们的模型是唯一同时支持“头部姿态”输入且完全不依赖未来信息的方案。
+表~\ref{tab:modalitycomparison}总结了各模型的输入输出模态特征。值得注意的是，我们的模型是唯一同时支持“头部姿态”输入且完全不依赖未来信息的方案。
 
 \begin{table}[h]
 \centering
@@ -200,6 +195,8 @@ DiffSHEG   & $\checkmark$ & $\times$ & $\times$ & $\checkmark$ & $\times$ & $\ch
 \bottomrule
 \end{tabular}%
 }
+\caption{实验对比模型的输入输出模态对比}
+\label{tab:modalitycomparison}
 \end{table}
 
 \section{用户调研}
@@ -309,11 +306,11 @@ VR 版本于\textbf{线下环境}进行，
 可认为该差异对结果的总体影响有限。
 
 \paragraph{实验材料与任务设计}
-评估样本来自 BEAT 数据集中四位演讲者（ID 2、4、6、8），
-其中 2、4 为男性，6、8 为女性。
-每位演讲者各选取两段平均长度约 1 分钟的语音片段，
+评估样本来自 BEAT 数据集中四位演讲者（ID: 2、4、6、8），
+其中2、4为男性，6、8为女性。
+每位演讲者各选取两段平均长度约1分钟的语音片段，
 演讲话题互不重复，共组成 \textbf{8 段固定视频样本}。
-所有实验均使用相同的 8 段样本，
+所有实验均使用相同的8段样本，
 但其\textbf{呈现顺序在不同被试间经过随机化或平衡化处理}，
 以避免顺序效应（order effect）。
 每段视频均包含三种模型生成的动作版本（FaceCapGes、CaMN、DiffSHEG），
@@ -332,7 +329,7 @@ VR 版本于\textbf{线下环境}进行，
 \end{figure}
 
 \paragraph{实验参与者}
-共邀请 16 名参与者（12 名使用 VR 设备，4 名使用桌面端），
+共邀请16名参与者（12名使用VR设备，4名使用桌面端），
 涵盖不同性别与学术背景。
 所有参与者在实验前均接受了操作说明与校准，
 并在系统指导下完成评分练习。
@@ -343,8 +340,8 @@ VR 版本于\textbf{线下环境}进行，
 \subsection{平衡拉丁方排序设计}
 \label{subsec:latin_square}
 
-该版本实验共招募 8 位 VR 用户（4 男 4 女），
-排序顺序由 HCI 用户研究工具包 \cite{LatinSquareToolkit} 自动生成，
+该版本实验共招募8位VR用户（4男4女），
+排序顺序由HCI用户调研工具包\cite{LatinSquareToolkit}自动生成，
 确保模型与演讲者组合的呈现顺序在全体被试间均匀分布。
 所有条件保持一致，唯一变量为视频播放顺序。
 
@@ -352,16 +349,16 @@ VR 版本于\textbf{线下环境}进行，
 \label{subsec:user_study_result}
 
 本节综合分析两轮用户评估的统计结果与参与者反馈。
-所有结果均基于相同的 8 段测试样本，
+所有结果均基于相同的8段测试样本，
 其中模型位置与播放顺序在不同被试间随机化或经平衡拉丁方控制，
 以保证主观评价的公正性。
 
 \paragraph{电脑用户测评结果}
-如图~\ref{fig:userstudy} 所示，
-在 16 名参与者的总体评价中，
-FaceCapGes 在三个维度（真实感、同步性、多样性）上均优于基线模型 CaMN，
-并在“真实感”方面与离线扩散模型 DiffSHEG 持平。
-这一结果表明，FaceCapGes 虽在严格的实时因果约束下运行，
+如图~\ref{fig:userstudy}所示，
+在16名参与者的总体评价中，
+FaceCapGes在三个维度（真实感、同步性、多样性）上均优于基线模型CaMN，
+并在“真实感”方面与离线扩散模型DiffSHEG持平。
+这一结果表明，FaceCapGes虽在严格的实时因果约束下运行，
 但仍能保持与非实时生成模型相近的动作自然度与流畅性。
 
 \begin{figure}[h!t]
@@ -372,46 +369,46 @@ FaceCapGes 在三个维度（真实感、同步性、多样性）上均优于基
 \end{figure}
 
 \paragraph{平衡拉丁方实验结果}
-图~\ref{fig:userstudy_latin_square} 展示了平衡拉丁方实验版本中 8 位 VR 用户的独立结果，
+图~\ref{fig:userstudy_latin_square} 展示了平衡拉丁方实验版本中8位 VR 用户的独立结果，
 该版本严格控制了模型与演讲者组合的呈现顺序。
 结果与总体趋势一致，
-FaceCapGes 在“同步性”与“真实感”上显著优于 CaMN，
-并在“多样性”指标上与 DiffSHEG 接近。
+FaceCapGes 在“同步性”与“真实感”上显著优于CaMN，
+并在“多样性”指标上与DiffSHEG接近。
 这表明实验结果在不同顺序条件下保持稳定，
 进一步验证了模型在多维度主观评价中的一致优势。
 
 \begin{figure}[h!t]
 \centering
 \includegraphics[width=\linewidth]{figures/UserStudy_LatinSquare.png}
-\caption{平衡拉丁方实验版本中 8 位 VR 用户的主观排名结果，
+\caption{平衡拉丁方实验版本中8位VR用户的主观排名结果，
 评价维度包括“真实感”、“同步性”和“多样性”。}
 \label{fig:userstudy_latin_square}
 \end{figure}
 
 \paragraph{用户反馈分析}
 根据实验后访谈与自由评论汇总，
-参与者普遍认为 FaceCapGes 的动作过渡自然、节奏感强，
+参与者普遍认为FaceCapGes的动作过渡自然、节奏感强，
 手势响应与语音重音、语调变化更加一致。
-部分 VR 用户指出，
+部分VR用户指出，
 在沉浸式视角下能够明显感受到手势的连贯性与时序协调，
-而 CaMN 在头部与上身动作衔接处偶有“僵硬”或“转向延迟”现象。
-约三分之一的参与者提到 DiffSHEG 的动作表现力最强，
+而CaMN在头部与上身动作衔接处偶有“僵硬”或“转向延迟”现象。
+约三分之一的参与者提到DiffSHEG的动作表现力最强，
 但在某些片段中出现手部摆动幅度过大或抖动的情况，
 导致同步性评分略低。
 
 桌面端用户普遍认为三种模型的差异在节奏与流畅性上最明显；
-VR 用户则更容易察觉动作的空间一致性与临场协调。
+VR用户则更容易察觉动作的空间一致性与临场协调。
 两组被试的整体排序趋势一致，
 说明模型差异具有跨设备一致性。
 
 \paragraph{结果讨论}
-CaMN 得分较低的主要原因在于其采用欧拉角表示，
+CaMN得分较低的主要原因在于其采用欧拉角表示，
 导致部分姿态序列在旋转空间中出现不连续，
 尤其在头部动作上易产生跳变；
-而 DiffSHEG 的高方差输出虽提升了动作多样性，
+而DiffSHEG的高方差输出虽提升了动作多样性，
 但表现出一定的突然颤抖，可能来源于Axis-Angle的不连续性。
 相比之下，
-FaceCapGes 的因果式时间建模和头部姿态融合策略
+FaceCapGes的因果式时间建模和头部姿态融合策略
 有效提升了局部动作的平滑性与节奏协调，
 使其在实时条件下同时兼顾自然度与稳定性。
 此外，
@@ -419,7 +416,7 @@ FaceCapGes 的因果式时间建模和头部姿态融合策略
 排除了顺序偏差对主观评价的显著影响。
 
 综上，
-用户研究表明 FaceCapGes 在实时生成条件下
+用户研究表明FaceCapGes在实时生成条件下
 仍能维持与离线模型相当的主观表现，
 在动作真实感、节奏同步性和长时间交互稳定性方面
 均显著优于传统因果结构基线，

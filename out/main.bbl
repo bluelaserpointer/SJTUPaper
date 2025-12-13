@@ -367,6 +367,80 @@
       \field{dateera}{ce}
       \keyw{mcneill_1992_hand}
     \endentry
+    \entry{FlapThoseHands}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=7dddd776ea12180212583ee37e074e4f}{%
+           family={Baars},
+           familyi={B\bibinitperiod},
+           given={Sjaak},
+           giveni={S\bibinitperiod}}}%
+        {{hash=996573030813cadc37490b1855800236}{%
+           family={Andeweg},
+           familyi={A\bibinitperiod},
+           given={Bas},
+           giveni={B\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=7dddd776ea12180212583ee37e074e4f}{%
+           family={Baars},
+           familyi={B\bibinitperiod},
+           given={Sjaak},
+           giveni={S\bibinitperiod}}}%
+        {{hash=996573030813cadc37490b1855800236}{%
+           family={Andeweg},
+           familyi={A\bibinitperiod},
+           given={Bas},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Amsterdam University Press}%
+      }
+      \strng{namehash}{da4ffe9ad93a79f62bd33e7eebd36060}
+      \strng{fullhash}{2bb8cf74a1192c13cb0ca0db9f7769d5}
+      \strng{fullhashraw}{2bb8cf74a1192c13cb0ca0db9f7769d5}
+      \strng{bibnamehash}{2bb8cf74a1192c13cb0ca0db9f7769d5}
+      \strng{authorbibnamehash}{2bb8cf74a1192c13cb0ca0db9f7769d5}
+      \strng{authornamehash}{da4ffe9ad93a79f62bd33e7eebd36060}
+      \strng{authorfullhash}{2bb8cf74a1192c13cb0ca0db9f7769d5}
+      \strng{authorfullhashraw}{2bb8cf74a1192c13cb0ca0db9f7769d5}
+      \strng{nameabibnamehash}{2bb8cf74a1192c13cb0ca0db9f7769d5}
+      \strng{nameanamehash}{da4ffe9ad93a79f62bd33e7eebd36060}
+      \strng{nameafullhash}{2bb8cf74a1192c13cb0ca0db9f7769d5}
+      \strng{nameafullhashraw}{2bb8cf74a1192c13cb0ca0db9f7769d5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2352-1236}
+      \field{journaltitle}{Tijdschrift voor Taalbeheersing}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{1}
+      \field{title}{‘Wapper wat meer met je handen’}
+      \field{type}{Journal Article}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{41}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{3\bibrangedash 17}
+      \range{pages}{15}
+      \verb{doi}
+      \verb https://doi.org/10.5117/TVT2019.1.001.BAAR
+      \endverb
+      \verb{urlraw}
+      \verb https://www.aup-online.com/content/journals/10.5117/TVT2019.1.001.BAAR
+      \endverb
+      \verb{url}
+      \verb https://www.aup-online.com/content/journals/10.5117/TVT2019.1.001.BAAR
+      \endverb
+      \keyw{FlapThoseHands}
+    \endentry
     \entry{gesture_and_speech_in_interaction}{article}{}{}
       \name{author}{3}{}{%
         {{hash=a573806d550c99bd165bf5a733b0194d}{%
@@ -2737,8 +2811,8 @@
       \strng{nameafullhash}{e16e786b3feb95c6552bfbc9ed1a22da}
       \strng{nameafullhashraw}{e16e786b3feb95c6552bfbc9ed1a22da}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 23rd ACM International Conference on Intelligent Virtual Agents (IVA 2023)}

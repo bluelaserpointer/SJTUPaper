@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  10 DEC 2025 08:19
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  13 DEC 2025 23:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2610,34 +2610,7 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 
  [6] [7] [8
 
-] (e:\SJTU\SJTUPaper\out\main.lof
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "FangSong/BI" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "FangSong/B" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "FangSong/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FangSong(0)' created for font 'FangSong'
-(fontspec)             with options [Script={CJK}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
-
-)
+] (e:\SJTU\SJTUPaper\out\main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
@@ -2719,76 +2692,105 @@ File: figures/Fig_blendshapeEyeBlink.png Graphic file (type bmp)
  [9]
 File: figures/Fig_MediaPipeLandmark.png Graphic file (type bmp)
 <figures/Fig_MediaPipeLandmark.png>
- [10] [11] [12] [13] [14] [15]) (contents/method.tex
-[16]
+ [10] [11] [12] [13] [14] [15] [16]) (contents/method.tex
+[17] [18
+
+]
 第 3 章
 File: figures/SystemArchitecture.png Graphic file (type bmp)
 <figures/SystemArchitecture.png>
-[17
-
-] [18] [19] [20] [21] [22] [23]
+[19] [20] [21] [22] [23] [24] [25]
 File: figures/Fig_lstmcompare.png Graphic file (type bmp)
 <figures/Fig_lstmcompare.png>
- [24]
+ [26]
 File: figures/Fig2.png Graphic file (type bmp)
 <figures/Fig2.png>
- [25] [26]
+ [27] [28]
 File: figures/Fig_headencoder.png Graphic file (type bmp)
 <figures/Fig_headencoder.png>
 File: figures/Fig1.png Graphic file (type bmp)
 <figures/Fig1.png>
- [27] [28]
+ [29] [30]
 File: figures/Fig_BEATBones.png Graphic file (type bmp)
 <figures/Fig_BEATBones.png>
 
 
-LaTeX Warning: Reference `sec:loss' on page 29 undefined on input line 480.
+LaTeX Warning: Reference `sec:loss' on page 31 undefined on input line 480.
 
-[29]) (contents/evaluation.tex [30]
+[31]) (contents/evaluation.tex [32]
 第 4 章
+[33
 
-Overfull \hbox (2.31146pt too wide) in paragraph at lines 7--8
-[]\TU/SimSun(0)/m/n/12.045 我 们 使 用 四 种 广 泛 采 用 的 指 标 对 模 型 进 行 评 估：| \TU/TeXGyr
-eTermesX(0)/m/n/12.045 Fréchet Gesture Distance |\TU/SimSun(0)/m/n/12.045 （\TU/
-TeXGyreTermesX(0)/m/n/12.045 FGD\TU/SimSun(0)/m/n/12.045 ）|$[]$、|
- []
+] [34] [35]
 
-[31
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-] [32] [33]
-
-LaTeX Warning: Reference `tab:modalitycomparison' on page 34 undefined on input
- line 186.
-
-[34] [35] [36]
+[36] [37] [38]
 File: figures/UserStudyImage.png Graphic file (type bmp)
 <figures/UserStudyImage.png>
- [37]
+ [39]
 File: figures/UserStudy_All.png Graphic file (type bmp)
 <figures/UserStudy_All.png>
 File: figures/UserStudy_LatinSquare.png Graphic file (type bmp)
 <figures/UserStudy_LatinSquare.png>
- [38] [39]
+ [40]
 File: figures/GeneratedPoseOverview.png Graphic file (type bmp)
 <figures/GeneratedPoseOverview.png>
- [40] [41]) (contents/conclusions.tex [42]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[41]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[42]) (contents/conclusions.tex [43] [44
+
+]
 第 5 章
-) [43
+) [45] [46
 
-] [44
+] [47]
 
-] [45]
+Package fontspec Info: 
+(fontspec)             Could not resolve font "FangSong/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "FangSong/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "FangSong/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FangSong(0)' created for font 'FangSong'
+(fontspec)             with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
+
+
 
 Package biblatex Warning: No driver for 'webpage'.
 (biblatex)                Using fallback driver on input line 66.
 
-[46] [47]
+[48] [49]
 Underfull \hbox (badness 6625) in paragraph at lines 66--66
 \TU/TeXGyreTermesX(0)/m/n/12.045 Speech-Driven Gesture Synthesis Using Normalis
 ing Flows[]C/OL[]//Computer
  []
 
-(contents/app_balanced_latin_square_setup.tex [48]
+[50] (contents/app_balanced_latin_square_setup.tex [51] [52
+
+]
 附录 A
 File: figures/UserStudy_LatinSquare.png Graphic file (type bmp)
 <figures/UserStudy_LatinSquare.png>
@@ -2797,26 +2799,24 @@ File: figures/UserStudyImage.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [49
-
-] [50] (contents/acknowledgements.tex) (contents/achievements.tex [51
+) [53] [54] (contents/acknowledgements.tex) (contents/achievements.tex [55
 
 
 
 ]
-[52
+[56
 
-]) (contents/resume.tex [53
+]) (contents/resume.tex [57
 
-] [54
+] [58
 
 ]) (contents/digest.tex)
 \tf@thm=\write10
 \openout10 = `main.thm'.
 
- [55
+ [59
 
-] [56
+] [60
 
 ] [1
 
@@ -2835,18 +2835,18 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: FF235F980B7D8337DFFB73C8F383DCAA;9041.
+(rerunfilecheck)             Checksum: E390D73D05D50DC52AEF212F78D1DE04;9066.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52246 strings out of 402986
- 1117699 string characters out of 5453884
- 2058730 words of memory out of 5000000
- 80191 multiletter control sequences out of 15000+600000
- 706704 words of font info for 261 fonts, out of 8000000 for 9000
+ 52260 strings out of 402986
+ 1118549 string characters out of 5453884
+ 2059834 words of memory out of 5000000
+ 80206 multiletter control sequences out of 15000+600000
+ 706696 words of font info for 260 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 115i,16n,124p,1183b,7473s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,16n,124p,1183b,7475s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on e:\SJTU\SJTUPaper\out\main.pdf (78 pages).
+Output written on e:\SJTU\SJTUPaper\out\main.pdf (82 pages).
