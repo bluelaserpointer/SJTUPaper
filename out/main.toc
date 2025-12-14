@@ -35,25 +35,25 @@
 \contentsline {chapter}{\numberline {第 3 章}方法}{19}{chapter.3}%
 \contentsline {section}{\numberline {3.1}研究定位与总体设计思路}{19}{section.3.1}%
 \contentsline {section}{\numberline {3.2}系统整体框架与模块定位}{19}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}信号采集与系统配置层}{20}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.1}信号采集与系统配置层}{19}{subsection.3.2.1}%
 \contentsline {paragraph}{设备层}{20}{paragraph*.33}%
 \contentsline {paragraph}{中间件层}{20}{paragraph*.34}%
-\contentsline {paragraph}{用户配置层}{21}{paragraph*.35}%
+\contentsline {paragraph}{用户配置层}{20}{paragraph*.35}%
 \contentsline {subsection}{\numberline {3.2.2}手势生成模型层（FaceCapGes）}{21}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}渲染驱动层}{21}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}问题定义}{21}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}任务描述}{22}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}输入与输出模态}{22}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}学习目标与优化形式}{23}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.3}学习目标与优化形式}{22}{subsection.3.3.3}%
 \contentsline {section}{\numberline {3.4}级联架构与输入模态设计}{23}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}级联架构的原理与理论背景}{23}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}基线模态继承与实时适配}{24}{subsection.3.4.2}%
-\contentsline {subsubsection}{\numberline {3.4.2.1}说话人 ID 分支移除}{24}{subsubsection.3.4.2.1}%
+\contentsline {subsection}{\numberline {3.4.2}基线模态继承与实时适配}{23}{subsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}说话人ID分支移除}{24}{subsubsection.3.4.2.1}%
 \contentsline {subsubsection}{\numberline {3.4.2.2}输入模态继承}{24}{subsubsection.3.4.2.2}%
 \contentsline {subsubsection}{\numberline {3.4.2.3}输出模态继承（身体姿态解码）}{24}{subsubsection.3.4.2.3}%
 \contentsline {subsubsection}{\numberline {3.4.2.4}时间建模结构改动与因果性约束}{25}{subsubsection.3.4.2.4}%
 \contentsline {subsubsection}{\numberline {3.4.2.5}滑动窗口式自回归训练}{26}{subsubsection.3.4.2.5}%
-\contentsline {subsection}{\numberline {3.4.3}头部姿态模态的引入与结构位置}{28}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.3}头部姿态模态的引入与结构位置}{27}{subsection.3.4.3}%
 \contentsline {paragraph}{输入特征与表示}{28}{paragraph*.39}%
 \contentsline {paragraph}{编码器结构}{29}{paragraph*.40}%
 \contentsline {paragraph}{架构位置与实验依据}{29}{paragraph*.42}%
@@ -71,37 +71,37 @@
 \contentsline {section}{\numberline {4.1}客观评估指标与实现细节}{33}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Fréchet Gesture Distance(FGD)}{33}{subsection.4.1.1}%
 \contentsline {paragraph}{评估模型结构与训练配置}{33}{paragraph*.51}%
-\contentsline {paragraph}{骨架拓扑敏感的自编码器}{34}{paragraph*.52}%
-\contentsline {paragraph}{指标计算流程}{34}{paragraph*.53}%
-\contentsline {subsection}{\numberline {4.1.2}Speech–Gesture Rhythm Correlation (SRGR)}{34}{subsection.4.1.2}%
-\contentsline {paragraph}{定义与原理}{34}{paragraph*.54}%
+\contentsline {paragraph}{用于FGD评估的骨架感知自编码器}{34}{paragraph*.52}%
+\contentsline {paragraph}{指标计算流程}{35}{paragraph*.53}%
+\contentsline {subsection}{\numberline {4.1.2}Semantic-Relevant Gesture Recall (SRGR)}{35}{subsection.4.1.2}%
+\contentsline {paragraph}{定义与原理}{35}{paragraph*.54}%
 \contentsline {paragraph}{计算流程}{35}{paragraph*.55}%
-\contentsline {subsection}{\numberline {4.1.3}Beat Alignment(BA)}{35}{subsection.4.1.3}%
-\contentsline {paragraph}{定义与原理}{35}{paragraph*.56}%
-\contentsline {paragraph}{计算流程}{35}{paragraph*.57}%
+\contentsline {subsection}{\numberline {4.1.3}Beat Alignment(BA)}{36}{subsection.4.1.3}%
+\contentsline {paragraph}{定义与原理}{36}{paragraph*.56}%
+\contentsline {paragraph}{计算流程}{36}{paragraph*.57}%
 \contentsline {subsection}{\numberline {4.1.4}L1范数}{36}{subsection.4.1.4}%
 \contentsline {paragraph}{定义与原理}{36}{paragraph*.58}%
-\contentsline {paragraph}{计算流程}{36}{paragraph*.59}%
-\contentsline {subsection}{\numberline {4.1.5}客观评估设置}{36}{subsection.4.1.5}%
-\contentsline {section}{\numberline {4.2}模型对比概览}{36}{section.4.2}%
-\contentsline {section}{\numberline {4.3}用户调研}{36}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}评估系统与实验配置}{37}{subsection.4.3.1}%
-\contentsline {paragraph}{实验材料与呈现方式}{37}{paragraph*.61}%
-\contentsline {paragraph}{播放系统实现}{37}{paragraph*.62}%
+\contentsline {paragraph}{计算流程}{37}{paragraph*.59}%
+\contentsline {subsection}{\numberline {4.1.5}客观评估设置}{37}{subsection.4.1.5}%
+\contentsline {section}{\numberline {4.2}模型对比概览}{37}{section.4.2}%
+\contentsline {section}{\numberline {4.3}用户调研}{37}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}评估系统与实验配置}{38}{subsection.4.3.1}%
+\contentsline {paragraph}{实验材料与呈现方式}{38}{paragraph*.61}%
+\contentsline {paragraph}{播放系统实现}{38}{paragraph*.62}%
 \contentsline {paragraph}{实验界面与设备}{38}{paragraph*.63}%
-\contentsline {paragraph}{实验流程与指导}{38}{paragraph*.64}%
+\contentsline {paragraph}{实验流程与指导}{39}{paragraph*.64}%
 \contentsline {paragraph}{实验材料与任务设计}{39}{paragraph*.65}%
 \contentsline {paragraph}{实验参与者}{39}{paragraph*.67}%
-\contentsline {subsection}{\numberline {4.3.2}平衡拉丁方排序设计}{39}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.2}平衡拉丁方排序设计}{40}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}结果与分析}{40}{subsection.4.3.3}%
 \contentsline {paragraph}{电脑用户测评结果}{40}{paragraph*.68}%
-\contentsline {paragraph}{平衡拉丁方实验结果}{40}{paragraph*.70}%
+\contentsline {paragraph}{平衡拉丁方实验结果}{41}{paragraph*.70}%
 \contentsline {paragraph}{用户反馈分析}{41}{paragraph*.72}%
-\contentsline {paragraph}{结果讨论}{41}{paragraph*.73}%
-\contentsline {section}{\numberline {4.4}定性分析}{41}{section.4.4}%
-\contentsline {section}{\numberline {4.5}定量分析}{42}{section.4.5}%
-\contentsline {section}{\numberline {4.6}消融实验分析}{42}{section.4.6}%
-\contentsline {section}{\numberline {4.7}性能评估}{43}{section.4.7}%
+\contentsline {paragraph}{结果讨论}{42}{paragraph*.73}%
+\contentsline {section}{\numberline {4.4}定性分析}{42}{section.4.4}%
+\contentsline {section}{\numberline {4.5}定量分析}{43}{section.4.5}%
+\contentsline {section}{\numberline {4.6}消融实验分析}{43}{section.4.6}%
+\contentsline {section}{\numberline {4.7}性能评估}{44}{section.4.7}%
 \contentsline {chapter}{\numberline {第 5 章}结论}{45}{chapter.5}%
 \contentsline {chapter}{参考文献}{47}{chapter*.78}%
 \contentsline {chapter}{\numberline {附录 A}平衡拉丁方排序设计}{53}{appendix.A}%

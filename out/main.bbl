@@ -3287,6 +3287,87 @@
       \field{dateera}{ce}
       \keyw{speech_gesture_generation}
     \endentry
+    \entry{unity}{online}{}{}
+      \list{institution}{1}{%
+        {Unity Technologies}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {Unity Technologies}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Unity Editor [Computer Software]}
+      \field{usera}{A}
+      \field{userd}{english}
+      \verb{urlraw}
+      \verb https://unity.com/
+      \endverb
+      \verb{url}
+      \verb https://unity.com/
+      \endverb
+      \keyw{unity}
+    \endentry
+    \entry{unitymechanim}{online}{}{}
+      \list{institution}{1}{%
+        {Unity Technologies}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {Unity Technologies}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Mechanim Animation System [Computer Software Module]}
+      \field{usera}{A}
+      \field{userd}{english}
+      \verb{urlraw}
+      \verb https://docs.unity3d.com/Manual/AnimationOverview.html
+      \endverb
+      \verb{url}
+      \verb https://docs.unity3d.com/Manual/AnimationOverview.html
+      \endverb
+      \keyw{unitymechanim}
+    \endentry
+    \entry{pico4}{online}{}{}
+      \list{institution}{1}{%
+        {ByteDance Inc.}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {ByteDance Inc.}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{PICO 4 All-in-One VR Headset [Hardware Device]}
+      \field{usera}{A}
+      \field{userd}{english}
+      \verb{urlraw}
+      \verb https://www.pico-interactive.com/
+      \endverb
+      \verb{url}
+      \verb https://www.pico-interactive.com/
+      \endverb
+      \keyw{pico4}
+    \endentry
     \entry{LatinSquareToolkit}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{hash=db1bf88039523161a1dc67ca13d63e24}{%
