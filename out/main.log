@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  14 DEC 2025 22:21
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  14 DEC 2025 22:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2738,18 +2738,10 @@ File: figures/UserStudy_All.png Graphic file (type bmp)
 <figures/UserStudy_All.png>
 File: figures/UserStudy_LatinSquare.png Graphic file (type bmp)
 <figures/UserStudy_LatinSquare.png>
- [41]
+ [41] [42]
 File: figures/GeneratedPoseOverview.png Graphic file (type bmp)
 <figures/GeneratedPoseOverview.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[42]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[43]) (contents/conclusions.tex [44]
+ [43]) (contents/conclusions.tex [44]
 第 5 章
 ) [45
 

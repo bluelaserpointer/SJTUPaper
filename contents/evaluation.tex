@@ -156,7 +156,7 @@ SRGR通过对所有时间帧与关节进行统计，
 \subsection{Beat Alignment (BA)}
 \label{subsec:ba}
 
-BA（Beat Alignment）指标用于衡量语音节拍事件与手势关键动作事件在时间轴上的对齐程度，
+BA(Beat Alignment)指标用于衡量语音节拍事件与手势关键动作事件在时间轴上的对齐程度，
 反映模型在语音–手势时序同步性（temporal synchronization）方面的性能。
 本文采用 BEAT/CaMN 中使用的 BeatAlign 指标\cite{beatcamn}，其原始形式由 Li 等人提出于 AI Choreographer 工作中\cite{beatalign}，
 并可视为音频节拍与动作节拍集合之间的单向 Chamfer 相似度度量。
@@ -168,7 +168,14 @@ BA 关注的是离散事件层面的时间对齐关系，
 \paragraph{定义与原理}
 设语音节拍事件集合为
 $\mathcal{B}_s = \{ t^s_k \}$，
-通过对语音信号的能量包络与 RMS 特征进行 onset detection 得到；
+通过对语音信号的能量相关特征进行起始点检测（onset detection）得到。
+具体而言，首先基于谱能量变化计算 onset strength 曲线，
+并在该曲线上进行峰值检测以获得候选语音事件位置。
+随后，引入 Root Mean Square(RMS)特征作为短时能量幅度的描述，
+并在 RMS 曲线上对检测到的起始点进行 backtracking 校正，
+从而将语音节拍事件定位至能量实际开始上升的位置，
+以提高时间定位的稳定性与准确性。
+
 手势关键动作事件集合为
 $\mathcal{B}_g = \{ t^g_m \}$，
 定义为关节运动速度的局部极小值点，
@@ -277,7 +284,7 @@ DiffSHEG   & $\checkmark$ & $\times$ & $\times$ & $\checkmark$ & $\times$ & $\ch
 
 \paragraph{实验材料与呈现方式}
 用户评估所使用的手势动画均基于测试集语音片段生成，
-并以BVH（Biovision Hierarchy）文件形式保存。
+并以BVH(Biovision Hierarchy)文件形式保存。
 BVH是一种通用的动作捕捉数据格式，
 通过层级化定义骨骼结构与帧级旋转参数，
 可直接导入3D动画与虚拟人系统。
