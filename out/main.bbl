@@ -3287,6 +3287,85 @@
       \field{dateera}{ce}
       \keyw{speech_gesture_generation}
     \endentry
+    \entry{beatalign}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=b417efc17c6c4f027b621a1f48d8342e}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Ruilong},
+           giveni={R\bibinitperiod}}}%
+        {{hash=145f16fc6448a0544cbff9ecccf36caf}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Shan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=53f0107f9251cd11df52ce937822ea7c}{%
+           family={Ross},
+           familyi={R\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=6739ae1219e43710a65f37e9a5b5e902}{%
+           family={Kanazawa},
+           familyi={K\bibinitperiod},
+           given={Angjoo},
+           giveni={A\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=b417efc17c6c4f027b621a1f48d8342e}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Ruilong},
+           giveni={R\bibinitperiod}}}%
+        {{hash=145f16fc6448a0544cbff9ecccf36caf}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Shan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=53f0107f9251cd11df52ce937822ea7c}{%
+           family={Ross},
+           familyi={R\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=6739ae1219e43710a65f37e9a5b5e902}{%
+           family={Kanazawa},
+           familyi={K\bibinitperiod},
+           given={Angjoo},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{45256fbeebcc356ec0395a4edf96433c}
+      \strng{fullhash}{b01c9c177264d21076900d55324177e5}
+      \strng{fullhashraw}{b01c9c177264d21076900d55324177e5}
+      \strng{bibnamehash}{6a1ace9835791da51072fc0d435925a3}
+      \strng{authorbibnamehash}{6a1ace9835791da51072fc0d435925a3}
+      \strng{authornamehash}{45256fbeebcc356ec0395a4edf96433c}
+      \strng{authorfullhash}{b01c9c177264d21076900d55324177e5}
+      \strng{authorfullhashraw}{b01c9c177264d21076900d55324177e5}
+      \strng{nameabibnamehash}{6a1ace9835791da51072fc0d435925a3}
+      \strng{nameanamehash}{45256fbeebcc356ec0395a4edf96433c}
+      \strng{nameafullhash}{b01c9c177264d21076900d55324177e5}
+      \strng{nameafullhashraw}{b01c9c177264d21076900d55324177e5}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{month}{10}
+      \field{title}{AI Choreographer: Music Conditioned 3D Dance Generation With AIST++}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{13401\bibrangedash 13412}
+      \range{pages}{12}
+      \keyw{beatalign}
+    \endentry
     \entry{unity}{online}{}{}
       \list{institution}{1}{%
         {Unity Technologies}%
@@ -3351,8 +3430,8 @@
       \list{organization}{1}{%
         {ByteDance Inc.}%
       }
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labeltitlesource}{title}
       \field{langid}{english}
       \field{languageid}{english}
@@ -3421,8 +3500,8 @@
       \strng{nameanamehash}{c2b621d57ddde29f176fd27ecf39637d}
       \strng{nameafullhash}{1c27d7d6b7b0c48adafd77f3c7a90685}
       \strng{nameafullhashraw}{1c27d7d6b7b0c48adafd77f3c7a90685}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems (CHI EA '23)}

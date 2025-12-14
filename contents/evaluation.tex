@@ -9,7 +9,7 @@
 \label{sec:objective_metrics}
 
 为全面评价模型在动作自然性、节奏同步性与多样性等方面的表现，
-本文在客观指标层面采用四项度量：Fréchet Gesture Distance(FGD)、语义相关动作召回率(Semantic Relevance Gesture Recall, SRGR)、节奏对齐度(Beat Alignment, BA)以及L1范数(L1DIV)。
+本文在客观指标层面采用四项度量：Fréchet Gesture Distance(FGD)\cite{speech_gesture_generation}、语义相关动作召回率(Semantic Relevance Gesture Recall, SRGR)\cite{beatcamn}、节奏对齐度(Beat Alignment, BA)\cite{beatcamn, beatalign}以及L1范数(L1DIV)。
 这些指标分别对应生成动作在分布一致性、语音同步性与变化丰富性等不同维度，
 共同构成对模型质量的综合评估体系。
 
@@ -77,7 +77,7 @@ A_{ij} =
 \end{cases}
 \end{equation}
 此外，设$W^{(l)} \in \mathbb{R}^{d_{l+1}\times d_l}$与$b^{(l)} \in \mathbb{R}^{d_{l+1}}$
-分别为第$l$层的可学习权重矩阵与偏置项，$\sigma(\cdot)$为非线性激活函数。
+分别为第$l$层的可学习权重矩阵与偏置项。设$\sigma(\cdot)$为非线性激活函数，在本文实现中取为双曲正切函数$\tanh(\cdot)$。
 上述局部邻域聚合过程可形式化表示为：
 \begin{equation}
 \mathbf{h}_i^{(l+1)} =
@@ -102,7 +102,7 @@ A_{ij} =
 \subsection{Semantic Relevance Gesture Recall (SRGR)}
 \label{subsec:srgr}
 
-SRGR 指标（Semantic Relevance Gesture Recall）\cite{beatcamn}
+SRGR指标（Semantic Relevance Gesture Recall）\cite{beatcamn}
 用于衡量生成手势在语义相关时间段内与真实手势在数值层面的匹配程度。
 该指标关注的是语音语义触发的关键手势是否被正确生成，
 而非整体分布一致性或语音–手势节奏相关性。
@@ -153,36 +153,57 @@ SRGR通过对所有时间帧与关节进行统计，
 4. 对所有关节与时间帧进行加权平均，
    得到最终的 SRGR 值。
 
-\subsection{Beat Alignment(BA)}
+\subsection{Beat Alignment (BA)}
 \label{subsec:ba}
 
-BA（Beat Alignment）指标\cite{beatcamn}用于衡量手势关键动作与语音重读节拍的时间对齐程度，
-反映模型在时序同步性（temporal synchronization）方面的性能。
-与SRGR基于阈值的逐帧数值匹配不同，BA更关注语音节拍事件与手势关键动作事件之间的时间对齐精度。
+BA（Beat Alignment）指标用于衡量语音节拍事件与手势关键动作事件在时间轴上的对齐程度，
+反映模型在语音–手势时序同步性（temporal synchronization）方面的性能。
+本文采用 BEAT/CaMN 中使用的 BeatAlign 指标\cite{beatcamn}，其原始形式由 Li 等人提出于 AI Choreographer 工作中\cite{beatalign}，
+并可视为音频节拍与动作节拍集合之间的单向 Chamfer 相似度度量。
+
+与 SRGR 基于阈值的逐帧数值匹配不同，
+BA 关注的是离散事件层面的时间对齐关系，
+即手势关键动作是否在时间上合理地响应了语音中的重读节拍。
 
 \paragraph{定义与原理}
-设语音节拍集合为$\mathcal{B}_s = \{t^s_k\}$，
-通过检测语音短时能量或梅尔倒谱系数（Mel-Frequency Cepstral Coefficients, MFCC）的局部峰值得到；
-手势峰集合为$\mathcal{B}_g = \{t^g_m\}$，
-定义为手势速度$v_t$的局部极大点集合。
-对于每个语音节拍$t^s_k$，
-计算其最近手势峰的时间差$\Delta t_k = \min_m |t^s_k - t^g_m|$。
-则BA指标定义为：
+设语音节拍事件集合为
+$\mathcal{B}_s = \{ t^s_k \}$，
+通过对语音信号的能量包络与 RMS 特征进行 onset detection 得到；
+手势关键动作事件集合为
+$\mathcal{B}_g = \{ t^g_m \}$，
+定义为关节运动速度的局部极小值点，
+对应动作中的停顿或方向变化等显著运动事件。
+
+对于每一个语音节拍事件$t^s_k$，
+计算其与所有手势关键动作事件之间的最小时间偏差：
 \begin{equation}
-\mathrm{BA} = 1 - \frac{1}{K} \sum_{k=1}^{K} \frac{\Delta t_k}{\tau},
+\Delta t_k = \min_{m} | t^s_k - t^g_m | .
 \end{equation}
-其中$K$为节拍数，$\tau$为允许最大偏差阈值（本文取 $\tau=0.5$\,s）。
-当$\Delta t_k < \tau$时，记为一次成功对齐。
-因此$\mathrm{BA}$越接近1，表明手势动作越能准确响应语音重读节拍。
+随后采用高斯核函数将时间偏差映射为相似度分数，
+从而得到单个语音节拍的对齐得分。
+最终BA指标定义为：
+\begin{equation}
+\mathrm{BA} =
+\frac{1}{|\mathcal{B}_s|}
+\sum_{k}
+\exp\left(
+-\frac{(\Delta t_k)^2}{2\sigma^2}
+\right),
+\end{equation}
+其中$\sigma$为时间尺度参数，本文中取$\sigma=0.3$，用于控制对齐容忍范围。
+
+该定义可视为从语音节拍集合到手势节拍集合的单向 Chamfer 相似度，
+当语音节拍与手势关键动作在时间上高度对齐时，BA 值接近 1；
+反之，当二者时间偏差较大时，BA 值趋近于 0。
 
 \paragraph{计算流程}
-1. 通过能量包络峰值检测获取语音节拍点；  
-2. 通过运动速度极值检测获取手势关键帧；  
-3. 计算两者的最短时间偏差并归一化；  
-4. 平均所有节拍对齐率，得到整体BA指标。  
+1. 基于语音能量包络与 RMS 特征进行 onset detection，提取语音节拍事件；  
+2. 计算关节旋转速度，并检测其局部极小值作为手势关键动作事件；  
+3. 对每个语音节拍计算其到最近手势关键动作的时间偏差；  
+4. 通过高斯核函数将时间偏差映射为相似度，并对所有语音节拍取平均，得到 BA 指标。
 
-本文使用该指标评估模型在节奏突变与强调语气时的响应能力。
-在主观观察中，BA与视觉上“语音同步自然度”呈正相关。
+本文使用 BA 指标评估模型在语音重读节拍与手势关键动作之间的时间同步能力，
+该指标与主观观察到的语音–手势同步自然度具有较好一致性。
 
 \subsection{L1范数}
 \label{subsec:l1div}

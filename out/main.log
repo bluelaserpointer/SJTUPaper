@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  14 DEC 2025 21:28
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  14 DEC 2025 22:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2726,20 +2726,30 @@ LaTeX Warning: Reference `sec:loss' on page 31 undefined on input line 478.
 第 4 章
 [33
 
-] [34] [35] [36] [37] [38]
+] [34] [35] [36]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[37] [38] [39]
 File: figures/UserStudyImage.png Graphic file (type bmp)
 <figures/UserStudyImage.png>
- [39]
+ [40]
 File: figures/UserStudy_All.png Graphic file (type bmp)
 <figures/UserStudy_All.png>
- [40]
 File: figures/UserStudy_LatinSquare.png Graphic file (type bmp)
 <figures/UserStudy_LatinSquare.png>
  [41]
 File: figures/GeneratedPoseOverview.png Graphic file (type bmp)
 <figures/GeneratedPoseOverview.png>
- [42] [43])
-(contents/conclusions.tex [44]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[42]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[43]) (contents/conclusions.tex [44]
 第 5 章
 ) [45
 
@@ -2830,16 +2840,16 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: CF53DF73C841BF41A305B3E67F56353B;9058.
+(rerunfilecheck)             Checksum: 6D4457C0BA695AEA96937A302BE55F8B;9074.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52280 strings out of 402986
- 1119073 string characters out of 5453884
- 2059972 words of memory out of 5000000
- 80224 multiletter control sequences out of 15000+600000
+ 52284 strings out of 402986
+ 1119225 string characters out of 5453884
+ 2060029 words of memory out of 5000000
+ 80228 multiletter control sequences out of 15000+600000
  706712 words of font info for 262 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,16n,124p,1183b,7486s stack positions out of 10000i,1000n,20000p,200000b,200000s
