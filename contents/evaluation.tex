@@ -40,14 +40,13 @@ $\mathcal{N}(\bm{\mu}_r, \bm{\Sigma}_r)$ 与 $\mathcal{N}(\bm{\mu}_g, \bm{\Sigma
 \paragraph{评估模型结构与训练配置}
 本文在每位说话人的训练集上分别训练一组评估用自编码器，以避免跨说话人分布差异对指标的干扰。
 自编码器输入为以Rot6d表示的上半身骨架序列，
-训练目标为最小化位置、速度与加速度的多尺度重构误差：
+训练目标为最小化位置与速度的重构误差：
 \begin{equation}
 \mathcal{L}_{AE} = 
-\|\hat{\bm{g}} - \bm{g}\|_2^2 +
-\lambda_v \|\hat{\bm{g}}' - \bm{g}'\|_2^2 +
-\lambda_a \|\hat{\bm{g}}'' - \bm{g}''\|_2^2,
+\lambda_r \|\hat{\bm{g}} - \bm{g}\|_2^2 +
+\lambda_v \|\hat{\bm{g}}' - \bm{g}'\|_2^2,
 \end{equation}
-其中$\lambda_v = 0.1$, $\lambda_a = 0.1$，$\bm{g}'$、$\bm{g}''$分别为速度与加速度序列。
+其中$\lambda_r = 1$, $\lambda_v = 0.1$，$\bm{g}'$为速度序列。
 
 训练配置如下：
 输入片段长度为32帧，批大小256，隐藏层维度128，学习率$1.2\times10^{-4}$，优化器为Adam；
@@ -245,7 +244,7 @@ FGD 反映真实度，L1范数反映丰富度，
 
 \subsection{客观评估设置}
 所有评估均在BEAT数据集上进行，选用说话人编号为2、4、6和8。生成的身体姿态与真实标签均采用相同骨架拓扑的BVH格式。
-FGD特征由EMAGE模型\cite{emage}提取，L1范数、BA和SRGR的实现使用BEAT官方提供的代码。
+FGD训练方式由EMAGE\cite{emage}提取，L1范数、BA和SRGR的实现使用CaMN\cite{beatcamn}提供的算法。
 各指标结果在四位说话人上取平均，以减少个体差异带来的偏差。
 
 \section{模型对比概览}

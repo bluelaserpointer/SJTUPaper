@@ -231,9 +231,9 @@
 \newlabel{fig:system_architecture}{{3.1}{20}{系统整体架构与数据流示意图}{figure.caption.32}{}}
 \@writefile{toc}{\contentsline {paragraph}{设备层}{20}{paragraph*.33}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{中间件层}{20}{paragraph*.34}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{用户配置层}{20}{paragraph*.35}\protected@file@percent }
 \abx@aux@cite{0}{rot6d}
 \abx@aux@segm{0}{0}{rot6d}
+\@writefile{toc}{\contentsline {paragraph}{用户配置层}{21}{paragraph*.35}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}手势生成模型层（FaceCapGes）}{21}{subsection.3.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}渲染驱动层}{21}{subsection.3.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}问题定义}{21}{section.3.3}\protected@file@percent }
@@ -242,54 +242,55 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}输入与输出模态}{22}{subsection.3.3.2}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces 输入输出模态符号与维度}}{22}{table.caption.36}\protected@file@percent }
 \newlabel{tab:modalities}{{3.1}{22}{输入输出模态符号与维度}{table.caption.36}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}学习目标与优化形式}{22}{subsection.3.3.3}\protected@file@percent }
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{mcneill_1992_hand}
 \abx@aux@segm{0}{0}{mcneill_1992_hand}
 \abx@aux@cite{0}{kendon_2004_gesture}
 \abx@aux@segm{0}{0}{kendon_2004_gesture}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}学习目标与优化形式}{23}{subsection.3.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3.4}级联架构与输入模态设计}{23}{section.3.4}\protected@file@percent }
 \newlabel{sec:cascade}{{3.4}{23}{级联架构与输入模态设计}{section.3.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}级联架构的原理与理论背景}{23}{subsection.3.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}基线模态继承与实时适配}{23}{subsection.3.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}基线模态继承与实时适配}{24}{subsection.3.4.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.1}说话人ID分支移除}{24}{subsubsection.3.4.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.2}输入模态继承}{24}{subsubsection.3.4.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.3}输出模态继承（身体姿态解码）}{24}{subsubsection.3.4.2.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.4}时间建模结构改动与因果性约束}{25}{subsubsection.3.4.2.4}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces 双向与单向 LSTM 对比示意图。 双向结构（上）在每个时间步同时利用历史与未来帧特征进行建模； 单向结构（下）仅基于历史帧进行递推，以保持因果性并支持流式推理。}}{26}{figure.caption.37}\protected@file@percent }
 \newlabel{fig_lstmcompare}{{3.2}{26}{双向与单向 LSTM 对比示意图。 双向结构（上）在每个时间步同时利用历史与未来帧特征进行建模； 单向结构（下）仅基于历史帧进行递推，以保持因果性并支持流式推理。}{figure.caption.37}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.5}滑动窗口式自回归训练}{26}{subsubsection.3.4.2.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}头部姿态模态的引入与结构位置}{27}{subsection.3.4.3}\protected@file@percent }
-\newlabel{sec:head_encoder}{{3.4.3}{27}{头部姿态模态的引入与结构位置}{subsection.3.4.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.5}滑动窗口式自回归训练}{27}{subsubsection.3.4.2.5}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces 滑动窗口训练机制：模型通过自回归循环预测$M$帧，每步使用$N$帧上下文并预测第$N+1$帧。损失函数累计所有预测帧的误差，保证因果性与时间平滑性。}}{28}{figure.caption.38}\protected@file@percent }
 \newlabel{fig2_}{{3.3}{28}{滑动窗口训练机制：模型通过自回归循环预测$M$帧，每步使用$N$帧上下文并预测第$N+1$帧。损失函数累计所有预测帧的误差，保证因果性与时间平滑性。}{figure.caption.38}{}}
-\@writefile{toc}{\contentsline {paragraph}{输入特征与表示}{28}{paragraph*.39}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}头部姿态模态的引入与结构位置}{28}{subsection.3.4.3}\protected@file@percent }
+\newlabel{sec:head_encoder}{{3.4.3}{28}{头部姿态模态的引入与结构位置}{subsection.3.4.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{输入特征与表示}{29}{paragraph*.39}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{编码器结构}{29}{paragraph*.40}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces 头部姿态编码器结构示意图。 输入为 Rot6d 表示的 6 维旋转向量，经两层前馈网络与 ReLU 非线性映射， 输出 12 维紧凑潜在表征。 该编码结果与语音、面部嵌入拼接后输入解码器，用于补充动作的方向与节奏信号。}}{29}{figure.caption.41}\protected@file@percent }
 \newlabel{fig_headencoder}{{3.4}{29}{头部姿态编码器结构示意图。 输入为 Rot6d 表示的 6 维旋转向量，经两层前馈网络与 ReLU 非线性映射， 输出 12 维紧凑潜在表征。 该编码结果与语音、面部嵌入拼接后输入解码器，用于补充动作的方向与节奏信号。}{figure.caption.41}{}}
 \@writefile{toc}{\contentsline {paragraph}{架构位置与实验依据}{29}{paragraph*.42}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}小结：从语义驱动到反应调节的信号层级}{29}{subsection.3.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}训练与损失函数设计}{29}{section.3.5}\protected@file@percent }
-\newlabel{sec:training}{{3.5}{29}{训练与损失函数设计}{section.3.5}{}}
-\abx@aux@cite{0}{beatcamn}
-\abx@aux@segm{0}{0}{beatcamn}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces FaceCapGes 模型结构：音频、面部、头部编码器分别提取模态特征后拼接，输入至 LSTM 解码器生成躯干与手部动作，仅保留最后一帧输出作为当前时刻预测，符合帧级实时推理设定。训练阶段历史姿态序列比目标长度少一帧，需进行零填充。}}{30}{figure.caption.43}\protected@file@percent }
 \newlabel{fig1_}{{3.5}{30}{FaceCapGes 模型结构：音频、面部、头部编码器分别提取模态特征后拼接，输入至 LSTM 解码器生成躯干与手部动作，仅保留最后一帧输出作为当前时刻预测，符合帧级实时推理设定。训练阶段历史姿态序列比目标长度少一帧，需进行零填充。}{figure.caption.43}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}训练与损失函数设计}{30}{section.3.5}\protected@file@percent }
+\newlabel{sec:training}{{3.5}{30}{训练与损失函数设计}{section.3.5}{}}
 \@writefile{toc}{\contentsline {paragraph}{手势重构损失}{30}{paragraph*.44}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{对抗损失}{30}{paragraph*.45}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{总体损失}{30}{paragraph*.46}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}实现与训练配置}{30}{section.3.6}\protected@file@percent }
-\newlabel{sec:implementation}{{3.6}{30}{实现与训练配置}{section.3.6}{}}
+\abx@aux@cite{0}{beatcamn}
+\abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{adam2017}
 \abx@aux@segm{0}{0}{adam2017}
 \abx@aux@cite{0}{emage}
 \abx@aux@segm{0}{0}{emage}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}实现与训练配置}{31}{section.3.6}\protected@file@percent }
+\newlabel{sec:implementation}{{3.6}{31}{实现与训练配置}{section.3.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces  BEAT 数据集的骨架拓扑结构。 蓝色部分为 FaceCapGes 模型的控制区域， 涵盖上肢与三段脊椎关节，其余节点保持静态。 }}{31}{figure.caption.47}\protected@file@percent }
 \newlabel{fig_beatbones}{{3.6}{31}{BEAT 数据集的骨架拓扑结构。 蓝色部分为 FaceCapGes 模型的控制区域， 涵盖上肢与三段脊椎关节，其余节点保持静态。}{figure.caption.47}{}}
+\newlabel{train_param_setting}{{3.6}{31}{训练配置}{paragraph*.48}{}}
 \@writefile{toc}{\contentsline {paragraph}{训练配置}{31}{paragraph*.48}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{姿态表示}{31}{paragraph*.49}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{运行性能}{31}{paragraph*.50}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{姿态表示}{32}{paragraph*.49}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{运行性能}{32}{paragraph*.50}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3.7}本章小结}{32}{section.3.7}\protected@file@percent }
 \abx@aux@cite{0}{speech_gesture_generation}
 \abx@aux@segm{0}{0}{speech_gesture_generation}
@@ -328,6 +329,8 @@
 \abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{emage}
 \abx@aux@segm{0}{0}{emage}
+\abx@aux@cite{0}{beatcamn}
+\abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{diffsheg}
 \abx@aux@segm{0}{0}{diffsheg}
 \abx@aux@cite{0}{beatcamn}
@@ -400,11 +403,21 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {附录 A}平衡拉丁方排序设计}{53}{appendix.A}\protected@file@percent }
 \newlabel{fig:userstudy_latin_square}{{A.1}{53}{平衡拉丁方实验版本中的用户主观评分结果，共 8 位参与者，评价维度包括“真实感”、“同步性”和“多样性”。}{figure.caption.79}{}}
 \newlabel{fig:userstudy_app}{{A.2}{54}{用户研究中使用的手势播放界面示意图。}{figure.caption.80}{}}
-\@writefile{toc}{\contentsline {chapter}{致\quad 谢}{55}{section*.81}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{学术论文和科研成果目录}{57}{section*.83}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{个人简历}{59}{section*.87}\protected@file@percent }
+\pp@pagectr{footnote}{7}{75}{55}
+\@writefile{toc}{\contentsline {chapter}{\numberline {附录 B}代码与实现资源}{55}{appendix.B}\protected@file@percent }
+\newlabel{appendix:code}{{B}{55}{代码与实现资源}{appendix.B}{}}
+\abx@aux@cite{0}{beatcamn}
+\abx@aux@segm{0}{0}{beatcamn}
+\abx@aux@cite{0}{diffsheg}
+\abx@aux@segm{0}{0}{diffsheg}
+\pp@pagectr{footnote}{8}{77}{57}
+\@writefile{toc}{\contentsline {chapter}{\numberline {附录 C}手势生成对比视频}{57}{appendix.C}\protected@file@percent }
+\newlabel{appendix:videos}{{C}{57}{手势生成对比视频}{appendix.C}{}}
+\@writefile{toc}{\contentsline {chapter}{致\quad 谢}{59}{section*.81}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{学术论文和科研成果目录}{61}{section*.83}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{个人简历}{63}{section*.87}\protected@file@percent }
 \ttl@finishall
-\HyPL@Entry{80<</S/r>>}
+\HyPL@Entry{84<</S/r>>}
 \ttl@finishall
 \abx@aux@read@bbl@mdfivesum{8E5F55DE8BD4E7339591C4E5D0D8BBAF}
 \abx@aux@defaultrefcontext{0}{mediapipefacemesh}{none/global//global/global/global}
@@ -451,4 +464,4 @@
 \abx@aux@defaultrefcontext{0}{unitymechanim}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{pico4}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{LatinSquareToolkit}{none/global//global/global/global}
-\gdef \@abspage@last{82}
+\gdef \@abspage@last{86}

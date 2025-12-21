@@ -43,8 +43,25 @@ FaceCapGes模型位于中间层，承担多模态输入到上半身姿态输出�
 
 \paragraph{中间件层}
 中间件层通过Apple提供的ARKit框架\cite{ARKitDocumentation}，将设备层的原始图像流与深度图转化为结构化特征。ARKit输出两类主要数据：  
-(1) \textbf{面部表情特征} ARKit提供52维BlendShape系数向量，用于描述关键肌肉群的局部形变状态。该特征能够反映用户的表情、口型与情感变化，并以帧级形式同步输出。  
-(2) \textbf{头部姿态特征} ARKit在ARFaceAnchor对象中输出一个$4\times4$齐次变换矩阵$\mathbf{T}=[\mathbf{R}|\mathbf{t}]$，其中左上角的$\mathbf{R}\in\mathbb{R}^{3\times3}$为旋转矩阵，右上角的$\mathbf{t}\in\mathbb{R}^{3\times1}$为平移向量。本研究从矩阵中提取旋转部分，并将其转换为Rot6D\cite{rot6d}表示形式，以提升旋转空间的连续性与模型训练的稳定性。  
+(1) \textbf{面部表情特征}
+ARKit提供52维BlendShape系数向量，用于描述关键肌肉群的局部形变状态。该特征能够反映用户的表情、口型与情感变化，并以帧级形式同步输出。  
+(2) \textbf{头部姿态特征} 
+ARKit在ARFaceAnchor中提供一个齐次变换矩阵$\mathbf{T}\in\mathbb{R}^{4\times4}$，
+用于描述人脸锚点相对会话世界坐标系的位姿：
+\begin{equation}
+\mathbf{T} =
+\begin{bmatrix}
+\mathbf{R} & \mathbf{t} \\
+\mathbf{0}^{\top} & 1
+\end{bmatrix},
+\quad
+\mathbf{R}\in\mathbb{R}^{3\times3},\ 
+\mathbf{t}\in\mathbb{R}^{3\times1}.
+\end{equation}
+其中左上角的$\mathbf{R}$为旋转矩阵，右上角的$\mathbf{t}$为平移向量。
+本研究从矩阵中提取旋转部分 $\mathbf{R}$，
+并将其转换为Rot6D~\cite{rot6d}表示形式，
+以提升旋转空间的连续性与模型训练的稳定性。
 
 同时，音频流在中间件层中被传入特征提取模块以生成时间序列特征。模型训练阶段使用Librosa库离线提取Mel频谱、短时能量与基频$F_0$等声学特征，以保证特征精度与一致性。系统运行阶段可由等价的实时特征提取模块（如torchaudio或TensorFlow Audio）逐帧生成对应特征，以实现端到端的低延迟运行。
 
@@ -64,7 +81,7 @@ FaceCapGes输出的姿态数据通过统一接口传递至渲染与驱动模块�
 \subsection{渲染驱动层}
 
 该模块位于系统输出端，负责将手势生成模型与面部捕捉结果共同转化为虚拟人的实时动作表现。
-系统将FaceCapGes模型输出的上半身骨骼姿态与ARKit实时生成的52维面部BlendShape系数传递至渲染引擎，
+系统将FaceCapGes模型输出的上半身骨骼姿态与ARKit实时检测的52维面部BlendShape系数传递至渲染引擎，
 由引擎内的模块解析并映射至目标虚拟人的骨骼与表情控制接口，从而实现多模态动作驱动。
 
 渲染模块采用基于GPU的蒙皮计算与实时光照模型，以确保动画的平滑性和视觉一致性。
@@ -129,14 +146,15 @@ FaceCapGes模型的输入由三种可同时实时获取的模态组成：语音�
 综合考虑空间重构误差与时序平滑性约束，总体优化目标可表示为：
 \begin{equation}
 \mathcal{L}_{total} =
-\mathcal{L}_{rec} + \lambda_v \mathcal{L}_{vel} + \lambda_a \mathcal{L}_{acc} + \lambda_{adv} \mathcal{L}_{adv}
+\lambda_r  \mathcal{L}_{rec} + \lambda_v \mathcal{L}_{vel} + \lambda_a \mathcal{L}_{acc} + \lambda_{adv} \mathcal{L}_{adv}
 \end{equation}
 其中：
 \begin{itemize}
     \item $\mathcal{L}_{rec}$为姿态重构损失，衡量单帧旋转角度误差；
     \item $\mathcal{L}_{vel}$、$\mathcal{L}_{acc}$分别约束预测序列的速度与加速度连续性；
     \item $\mathcal{L}_{adv}$为对抗损失，用于提升生成手势的自然性；
-    \item $\lambda_v, \lambda_a, \lambda_{adv}$为对应的权重系数。
+    \item $\lambda_r, \lambda_v, \lambda_a, \lambda_{adv}$ 为对应的权重系数，实验中分别设为
+    $5\times10^{2}$、$10^{3}$、$10^{3}$、$10^{-1}$。
 \end{itemize}
 
 通过最小化上述综合损失，模型能够在不依赖未来帧的条件下生成自然、流畅且与语音节奏相匹配的上半身动作序列。
@@ -169,7 +187,7 @@ FaceCapGes保留了CaMN的语音与面部模态结构，但针对实时生成任
 语音编码器$E_A$与面部编码器$E_F$的输出定义为：
 \begin{equation}
 \bm{z}^{A}_t = E_A(\bm{v}_{t-N:t}^{A}), \quad
-\bm{z}^{F}_t = E_F(\bm{v}_{t-N:t}^{F};\, \bm{z}^{A}_t)
+\bm{z}^{F}_t = E_F(\bm{v}_{t-N:t}^{F}; \bm{z}^{A}_t)
 \end{equation}
 其中$\bm{z}^{A}_t \in \mathbb{R}^{128}$，$\bm{z}^{F}_t  \in \mathbb{R}^{32}$。
 这两个编码器负责提取低层次语音节奏与表情动态信息，为后续模态融合提供稳定上下文表征。
@@ -177,7 +195,7 @@ FaceCapGes保留了CaMN的语音与面部模态结构，但针对实时生成任
 此外，系统在此基础上引入头部姿态模态$\bm{v}_t^{H}$，用于补充空间方向与节奏信号。
 其编码器$E_H$将Rot6D表示的头部旋转向量映射为紧凑潜在表征：
 \begin{equation}
-\bm{z}^{H}_t = E_H(\bm{v}_{t-N:t}^{H}),
+\bm{z}^{H}_t = E_H(\bm{v}_{t-N:t}^{H}; \bm{z}^{A}_t, \bm{z}^{F}_t),
 \end{equation}
 编码器结构将在第~\ref{sec:head_encoder}~节详细说明。
 
@@ -361,12 +379,12 @@ CaMN在双向时间建模下使用该缓冲以补足片段外部上下文，
 \paragraph{编码器结构}
 图~\ref{fig_headencoder} 所示为头部姿态编码器结构。该编码器由两层前馈网络组成，输入为Rot6d表示的6维向量：
 \begin{equation}
-\mathbf{z}^{H}_t = E_H(\mathbf{H}_{t-N:t}; \mathbf{z}^A_t, \mathbf{z}^F_t),
+\bm{z}^{H}_t = E_H(\bm{v}^H_{t-N:t}; \bm{z}^A_t, \bm{z}^F_t),
 \end{equation}
 其中 $E_H$ 的具体形式为：
 \begin{align}
-\mathbf{h}_1 &= \mathrm{ReLU}(W_1 \mathbf{H}_t + b_1), \\
-\mathbf{z}^{H}_t &= W_2 \mathbf{h}_1 + b_2,
+\bm{h}_1 &= \mathrm{ReLU}(W_1 \bm{v}^H_t + b_1), \\
+\bm{z}^{H}_t &= W_2 \bm{h}_1 + b_2,
 \end{align}
 网络维度设置为：输入 $6$，中间层 $36$，输出 $12$。  
 在特征层面，其输出与语音、面部嵌入拼接后输入解码器，形成从语义到反应的多层信号流。
@@ -403,6 +421,7 @@ FaceCapGes 在 CaMN 的语音—表情级联架构基础上，通过实时适配
 模型在每个窗口中输出连续的动作序列 $\hat{\bm{g}} \in \mathbb{R}^{M \times 6 \times 47}$，
 并以重构与对抗两类损失共同约束生成质量。
 
+%重了？
 \paragraph{手势重构损失}
 重构项 $\mathcal{L}_{Gesture Rec}$ 由位置、速度与加速度误差组成，用以平衡空间准确性与时间平滑性：
 \begin{equation}
@@ -469,6 +488,7 @@ BEAT 数据集的骨架拓扑结构。
 在预处理阶段已进行严格划分以避免片段交叉。
 
 \paragraph{训练配置}
+\label{train_param_setting}
 训练时输入窗口的前序帧数设为 $N=16$，预测长度为 $M=34$，训练片段的切割步长为 10 帧。
 相邻片段因此存在部分重叠，从而在保证充分上下文信息的同时提升数据覆盖率与时间连续性。
 优化器采用 Adam\cite{adam2017}，学习率设为 $2\times10^{-4}$，$\beta_1=0.9, \beta_2=0.999$。
