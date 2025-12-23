@@ -12,11 +12,11 @@
 
 \paragraph{Kendon连续体}
 Kendon 连续体\cite{kendon_2004_gesture,mcneill_1992_hand}将与表达相关的手势行为，基于语言化程度做了以下分类：%
-\emph{gesticulation（随语手势）} %
-$\rightarrow$ \emph{language-like gestures（语言样手势）} %
-$\rightarrow$ \emph{pantomime（拟态/哑剧式动作）} %
-$\rightarrow$ \emph{emblems（约定俗成的象征手势）} %
-$\rightarrow$ \emph{sign language（手语）}。%
+gesticulation（随语手势） %
+$\rightarrow$ language-like gestures（语言样手势） %
+$\rightarrow$ pantomime（拟态/哑剧式动作） %
+$\rightarrow$ emblems（约定俗成的象征手势） %
+$\rightarrow$ sign language（手语）。%
 越靠左的类型通常更依赖当前的言语与语境、形式更即兴；%
 越靠右则越接近离散的符号系统，规约化程度高，意义更稳定，可在缺少口语的情况下独立传达。%
 
@@ -336,7 +336,7 @@ DiffTED\cite{DiffTED2024}实现了端到端的视频合成。
 多数语音驱动手势研究证实，仅凭语音的能量、时长与音高变化即可合成自然的节奏性上肢动作\cite{ginosar2019speech2gesture,alexanderson2020stylegestures,kucherenko2021movingfastslow}。
 这些研究所生成的动作在时间结构上与语音重音同步，体现了语音与手势共享的时间规划机制。
 
-相比之下，\emph{iconic}（形象性）、\emph{metaphoric}（隐喻性）与\emph{deictic}（指向性）手势均依赖语义或指向关系，
+相比之下，iconic（形象性）、metaphoric（隐喻性）与deictic（指向性）手势均依赖语义或指向关系，
 需要从上下文分析语义与语境，难以在严格实时的因果条件下生成。
 而节奏相关特征在音频中则具有更高的可预测性。\cite{kucherenko2021predictability}
 这表明，在缺乏未来语义与全局上下文的实时场景中，仅凭语音模态，模型只能稳定生成节奏层面的动作。
@@ -365,7 +365,7 @@ DiffTED\cite{DiffTED2024}实现了端到端的视频合成。
 (2) 对iconic手势而言，它在具有路径与方向特征的动作中提供空间参考，使模型能够在叙事空间中更稳定地确定动作的方位与轨迹方向。  
 通过这两方面的强化，系统在保持实时性的同时获得了更自然的节奏衔接与空间表达。
 
-与此同时，本文明确头部姿态模态的作用边界：其核心优势在于捕捉方向、焦点与时序节奏，而非手型语义或复杂形态描摹等细粒度语义特征。换言之，它主要改善手势的位置、方向与视角依附，而非手势的形状描绘或语义内容。对于依赖抽象语义或外指参照的\emph{metaphoric}与\emph{deictic}手势，仍需语言或上下文模态的补充。
+与此同时，本文明确头部姿态模态的作用边界：其核心优势在于捕捉方向、焦点与时序节奏，而非手型语义或复杂形态描摹等细粒度语义特征。换言之，它主要改善手势的位置、方向与视角依附，而非手势的形状描绘或语义内容。对于依赖抽象语义或外指参照的metaphoric与deictic手势，仍需语言或上下文模态的补充。
 
 总体而言，头部姿态为实时生成提供了介于韵律与语义之间的关键中层约束。%
 其时间上的前瞻性与空间上的指向性共同帮助模型在低延迟条件下保持自然、连贯且空间协调的动作表现，%
