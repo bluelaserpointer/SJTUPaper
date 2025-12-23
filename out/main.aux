@@ -242,56 +242,53 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}输入与输出模态}{22}{subsection.3.3.2}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces 输入输出模态符号与维度}}{22}{table.caption.36}\protected@file@percent }
 \newlabel{tab:modalities}{{3.1}{22}{输入输出模态符号与维度}{table.caption.36}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}学习目标与优化形式}{23}{subsection.3.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{姿态重构与时序平滑损失}{23}{paragraph*.37}\protected@file@percent }
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{mcneill_1992_hand}
 \abx@aux@segm{0}{0}{mcneill_1992_hand}
 \abx@aux@cite{0}{kendon_2004_gesture}
 \abx@aux@segm{0}{0}{kendon_2004_gesture}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}学习目标与优化形式}{23}{subsection.3.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}级联架构与输入模态设计}{23}{section.3.4}\protected@file@percent }
-\newlabel{sec:cascade}{{3.4}{23}{级联架构与输入模态设计}{section.3.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}级联架构的原理与理论背景}{23}{subsection.3.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{对抗损失}{24}{paragraph*.38}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}级联架构与输入模态设计}{24}{section.3.4}\protected@file@percent }
+\newlabel{sec:cascade}{{3.4}{24}{级联架构与输入模态设计}{section.3.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}级联架构的原理与理论背景}{24}{subsection.3.4.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}基线模态继承与实时适配}{24}{subsection.3.4.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.1}说话人ID分支移除}{24}{subsubsection.3.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.2}输入模态继承}{24}{subsubsection.3.4.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.3}输出模态继承（身体姿态解码）}{24}{subsubsection.3.4.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.4}时间建模结构改动与因果性约束}{25}{subsubsection.3.4.2.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces 双向与单向 LSTM 对比示意图。 双向结构（上）在每个时间步同时利用历史与未来帧特征进行建模； 单向结构（下）仅基于历史帧进行递推，以保持因果性并支持流式推理。}}{26}{figure.caption.37}\protected@file@percent }
-\newlabel{fig_lstmcompare}{{3.2}{26}{双向与单向 LSTM 对比示意图。 双向结构（上）在每个时间步同时利用历史与未来帧特征进行建模； 单向结构（下）仅基于历史帧进行递推，以保持因果性并支持流式推理。}{figure.caption.37}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.2}输入模态继承}{25}{subsubsection.3.4.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.3}输出模态继承（身体姿态解码）}{25}{subsubsection.3.4.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.4}时间建模结构改动与因果性约束}{26}{subsubsection.3.4.2.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces 双向与单向 LSTM 对比示意图。 双向结构（上）在每个时间步同时利用历史与未来帧特征进行建模； 单向结构（下）仅基于历史帧进行递推，以保持因果性并支持流式推理。}}{27}{figure.caption.39}\protected@file@percent }
+\newlabel{fig_lstmcompare}{{3.2}{27}{双向与单向 LSTM 对比示意图。 双向结构（上）在每个时间步同时利用历史与未来帧特征进行建模； 单向结构（下）仅基于历史帧进行递推，以保持因果性并支持流式推理。}{figure.caption.39}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2.5}滑动窗口式自回归训练}{27}{subsubsection.3.4.2.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces 滑动窗口训练机制：模型通过自回归循环预测$M$帧，每步使用$N$帧上下文并预测第$N+1$帧。损失函数累计所有预测帧的误差，保证因果性与时间平滑性。}}{28}{figure.caption.38}\protected@file@percent }
-\newlabel{fig2_}{{3.3}{28}{滑动窗口训练机制：模型通过自回归循环预测$M$帧，每步使用$N$帧上下文并预测第$N+1$帧。损失函数累计所有预测帧的误差，保证因果性与时间平滑性。}{figure.caption.38}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}头部姿态模态的引入与结构位置}{28}{subsection.3.4.3}\protected@file@percent }
 \newlabel{sec:head_encoder}{{3.4.3}{28}{头部姿态模态的引入与结构位置}{subsection.3.4.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{输入特征与表示}{29}{paragraph*.39}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{编码器结构}{29}{paragraph*.40}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces 头部姿态编码器结构示意图。 输入为 Rot6d 表示的 6 维旋转向量，经两层前馈网络与 ReLU 非线性映射， 输出 12 维紧凑潜在表征。 该编码结果与语音、面部嵌入拼接后输入解码器，用于补充动作的方向与节奏信号。}}{29}{figure.caption.41}\protected@file@percent }
-\newlabel{fig_headencoder}{{3.4}{29}{头部姿态编码器结构示意图。 输入为 Rot6d 表示的 6 维旋转向量，经两层前馈网络与 ReLU 非线性映射， 输出 12 维紧凑潜在表征。 该编码结果与语音、面部嵌入拼接后输入解码器，用于补充动作的方向与节奏信号。}{figure.caption.41}{}}
-\@writefile{toc}{\contentsline {paragraph}{架构位置与实验依据}{29}{paragraph*.42}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}小结：从语义驱动到反应调节的信号层级}{29}{subsection.3.4.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces FaceCapGes 模型结构：音频、面部、头部编码器分别提取模态特征后拼接，输入至 LSTM 解码器生成躯干与手部动作，仅保留最后一帧输出作为当前时刻预测，符合帧级实时推理设定。训练阶段历史姿态序列比目标长度少一帧，需进行零填充。}}{30}{figure.caption.43}\protected@file@percent }
-\newlabel{fig1_}{{3.5}{30}{FaceCapGes 模型结构：音频、面部、头部编码器分别提取模态特征后拼接，输入至 LSTM 解码器生成躯干与手部动作，仅保留最后一帧输出作为当前时刻预测，符合帧级实时推理设定。训练阶段历史姿态序列比目标长度少一帧，需进行零填充。}{figure.caption.43}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}训练与损失函数设计}{30}{section.3.5}\protected@file@percent }
-\newlabel{sec:training}{{3.5}{30}{训练与损失函数设计}{section.3.5}{}}
-\@writefile{toc}{\contentsline {paragraph}{手势重构损失}{30}{paragraph*.44}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{对抗损失}{30}{paragraph*.45}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{总体损失}{30}{paragraph*.46}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces 滑动窗口训练机制：模型通过自回归循环预测$M$帧，每步使用$N$帧上下文并预测第$N+1$帧。损失函数累计所有预测帧的误差，保证因果性与时间平滑性。}}{29}{figure.caption.40}\protected@file@percent }
+\newlabel{fig2_}{{3.3}{29}{滑动窗口训练机制：模型通过自回归循环预测$M$帧，每步使用$N$帧上下文并预测第$N+1$帧。损失函数累计所有预测帧的误差，保证因果性与时间平滑性。}{figure.caption.40}{}}
+\@writefile{toc}{\contentsline {paragraph}{输入特征与表示}{29}{paragraph*.41}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{编码器结构}{29}{paragraph*.42}\protected@file@percent }
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces 头部姿态编码器结构示意图。 输入为 Rot6d 表示的 6 维旋转向量，经两层前馈网络与 ReLU 非线性映射， 输出 12 维紧凑潜在表征。 该编码结果与语音、面部嵌入拼接后输入解码器，用于补充动作的方向与节奏信号。}}{30}{figure.caption.43}\protected@file@percent }
+\newlabel{fig_headencoder}{{3.4}{30}{头部姿态编码器结构示意图。 输入为 Rot6d 表示的 6 维旋转向量，经两层前馈网络与 ReLU 非线性映射， 输出 12 维紧凑潜在表征。 该编码结果与语音、面部嵌入拼接后输入解码器，用于补充动作的方向与节奏信号。}{figure.caption.43}{}}
+\@writefile{toc}{\contentsline {paragraph}{架构位置与实验依据}{30}{paragraph*.44}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}小结：从语义驱动到反应调节的信号层级}{30}{subsection.3.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces FaceCapGes 模型结构：音频、面部、头部编码器分别提取模态特征后拼接，输入至 LSTM 解码器生成躯干与手部动作，仅保留最后一帧输出作为当前时刻预测，符合帧级实时推理设定。训练阶段历史姿态序列比目标长度少一帧，需进行零填充。}}{30}{figure.caption.45}\protected@file@percent }
+\newlabel{fig1_}{{3.5}{30}{FaceCapGes 模型结构：音频、面部、头部编码器分别提取模态特征后拼接，输入至 LSTM 解码器生成躯干与手部动作，仅保留最后一帧输出作为当前时刻预测，符合帧级实时推理设定。训练阶段历史姿态序列比目标长度少一帧，需进行零填充。}{figure.caption.45}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}实现与训练配置}{30}{section.3.5}\protected@file@percent }
+\newlabel{sec:implementation}{{3.5}{30}{实现与训练配置}{section.3.5}{}}
 \abx@aux@cite{0}{adam2017}
 \abx@aux@segm{0}{0}{adam2017}
 \abx@aux@cite{0}{emage}
 \abx@aux@segm{0}{0}{emage}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}实现与训练配置}{31}{section.3.6}\protected@file@percent }
-\newlabel{sec:implementation}{{3.6}{31}{实现与训练配置}{section.3.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces  BEAT 数据集的骨架拓扑结构。 蓝色部分为 FaceCapGes 模型的控制区域， 涵盖上肢与三段脊椎关节，其余节点保持静态。 }}{31}{figure.caption.47}\protected@file@percent }
-\newlabel{fig_beatbones}{{3.6}{31}{BEAT 数据集的骨架拓扑结构。 蓝色部分为 FaceCapGes 模型的控制区域， 涵盖上肢与三段脊椎关节，其余节点保持静态。}{figure.caption.47}{}}
-\newlabel{train_param_setting}{{3.6}{31}{训练配置}{paragraph*.48}{}}
-\@writefile{toc}{\contentsline {paragraph}{训练配置}{31}{paragraph*.48}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{姿态表示}{32}{paragraph*.49}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{运行性能}{32}{paragraph*.50}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.7}本章小结}{32}{section.3.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces  BEAT 数据集的骨架拓扑结构。 蓝色部分为 FaceCapGes 模型的控制区域， 涵盖上肢与三段脊椎关节，其余节点保持静态。 }}{31}{figure.caption.46}\protected@file@percent }
+\newlabel{fig_beatbones}{{3.6}{31}{BEAT 数据集的骨架拓扑结构。 蓝色部分为 FaceCapGes 模型的控制区域， 涵盖上肢与三段脊椎关节，其余节点保持静态。}{figure.caption.46}{}}
+\newlabel{train_param_setting}{{3.5}{31}{训练配置}{paragraph*.47}{}}
+\@writefile{toc}{\contentsline {paragraph}{训练配置}{31}{paragraph*.47}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{姿态表示}{31}{paragraph*.48}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{运行性能}{31}{paragraph*.49}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}本章小结}{32}{section.3.6}\protected@file@percent }
 \abx@aux@cite{0}{speech_gesture_generation}
 \abx@aux@segm{0}{0}{speech_gesture_generation}
 \abx@aux@cite{0}{beatcamn}
@@ -308,25 +305,26 @@
 \newlabel{sec:objective_metrics}{{4.1}{33}{客观评估指标与实现细节}{section.4.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Fréchet Gesture Distance(FGD)}{33}{subsection.4.1.1}\protected@file@percent }
 \newlabel{subsec:fgd}{{4.1.1}{33}{Fréchet Gesture Distance(FGD)}{subsection.4.1.1}{}}
-\@writefile{toc}{\contentsline {paragraph}{评估模型结构与训练配置}{33}{paragraph*.51}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{用于FGD评估的骨架感知自编码器}{34}{paragraph*.52}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{评估模型结构与训练配置}{33}{paragraph*.50}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{用于FGD评估的骨架感知自编码器}{34}{paragraph*.51}\protected@file@percent }
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{beatalign}
 \abx@aux@segm{0}{0}{beatalign}
-\@writefile{toc}{\contentsline {paragraph}{指标计算流程}{35}{paragraph*.53}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{指标计算流程}{35}{paragraph*.52}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Semantic Relevance Gesture Recall (SRGR)}{35}{subsection.4.1.2}\protected@file@percent }
 \newlabel{subsec:srgr}{{4.1.2}{35}{Semantic Relevance Gesture Recall (SRGR)}{subsection.4.1.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{定义与原理}{35}{paragraph*.54}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{计算流程}{35}{paragraph*.55}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Beat Alignment (BA)}{36}{subsection.4.1.3}\protected@file@percent }
-\newlabel{subsec:ba}{{4.1.3}{36}{Beat Alignment (BA)}{subsection.4.1.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{定义与原理}{36}{paragraph*.56}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{计算流程}{36}{paragraph*.57}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{定义与原理}{35}{paragraph*.53}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Beat Alignment (BA)}{35}{subsection.4.1.3}\protected@file@percent }
+\newlabel{subsec:ba}{{4.1.3}{35}{Beat Alignment (BA)}{subsection.4.1.3}{}}
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
+\@writefile{toc}{\contentsline {paragraph}{定义与原理}{36}{paragraph*.54}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}L1范数}{36}{subsection.4.1.4}\protected@file@percent }
+\newlabel{subsec:l1div}{{4.1.4}{36}{L1范数}{subsection.4.1.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{定义与原理}{36}{paragraph*.55}\protected@file@percent }
 \abx@aux@cite{0}{emage}
 \abx@aux@segm{0}{0}{emage}
 \abx@aux@cite{0}{beatcamn}
@@ -335,89 +333,80 @@
 \abx@aux@segm{0}{0}{diffsheg}
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}L1范数}{37}{subsection.4.1.4}\protected@file@percent }
-\newlabel{subsec:l1div}{{4.1.4}{37}{L1范数}{subsection.4.1.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{定义与原理}{37}{paragraph*.58}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{计算流程}{37}{paragraph*.59}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.5}客观评估设置}{37}{subsection.4.1.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}模型对比概览}{37}{section.4.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces 实验对比模型的输入输出模态对比}}{37}{table.caption.56}\protected@file@percent }
+\newlabel{tab:modalitycomparison}{{4.1}{37}{实验对比模型的输入输出模态对比}{table.caption.56}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}用户调研}{37}{section.4.3}\protected@file@percent }
+\newlabel{sec:userstudy}{{4.3}{37}{用户调研}{section.4.3}{}}
 \abx@aux@cite{0}{unity}
 \abx@aux@segm{0}{0}{unity}
 \abx@aux@cite{0}{unitymechanim}
 \abx@aux@segm{0}{0}{unitymechanim}
 \abx@aux@cite{0}{ARKitDocumentation}
 \abx@aux@segm{0}{0}{ARKitDocumentation}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces 实验对比模型的输入输出模态对比}}{38}{table.caption.60}\protected@file@percent }
-\newlabel{tab:modalitycomparison}{{4.1}{38}{实验对比模型的输入输出模态对比}{table.caption.60}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}用户调研}{38}{section.4.3}\protected@file@percent }
-\newlabel{sec:userstudy}{{4.3}{38}{用户调研}{section.4.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}评估系统与实验配置}{38}{subsection.4.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{实验材料与呈现方式}{38}{paragraph*.61}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{播放系统实现}{38}{paragraph*.62}\protected@file@percent }
 \abx@aux@cite{0}{pico4}
 \abx@aux@segm{0}{0}{pico4}
-\@writefile{toc}{\contentsline {paragraph}{实验界面与设备}{39}{paragraph*.63}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{实验流程与指导}{39}{paragraph*.64}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}评估系统与实验配置}{38}{subsection.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{实验材料与呈现方式}{38}{paragraph*.57}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{播放系统实现}{38}{paragraph*.58}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{实验界面与设备}{38}{paragraph*.59}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{实验流程与指导}{39}{paragraph*.60}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{实验材料与任务设计}{39}{paragraph*.61}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{实验参与者}{39}{paragraph*.63}\protected@file@percent }
 \abx@aux@cite{0}{LatinSquareToolkit}
 \abx@aux@segm{0}{0}{LatinSquareToolkit}
-\@writefile{toc}{\contentsline {paragraph}{实验材料与任务设计}{40}{paragraph*.65}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces 用户研究系统界面示意图。 左、中、右位置随机分配给三种模型， 音频与面部表情完全一致，仅身体动作不同。}}{40}{figure.caption.66}\protected@file@percent }
-\newlabel{fig:userstudy_app}{{4.1}{40}{用户研究系统界面示意图。 左、中、右位置随机分配给三种模型， 音频与面部表情完全一致，仅身体动作不同。}{figure.caption.66}{}}
-\@writefile{toc}{\contentsline {paragraph}{实验参与者}{40}{paragraph*.67}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}平衡拉丁方排序设计}{41}{subsection.4.3.2}\protected@file@percent }
-\newlabel{subsec:latin_square}{{4.3.2}{41}{平衡拉丁方排序设计}{subsection.4.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}结果与分析}{41}{subsection.4.3.3}\protected@file@percent }
-\newlabel{subsec:user_study_result}{{4.3.3}{41}{结果与分析}{subsection.4.3.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{电脑用户测评结果}{41}{paragraph*.68}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces 16 名参与者对三种模型在“真实感”、“同步性”和“多样性”三个维度的主观排名结果。}}{41}{figure.caption.69}\protected@file@percent }
-\newlabel{fig:userstudy}{{4.2}{41}{16 名参与者对三种模型在“真实感”、“同步性”和“多样性”三个维度的主观排名结果。}{figure.caption.69}{}}
-\@writefile{toc}{\contentsline {paragraph}{平衡拉丁方实验结果}{41}{paragraph*.70}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{用户反馈分析}{41}{paragraph*.72}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces 平衡拉丁方实验版本中8位VR用户的主观排名结果， 评价维度包括“真实感”、“同步性”和“多样性”。}}{42}{figure.caption.71}\protected@file@percent }
-\newlabel{fig:userstudy_latin_square}{{4.3}{42}{平衡拉丁方实验版本中8位VR用户的主观排名结果， 评价维度包括“真实感”、“同步性”和“多样性”。}{figure.caption.71}{}}
-\@writefile{toc}{\contentsline {paragraph}{结果讨论}{42}{paragraph*.73}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces 用户研究系统界面示意图。 左、中、右位置随机分配给三种模型， 音频与面部表情完全一致，仅身体动作不同。}}{40}{figure.caption.62}\protected@file@percent }
+\newlabel{fig:userstudy_app}{{4.1}{40}{用户研究系统界面示意图。 左、中、右位置随机分配给三种模型， 音频与面部表情完全一致，仅身体动作不同。}{figure.caption.62}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}平衡拉丁方排序设计}{40}{subsection.4.3.2}\protected@file@percent }
+\newlabel{subsec:latin_square}{{4.3.2}{40}{平衡拉丁方排序设计}{subsection.4.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}结果与分析}{40}{subsection.4.3.3}\protected@file@percent }
+\newlabel{subsec:user_study_result}{{4.3.3}{40}{结果与分析}{subsection.4.3.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{电脑用户测评结果}{40}{paragraph*.64}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces 16 名参与者对三种模型在“真实感”、“同步性”和“多样性”三个维度的主观排名结果。}}{41}{figure.caption.65}\protected@file@percent }
+\newlabel{fig:userstudy}{{4.2}{41}{16 名参与者对三种模型在“真实感”、“同步性”和“多样性”三个维度的主观排名结果。}{figure.caption.65}{}}
+\@writefile{toc}{\contentsline {paragraph}{平衡拉丁方实验结果}{41}{paragraph*.66}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces 平衡拉丁方实验版本中8位VR用户的主观排名结果， 评价维度包括“真实感”、“同步性”和“多样性”。}}{41}{figure.caption.67}\protected@file@percent }
+\newlabel{fig:userstudy_latin_square}{{4.3}{41}{平衡拉丁方实验版本中8位VR用户的主观排名结果， 评价维度包括“真实感”、“同步性”和“多样性”。}{figure.caption.67}{}}
+\@writefile{toc}{\contentsline {paragraph}{用户反馈分析}{41}{paragraph*.68}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{结果讨论}{42}{paragraph*.69}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4.4}定性分析}{42}{section.4.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces GT、CaMN、DiffSHEG与FaceCapGes的动作效果对比。本模型手势响应自然，方向与头部朝向一致。}}{43}{figure.caption.74}\protected@file@percent }
-\newlabel{fig3}{{4.4}{43}{GT、CaMN、DiffSHEG与FaceCapGes的动作效果对比。本模型手势响应自然，方向与头部朝向一致。}{figure.caption.74}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces GT、CaMN、DiffSHEG与FaceCapGes的动作效果对比。本模型手势响应自然，方向与头部朝向一致。}}{42}{figure.caption.70}\protected@file@percent }
+\newlabel{fig3}{{4.4}{42}{GT、CaMN、DiffSHEG与FaceCapGes的动作效果对比。本模型手势响应自然，方向与头部朝向一致。}{figure.caption.70}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.5}定量分析}{43}{section.4.5}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces 在BEAT的四位说话人测试集上的定量评估结果。FaceCapGes在所有指标上优于CaMN，且与DiffSHEG表现相当。}}{43}{table.caption.75}\protected@file@percent }
-\newlabel{tab1}{{4.2}{43}{在BEAT的四位说话人测试集上的定量评估结果。FaceCapGes在所有指标上优于CaMN，且与DiffSHEG表现相当。}{table.caption.75}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces 在BEAT的四位说话人测试集上的定量评估结果。FaceCapGes在所有指标上优于CaMN，且与DiffSHEG表现相当。}}{43}{table.caption.71}\protected@file@percent }
+\newlabel{tab1}{{4.2}{43}{在BEAT的四位说话人测试集上的定量评估结果。FaceCapGes在所有指标上优于CaMN，且与DiffSHEG表现相当。}{table.caption.71}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}消融实验分析}{43}{section.4.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces 说话人2的消融实验结果。头部姿态对提升手势自然性与表达力有显著作用。}}{43}{table.caption.72}\protected@file@percent }
+\newlabel{tab2}{{4.3}{43}{说话人2的消融实验结果。头部姿态对提升手势自然性与表达力有显著作用。}{table.caption.72}{}}
 \abx@aux@cite{0}{AppleARKitTrackingGuide}
 \abx@aux@segm{0}{0}{AppleARKitTrackingGuide}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}消融实验分析}{44}{section.4.6}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces 说话人2的消融实验结果。头部姿态对提升手势自然性与表达力有显著作用。}}{44}{table.caption.76}\protected@file@percent }
-\newlabel{tab2}{{4.3}{44}{说话人2的消融实验结果。头部姿态对提升手势自然性与表达力有显著作用。}{table.caption.76}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.7}性能评估}{44}{section.4.7}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces 在 RTX4090上的帧级推理速度评估结果。}}{44}{table.caption.77}\protected@file@percent }
-\newlabel{tab3}{{4.4}{44}{在 RTX4090上的帧级推理速度评估结果。}{table.caption.77}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces 在 RTX4090上的帧级推理速度评估结果。}}{44}{table.caption.73}\protected@file@percent }
+\newlabel{tab3}{{4.4}{44}{在 RTX4090上的帧级推理速度评估结果。}{table.caption.73}{}}
 \pp@pagectr{footnote}{5}{65}{45}
 \@writefile{toc}{\contentsline {chapter}{\numberline {第 5 章}结论}{45}{chapter.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{参考文献}{47}{chapter*.78}\protected@file@percent }
-\abx@aux@cite{0}{LatinSquareToolkit}
-\abx@aux@segm{0}{0}{LatinSquareToolkit}
-\abx@aux@cite{0}{diffsheg}
-\abx@aux@segm{0}{0}{diffsheg}
-\abx@aux@cite{0}{beatcamn}
-\abx@aux@segm{0}{0}{beatcamn}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}本文工作总结}{45}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}未来工作展望}{45}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}高层语义信息与系统扩展}{45}{subsection.5.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}面向未来趋势的预测性训练目标}{46}{subsection.5.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}本章小结}{46}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{参考文献}{47}{chapter*.74}\protected@file@percent }
 \pp@pagectr{footnote}{6}{73}{53}
-\@writefile{toc}{\contentsline {chapter}{\numberline {附录 A}平衡拉丁方排序设计}{53}{appendix.A}\protected@file@percent }
-\newlabel{fig:userstudy_latin_square}{{A.1}{53}{平衡拉丁方实验版本中的用户主观评分结果，共 8 位参与者，评价维度包括“真实感”、“同步性”和“多样性”。}{figure.caption.79}{}}
-\newlabel{fig:userstudy_app}{{A.2}{54}{用户研究中使用的手势播放界面示意图。}{figure.caption.80}{}}
-\pp@pagectr{footnote}{7}{75}{55}
-\@writefile{toc}{\contentsline {chapter}{\numberline {附录 B}代码与实现资源}{55}{appendix.B}\protected@file@percent }
-\newlabel{appendix:code}{{B}{55}{代码与实现资源}{appendix.B}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {附录 A}代码与实现资源}{53}{appendix.A}\protected@file@percent }
+\newlabel{appendix:code}{{A}{53}{代码与实现资源}{appendix.A}{}}
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{diffsheg}
 \abx@aux@segm{0}{0}{diffsheg}
-\pp@pagectr{footnote}{8}{77}{57}
-\@writefile{toc}{\contentsline {chapter}{\numberline {附录 C}手势生成对比视频}{57}{appendix.C}\protected@file@percent }
-\newlabel{appendix:videos}{{C}{57}{手势生成对比视频}{appendix.C}{}}
-\@writefile{toc}{\contentsline {chapter}{致\quad 谢}{59}{section*.81}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{学术论文和科研成果目录}{61}{section*.83}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{个人简历}{63}{section*.87}\protected@file@percent }
+\pp@pagectr{footnote}{7}{75}{55}
+\@writefile{toc}{\contentsline {chapter}{\numberline {附录 B}手势生成对比视频}{55}{appendix.B}\protected@file@percent }
+\newlabel{appendix:videos}{{B}{55}{手势生成对比视频}{appendix.B}{}}
+\@writefile{toc}{\contentsline {chapter}{致\quad 谢}{57}{section*.75}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{学术论文和科研成果目录}{59}{section*.77}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{个人简历}{61}{section*.81}\protected@file@percent }
 \ttl@finishall
-\HyPL@Entry{84<</S/r>>}
+\HyPL@Entry{82<</S/r>>}
 \ttl@finishall
 \abx@aux@read@bbl@mdfivesum{8E5F55DE8BD4E7339591C4E5D0D8BBAF}
 \abx@aux@defaultrefcontext{0}{mediapipefacemesh}{none/global//global/global/global}
@@ -464,4 +453,4 @@
 \abx@aux@defaultrefcontext{0}{unitymechanim}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{pico4}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{LatinSquareToolkit}{none/global//global/global/global}
-\gdef \@abspage@last{86}
+\gdef \@abspage@last{84}

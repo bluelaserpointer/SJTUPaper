@@ -138,26 +138,85 @@ FaceCapGes模型的输入由三种可同时实时获取的模态组成：语音�
 
 \subsection{学习目标与优化形式}
 
-在训练阶段，给定来自多模态语音动作数据集（如BEAT）的配对样本：
+在训练阶段，给定来自多模态语音动作数据集（如 BEAT）的配对样本：
 \begin{equation}
-\big(\bm{v}_t^{A},\, \bm{v}_t^{F},\, \bm{v}_t^{H},\, \bm{v}_t^{B}\big)
+\big(\bm{v}_t^{A},\, \bm{v}_t^{F},\, \bm{v}_t^{H},\, \bm{v}_t^{B}\big),
 \end{equation}
-模型的学习目标是最小化预测姿态 $\hat{\bm{v}}_t^{B}$与真实姿态$\bm{v}_t^{B}$之间的差异。
-综合考虑空间重构误差与时序平滑性约束，总体优化目标可表示为：
+模型的学习目标是在不依赖未来帧的条件下，
+最小化预测姿态 $\hat{\bm{v}}_t^{B}$ 与真实姿态 $\bm{v}_t^{B}$ 之间的差异，
+从而生成自然、流畅且与语音节奏相匹配的上半身动作序列。
+
+假设模型在每个时间窗口中输出连续的 $M$ 帧预测结果，
+得到预测动作序列
+$\hat{\bm{g}} \in \mathbb{R}^{M \times 6 \times 47}$。
+综合考虑空间重构精度、时序平滑性以及动作分布一致性，
+总体优化目标定义为：
 \begin{equation}
 \mathcal{L}_{total} =
-\lambda_r  \mathcal{L}_{rec} + \lambda_v \mathcal{L}_{vel} + \lambda_a \mathcal{L}_{acc} + \lambda_{adv} \mathcal{L}_{adv}
+\lambda_r  \mathcal{L}_{rec}
++ \lambda_v \mathcal{L}_{vel}
++ \lambda_a \mathcal{L}_{acc}
++ \lambda_{adv} \mathcal{L}_{adv}.
 \end{equation}
-其中：
-\begin{itemize}
-    \item $\mathcal{L}_{rec}$为姿态重构损失，衡量单帧旋转角度误差；
-    \item $\mathcal{L}_{vel}$、$\mathcal{L}_{acc}$分别约束预测序列的速度与加速度连续性；
-    \item $\mathcal{L}_{adv}$为对抗损失，用于提升生成手势的自然性；
-    \item $\lambda_r, \lambda_v, \lambda_a, \lambda_{adv}$ 为对应的权重系数，实验中分别设为
-    $5\times10^{2}$、$10^{3}$、$10^{3}$、$10^{-1}$。
-\end{itemize}
 
-通过最小化上述综合损失，模型能够在不依赖未来帧的条件下生成自然、流畅且与语音节奏相匹配的上半身动作序列。
+其中 $\mathcal{L}_{rec}$ 衡量单帧姿态重构误差，
+$\mathcal{L}_{vel}$ 与 $\mathcal{L}_{acc}$ 分别约束速度与加速度的连续性。
+该组合设计在自回归预测过程中能够有效缓解抖动与速度漂移问题。
+
+\paragraph{姿态重构与时序平滑损失}
+为同时保证空间重构精度与时间连续性，
+我们采用基于 Huber 误差的重构损失形式，
+并分别作用于姿态、速度与加速度信号。
+
+给定任意预测序列 $\hat{\bm{x}}$ 及其对应的真实序列 $\bm{x}$，
+基础误差项定义为：
+\begin{equation}
+\mathcal{L}_{Huber}(\bm{x}, \hat{\bm{x}})
+=
+\beta \cdot
+\mathrm{SmoothL1}
+\left(
+\frac{\bm{x}}{\beta},
+\frac{\hat{\bm{x}}}{\beta}
+\right),
+\end{equation}
+其中 $\mathrm{SmoothL1}(\cdot)$ 表示平滑L1误差，$\beta$为平滑系数，本文中设为 $0.1$。
+
+在此基础上，
+姿态、速度与加速度重构损失分别定义为：
+\begin{align}
+\mathcal{L}_{rec} &= \mathcal{L}_{Huber}(\bm{g}, \hat{\bm{g}}), \\
+\mathcal{L}_{vel} &= \mathcal{L}_{Huber}(\bm{g}', \hat{\bm{g}}'), \\
+\mathcal{L}_{acc} &= \mathcal{L}_{Huber}(\bm{g}'', \hat{\bm{g}}''),
+\end{align}
+其中一阶与二阶时间差分 $\bm{g}'$、$\bm{g}''$ 定义为：
+\begin{equation}
+\bm{g}'_t = \bm{g}_t - \bm{g}_{t-1}, \quad
+\bm{g}''_t = \bm{g}'_t - \bm{g}'_{t-1}.
+\end{equation}
+
+该多尺度重构约束在自回归预测过程中
+能够有效缓解高频抖动与速度漂移问题，
+在保证运动学精度的同时提升生成序列的时间稳定性。
+
+\paragraph{对抗损失}
+为进一步提升生成动作的自然度，
+引入基于判别器的对抗损失：
+\begin{equation}
+\mathcal{L}_{adv} = -\mathbb{E}[\log(Dis(\hat{\bm{g}}))],
+\end{equation}
+其中判别器 $Dis$ 以完整动作序列为输入，
+判断其是否来自真实数据分布。
+该损失从整体动力学分布层面约束生成结果，
+促进生成动作在节奏、加速度与能量变化等统计特性上
+与真实表演者保持一致。
+训练过程中通过交替优化生成器与判别器参数以维持稳定性。
+
+各损失项的权重系数在实验中设定为
+$\lambda_r = 5\times10^{2}$，
+$\lambda_v = 10^{3}$，
+$\lambda_a = 10^{3}$，
+$\lambda_{adv} = 10^{-1}$。
 
 \section{级联架构与输入模态设计}
 \label{sec:cascade}
@@ -414,49 +473,10 @@ FaceCapGes 在 CaMN 的语音—表情级联架构基础上，通过实时适配
 \label{fig1_}
 \end{figure*}
 
-\section{训练与损失函数设计}
-\label{sec:training}
-
-在前述滑动窗口式自回归训练框架下，每段输入序列包含 $N$ 帧上下文与 $M$ 帧预测结果。
-模型在每个窗口中输出连续的动作序列 $\hat{\bm{g}} \in \mathbb{R}^{M \times 6 \times 47}$，
-并以重构与对抗两类损失共同约束生成质量。
-
-%重了？
-\paragraph{手势重构损失}
-重构项 $\mathcal{L}_{Gesture Rec}$ 由位置、速度与加速度误差组成，用以平衡空间准确性与时间平滑性：
-\begin{equation}
-\bm{g}' = \bm{g}_t - \bm{g}_{t-1}, \quad \bm{g}'' = \bm{g}'_t - \bm{g}'_{t-1},
-\end{equation}
-\begin{equation}
-\mathcal{L}_{Gesture Rec} = \mathcal{L}_{rec}(\bm{g}, \hat{\bm{g}}) + \mathcal{L}_{vel}(\bm{g}', \hat{\bm{g}}') + \mathcal{L}_{acc}(\bm{g}'', \hat{\bm{g}}''),
-\end{equation}
-其中 $\mathcal{L}_{rec}$ 保证空间姿态重构精度，
-$\mathcal{L}_{vel}$ 和 $\mathcal{L}_{acc}$ 强调动态平滑性与时序一致性。
-该组合设计在自回归预测中能有效缓解抖动与速度漂移问题。
-
-\paragraph{对抗损失}
-为进一步提升动作的自然度，引入对抗项 $\mathcal{L}_{Adv}$：
-\begin{equation}
-\mathcal{L}_{Adv} = -\mathbb{E}[\log(Dis(\hat{\bm{g}}))],
-\end{equation}
-其中判别器 $Dis$ 以完整的动作序列为输入，
-判别其是否来自真实数据分布。
-该项损失约束生成序列的整体动力学分布，
-促进生成动作在节奏、加速度和能量变化上与真实表演者一致。
-训练中通过交替优化生成器与判别器的参数，保持两者的平衡。
-
-\paragraph{总体损失}
-综合两项目标，模型的最终训练目标为：
-\begin{equation}
-\mathcal{L}_{total} = \mathcal{L}_{Gesture Rec} + \lambda_{adv}\mathcal{L}_{Adv},
-\end{equation}
-其中 $\lambda_{adv}$ 为对抗损失的权重（实验中设为 $0.1$）。
-该设计在保持运动学准确性的同时，提升了时序的自然性与节奏感。
-
 \section{实现与训练配置}
 \label{sec:implementation}
 
-在上述训练目标下，FaceCapGes 基于 PyTorch 实现，
+本文模型FaceCapGes基于PyTorch实现，
 所有实验在单张 NVIDIA RTX 4090 GPU 上进行。
 
 本文基于 BEAT 数据集\cite{beatcamn} 进行训练与评估。
