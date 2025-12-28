@@ -45,13 +45,21 @@ $\mathcal{N}(\bm{\mu}_r, \bm{\Sigma}_r)$ 与 $\mathcal{N}(\bm{\mu}_g, \bm{\Sigma
 \mathcal{L}_{AE} = 
 \lambda_r \|\hat{\bm{g}} - \bm{g}\|_2^2 +
 \lambda_v \|\hat{\bm{g}}' - \bm{g}'\|_2^2,
+\label{eq:fgd_ae_loss}
 \end{equation}
 其中$\lambda_r = 1$, $\lambda_v = 0.1$，$\bm{g}'$为速度序列。
 
 训练配置如下：
-输入片段长度为32帧，批大小256，隐藏层维度128，学习率$1.2\times10^{-4}$，优化器为Adam；
-共训练400轮。
-训练片段步长设为10，以增加样本数量并保持时间连续性。
+输入片段长度设为 32 帧，训练片段切割步长设为 10 帧，
+批大小设为 256，编码器与解码器的隐藏层维度均为 128。
+优化器采用 SGD\cite{bottou2010sgd}，
+基础学习率设为 $\mathrm{lr}_{base}=1.2\times 10^{-4}$，
+并按批大小线性缩放为
+\begin{equation}
+\mathrm{lr}=\mathrm{lr}_{base}\cdot \frac{\mathrm{batch\_size}}{128}.
+\end{equation}
+训练过程中仅使用位置与速度重构损失（式(\ref{eq:fgd_ae_loss})），不包含加速度或对抗项。
+自编码器共训练 400 个 epoch。
 
 \paragraph{用于FGD评估的骨架感知自编码器}
 
@@ -90,13 +98,6 @@ A_{ij} =
 实验结果表明，该骨架感知自编码器在Rot6d下产生更加稳定的潜在分布统计量。
 在本文的实验设置中，该设计显著提升了FGD评估的数值稳定性，
 并有效避免了在Rot6d表示条件下使用嵌入式自编码器时出现的极端FGD数值现象。
-
-\paragraph{指标计算流程}
-在获得评估模型后，
-分别将生成序列与真实序列输入自编码器的编码器部分，
-提取潜在特征$\bm{z}_g$与$\bm{z}_r$，
-再计算两者的均值与协方差以求得FGD。
-评估时按说话人独立计算，再取平均值作为总体指标。
 
 \subsection{Semantic Relevance Gesture Recall (SRGR)}
 \label{subsec:srgr}
@@ -262,7 +263,7 @@ DiffSHEG   & $\checkmark$ & $\times$ & $\times$ & $\checkmark$ & $\times$ & $\ch
 \bottomrule
 \end{tabular}%
 }
-\caption{实验对比模型的输入输出模态对比}
+\caption{实验对比模型的输入输出模态对比。$\ast$ 表示模型结构未显式输入说话人ID，但本文采用每位说话人独立训练的设置，因此说话人信息通过模型参数指定。}
 \label{tab:modalitycomparison}
 \end{table}
 

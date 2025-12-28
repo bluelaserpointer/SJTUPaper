@@ -5,12 +5,12 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces 双向与单向 LSTM 对比示意图。 双向结构（上）在每个时间步同时利用历史与未来帧特征进行建模； 单向结构（下）仅基于历史帧进行递推，以保持因果性并支持流式推理。}}{27}{figure.caption.39}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces 滑动窗口训练机制：模型通过自回归循环预测$M$帧，每步使用$N$帧上下文并预测第$N+1$帧。损失函数累计所有预测帧的误差，保证因果性与时间平滑性。}}{29}{figure.caption.40}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces 头部姿态编码器结构示意图。 输入为 Rot6d 表示的 6 维旋转向量，经两层前馈网络与 ReLU 非线性映射， 输出 12 维紧凑潜在表征。 该编码结果与语音、面部嵌入拼接后输入解码器，用于补充动作的方向与节奏信号。}}{30}{figure.caption.43}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces FaceCapGes 模型结构：音频、面部、头部编码器分别提取模态特征后拼接，输入至 LSTM 解码器生成躯干与手部动作，仅保留最后一帧输出作为当前时刻预测，符合帧级实时推理设定。训练阶段历史姿态序列比目标长度少一帧，需进行零填充。}}{30}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces FaceCapGes 模型结构：音频、面部、头部编码器分别提取模态特征后拼接，输入至 LSTM 解码器生成躯干与手部动作，仅保留最后一帧输出作为当前时刻预测，符合帧级实时推理设定。训练阶段历史姿态序列比目标长度少一帧，需进行零填充。}}{31}{figure.caption.45}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces BEAT 数据集的骨架拓扑结构。 蓝色部分为 FaceCapGes 模型的控制区域， 涵盖上肢与三段脊椎关节，其余节点保持静态。 }}{31}{figure.caption.46}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 用户研究系统界面示意图。 左、中、右位置随机分配给三种模型， 音频与面部表情完全一致，仅身体动作不同。}}{40}{figure.caption.62}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 16 名参与者对三种模型在“真实感”、“同步性”和“多样性”三个维度的主观排名结果。}}{41}{figure.caption.65}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 平衡拉丁方实验版本中8位VR用户的主观排名结果， 评价维度包括“真实感”、“同步性”和“多样性”。}}{41}{figure.caption.67}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces GT、CaMN、DiffSHEG与FaceCapGes的动作效果对比。本模型手势响应自然，方向与头部朝向一致。}}{42}{figure.caption.70}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 用户研究系统界面示意图。 左、中、右位置随机分配给三种模型， 音频与面部表情完全一致，仅身体动作不同。}}{40}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 16 名参与者对三种模型在“真实感”、“同步性”和“多样性”三个维度的主观排名结果。}}{41}{figure.caption.64}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 平衡拉丁方实验版本中8位VR用户的主观排名结果， 评价维度包括“真实感”、“同步性”和“多样性”。}}{41}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces GT、CaMN、DiffSHEG与FaceCapGes的动作效果对比。本模型手势响应自然，方向与头部朝向一致。}}{43}{figure.caption.69}%
 \contentsfinish 
 \contentsfinish 
 \contentsfinish 

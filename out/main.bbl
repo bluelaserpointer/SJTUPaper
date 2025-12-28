@@ -3114,71 +3114,57 @@
       \endverb
       \keyw{kucherenko2021movingfastslow}
     \endentry
-    \entry{adam2017}{online}{}{}
-      \name{author}{2}{}{%
-        {{hash=b6fbd171848aad4edf3925543f1f1522}{%
-           family={Kingma},
-           familyi={K\bibinitperiod},
-           given={Diederik\bibnamedelima P.},
-           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=8aa66e8231cc2fdbe67aa4f18ca970c6}{%
-           family={Ba},
+    \entry{SGDBottou2010LargeScaleML}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=ac762f2592005edf6bad58f566967c6c}{%
+           family={Bottou},
            familyi={B\bibinitperiod},
-           given={Jimmy},
-           giveni={J\bibinitperiod}}}%
+           given={Léon},
+           giveni={L\bibinitperiod}}}%
       }
-      \name{namea}{2}{}{%
-        {{hash=b6fbd171848aad4edf3925543f1f1522}{%
-           family={Kingma},
-           familyi={K\bibinitperiod},
-           given={Diederik\bibnamedelima P.},
-           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=8aa66e8231cc2fdbe67aa4f18ca970c6}{%
-           family={Ba},
+      \name{namea}{1}{}{%
+        {{hash=ac762f2592005edf6bad58f566967c6c}{%
+           family={Bottou},
            familyi={B\bibinitperiod},
-           given={Jimmy},
-           giveni={J\bibinitperiod}}}%
+           given={Léon},
+           giveni={L\bibinitperiod}}}%
       }
       \list{language}{1}{%
         {english}%
       }
-      \strng{namehash}{0018e09b9f142d15c9693e18a17bdf3f}
-      \strng{fullhash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{fullhashraw}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{bibnamehash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{authorbibnamehash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{authornamehash}{0018e09b9f142d15c9693e18a17bdf3f}
-      \strng{authorfullhash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{authorfullhashraw}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{nameabibnamehash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{nameanamehash}{0018e09b9f142d15c9693e18a17bdf3f}
-      \strng{nameafullhash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{nameafullhashraw}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{namehash}{ac762f2592005edf6bad58f566967c6c}
+      \strng{fullhash}{ac762f2592005edf6bad58f566967c6c}
+      \strng{fullhashraw}{ac762f2592005edf6bad58f566967c6c}
+      \strng{bibnamehash}{ac762f2592005edf6bad58f566967c6c}
+      \strng{authorbibnamehash}{ac762f2592005edf6bad58f566967c6c}
+      \strng{authornamehash}{ac762f2592005edf6bad58f566967c6c}
+      \strng{authorfullhash}{ac762f2592005edf6bad58f566967c6c}
+      \strng{authorfullhashraw}{ac762f2592005edf6bad58f566967c6c}
+      \strng{nameabibnamehash}{ac762f2592005edf6bad58f566967c6c}
+      \strng{nameanamehash}{ac762f2592005edf6bad58f566967c6c}
+      \strng{nameafullhash}{ac762f2592005edf6bad58f566967c6c}
+      \strng{nameafullhashraw}{ac762f2592005edf6bad58f566967c6c}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{eprintclass}{cs.LG}
-      \field{eprinttype}{arXiv}
+      \field{booktitle}{International Conference on Computational Statistics}
       \field{langid}{english}
       \field{languageid}{english}
       \field{lansortorder}{4}
-      \field{title}{Adam: A Method for Stochastic Optimization}
-      \field{usera}{EB}
+      \field{title}{Large-Scale Machine Learning with Stochastic Gradient Descent}
+      \field{usera}{C}
       \field{userd}{english}
       \field{userf}{english}
-      \field{year}{2017}
+      \field{year}{2010}
       \field{dateera}{ce}
-      \verb{eprint}
-      \verb 1412.6980
-      \endverb
       \verb{urlraw}
-      \verb https://arxiv.org/abs/1412.6980
+      \verb https://api.semanticscholar.org/CorpusID:115963355
       \endverb
       \verb{url}
-      \verb https://arxiv.org/abs/1412.6980
+      \verb https://api.semanticscholar.org/CorpusID:115963355
       \endverb
-      \keyw{adam2017}
+      \keyw{SGDBottou2010LargeScaleML}
     \endentry
     \entry{speech_gesture_generation}{article}{}{}
       \name{author}{7}{}{%
@@ -3522,6 +3508,7 @@
       \keyw{LatinSquareToolkit}
     \endentry
   \enddatalist
+  \missing{bottou2010sgd}
 \endrefsection
 \endinput
 

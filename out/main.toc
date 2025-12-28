@@ -30,7 +30,7 @@
 \contentsline {section}{\numberline {2.4}实时生成的理论基础与可行性分析}{15}{section.2.4}%
 \contentsline {paragraph}{头部姿态对手势预测的贡献}{15}{paragraph*.30}%
 \contentsline {paragraph}{头部姿态对空间锚定与视角一致性的贡献}{15}{paragraph*.31}%
-\contentsline {section}{\numberline {2.5}本文的工作与创新点}{16}{section.2.5}%
+\contentsline {section}{\numberline {2.5}本文研究目标}{16}{section.2.5}%
 \contentsline {section}{\numberline {2.6}本章小结}{17}{section.2.6}%
 \contentsline {chapter}{\numberline {第 3 章}方法}{19}{chapter.3}%
 \contentsline {section}{\numberline {3.1}研究定位与总体设计思路}{19}{section.3.1}%
@@ -57,44 +57,43 @@
 \contentsline {subsubsection}{\numberline {3.4.2.5}滑动窗口式自回归训练}{27}{subsubsection.3.4.2.5}%
 \contentsline {subsection}{\numberline {3.4.3}头部姿态模态的引入与结构位置}{28}{subsection.3.4.3}%
 \contentsline {paragraph}{输入特征与表示}{29}{paragraph*.41}%
-\contentsline {paragraph}{编码器结构}{29}{paragraph*.42}%
+\contentsline {paragraph}{编码器结构}{30}{paragraph*.42}%
 \contentsline {paragraph}{架构位置与实验依据}{30}{paragraph*.44}%
 \contentsline {subsection}{\numberline {3.4.4}小结：从语义驱动到反应调节的信号层级}{30}{subsection.3.4.4}%
 \contentsline {section}{\numberline {3.5}实现与训练配置}{30}{section.3.5}%
 \contentsline {paragraph}{训练配置}{31}{paragraph*.47}%
-\contentsline {paragraph}{姿态表示}{31}{paragraph*.48}%
-\contentsline {paragraph}{运行性能}{31}{paragraph*.49}%
+\contentsline {paragraph}{姿态表示}{32}{paragraph*.48}%
+\contentsline {paragraph}{运行性能}{32}{paragraph*.49}%
 \contentsline {section}{\numberline {3.6}本章小结}{32}{section.3.6}%
 \contentsline {chapter}{\numberline {第 4 章}评估}{33}{chapter.4}%
 \contentsline {section}{\numberline {4.1}客观评估指标与实现细节}{33}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Fréchet Gesture Distance(FGD)}{33}{subsection.4.1.1}%
 \contentsline {paragraph}{评估模型结构与训练配置}{33}{paragraph*.50}%
 \contentsline {paragraph}{用于FGD评估的骨架感知自编码器}{34}{paragraph*.51}%
-\contentsline {paragraph}{指标计算流程}{35}{paragraph*.52}%
 \contentsline {subsection}{\numberline {4.1.2}Semantic Relevance Gesture Recall (SRGR)}{35}{subsection.4.1.2}%
-\contentsline {paragraph}{定义与原理}{35}{paragraph*.53}%
+\contentsline {paragraph}{定义与原理}{35}{paragraph*.52}%
 \contentsline {subsection}{\numberline {4.1.3}Beat Alignment (BA)}{35}{subsection.4.1.3}%
-\contentsline {paragraph}{定义与原理}{36}{paragraph*.54}%
+\contentsline {paragraph}{定义与原理}{36}{paragraph*.53}%
 \contentsline {subsection}{\numberline {4.1.4}L1范数}{36}{subsection.4.1.4}%
-\contentsline {paragraph}{定义与原理}{36}{paragraph*.55}%
+\contentsline {paragraph}{定义与原理}{37}{paragraph*.54}%
 \contentsline {subsection}{\numberline {4.1.5}客观评估设置}{37}{subsection.4.1.5}%
 \contentsline {section}{\numberline {4.2}模型对比概览}{37}{section.4.2}%
-\contentsline {section}{\numberline {4.3}用户调研}{37}{section.4.3}%
+\contentsline {section}{\numberline {4.3}用户调研}{38}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}评估系统与实验配置}{38}{subsection.4.3.1}%
-\contentsline {paragraph}{实验材料与呈现方式}{38}{paragraph*.57}%
-\contentsline {paragraph}{播放系统实现}{38}{paragraph*.58}%
-\contentsline {paragraph}{实验界面与设备}{38}{paragraph*.59}%
-\contentsline {paragraph}{实验流程与指导}{39}{paragraph*.60}%
-\contentsline {paragraph}{实验材料与任务设计}{39}{paragraph*.61}%
-\contentsline {paragraph}{实验参与者}{39}{paragraph*.63}%
+\contentsline {paragraph}{实验材料与呈现方式}{38}{paragraph*.56}%
+\contentsline {paragraph}{播放系统实现}{38}{paragraph*.57}%
+\contentsline {paragraph}{实验界面与设备}{39}{paragraph*.58}%
+\contentsline {paragraph}{实验流程与指导}{39}{paragraph*.59}%
+\contentsline {paragraph}{实验材料与任务设计}{39}{paragraph*.60}%
+\contentsline {paragraph}{实验参与者}{40}{paragraph*.62}%
 \contentsline {subsection}{\numberline {4.3.2}平衡拉丁方排序设计}{40}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}结果与分析}{40}{subsection.4.3.3}%
-\contentsline {paragraph}{电脑用户测评结果}{40}{paragraph*.64}%
-\contentsline {paragraph}{平衡拉丁方实验结果}{41}{paragraph*.66}%
-\contentsline {paragraph}{用户反馈分析}{41}{paragraph*.68}%
-\contentsline {paragraph}{结果讨论}{42}{paragraph*.69}%
+\contentsline {paragraph}{电脑用户测评结果}{41}{paragraph*.63}%
+\contentsline {paragraph}{平衡拉丁方实验结果}{41}{paragraph*.65}%
+\contentsline {paragraph}{用户反馈分析}{41}{paragraph*.67}%
+\contentsline {paragraph}{结果讨论}{42}{paragraph*.68}%
 \contentsline {section}{\numberline {4.4}定性分析}{42}{section.4.4}%
-\contentsline {section}{\numberline {4.5}定量分析}{43}{section.4.5}%
+\contentsline {section}{\numberline {4.5}定量分析}{42}{section.4.5}%
 \contentsline {section}{\numberline {4.6}消融实验分析}{43}{section.4.6}%
 \contentsline {section}{\numberline {4.7}性能评估}{44}{section.4.7}%
 \contentsline {chapter}{\numberline {第 5 章}结论}{45}{chapter.5}%
@@ -103,11 +102,11 @@
 \contentsline {subsection}{\numberline {5.2.1}高层语义信息与系统扩展}{45}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}面向未来趋势的预测性训练目标}{46}{subsection.5.2.2}%
 \contentsline {section}{\numberline {5.3}本章小结}{46}{section.5.3}%
-\contentsline {chapter}{参考文献}{47}{chapter*.74}%
+\contentsline {chapter}{参考文献}{47}{chapter*.73}%
 \contentsline {chapter}{\numberline {附录 A}代码与实现资源}{53}{appendix.A}%
 \contentsline {chapter}{\numberline {附录 B}手势生成对比视频}{55}{appendix.B}%
-\contentsline {chapter}{致\quad 谢}{57}{section*.75}%
-\contentsline {chapter}{学术论文和科研成果目录}{59}{section*.77}%
-\contentsline {chapter}{个人简历}{61}{section*.81}%
+\contentsline {chapter}{致\quad 谢}{57}{section*.74}%
+\contentsline {chapter}{学术论文和科研成果目录}{59}{section*.76}%
+\contentsline {chapter}{个人简历}{61}{section*.80}%
 \contentsfinish 
 \contentsfinish 
