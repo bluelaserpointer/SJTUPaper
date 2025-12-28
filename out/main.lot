@@ -1,10 +1,10 @@
-\contentsline {table}{\numberline {2.1}{\ignorespaces 不同旋转表示方式的空间连续性与使用示例}}{8}{table.caption.21}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces 两类手势生成任务在约束与可利用条件上的对比}}{11}{table.caption.29}%
-\contentsline {table}{\numberline {3.1}{\ignorespaces 输入输出模态符号与维度}}{20}{table.caption.36}%
-\contentsline {table}{\numberline {4.1}{\ignorespaces 实验对比模型的输入输出模态对比。$\ast $ 表示模型结构未显式输入说话人ID，采用每位说话人独立训练的设置，说话人ID通过模型参数指定。}}{35}{table.caption.54}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces 在BEAT的四位说话人测试集上的定量评估结果。FaceCapGes在所有指标上优于CaMN，且与DiffSHEG表现相当。}}{41}{table.caption.69}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces 说话人2的消融实验结果。头部姿态对提升手势自然性与表达力有显著作用。}}{41}{table.caption.70}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces 在 RTX4090上的帧级推理速度评估结果。}}{42}{table.caption.71}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces 不同旋转表示方式的空间连续性与使用示例}}{8}{table.caption.19}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces 两类手势生成任务在约束与可利用条件上的对比}}{11}{table.caption.27}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces 输入输出模态符号与维度}}{20}{table.caption.34}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces 实验对比模型的输入输出模态对比。$\ast $ 表示模型结构未显式输入说话人ID，采用每位说话人独立训练的设置，说话人ID通过模型参数指定。}}{35}{table.caption.52}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces 在BEAT的四位说话人测试集上的定量评估结果。FaceCapGes在所有指标上优于CaMN，且与DiffSHEG表现相当。}}{41}{table.caption.67}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces 说话人2的消融实验结果。头部姿态对提升手势自然性与表达力有显著作用。}}{41}{table.caption.68}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces 在 RTX4090上的帧级推理速度评估结果。}}{42}{table.caption.69}%
 \contentsfinish 
 \contentsfinish 
 \contentsfinish 

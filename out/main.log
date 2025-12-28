@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  28 DEC 2025 20:54
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  28 DEC 2025 21:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2623,66 +2623,57 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
  [10
 
 
-] (e:\SJTU\SJTUPaper\out\main.loa)
-\tf@loa=\write9
-\openout9 = `main.loa'.
-
-
-(contents/nomenclature.tex
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 7.0pt on input line 7.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 5.0pt on input line 7.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.0pt on input line 7.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 5.0pt on input line 7.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.0pt on input line 7.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 5.0pt on input line 7.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.0pt on input line 7.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 5.0pt on input line 7.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.0pt on input line 7.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 5.0pt on input line 7.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.0pt on input line 7.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 5.0pt on input line 7.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.0pt on input line 7.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 5.0pt on input line 7.
-LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 7.0pt on input line 7.
-LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 5.0pt on input line 7.
-LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 7.0pt on input line 7.
-LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 5.0pt on input line 7.
-LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 7.0pt on input line 7.
-LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 5.0pt on input line 7.
-) [11
-
-
-] [12
-
 ] (contents/intro.tex
 第 1 章
 [1
+
 
 ] [2]) (contents/related_work.tex [3]
 第 2 章
 [4
 
-] [5] [6] [7]
+] [5] [6]
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 7.0pt on input line 134.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 5.0pt on input line 134.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 7.0pt on input line 134.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 5.0pt on input line 134.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 7.0pt on input line 134.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 5.0pt on input line 134.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 7.0pt on input line 134.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 5.0pt on input line 134.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 7.0pt on input line 134.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 5.0pt on input line 134.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 7.0pt on input line 134.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 5.0pt on input line 134.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 7.0pt on input line 134.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 5.0pt on input line 134.
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 7.0pt on input line 134.
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 5.0pt on input line 134.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 7.0pt on input line 134.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 5.0pt on input line 134.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 7.0pt on input line 134.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 5.0pt on input line 134.
+ [7]
 File: figures/Fig_AUSample.png Graphic file (type bmp)
 <figures/Fig_AUSample.png>
 File: figures/Fig_blendshapeEyeBlink.png Graphic file (type bmp)
@@ -2779,10 +2770,10 @@ Package fontspec Info:
 
 
 Package biblatex Warning: No driver for 'webpage'.
-(biblatex)                Using fallback driver on input line 66.
+(biblatex)                Using fallback driver on input line 61.
 
 [46] [47]
-Underfull \hbox (badness 6625) in paragraph at lines 66--66
+Underfull \hbox (badness 6625) in paragraph at lines 61--61
 \TU/TeXGyreTermesX(0)/m/n/12.045 Speech-Driven Gesture Synthesis Using Normalis
 ing Flows[]C/OL[]//Computer
  []
@@ -2811,8 +2802,8 @@ Overfull \hbox (11.03325pt too wide) in paragraph at lines 26--28
 
 
 ]) (contents/digest.tex)
-\tf@thm=\write10
-\openout10 = `main.thm'.
+\tf@thm=\write9
+\openout9 = `main.thm'.
 
  [54
 
@@ -2832,18 +2823,18 @@ L3 programming layer <2022/08/05>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AF649C477FAA9AD458F2C1582B105F0A;9765.
+(rerunfilecheck)             Checksum: 0EE4A31C40997E7853C87A6CA1CE88A4;9699.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52268 strings out of 402986
- 1117890 string characters out of 5453884
- 2059413 words of memory out of 5000000
- 80213 multiletter control sequences out of 15000+600000
+ 52250 strings out of 402986
+ 1117499 string characters out of 5453884
+ 2060354 words of memory out of 5000000
+ 80200 multiletter control sequences out of 15000+600000
  706704 words of font info for 261 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,16n,124p,1183b,7488s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on e:\SJTU\SJTUPaper\out\main.pdf (72 pages).
+Output written on e:\SJTU\SJTUPaper\out\main.pdf (70 pages).
