@@ -263,7 +263,7 @@ FaceCapGes保留了CaMN的语音与面部模态结构，但针对实时生成任
 
 在输入模态经过编码与融合后，模型需将多模态特征映射至对应的身体姿态空间。
 为实现层次化的动作生成与结构协调，本文将上半身的输出区域划分为两个互补分支：
-躯干(Torso, T)与上肢(Upper limbs, U)。
+躯干（Torso, T）与上肢（Upper limbs, U）。
 躯干部分包含脊椎的三个主要控制关节，用于确定身体的姿态基准与运动节奏；
 上肢部分包含双臂及手部关节，负责生成与语音节奏及情绪表达相呼应的细节动作。
 最终的上半身姿态表示为两者的组合：
@@ -351,7 +351,7 @@ $\bm{z}_t^{A}$、$\bm{z}_t^{F}$、$\bm{z}_t^{H}$会与历史姿态序列$(\bm{v}
 
 \subsubsection{滑动窗口式自回归训练}
 
-训练时，每段输入为$N+M$帧，前$N$帧作为输入上下文，后$M$帧逐步预测（见图~\ref{fig2_}）。
+训练时，每段输入为$N+M$帧，前$N$帧作为输入上下文，后$M$帧逐步预测（见图~\ref{fig_slideWindow}）。
 其中，前$N$帧的历史姿态可视为模型的因果历史窗口，
 其设计思路与基线模型中附加片段首部的“历史缓冲”类似，
 但在意义上有所不同。
@@ -403,7 +403,7 @@ CaMN在双向时间建模下使用该缓冲以补足片段外部上下文，
 \centering
 \includegraphics[width=0.75\linewidth]{figures/Fig2.png}
 \caption{滑动窗口训练机制：模型通过自回归循环预测$M$帧，每步使用$N$帧上下文并预测第$N+1$帧。损失函数累计所有预测帧的误差，保证因果性与时间平滑性。}
-\label{fig2_}
+\label{fig_slideWindow}
 \end{figure}
 
 通过以上适配，FaceCapGes在保持CaMN级联优势的同时显著降低系统延迟，
@@ -448,7 +448,7 @@ CaMN在双向时间建模下使用该缓冲以补足片段外部上下文，
 \paragraph{编码器结构}
 图~\ref{fig_headencoder} 所示为头部姿态编码器结构。该编码器由两层前馈网络组成，输入为Rot6d表示的6维向量：
 \begin{equation}
-\bm{z}^{H}_t = E_H(\bm{v}^H_{t-N:t}; \bm{z}^A_t, \bm{z}^F_t),
+\bm{z}^{H}_t = E_H(\bm{v}^H_{t-N:t}),
 \end{equation}
 其中 $E_H$ 的具体形式为：
 \begin{align}
@@ -468,19 +468,15 @@ CaMN在双向时间建模下使用该缓冲以补足片段外部上下文，
 \label{fig_headencoder}
 \end{figure}
 
-\paragraph{架构位置与实验依据}
-在早期实验中，我们尝试将头部姿态与语音、面部特征早期融合，但该方式导致手势方向轻微抖动、语音与动作节奏错位，收敛速度减慢。分析认为，原因在于头部姿态的反应性与非因果性：若过早参与特征交互，会破坏语音—手势因果映射。  
-因此本文采用后级融合策略，在语音与面部特征编码完成后再输入头部特征。该设计使模型先形成语义骨架，再由头部姿态进行方向修正与节奏调节。
-
 \subsection{小结：从语义驱动到反应调节的信号层级}
 
 FaceCapGes 在 CaMN 的语音—表情级联架构基础上，通过实时适配与头部模态引入实现了信号层级的扩展。前两级模态承担语义与情感驱动，而新增头部姿态层作为反应性调节模块，在实时条件下为手势提供动态节奏与空间反馈。
 
 \begin{figure*}[h!t]
 \centering
-\includegraphics[width=\textwidth]{figures/Fig1.png}
+\includegraphics[width=\textwidth]{figures/Fig_NeuroArchitecture.png}
 \caption{FaceCapGes 模型结构：音频、面部、头部编码器分别提取模态特征后拼接，输入至 LSTM 解码器生成躯干与手部动作，仅保留最后一帧输出作为当前时刻预测，符合帧级实时推理设定。训练阶段历史姿态序列比目标长度少一帧，需进行零填充。}
-\label{fig1_}
+\label{fig_architecture}
 \end{figure*}
 
 \section{实现与训练配置}
@@ -523,7 +519,7 @@ BEAT 数据集的骨架拓扑结构。
 相邻片段因此存在部分重叠，从而在保证充分上下文信息的同时提升数据覆盖率与时间连续性。
 批大小设为 256。
 
-优化器采用随机梯度下降 (Stochastic Gradient Descent, SGD)\cite{SGDBottou2010LargeScaleML}。
+优化器采用随机梯度下降（Stochastic Gradient Descent, SGD）\cite{SGDBottou2010LargeScaleML}。
 基础学习率设置为 $\mathrm{lr}_{base}=2.5\times10^{-4}$，
 并根据批大小按线性规则缩放为
 \begin{equation}

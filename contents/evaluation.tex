@@ -9,15 +9,15 @@
 \label{sec:objective_metrics}
 
 为全面评价模型在动作自然性、节奏同步性与多样性等方面的表现，
-本文在客观指标层面采用四项度量：Fréchet Gesture Distance(FGD)\cite{speech_gesture_generation}、语义相关动作召回率(Semantic Relevance Gesture Recall, SRGR)\cite{beatcamn}、节奏对齐度(Beat Alignment, BA)\cite{beatcamn, beatalign}以及L1范数(L1DIV)。
+本文在客观指标层面采用四项度量：Fréchet Gesture Distance（FGD）\cite{speech_gesture_generation}、语义相关动作召回率（Semantic Relevance Gesture Recall, SRGR）\cite{beatcamn}、节奏对齐度（Beat Alignment, BA）\cite{beatcamn, beatalign}以及L1范数（L1DIV）。
 这些指标分别对应生成动作在分布一致性、语音同步性与变化丰富性等不同维度，
 共同构成对模型质量的综合评估体系。
 
-\subsection{Fréchet Gesture Distance(FGD)}
+\subsection{Fréchet Gesture Distance（FGD）}
 \label{subsec:fgd}
 
 FGD\cite{speech_gesture_generation}用于衡量生成手势分布与真实手势分布之间的统计距离，
-灵感源自图像生成领域的Fréchet Inception Distance(FID)。
+灵感源自图像生成领域的Fréchet Inception Distance（FID）。
 不同于图像任务直接利用Inception网络特征，
 在动作生成领域，特征空间需由单独训练的动作自编码器定义。
 该自编码器通过重构任务学习手势的潜在表示，使潜在空间具备对运动模式的压缩与区分能力。
@@ -58,7 +58,7 @@ $\mathcal{N}(\bm{\mu}_r, \bm{\Sigma}_r)$ 与 $\mathcal{N}(\bm{\mu}_g, \bm{\Sigma
 \begin{equation}
 \mathrm{lr}=\mathrm{lr}_{base}\cdot \frac{\mathrm{batch\_size}}{128}.
 \end{equation}
-训练过程中仅使用位置与速度重构损失（式(\ref{eq:fgd_ae_loss})），不包含加速度或对抗项。
+训练过程中仅使用位置与速度重构损失（式（\ref{eq:fgd_ae_loss}）），不包含加速度或对抗项。
 自编码器共训练 400 个 epoch。
 
 \paragraph{用于FGD评估的骨架感知自编码器}
@@ -99,7 +99,7 @@ A_{ij} =
 在本文的实验设置中，该设计显著提升了FGD评估的数值稳定性，
 并有效避免了在Rot6d表示条件下使用嵌入式自编码器时出现的极端FGD数值现象。
 
-\subsection{Semantic Relevance Gesture Recall (SRGR)}
+\subsection{Semantic Relevance Gesture Recall（SRGR）}
 \label{subsec:srgr}
 
 SRGR指标（Semantic Relevance Gesture Recall）\cite{beatcamn}
@@ -146,10 +146,10 @@ SRGR通过对所有时间帧与关节进行统计，
 从而使 SRGR 更加关注语义相关手势的召回情况，
 而非对所有时间片段进行均匀统计。
 
-\subsection{Beat Alignment (BA)}
+\subsection{Beat Alignment（BA）}
 \label{subsec:ba}
 
-BA(Beat Alignment)指标用于衡量语音节拍事件与手势关键动作事件在时间轴上的对齐程度，
+Beat Alignment（BA）指标用于衡量语音节拍事件与手势关键动作事件在时间轴上的对齐程度，
 反映模型在语音–手势时序同步性（temporal synchronization）方面的性能。
 本文采用 BEAT/CaMN 中使用的 BeatAlign 指标\cite{beatcamn}，其原始形式由 Li 等人提出于 AI Choreographer 工作中\cite{beatalign}，
 并可视为音频节拍与动作节拍集合之间的单向 Chamfer 相似度度量。
@@ -164,7 +164,7 @@ $\mathcal{B}_s = \{ t^s_k \}$，
 通过对语音信号的能量相关特征进行起始点检测（onset detection）得到。
 具体而言，首先基于谱能量变化计算 onset strength 曲线，
 并在该曲线上进行峰值检测以获得候选语音事件位置。
-随后，引入 Root Mean Square(RMS)特征作为短时能量幅度的描述，
+随后，引入 Root Mean Square（RMS）特征作为短时能量幅度的描述，
 并在 RMS 曲线上对检测到的起始点进行 backtracking 校正，
 从而将语音节拍事件定位至能量实际开始上升的位置，
 以提高时间定位的稳定性与准确性。
@@ -263,7 +263,7 @@ DiffSHEG   & $\checkmark$ & $\times$ & $\times$ & $\checkmark$ & $\times$ & $\ch
 \bottomrule
 \end{tabular}%
 }
-\caption{实验对比模型的输入输出模态对比。$\ast$ 表示模型结构未显式输入说话人ID，但本文采用每位说话人独立训练的设置，因此说话人信息通过模型参数指定。}
+\caption{实验对比模型的输入输出模态对比。$\ast$ 表示模型结构未显式输入说话人ID，采用每位说话人独立训练的设置，说话人ID通过模型参数指定。}
 \label{tab:modalitycomparison}
 \end{table}
 
@@ -280,7 +280,7 @@ DiffSHEG   & $\checkmark$ & $\times$ & $\times$ & $\checkmark$ & $\times$ & $\ch
 
 \paragraph{实验材料与呈现方式}
 用户评估所使用的手势动画均基于测试集语音片段生成，
-并以BVH(Biovision Hierarchy)文件形式保存。
+并以Biovision Hierarchy（BVH）文件形式保存。
 BVH是一种通用的动作捕捉数据格式，
 通过层级化定义骨骼结构与帧级旋转参数，
 可直接导入3D动画与虚拟人系统。
