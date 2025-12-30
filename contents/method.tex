@@ -103,13 +103,13 @@ FaceCapGes输出的姿态数据通过统一接口传递至渲染与驱动模块�
 \begin{equation}
 \hat{\bm{v}}_{t}^{B} = f_\theta\!\big(\bm{v}_{t-N:t}^{A},\, \bm{v}_{t-N:t}^{F},\, \bm{v}_{t-N:t}^{H}\big),
 \end{equation}
-其中$f_\theta$表示由参数$\theta$控制的预测模型，$N$为历史窗口长度。
+其中$f_\theta$表示由参数$\theta$控制的生成模型，$N$为历史窗口长度。
 %
 各模态输入定义如下：
 $\bm{v}_{t}^{A}$表示语音模态在时刻$t$的特征向量，由麦克风信号经特征提取模块得到；
 $\bm{v}_{t}^{F}$表示面部模态的输入，为ARKit输出的52维标准化BlendShape系数；
 $\bm{v}_{t}^{H}$表示头部模态的输入，为ARKit得出的头部旋转矩阵经Rot6D表示；
-而$\hat{\bm{v}}_{t}^{B}$为模型在当前时刻预测的上半身骨骼姿态向量。
+而$\hat{\bm{v}}_{t}^{B}$为生成模型在当前时刻预测的上半身骨骼姿态向量。
 %
 模型仅利用当前及过去$N$帧的输入信息估计$\hat{\bm{v}}_{t}^{B}$，
 从而满足严格的实时推理约束。
@@ -119,8 +119,8 @@ $\bm{v}_{t}^{H}$表示头部模态的输入，为ARKit得出的头部旋转矩�
 FaceCapGes模型的输入由三种可同时实时获取的模态组成：语音特征、面部BlendShape权重及头部姿态参数；输出为当前帧的上半身骨骼旋转状态。各模态的符号与维度如表~\ref{tab:modalities}所示。
 
 \begin{table}[h]
-\centering
 \caption{输入输出模态符号与维度}
+\centering
 \label{tab:modalities}
 \begin{tabular}{llll}
 \toprule
