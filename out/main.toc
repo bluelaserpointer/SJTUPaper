@@ -85,28 +85,34 @@
 \contentsline {paragraph}{实验流程与指导}{37}{paragraph*.56}%
 \contentsline {paragraph}{实验材料与任务设计}{37}{paragraph*.57}%
 \contentsline {paragraph}{实验参与者}{38}{paragraph*.59}%
-\contentsline {subsection}{\numberline {4.3.2}平衡拉丁方排序设计}{38}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}结果与分析}{38}{subsection.4.3.3}%
-\contentsline {paragraph}{电脑用户测评结果}{39}{paragraph*.60}%
-\contentsline {paragraph}{平衡拉丁方实验结果}{39}{paragraph*.62}%
-\contentsline {paragraph}{用户反馈分析}{39}{paragraph*.64}%
-\contentsline {paragraph}{结果讨论}{40}{paragraph*.65}%
-\contentsline {section}{\numberline {4.4}定性分析}{40}{section.4.4}%
-\contentsline {section}{\numberline {4.5}定量分析}{40}{section.4.5}%
-\contentsline {section}{\numberline {4.6}消融实验分析}{41}{section.4.6}%
-\contentsline {section}{\numberline {4.7}性能评估}{42}{section.4.7}%
-\contentsline {paragraph}{端到端总延迟拆解与场景化分析}{42}{paragraph*.70}%
-\contentsline {chapter}{\numberline {第 5 章}结论}{44}{chapter.5}%
-\contentsline {section}{\numberline {5.1}本文工作总结}{44}{section.5.1}%
-\contentsline {section}{\numberline {5.2}未来工作展望}{44}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}高层语义信息与系统扩展}{44}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}面向未来趋势的预测性训练目标}{45}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}本章小结}{45}{section.5.3}%
-\contentsline {chapter}{参考文献}{46}{chapter*.71}%
-\contentsline {chapter}{\numberline {附录 A}代码与实现资源}{51}{appendix.A}%
-\contentsline {chapter}{\numberline {附录 B}手势生成对比视频}{52}{appendix.B}%
-\contentsline {chapter}{致\quad 谢}{53}{section*.72}%
-\contentsline {chapter}{学术论文和科研成果目录}{54}{section*.74}%
-\contentsline {chapter}{个人简历}{55}{section*.78}%
+\contentsline {paragraph}{实验环境说明}{38}{paragraph*.60}%
+\contentsline {subsection}{\numberline {4.3.2}平衡拉丁方排序设计}{39}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}结果与分析}{39}{subsection.4.3.3}%
+\contentsline {paragraph}{电脑用户测评结果}{39}{paragraph*.61}%
+\contentsline {paragraph}{平衡拉丁方实验结果}{40}{paragraph*.63}%
+\contentsline {paragraph}{用户反馈分析}{40}{paragraph*.65}%
+\contentsline {paragraph}{结果讨论}{41}{paragraph*.66}%
+\contentsline {section}{\numberline {4.4}定性分析}{41}{section.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.0.1}定性观察：手势起势与语音修正场景的时序一致性}{42}{subsubsection.4.4.0.1}%
+\contentsline {paragraph}{手势起势的节奏触发}{42}{paragraph*.68}%
+\contentsline {paragraph}{头-手协调：头部动作对手势方向与启动的提示作用}{42}{paragraph*.69}%
+\contentsline {paragraph}{语音卡顿与重说下的动作保持}{43}{paragraph*.70}%
+\contentsline {paragraph}{头部朝向与手势空间指向一致性}{43}{figure.caption.72}%
+\contentsline {section}{\numberline {4.5}定量分析}{43}{section.4.5}%
+\contentsline {section}{\numberline {4.6}消融实验分析}{44}{section.4.6}%
+\contentsline {section}{\numberline {4.7}性能评估}{44}{section.4.7}%
+\contentsline {paragraph}{端到端总延迟分析}{45}{paragraph*.76}%
+\contentsline {chapter}{\numberline {第 5 章}结论}{47}{chapter.5}%
+\contentsline {section}{\numberline {5.1}本文工作总结}{47}{section.5.1}%
+\contentsline {section}{\numberline {5.2}未来工作展望}{47}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}高层语义信息与系统扩展}{47}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}面向未来趋势的预测性训练目标}{48}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}本章小结}{48}{section.5.3}%
+\contentsline {chapter}{参考文献}{49}{chapter*.77}%
+\contentsline {chapter}{\numberline {附录 A}代码与实现资源}{54}{appendix.A}%
+\contentsline {chapter}{\numberline {附录 B}手势生成对比视频}{55}{appendix.B}%
+\contentsline {chapter}{致\quad 谢}{56}{section*.78}%
+\contentsline {chapter}{学术论文和科研成果目录}{57}{section*.80}%
+\contentsline {chapter}{个人简历}{58}{section*.84}%
 \contentsfinish 
 \contentsfinish 
