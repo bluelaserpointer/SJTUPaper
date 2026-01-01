@@ -93,26 +93,35 @@
 \contentsline {paragraph}{用户反馈分析}{40}{paragraph*.65}%
 \contentsline {paragraph}{结果讨论}{41}{paragraph*.66}%
 \contentsline {section}{\numberline {4.4}定性分析}{41}{section.4.4}%
-\contentsline {subsubsection}{\numberline {4.4.0.1}定性观察：手势起势与语音修正场景的时序一致性}{42}{subsubsection.4.4.0.1}%
+\contentsline {subsection}{\numberline {4.4.1}定性观察：手势起势与语音修正场景的时序一致性}{42}{subsection.4.4.1}%
 \contentsline {paragraph}{手势起势的节奏触发}{42}{paragraph*.68}%
 \contentsline {paragraph}{头-手协调：头部动作对手势方向与启动的提示作用}{42}{paragraph*.69}%
 \contentsline {paragraph}{语音卡顿与重说下的动作保持}{43}{paragraph*.70}%
 \contentsline {paragraph}{头部朝向与手势空间指向一致性}{43}{figure.caption.72}%
 \contentsline {section}{\numberline {4.5}定量分析}{43}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}评估区域设定与公平性说明}{43}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}定量评估结果}{44}{subsection.4.5.2}%
 \contentsline {section}{\numberline {4.6}消融实验分析}{44}{section.4.6}%
-\contentsline {section}{\numberline {4.7}性能评估}{44}{section.4.7}%
-\contentsline {paragraph}{端到端总延迟分析}{45}{paragraph*.76}%
-\contentsline {chapter}{\numberline {第 5 章}结论}{47}{chapter.5}%
-\contentsline {section}{\numberline {5.1}本文工作总结}{47}{section.5.1}%
-\contentsline {section}{\numberline {5.2}未来工作展望}{47}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}高层语义信息与系统扩展}{47}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}面向未来趋势的预测性训练目标}{48}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}本章小结}{48}{section.5.3}%
-\contentsline {chapter}{参考文献}{49}{chapter*.77}%
-\contentsline {chapter}{\numberline {附录 A}代码与实现资源}{54}{appendix.A}%
-\contentsline {chapter}{\numberline {附录 B}手势生成对比视频}{55}{appendix.B}%
-\contentsline {chapter}{致\quad 谢}{56}{section*.78}%
-\contentsline {chapter}{学术论文和科研成果目录}{57}{section*.80}%
-\contentsline {chapter}{个人简历}{58}{section*.84}%
+\contentsline {paragraph}{头部姿态输入的贡献}{45}{paragraph*.75}%
+\contentsline {paragraph}{帧级自回归生成的优势}{45}{paragraph*.76}%
+\contentsline {paragraph}{与基线模型 CaMN 的差异}{46}{paragraph*.77}%
+\contentsline {section}{\numberline {4.7}性能评估}{46}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}单帧推理性能}{46}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}端到端计算链路延迟}{46}{subsection.4.7.2}%
+\contentsline {paragraph}{远程推理部署的额外开销}{47}{paragraph*.79}%
+\contentsline {subsection}{\numberline {4.7.3}系统更新率}{48}{subsection.4.7.3}%
+\contentsline {subsection}{\numberline {4.7.4}帧率设定的可扩展性}{48}{subsection.4.7.4}%
+\contentsline {chapter}{\numberline {第 5 章}结论}{50}{chapter.5}%
+\contentsline {section}{\numberline {5.1}本文工作总结}{50}{section.5.1}%
+\contentsline {section}{\numberline {5.2}未来工作展望}{50}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}高层语义信息与系统扩展}{50}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}面向未来趋势的预测性训练目标}{51}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}本章小结}{51}{section.5.3}%
+\contentsline {chapter}{参考文献}{52}{chapter*.80}%
+\contentsline {chapter}{\numberline {附录 A}代码与实现资源}{57}{appendix.A}%
+\contentsline {chapter}{\numberline {附录 B}手势生成对比视频}{58}{appendix.B}%
+\contentsline {chapter}{致\quad 谢}{59}{section*.81}%
+\contentsline {chapter}{学术论文和科研成果目录}{60}{section*.83}%
+\contentsline {chapter}{个人简历}{61}{section*.87}%
 \contentsfinish 
 \contentsfinish 
