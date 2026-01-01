@@ -3166,6 +3166,161 @@
       \endverb
       \keyw{SGDBottou2010LargeScaleML}
     \endentry
+    \entry{unity}{online}{}{}
+      \list{institution}{1}{%
+        {Unity Technologies}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {Unity Technologies}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Unity Editor [Computer Software]}
+      \field{usera}{A}
+      \field{userd}{english}
+      \verb{urlraw}
+      \verb https://unity.com/
+      \endverb
+      \verb{url}
+      \verb https://unity.com/
+      \endverb
+      \keyw{unity}
+    \endentry
+    \entry{unitymechanim}{online}{}{}
+      \list{institution}{1}{%
+        {Unity Technologies}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {Unity Technologies}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Mechanim Animation System [Computer Software Module]}
+      \field{usera}{A}
+      \field{userd}{english}
+      \verb{urlraw}
+      \verb https://docs.unity3d.com/Manual/AnimationOverview.html
+      \endverb
+      \verb{url}
+      \verb https://docs.unity3d.com/Manual/AnimationOverview.html
+      \endverb
+      \keyw{unitymechanim}
+    \endentry
+    \entry{pico4}{online}{}{}
+      \list{institution}{1}{%
+        {ByteDance Inc.}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {ByteDance Inc.}%
+      }
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{PICO 4 All-in-One VR Headset [Hardware Device]}
+      \field{usera}{A}
+      \field{userd}{english}
+      \verb{urlraw}
+      \verb https://www.pico-interactive.com/
+      \endverb
+      \verb{url}
+      \verb https://www.pico-interactive.com/
+      \endverb
+      \keyw{pico4}
+    \endentry
+    \entry{LatinSquareToolkit}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=db1bf88039523161a1dc67ca13d63e24}{%
+           family={Schwind},
+           familyi={S\bibinitperiod},
+           given={Valentin},
+           giveni={V\bibinitperiod}}}%
+        {{hash=f6116bdf4670cdc2ab07410bbe223fcd}{%
+           family={Resch},
+           familyi={R\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=dfc90f8b652147d67d451d627f8c322a}{%
+           family={Sehrt},
+           familyi={S\bibinitperiod},
+           given={Jessica},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=db1bf88039523161a1dc67ca13d63e24}{%
+           family={Schwind},
+           familyi={S\bibinitperiod},
+           given={Valentin},
+           giveni={V\bibinitperiod}}}%
+        {{hash=f6116bdf4670cdc2ab07410bbe223fcd}{%
+           family={Resch},
+           familyi={R\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=dfc90f8b652147d67d451d627f8c322a}{%
+           family={Sehrt},
+           familyi={S\bibinitperiod},
+           given={Jessica},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{c2b621d57ddde29f176fd27ecf39637d}
+      \strng{fullhash}{1c27d7d6b7b0c48adafd77f3c7a90685}
+      \strng{fullhashraw}{1c27d7d6b7b0c48adafd77f3c7a90685}
+      \strng{bibnamehash}{1c27d7d6b7b0c48adafd77f3c7a90685}
+      \strng{authorbibnamehash}{1c27d7d6b7b0c48adafd77f3c7a90685}
+      \strng{authornamehash}{c2b621d57ddde29f176fd27ecf39637d}
+      \strng{authorfullhash}{1c27d7d6b7b0c48adafd77f3c7a90685}
+      \strng{authorfullhashraw}{1c27d7d6b7b0c48adafd77f3c7a90685}
+      \strng{nameabibnamehash}{1c27d7d6b7b0c48adafd77f3c7a90685}
+      \strng{nameanamehash}{c2b621d57ddde29f176fd27ecf39637d}
+      \strng{nameafullhash}{1c27d7d6b7b0c48adafd77f3c7a90685}
+      \strng{nameafullhashraw}{1c27d7d6b7b0c48adafd77f3c7a90685}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems (CHI EA '23)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{The HCI User Studies Toolkit: Supporting Study Designing and Planning for Undergraduates and Novice Researchers in Human-Computer Interaction}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{7}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1145/3544549.3585890
+      \endverb
+      \keyw{LatinSquareToolkit}
+    \endentry
     \entry{speech_gesture_generation}{article}{}{}
       \name{author}{7}{}{%
         {{hash=f839c5ca65064716fb99801199be05ee}{%
@@ -3257,8 +3412,8 @@
       \strng{nameafullhash}{6153362954b8a277fd4bd0e38a7a2eac}
       \strng{nameafullhashraw}{6153362954b8a277fd4bd0e38a7a2eac}
       \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv:2009.02119}
@@ -3333,8 +3488,8 @@
       \strng{nameanamehash}{45256fbeebcc356ec0395a4edf96433c}
       \strng{nameafullhash}{b01c9c177264d21076900d55324177e5}
       \strng{nameafullhashraw}{b01c9c177264d21076900d55324177e5}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)}
@@ -3352,163 +3507,7 @@
       \range{pages}{12}
       \keyw{beatalign}
     \endentry
-    \entry{unity}{online}{}{}
-      \list{institution}{1}{%
-        {Unity Technologies}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \list{organization}{1}{%
-        {Unity Technologies}%
-      }
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{Unity Editor [Computer Software]}
-      \field{usera}{A}
-      \field{userd}{english}
-      \verb{urlraw}
-      \verb https://unity.com/
-      \endverb
-      \verb{url}
-      \verb https://unity.com/
-      \endverb
-      \keyw{unity}
-    \endentry
-    \entry{unitymechanim}{online}{}{}
-      \list{institution}{1}{%
-        {Unity Technologies}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \list{organization}{1}{%
-        {Unity Technologies}%
-      }
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{Mechanim Animation System [Computer Software Module]}
-      \field{usera}{A}
-      \field{userd}{english}
-      \verb{urlraw}
-      \verb https://docs.unity3d.com/Manual/AnimationOverview.html
-      \endverb
-      \verb{url}
-      \verb https://docs.unity3d.com/Manual/AnimationOverview.html
-      \endverb
-      \keyw{unitymechanim}
-    \endentry
-    \entry{pico4}{online}{}{}
-      \list{institution}{1}{%
-        {ByteDance Inc.}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \list{organization}{1}{%
-        {ByteDance Inc.}%
-      }
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
-      \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{PICO 4 All-in-One VR Headset [Hardware Device]}
-      \field{usera}{A}
-      \field{userd}{english}
-      \verb{urlraw}
-      \verb https://www.pico-interactive.com/
-      \endverb
-      \verb{url}
-      \verb https://www.pico-interactive.com/
-      \endverb
-      \keyw{pico4}
-    \endentry
-    \entry{LatinSquareToolkit}{inproceedings}{}{}
-      \name{author}{3}{}{%
-        {{hash=db1bf88039523161a1dc67ca13d63e24}{%
-           family={Schwind},
-           familyi={S\bibinitperiod},
-           given={Valentin},
-           giveni={V\bibinitperiod}}}%
-        {{hash=f6116bdf4670cdc2ab07410bbe223fcd}{%
-           family={Resch},
-           familyi={R\bibinitperiod},
-           given={Stefan},
-           giveni={S\bibinitperiod}}}%
-        {{hash=dfc90f8b652147d67d451d627f8c322a}{%
-           family={Sehrt},
-           familyi={S\bibinitperiod},
-           given={Jessica},
-           giveni={J\bibinitperiod}}}%
-      }
-      \name{namea}{3}{}{%
-        {{hash=db1bf88039523161a1dc67ca13d63e24}{%
-           family={Schwind},
-           familyi={S\bibinitperiod},
-           given={Valentin},
-           giveni={V\bibinitperiod}}}%
-        {{hash=f6116bdf4670cdc2ab07410bbe223fcd}{%
-           family={Resch},
-           familyi={R\bibinitperiod},
-           given={Stefan},
-           giveni={S\bibinitperiod}}}%
-        {{hash=dfc90f8b652147d67d451d627f8c322a}{%
-           family={Sehrt},
-           familyi={S\bibinitperiod},
-           given={Jessica},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \list{publisher}{1}{%
-        {ACM}%
-      }
-      \strng{namehash}{c2b621d57ddde29f176fd27ecf39637d}
-      \strng{fullhash}{1c27d7d6b7b0c48adafd77f3c7a90685}
-      \strng{fullhashraw}{1c27d7d6b7b0c48adafd77f3c7a90685}
-      \strng{bibnamehash}{1c27d7d6b7b0c48adafd77f3c7a90685}
-      \strng{authorbibnamehash}{1c27d7d6b7b0c48adafd77f3c7a90685}
-      \strng{authornamehash}{c2b621d57ddde29f176fd27ecf39637d}
-      \strng{authorfullhash}{1c27d7d6b7b0c48adafd77f3c7a90685}
-      \strng{authorfullhashraw}{1c27d7d6b7b0c48adafd77f3c7a90685}
-      \strng{nameabibnamehash}{1c27d7d6b7b0c48adafd77f3c7a90685}
-      \strng{nameanamehash}{c2b621d57ddde29f176fd27ecf39637d}
-      \strng{nameafullhash}{1c27d7d6b7b0c48adafd77f3c7a90685}
-      \strng{nameafullhashraw}{1c27d7d6b7b0c48adafd77f3c7a90685}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems (CHI EA '23)}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{The HCI User Studies Toolkit: Supporting Study Designing and Planning for Undergraduates and Novice Researchers in Human-Computer Interaction}
-      \field{usera}{C}
-      \field{userd}{english}
-      \field{userf}{english}
-      \field{year}{2023}
-      \field{dateera}{ce}
-      \field{pages}{7}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1145/3544549.3585890
-      \endverb
-      \keyw{LatinSquareToolkit}
-    \endentry
   \enddatalist
-  \missing{bottou2010sgd}
 \endrefsection
 \endinput
 

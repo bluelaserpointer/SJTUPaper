@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  1 JAN 2026 15:49
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  1 JAN 2026 23:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2327,15 +2327,7 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
-(e:\SJTU\SJTUPaper\out\main.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                bottou2010sgd
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+(e:\SJTU\SJTUPaper\out\main.bbl)
 Package biblatex Info: Reference section=0 on input line 17.
 Package biblatex Info: Reference segment=0 on input line 17.
 \c@lstlisting=\count605
@@ -2344,7 +2336,8 @@ Package tocbasic Info: omitting babel extension for `lol'
 Package translations Info: no dictionary file `translations-basic-dictionary-ch
 inese.trsl' found. on input line 17.
 Package hyperref Info: Link coloring OFF on input line 17.
- (e:\SJTU\SJTUPaper\out\main.out) (e:\SJTU\SJTUPaper\out\main.out)
+ (e:\SJTU\SJTUPaper\out\main.out)
+(e:\SJTU\SJTUPaper\out\main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
@@ -2717,33 +2710,39 @@ File: figures/Fig_BEATBones.png Graphic file (type bmp)
 [31
 
 ]
+Overfull \hbox (3.08372pt too wide) in paragraph at lines 75--80
+[]\TU/SimSun(0)/m/n/12.045 本 系 统 当 前 支 持 的 虚 拟 人 三 维 模 型 需 同 时 具 备 骨 骼 绑 定 与 \T
+U/TeXGyreTermesX(0)/m/n/12.045 ARKit$[]$\TU/SimSun(0)/m/n/12.045 兼 容 的 \TU/TeXG
+yreTermesX(0)/m/n/12.045 Blend-
+ []
 
-LaTeX Warning: Citation 'bottou2010sgd' on page 32 undefined on input line 55.
-
-[32] [33] [34] [35] [36] [37]
+[32] [33]
 File: figures/UserStudyImage.png Graphic file (type bmp)
 <figures/UserStudyImage.png>
- [38]
+ [34]
 File: figures/UserStudy_All.png Graphic file (type bmp)
 <figures/UserStudy_All.png>
- [39]
 File: figures/UserStudy_LatinSquare.png Graphic file (type bmp)
 <figures/UserStudy_LatinSquare.png>
- [40] [41]
+ [35] [36]
 File: figures/GeneratedPoseOverview.png Graphic file (type bmp)
 <figures/GeneratedPoseOverview.png>
- [42]
+ [37] [38]
 File: figures/Fig_HeadHandAlignment.png Graphic file (type bmp)
 <figures/Fig_HeadHandAlignment.png>
 
 
-LaTeX Warning: Float too large for page by 21.00916pt on input line 588.
+LaTeX Warning: Float too large for page by 21.00916pt on input line 354.
 
-[43] [44] [45] [46] [47]) (contents/conclusions.tex [48] [49]
+[39] [40] [41] [42] [43]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[44] [45] [46] [47]) (contents/conclusions.tex [48] [49] [50]
 第 5 章
-[50
+[51
 
-]) [51] [52
+]) [52] [53
 
 ]
 
@@ -2777,15 +2776,15 @@ Package fontspec Info:
 Package biblatex Warning: No driver for 'webpage'.
 (biblatex)                Using fallback driver on input line 61.
 
-[53] [54]
+[54] [55]
 Underfull \hbox (badness 6625) in paragraph at lines 61--61
 \TU/TeXGyreTermesX(0)/m/n/12.045 Speech-Driven Gesture Synthesis Using Normalis
 ing Flows[]C/OL[]//Computer
  []
 
-[55] (contents/app_external_files.tex [56]
+[56] (contents/app_external_files.tex [57]
 附录 A
-[57
+[58
 
 ]
 附录 B
@@ -2796,21 +2795,21 @@ Overfull \hbox (11.03325pt too wide) in paragraph at lines 26--28
 ][][] []
  []
 
-) [58
+) [59
 
-] (contents/acknowledgements.tex) (contents/achievements.tex [59
+] (contents/acknowledgements.tex) (contents/achievements.tex [60
 
 
 
 ])
-(contents/resume.tex [60
+(contents/resume.tex [61
 
 
 ]) (contents/digest.tex)
 \tf@thm=\write9
 \openout9 = `main.thm'.
 
- [61
+ [62
 
 
 ] [1
@@ -2828,18 +2827,18 @@ L3 programming layer <2022/08/05>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F6768038F821D682AF1F51CE87AB817B;10916.
+(rerunfilecheck)             Checksum: 8639949C341854315BA05B8DF392EDE3;10883.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52245 strings out of 402986
- 1116219 string characters out of 5453884
- 2060234 words of memory out of 5000000
- 80193 multiletter control sequences out of 15000+600000
- 706712 words of font info for 262 fonts, out of 8000000 for 9000
+ 52212 strings out of 402986
+ 1114409 string characters out of 5453884
+ 2060138 words of memory out of 5000000
+ 80162 multiletter control sequences out of 15000+600000
+ 706696 words of font info for 260 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 115i,16n,124p,1183b,7488s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,16n,124p,1183b,7475s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on e:\SJTU\SJTUPaper\out\main.pdf (77 pages).
+Output written on e:\SJTU\SJTUPaper\out\main.pdf (78 pages).

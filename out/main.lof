@@ -7,11 +7,11 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces 头部姿态编码器结构示意图。 输入为 Rot6d 表示的 6 维旋转向量，经两层前馈网络与 ReLU 非线性映射， 输出 12 维紧凑潜在表征。 该编码结果与语音、面部嵌入拼接后输入解码器，用于补充动作的方向与节奏信号。}}{28}{figure.caption.41}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces FaceCapGes 模型结构：音频、面部、头部编码器分别提取模态特征后拼接，输入至 LSTM 解码器生成躯干与手部动作，仅保留最后一帧输出作为当前时刻预测，符合帧级实时推理设定。训练阶段历史姿态序列比目标长度少一帧，需进行零填充。}}{28}{figure.caption.42}%
 \contentsline {figure}{\numberline {3.6}{\ignorespaces BEAT 数据集的骨架拓扑结构。 蓝色部分为 FaceCapGes 模型的控制区域， 涵盖上肢与三段脊椎关节，其余节点保持静态。 }}{29}{figure.caption.43}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 用户调用工具实机界面}}{38}{figure.caption.58}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 电脑用户对三种生成模型的主观排名结果}}{39}{figure.caption.62}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 平衡拉丁方实验版本中虚拟现实用户对三种生成模型的主观排名结果}}{40}{figure.caption.64}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces GT、CaMN、DiffSHEG与FaceCapGes的动作效果对比。本模型手势响应自然，方向与头部朝向一致。}}{42}{figure.caption.67}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces 头部朝向与手势空间指向上的对比}}{49}{figure.caption.72}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 用户调用工具实机界面}}{34}{figure.caption.53}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 电脑用户对三种生成模型的主观排名结果}}{35}{figure.caption.57}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 平衡拉丁方实验版本中虚拟现实用户对三种生成模型的主观排名结果}}{36}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces GT、CaMN、DiffSHEG与FaceCapGes的动作效果对比。本模型手势响应自然，方向与头部朝向一致。}}{38}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 头部朝向与手势空间指向上的对比}}{50}{figure.caption.67}%
 \contentsfinish 
 \contentsfinish 
 \contentsfinish 
