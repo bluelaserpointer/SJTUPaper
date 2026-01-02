@@ -113,8 +113,8 @@
 \contentsline {chapter}{\numberline {第 5 章}结论}{51}{chapter.5}%
 \contentsline {section}{\numberline {5.1}本文工作总结}{51}{section.5.1}%
 \contentsline {section}{\numberline {5.2}未来工作展望}{51}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}高层语义信息与系统扩展}{51}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}面向未来趋势的预测性训练目标}{52}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.1}高层语义信息}{51}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}面向未来趋势的预测性训练目标}{51}{subsection.5.2.2}%
 \contentsline {section}{\numberline {5.3}本章小结}{52}{section.5.3}%
 \contentsline {chapter}{参考文献}{53}{chapter*.75}%
 \contentsline {chapter}{\numberline {附录 A}手势生成对比视频}{58}{appendix.A}%
