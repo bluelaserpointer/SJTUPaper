@@ -1,19 +1,19 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'out\main.blg'
-[151] biber-MSWIN64:342> INFO - === 
-[201] Biber.pm:421> INFO - Reading 'out\main.bcf'
-[412] Biber.pm:1002> INFO - Found 44 citekeys in bib section 0
-[430] Biber.pm:4487> INFO - Processing section 0
-[443] Biber.pm:4678> INFO - Looking for bibtex file 'refs.bib' for section 0
-[525] bibtex.pm:1713> INFO - LaTeX decoding ...
-[609] bibtex.pm:1519> INFO - Found BibTeX data source 'refs.bib'
-[1422] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1422] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1422] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[1422] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[1472] bbl.pm:676> INFO - Writing 'out\main.bbl' with encoding 'UTF-8'
-[1556] bbl.pm:779> INFO - Output to out\main.bbl
-[1556] Biber.pm:132> WARN - legacy month field 'June' in entry 'AMUSE2024' is not an integer - this will probably not sort properly.
-[1556] Biber.pm:132> WARN - legacy month field 'June' in entry 'DiffTED2024' is not an integer - this will probably not sort properly.
-[1557] Biber.pm:132> WARN - legacy month field 'October' in entry 'beatalign' is not an integer - this will probably not sort properly.
-[1557] Biber.pm:134> INFO - WARNINGS: 3
+[173] biber-MSWIN64:342> INFO - === 
+[234] Biber.pm:421> INFO - Reading 'out\main.bcf'
+[503] Biber.pm:1002> INFO - Found 44 citekeys in bib section 0
+[525] Biber.pm:4487> INFO - Processing section 0
+[540] Biber.pm:4678> INFO - Looking for bibtex file 'refs.bib' for section 0
+[648] bibtex.pm:1713> INFO - LaTeX decoding ...
+[751] bibtex.pm:1519> INFO - Found BibTeX data source 'refs.bib'
+[1755] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1755] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1755] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[1755] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[1819] bbl.pm:676> INFO - Writing 'out\main.bbl' with encoding 'UTF-8'
+[1906] bbl.pm:779> INFO - Output to out\main.bbl
+[1906] Biber.pm:132> WARN - legacy month field 'June' in entry 'AMUSE2024' is not an integer - this will probably not sort properly.
+[1906] Biber.pm:132> WARN - legacy month field 'June' in entry 'DiffTED2024' is not an integer - this will probably not sort properly.
+[1906] Biber.pm:132> WARN - legacy month field 'October' in entry 'beatalign' is not an integer - this will probably not sort properly.
+[1906] Biber.pm:134> INFO - WARNINGS: 3
