@@ -112,7 +112,7 @@ Baars等的实验\cite{FlapThoseHands}比较了无手势、仅使用节奏型手
       \item 旋转矩阵：
       以3x3的正交矩阵，表示坐标系或物体绕某个轴旋转一定角度后的新姿态。
       常用于计算机图形学、机器人学和物理仿真中，但正交约束（\(R^T R = I\)且\(\det(R) = 1\)）提高神经网络的学习难度。
-      \item Rot6d\cite {rot6d}：将3×3旋转矩阵的前两列展开为六维向量，
+      \item Rot6D\cite {rot6d}：将3×3旋转矩阵的前两列展开为六维向量，
       通过 Gram-Schmidt 正交化过程自动保持列向量的正交性与单位长度，无需额外约束。
       该表示既继承了旋转矩阵的数值稳定性，又解决了其参数冗余和正交性约束难题，同时具备连续性优势。
 \end {enumerate}
@@ -120,15 +120,15 @@ Baars等的实验\cite{FlapThoseHands}比较了无手势、仅使用节奏型手
 在计算机图形与实时渲染中，通常采用四元数或旋转矩阵进行骨骼变换与插值，以保证数值稳定性和计算效率。
 然而，在深度学习任务中，这些表示方式的约束会对训练效率造成影响：
 四元数需满足单位长度约束；旋转矩阵则需满足元素的正交约束。
-近年来的研究表明\cite {rot6d}，Rot6d既规避了上述两种表示的约束难题，又保持了姿态空间的连续性与物理合理性，
+近年来的研究表明\cite {rot6d}，Rot6D既规避了上述两种表示的约束难题，又保持了姿态空间的连续性与物理合理性，
 在动作生成与姿态预测任务中展现出更优的可学习性。
 
 手势生成方法对旋转参数的选取经历了一个演变过程。早期工作采用的方法各异（如欧拉角、Axis-Angle），多受限于特定框架或历史因素；
-而近期研究，出于对神经网络训练稳定性的追求，已显著趋向于采用Rot6d表示。
+而近期研究，出于对神经网络训练稳定性的追求，已显著趋向于采用Rot6D表示。
 这一趋势的实例对比见表~\ref{fig:rotation_comparison}。
 
 \begin{table}[htbp]
-\bicaption{不同旋转表示方式的空间连续性与使用示例}{}
+\bicaption{不同旋转表示方式的空间连续性与使用示例}{Spatial Continuity and Usage Examples of Different Rotation Representations}
 \centering
 \label{fig:rotation_comparison}
 \begin{tabular}{@{}lcccc@{}}
@@ -138,11 +138,11 @@ Baars等的实验\cite{FlapThoseHands}比较了无手势、仅使用节奏型手
 四元数 & 4 & 连续，但存在单位长度约束 & 图形学 & — \\
 Axis-Angle & 3 & 角度部分不连续 & 神经网络 & DiffSHEG\cite{diffsheg} \\
 旋转矩阵 & 9 & 连续，但存在正交约束 & 图形学、机器人学 & MambaGesture\cite{fu2024mambagesture} \\
-Rot6d & 6 & 连续 & 神经网络 & 近期多数\cite{emage, Ao2023GestureDiffuCLIP,AMUSE2024} \\ \bottomrule
+Rot6D & 6 & 连续 & 神经网络 & 近期多数\cite{emage, Ao2023GestureDiffuCLIP,AMUSE2024} \\ \bottomrule
 \end{tabular}
 \end{table}
 
-因此，本文在姿态生成模型中统一使用Rot6d表示每个关节的旋转状态，以确保训练阶段的平滑收敛与推理阶段的稳定性。
+因此，本文在姿态生成模型中统一使用Rot6D表示每个关节的旋转状态，以确保训练阶段的平滑收敛与推理阶段的稳定性。
 
 \section{面部表情的定义与参数化表示}
 
@@ -151,26 +151,28 @@ Rot6d & 6 & 连续 & 神经网络 & 近期多数\cite{emage, Ao2023GestureDiffuC
 目前常见的面部状态描述方法主要有两类：
 
 \paragraph{BlendShape权重模型}
-FACS（Facial Action Coding System）\cite{EkmanFriesenFACS1978}提出复杂表情可分解为若干可组合的基本动作单元（Action Units, AU），为表情的参数化表示提供了理论基础。
+Facial Action Coding System（FACS）\cite{EkmanFriesenFACS1978}提出复杂表情可分解为若干可组合的基本动作单元（Action Units, AU），为表情的参数化表示提供了理论基础。
 受此启发，BlendShape 模型将面部表情表示为一组可线性叠加的形变基，每个基形对应一个权重控制的局部表情变化。复杂表情由多个基形的组合生成，其思想与FACS的动作单元体系相呼应。
 
 与基于骨骼的形变不同，BlendShape 直接在顶点层面定义几何偏移量，因此对网格拓扑结构高度依赖：每个基形的顶点偏移需与基础网格逐点对应。在具有相同网格结构的角色模型之间，BlendShape 集合可以直接复用；但若拓扑发生变化，偏移数据将无法一一对应，从而难以在不同模型间映射或重定向。这种拓扑依赖性限制了其跨模型的通用性。
 
 尽管如此，BlendShape 在表现精细面部表情和软组织形变方面具有显著优势。其标准化权重接口、实时可驱动性与渲染兼容性，使其成为虚拟人和表情捕捉系统的主流表示形式，并被广泛应用于如ARKit\cite{ARKitDocumentation} 等实时动画框架，以及主流渲染引擎中。
 
+图~\ref{fig:au_sample}来自~\cite{ozel_arkit_facs_cheatsheet}，展示FACS对闭眼睛的动作单元AU45的定义。
+
 \begin{figure}[h!t]
 \centering
 \includegraphics[width=0.95\linewidth]{figures/Fig_AUSample.png}
-\caption{示例图来自~\cite{ozel_arkit_facs_cheatsheet}，展示FACS AU45（blink）对应的ARKit中的两种BlendShape基形：eyeBlinkLeft（闭左眼）与eyeBlinkRight（闭右眼）。}
+\bicaption{FACS 中闭眼动作单元的定义}{Definition of Eye Closure Action Units in FACS}
 \label{fig:au_sample}
 \end{figure}
 
-图~\ref{fig:bs_eyeblink}展示了eyeBlinkLeft、eyeBlinkRight的ARKit BlendShape基形在权重$w\!\in\![0,1]$下的线性插值效果（从张眼到闭眼）。
+这在BlendShape中，一般对应两种基形：eyeBlinkLeft（闭左眼）与eyeBlinkRight（闭右眼）。图~\ref{fig:bs_eyeblink}展示了eyeBlinkLeft、eyeBlinkRight的ARKit BlendShape基形在权重$w\!\in\![0,1]$下的线性插值效果（从张眼到闭眼）。
 
 \begin{figure}[h!t]
 \centering
 \includegraphics[width=0.95\linewidth]{figures/Fig_blendshapeEyeBlink.png}
-\caption{BlendShape线性插值效果示例：eyeBlink从 $w{=}0$（左）到 $w{=}1$（右）的连续变化，中图为中间值。BS权重可直接用于实时渲染驱动。}
+\bicaption{BlendShape 在闭眼形变上的线性插值效果}{Linear Interpolation of BlendShape Deformation for Eye Closure}
 \label{fig:bs_eyeblink}
 \end{figure}
 
@@ -184,7 +186,7 @@ FACS（Facial Action Coding System）\cite{EkmanFriesenFACS1978}提出复杂表�
 \begin{figure}[h!t]
 \centering
 \includegraphics[width=0.4\linewidth]{figures/Fig_MediaPipeLandmark.png}
-\caption{MediaPipe Face Mesh 关键点结构示意图，截取自\cite{mediapipefacemesh}。}
+\bicaption{MediaPipe Face Mesh 关键点结构示意图}{Illustration of MediaPipe Face Mesh Landmark Topology}
 \label{fig_mediapipe_landmark}
 \end{figure}
 
@@ -223,7 +225,7 @@ FACS（Facial Action Coding System）\cite{EkmanFriesenFACS1978}提出复杂表�
 这两类研究目标在可利用的信息条件和评价重心上存在本质区别：
 
 \begin{table}[h]
-\caption{两类手势生成任务在约束与可利用条件上的对比}
+\bicaption{离线与在线手势生成任务在约束与可利用信息上的对比}{Comparison of Constraints and Available Information between Offline and Online Gesture Generation}
 \centering
 \label{tab:task_constraint_comparison}
 \begin{tabular}{@{}p{3cm}p{5.5cm}p{5.5cm}@{}}
@@ -291,7 +293,7 @@ FACS（Facial Action Coding System）\cite{EkmanFriesenFACS1978}提出复杂表�
 典型代表如CaMN模型\cite{beatcamn}，其基于BEAT数据集\cite{beatcamn}训练级联网络，将LSTM、全连接网络与GAN结构相结合，实现从语音到动作的端到端预测。
 
 然而，该类模型多使用欧拉角或离散旋转参数作为手势表示，生成结果容易出现抖动与不连续。
-后续工作引入更平滑的表示方式，如Rot6d\cite{rot6d,emage,Ao2023GestureDiffuCLIP, AMUSE2024}或Axis-Angle\cite{diffsheg}，显著提升了动作流畅性。
+后续工作引入更平滑的表示方式，如Rot6D\cite{rot6d,emage,Ao2023GestureDiffuCLIP, AMUSE2024}或Axis-Angle\cite{diffsheg}，显著提升了动作流畅性。
 与此同时，为解决语音与手势间的多对多映射问题，研究者引入了VQ-VAE\cite{emage,zhang2024SemanticGesticulator}与扩散模型\cite{tamingDiffgesture,diffsheg,diffstylegesture,DiffTED2024,diffusion-self-supervised2023}，
 在保持自然性的同时提升了生成多样性与表现力。
 

@@ -79,8 +79,8 @@
       \strng{nameanamehash}{f720016bf9599fbe5103e12414d52e30}
       \strng{nameafullhash}{20862ec123fa6e1df0240c9ff7ec6c53}
       \strng{nameafullhashraw}{20862ec123fa6e1df0240c9ff7ec6c53}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv:1907.06724}
@@ -125,8 +125,8 @@
       \strng{nameanamehash}{9fbbe4a7d74dff00639205779e74876d}
       \strng{nameafullhash}{9fbbe4a7d74dff00639205779e74876d}
       \strng{nameafullhashraw}{9fbbe4a7d74dff00639205779e74876d}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
@@ -247,8 +247,8 @@
       \strng{nameafullhash}{0965d055495faa299bf2fe0be84a066f}
       \strng{nameafullhashraw}{0965d055495faa299bf2fe0be84a066f}
       \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:2203.05297}
@@ -299,8 +299,8 @@
       \strng{nameanamehash}{2512b39e214f27cb2b9e3dc6913f7f9a}
       \strng{nameafullhash}{2512b39e214f27cb2b9e3dc6913f7f9a}
       \strng{nameafullhashraw}{2512b39e214f27cb2b9e3dc6913f7f9a}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780521542937}
@@ -351,8 +351,8 @@
       \strng{nameanamehash}{3ccf5b8aeb22bbe688614d1e72c13c21}
       \strng{nameafullhash}{3ccf5b8aeb22bbe688614d1e72c13c21}
       \strng{nameafullhashraw}{3ccf5b8aeb22bbe688614d1e72c13c21}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780226561325}
@@ -410,8 +410,8 @@
       \strng{nameanamehash}{da4ffe9ad93a79f62bd33e7eebd36060}
       \strng{nameafullhash}{2bb8cf74a1192c13cb0ca0db9f7769d5}
       \strng{nameafullhashraw}{2bb8cf74a1192c13cb0ca0db9f7769d5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2352-1236}
@@ -491,8 +491,8 @@
       \strng{nameanamehash}{08e3cbd50ab93714598da16cf92b09dc}
       \strng{nameafullhash}{81badc86d4223475121570eac0d378b7}
       \strng{nameafullhashraw}{81badc86d4223475121570eac0d378b7}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Speech Communication}
@@ -554,8 +554,8 @@
       \strng{nameanamehash}{a9ef9e01277d09c7f2c499110ee651e4}
       \strng{nameafullhash}{f0b19dceb7ac924c291a285c492579ff}
       \strng{nameafullhashraw}{f0b19dceb7ac924c291a285c492579ff}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Semiotica}
@@ -1043,8 +1043,8 @@
       \strng{nameanamehash}{5486ce563fc3f3125c46603bf0d2b79c}
       \strng{nameafullhash}{00872578de61be3b446d5e23bbd8a382}
       \strng{nameafullhashraw}{00872578de61be3b446d5e23bbd8a382}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1812.07035v4}
@@ -1819,8 +1819,8 @@
       \strng{nameanamehash}{619286ae07bc6892c6577c4d8a6c7e3c}
       \strng{nameafullhash}{78cb5e593f08460213339cb875a32187}
       \strng{nameafullhashraw}{78cb5e593f08460213339cb875a32187}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
@@ -1914,8 +1914,8 @@
       \strng{nameanamehash}{88ea2f6db73568911b3c10a264278e8f}
       \strng{nameafullhash}{cf279010dcfd61f6fcbbadde65bb8f60}
       \strng{nameafullhashraw}{cf279010dcfd61f6fcbbadde65bb8f60}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}
@@ -2009,8 +2009,8 @@
       \strng{nameafullhash}{c6f4fa4a470b06fa7909787eaec5bf3e}
       \strng{nameafullhashraw}{c6f4fa4a470b06fa7909787eaec5bf3e}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Frontiers in Computer Science}
@@ -2326,8 +2326,8 @@
       \strng{nameanamehash}{62a52e2596cf3d8ca5c34b14b107fffa}
       \strng{nameafullhash}{1112cb19cc5d19f52ea6d01f65e6b410}
       \strng{nameafullhashraw}{1112cb19cc5d19f52ea6d01f65e6b410}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ACM Transactions on Graphics (TOG)}
@@ -2426,8 +2426,8 @@
       \strng{nameanamehash}{02097d812fc3c9a5f66675e55239b1b6}
       \strng{nameafullhash}{fe6be3f9201e2f558920d03c09a85fb1}
       \strng{nameafullhashraw}{fe6be3f9201e2f558920d03c09a85fb1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition}
@@ -2544,8 +2544,8 @@
       \strng{nameanamehash}{1027738af091389081d6faebf068d260}
       \strng{nameafullhash}{3798646f4edec3c5155684e57baf85ec}
       \strng{nameafullhashraw}{3798646f4edec3c5155684e57baf85ec}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence, {IJCAI-23}}
@@ -2642,8 +2642,8 @@
       \strng{nameanamehash}{cad487b17ca2aa59f98bf738d509a6b4}
       \strng{nameafullhash}{79ea90570426e952592dc09c13f0237d}
       \strng{nameafullhashraw}{79ea90570426e952592dc09c13f0237d}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops}
@@ -2721,8 +2721,8 @@
       \strng{nameanamehash}{73fa768409b15075f4120d59e36f4986}
       \strng{nameafullhash}{9f8e6ab6aa6e3344a3727bb5ba343b16}
       \strng{nameafullhashraw}{9f8e6ab6aa6e3344a3727bb5ba343b16}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 25th International Conference on Multimodal Interaction}
@@ -2811,8 +2811,8 @@
       \strng{nameafullhash}{e16e786b3feb95c6552bfbc9ed1a22da}
       \strng{nameafullhashraw}{e16e786b3feb95c6552bfbc9ed1a22da}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 23rd ACM International Conference on Intelligent Virtual Agents (IVA 2023)}
@@ -2919,8 +2919,8 @@
       \strng{nameafullhash}{13c29dfd1ba1cb3eb843628757a3aaf0}
       \strng{nameafullhashraw}{13c29dfd1ba1cb3eb843628757a3aaf0}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 2020 ACM International Conference on Multimodal Interaction (ICMI)}
@@ -3007,8 +3007,8 @@
       \strng{nameafullhash}{be85190b1e8a48c112d9940f8b1dd145}
       \strng{nameafullhashraw}{be85190b1e8a48c112d9940f8b1dd145}
       \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Computer Graphics Forum (Proc. Eurographics)}
@@ -3092,8 +3092,8 @@
       \strng{nameafullhash}{6403150f12baba4949930a1fccbe87f2}
       \strng{nameafullhashraw}{6403150f12baba4949930a1fccbe87f2}
       \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:2107.12305}
@@ -3144,8 +3144,8 @@
       \strng{nameanamehash}{ac762f2592005edf6bad58f566967c6c}
       \strng{nameafullhash}{ac762f2592005edf6bad58f566967c6c}
       \strng{nameafullhashraw}{ac762f2592005edf6bad58f566967c6c}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{International Conference on Computational Statistics}
@@ -3176,8 +3176,8 @@
       \list{organization}{1}{%
         {Unity Technologies}%
       }
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
       \field{langid}{english}
       \field{languageid}{english}
@@ -3203,8 +3203,8 @@
       \list{organization}{1}{%
         {Unity Technologies}%
       }
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
       \field{langid}{english}
       \field{languageid}{english}
@@ -3230,8 +3230,8 @@
       \list{organization}{1}{%
         {ByteDance Inc.}%
       }
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labeltitlesource}{title}
       \field{langid}{english}
       \field{languageid}{english}
@@ -3300,8 +3300,8 @@
       \strng{nameanamehash}{c2b621d57ddde29f176fd27ecf39637d}
       \strng{nameafullhash}{1c27d7d6b7b0c48adafd77f3c7a90685}
       \strng{nameafullhashraw}{1c27d7d6b7b0c48adafd77f3c7a90685}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems (CHI EA '23)}
