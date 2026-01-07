@@ -5,6 +5,71 @@
 为评估 FaceCapGes 的生成质量与实时性能，本文从用户评估、客观指标测量与推理效率三个方面展开实验，
 并在生成质量上与代表性方法进行对比分析。
 
+\section{训练配置}
+\label{sec:implementation}
+
+本文模型FaceCapGes基于PyTorch实现，
+所有实验在单张 NVIDIA RTX 4090 GPU 上进行。
+
+本文基于 BEAT 数据集\cite{beatcamn} 进行训练与评估。
+该数据集包含多模态同步的语音、面部 blendshape 与全身动作信息，
+以 15\,fps 记录多位专业表演者的演讲片段，覆盖多种语义与情绪场景。
+其标准骨架结构如图~\ref{fig_beatbones} 所示，
+BEAT 数据集共包含人体中的 47 个关节节点，
+包括上肢及躯干的三个主要控制点（蓝色区域所示）。
+下肢关节则保持静态。
+
+\begin{figure}[h!t]
+\centering
+\includegraphics[width=0.15\textwidth]{figures/Fig_BEATBones.png}
+\bicaption{BEAT 数据集的骨架拓扑结构与驱动范围}{Skeleton Topology and Actuated Joint Range in the BEAT Dataset}
+\label{fig_beatbones}
+\end{figure}
+
+本文选取表演者 ID~2、4、6、8 的数据进行训练与测试，
+其中~2、4~为男性，~6、8~为女性，
+确保在性别与说话风格上的分布均衡。
+训练集与测试集均包含相同的表演者，
+但使用不同的演讲片段，
+在预处理阶段已进行严格划分以避免片段交叉。
+
+\paragraph{训练配置}
+\label{train_param_setting}
+训练时输入窗口的前序帧数设为 $N=16$，预测长度为 $M=34$，训练片段的切割步长为 10 帧。
+相邻片段因此存在部分重叠，从而在保证充分上下文信息的同时提升数据覆盖率与时间连续性。
+批大小设为 256。
+
+优化器采用随机梯度下降（Stochastic Gradient Descent, SGD）\cite{SGDBottou2010LargeScaleML}。
+基础学习率设置为 $\mathrm{lr}_{base}=2.5\times10^{-4}$，
+并根据批大小按线性规则缩放为
+\begin{equation}
+\mathrm{lr}_{g} = \mathrm{lr}_{base}\cdot \frac{\mathrm{batch\_size}}{128},
+\end{equation}
+其中 $\mathrm{lr}_{g}$ 为生成器（手势生成网络）的实际学习率。
+
+在对抗训练阶段，判别器使用相同类型的 SGD 优化器，
+其学习率按权重系数 $w_d$ 缩放为
+\begin{equation}
+\mathrm{lr}_{d} = w_d \cdot \mathrm{lr}_{g},
+\end{equation}
+本文中设定 $w_d = 0.2$。
+
+为防止早期训练阶段的不稳定，对抗项在第 10 个 epoch 后引入，
+即前 10 个 epoch 仅优化重构与时序平滑损失，
+从第 11 个 epoch 起加入判别器并交替优化生成器与判别器参数。
+整体训练共 374 个 epoch。
+
+在损失计算中，前 $N$ 帧的历史窗口仅作为因果上下文输入，不参与重构与对抗项的误差回传。
+损失函数采用第~\ref{sec:loss} 节所述的复合重构与对抗目标。
+
+\paragraph{姿态表示}
+所有身体动作均转换为连续可微的 Rot6D 表示，
+使用 EMAGE\cite{emage} 中的实现方法，
+以避免欧拉角奇异性与四元数的符号不确定性。
+
+\paragraph{运行性能}
+在实时推理阶段，FaceCapGes 以 15\,FPS 的速度驱动虚拟角色。
+
 \section{实验配置}
 
 \subsection{实验对比模型}

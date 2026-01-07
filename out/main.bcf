@@ -2988,8 +2988,10 @@
     <bcf:citekey order="26" intorder="1">mediapipefacemesh</bcf:citekey>
     <bcf:citekey order="27" intorder="1">amos2016openface</bcf:citekey>
     <bcf:citekey order="28" intorder="1">ginosar2019speech2gesture</bcf:citekey>
+    <bcf:citekey order="28" intorder="2">alexanderson2020stylegestures</bcf:citekey>
+    <bcf:citekey order="28" intorder="3">kucherenko2021movingfastslow</bcf:citekey>
     <bcf:citekey order="29" intorder="1">kucherenko2021predictability</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">beatcamn</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">esteve2017timing</bcf:citekey>
     <bcf:citekey order="31" intorder="1">behavior_expression_animation_toolkit</bcf:citekey>
     <bcf:citekey order="31" intorder="2">robot_behavior_toolkit</bcf:citekey>
     <bcf:citekey order="31" intorder="3">gesture_generation_by_imitation</bcf:citekey>
@@ -3022,10 +3024,8 @@
     <bcf:citekey order="45" intorder="1">yoon2020speechgesturebert</bcf:citekey>
     <bcf:citekey order="45" intorder="2">alexanderson2023diffgesture</bcf:citekey>
     <bcf:citekey order="46" intorder="1">ginosar2019speech2gesture</bcf:citekey>
-    <bcf:citekey order="46" intorder="2">alexanderson2020stylegestures</bcf:citekey>
-    <bcf:citekey order="46" intorder="3">kucherenko2021movingfastslow</bcf:citekey>
     <bcf:citekey order="47" intorder="1">kucherenko2021predictability</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">esteve2017timing</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">beatcamn</bcf:citekey>
     <bcf:citekey order="49" intorder="1">beatcamn</bcf:citekey>
     <bcf:citekey order="50" intorder="1">ARKitDocumentation</bcf:citekey>
     <bcf:citekey order="51" intorder="1">rot6d</bcf:citekey>

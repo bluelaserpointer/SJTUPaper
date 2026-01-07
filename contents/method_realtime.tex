@@ -1,0 +1,112 @@
+\chapter{基于滑动窗口的实时手势生成自回归训练}
+
+\section{因果时序建模与训练策略}
+\label{sec:realtime}
+\subsection{时间建模结构改动与因果性约束}
+
+基线模型CaMN使用双向LSTM生成完整序列的骨骼姿态，输入与输出片段长度一致。
+由于双向结构在每个时间步都依赖未来帧隐状态，虽然能增强整体平滑性，但不满足实时生成场景的因果约束。
+为实现严格的实时性，本文将时间建模模块改为单向LSTM，
+使模型在每一时间步仅依赖过去$N$帧的输入并预测当前帧的骨骼姿态。
+虽然单向LSTM结构上仍会输出与输入片段等长的时间序列，
+但有效输出为输出序列的最后一帧（即当前时刻$t$），
+我们对此计算重构与平滑损失。
+形式化地，令
+\begin{equation}
+\hat{\bm{v}}_{t} = \mathrm{LSTM}(\bm{z}_{t-N:t}^{fuse})_{N},
+\end{equation}
+其中，下标$N$表示取LSTM输出序列的最后一帧作为当前时刻的预测结果。
+
+则前述损失函数中的姿态、速度与加速度项均以该目标帧为中心计算，
+即
+\begin{equation}
+\mathcal{L}_{rec} = \mathcal{L}_{Huber}(\bm{v}_t,\hat{\bm{v}}_t),
+\end{equation}
+
+其余项 $\mathcal{L}_{vel},\mathcal{L}_{acc}$ 亦同理，由 $\hat{\bm{v}}_t$ 与历史帧差分得到。
+最终仍采用式\ref{eq:loss_total}定义的总体目标进行优化。
+
+该策略通过在前$N$帧内累积隐状态，完成当前姿态预测，从而建立严格的因果时序映射。
+
+在推理阶段，FaceCapGes采用长度为$N$的显式输入窗口，并在时间步之间保留LSTM的隐状态。
+虽然单向LSTM理论上能够仅通过递推隐状态存储历史信息，
+但由于隐状态为压缩形式，难以完全保留短时节奏与相位特征。
+因此，显式窗口输入与隐状态记忆在模型中形成互补：
+前者提供局部的高分辨率上下文，
+后者维持全局的时序连贯性。
+这种设计在保证因果性的前提下提高了生成的稳定性与自然性，
+也是实现实时语音驱动动作生成的关键因素之一。
+
+图~\ref{fig_lstmcompare}展示了双向与单向结构的差异。
+双向结构在每个时间步同时利用历史与未来帧特征进行建模；
+而单向结构仅基于历史帧进行递推，以保持因果性并支持流式推理，
+因此仅依赖历史帧输入，更适合在流式序列中逐帧输出预测结果。
+
+\begin{figure}[h!t]
+\centering
+\includegraphics[width=0.9\linewidth]{figures/Fig_lstmcompare.png}
+\bicaption{双向与单向 LSTM 的因果性对比示意图}{Illustration of Bidirectional vs. Unidirectional LSTM under Causality Constraint}
+\label{fig_lstmcompare}
+\end{figure}
+
+\subsection{滑动窗口式自回归训练}
+
+训练时，每段输入为$N+M$帧，前$N$帧作为输入上下文，后$M$帧逐步预测（见图~\ref{fig_slideWindow}）。
+其中，前$N$帧的历史姿态可视为模型的因果历史窗口，
+其设计思路与基线模型中附加片段首部的“历史缓冲”类似，
+但在意义上有所不同。
+CaMN在双向时间建模下使用该缓冲以补足片段外部上下文，
+而FaceCapGes则将其重新定义为实时预测所需的前序姿态帧数量，
+即当前帧推理所依赖的显式时间上下文。
+
+在训练阶段，模型采用纯自回归（pure autoregressive）方式展开，
+即在每一步预测后，将自身生成的历史帧作为下一步输入，
+而非采用教师强制（teacher forcing）。
+这种方式使模型在优化过程中暴露于自身预测的分布，
+保持训练与推理过程的一致性，
+避免了教师强制常见的暴露偏差（exposure bias），
+即推理阶段模型面对自身生成数据时性能下降的问题。
+在每个窗口内连续预测 $M$ 步后，
+对所有预测帧计算式\ref{eq:loss_total}定义的损失，
+并在时间维度上取平均作为该窗口的优化目标：
+\begin{equation}
+\mathcal{L}_{window}
+=
+\frac{1}{M}\sum_{i=1}^{M}
+\mathcal{L}_{total}^{(i)},
+\end{equation}
+其中 $\mathcal{L}_{total}^{(i)}$ 表示在第 $i$ 帧处依据式\ref{eq:loss_total}计算得到的总损失。
+
+纯自回归训练使模型在遇到自身预测误差时能够动态修正节奏，
+从而在长时间交互中保持自然的动作连续性与节奏稳定性。
+
+每一预测步中定义一个长度为$N+1$的滑动窗口，
+其中前$N$帧为输入，第$N+1$帧为预测目标。
+形式化定义如下：
+\begin{align}
+\bm{g}^H_i &= (\bm{g}_{i-N}, ..., \bm{g}_{\min(N, i-1)}) \otimes (\hat{\bm{g}}_{\max(N+1, i-N)}, ..., \hat{\bm{g}}_{i-1}), \\
+\hat{\bm{g}}_i &= FaceCapGes(\bm{v}_{i-N}, ..., \bm{v}_i; \bm{g}^H_i),
+\end{align}
+其中$\otimes$表示时间拼接操作。
+该机制在每步仅依赖过去信息，从而保持因果性约束；
+同时通过窗口内的滚动更新，在不引入未来帧的前提下实现平滑过渡。
+推理阶段模型以单帧为输入流，输出当前时刻的上半身姿态，实现端到端低延迟生成。
+
+需要指出的是，由于滑动窗口机制依赖前$N$帧的上下文信息，
+模型在序列开端无法立即生成动作，即存在一个短暂的冷启动阶段。
+然而，在本文的目标应用场景中，
+模型作为常驻进程伴随用户的虚拟人交互持续运行，无需在每一句发话时切换启动状态。
+因此该延迟仅在首次启动程序时出现$N$帧的等待，
+对用户体验影响可基本忽略。
+
+\begin{figure}[h!t]
+\centering
+\includegraphics[width=0.75\linewidth]{figures/Fig2.png}
+\bicaption{滑动窗口训练示意图}{Sliding-window Training Illustration}
+\label{fig_slideWindow}
+\end{figure}
+
+通过以上适配，FaceCapGes在保持CaMN级联优势的同时显著降低系统延迟，
+实现实时稳定的语音与面部驱动手势生成。
+
+\section{本章小结}

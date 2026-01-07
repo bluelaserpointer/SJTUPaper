@@ -1938,6 +1938,174 @@
       \endverb
       \keyw{ginosar2019speech2gesture}
     \endentry
+    \entry{alexanderson2020stylegestures}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=a0fb79189832a3e05b717cc13cefb697}{%
+           family={Alexanderson},
+           familyi={A\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ab3459afd8b47494ddfdd243147c4fca}{%
+           family={Henter},
+           familyi={H\bibinitperiod},
+           given={Gustav\bibnamedelima Eje},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=0c86af87f1864ca80d613fec481fecfe}{%
+           family={Kucherenko},
+           familyi={K\bibinitperiod},
+           given={Taras},
+           giveni={T\bibinitperiod}}}%
+        {{hash=360375b5fce1d04c3e8e15b273de2833}{%
+           family={Beskow},
+           familyi={B\bibinitperiod},
+           given={Jonas},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=a0fb79189832a3e05b717cc13cefb697}{%
+           family={Alexanderson},
+           familyi={A\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ab3459afd8b47494ddfdd243147c4fca}{%
+           family={Henter},
+           familyi={H\bibinitperiod},
+           given={Gustav\bibnamedelima Eje},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=0c86af87f1864ca80d613fec481fecfe}{%
+           family={Kucherenko},
+           familyi={K\bibinitperiod},
+           given={Taras},
+           giveni={T\bibinitperiod}}}%
+        {{hash=360375b5fce1d04c3e8e15b273de2833}{%
+           family={Beskow},
+           familyi={B\bibinitperiod},
+           given={Jonas},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{d0f3ba778d44f98a792ff709a847cc49}
+      \strng{fullhash}{be85190b1e8a48c112d9940f8b1dd145}
+      \strng{fullhashraw}{be85190b1e8a48c112d9940f8b1dd145}
+      \strng{bibnamehash}{4c1af0298a3d63a6a05aacd20101769b}
+      \strng{authorbibnamehash}{4c1af0298a3d63a6a05aacd20101769b}
+      \strng{authornamehash}{d0f3ba778d44f98a792ff709a847cc49}
+      \strng{authorfullhash}{be85190b1e8a48c112d9940f8b1dd145}
+      \strng{authorfullhashraw}{be85190b1e8a48c112d9940f8b1dd145}
+      \strng{nameabibnamehash}{4c1af0298a3d63a6a05aacd20101769b}
+      \strng{nameanamehash}{d0f3ba778d44f98a792ff709a847cc49}
+      \strng{nameafullhash}{be85190b1e8a48c112d9940f8b1dd145}
+      \strng{nameafullhashraw}{be85190b1e8a48c112d9940f8b1dd145}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Computer Graphics Forum (Proc. Eurographics)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Style-Controllable Speech-Driven Gesture Synthesis Using Normalising Flows}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{pages}{487\bibrangedash 496}
+      \range{pages}{10}
+      \verb{urlraw}
+      \verb https://people.kth.se/~ghe/pubs/pdf/alexanderson2020style.pdf
+      \endverb
+      \verb{url}
+      \verb https://people.kth.se/~ghe/pubs/pdf/alexanderson2020style.pdf
+      \endverb
+      \keyw{alexanderson2020stylegestures}
+    \endentry
+    \entry{kucherenko2021movingfastslow}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=0c86af87f1864ca80d613fec481fecfe}{%
+           family={Kucherenko},
+           familyi={K\bibinitperiod},
+           given={Taras},
+           giveni={T\bibinitperiod}}}%
+        {{hash=360375b5fce1d04c3e8e15b273de2833}{%
+           family={Beskow},
+           familyi={B\bibinitperiod},
+           given={Jonas},
+           giveni={J\bibinitperiod}}}%
+        {{hash=71c06bff3401a4e6c4acf55ff2fc58c3}{%
+           family={Kjellström},
+           familyi={K\bibinitperiod},
+           given={Hedvig},
+           giveni={H\bibinitperiod}}}%
+        {{hash=ab3459afd8b47494ddfdd243147c4fca}{%
+           family={Henter},
+           familyi={H\bibinitperiod},
+           given={Gustav\bibnamedelima Eje},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=0c86af87f1864ca80d613fec481fecfe}{%
+           family={Kucherenko},
+           familyi={K\bibinitperiod},
+           given={Taras},
+           giveni={T\bibinitperiod}}}%
+        {{hash=360375b5fce1d04c3e8e15b273de2833}{%
+           family={Beskow},
+           familyi={B\bibinitperiod},
+           given={Jonas},
+           giveni={J\bibinitperiod}}}%
+        {{hash=71c06bff3401a4e6c4acf55ff2fc58c3}{%
+           family={Kjellström},
+           familyi={K\bibinitperiod},
+           given={Hedvig},
+           giveni={H\bibinitperiod}}}%
+        {{hash=ab3459afd8b47494ddfdd243147c4fca}{%
+           family={Henter},
+           familyi={H\bibinitperiod},
+           given={Gustav\bibnamedelima Eje},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{769e512c22981f2a468dbc647bc07ef5}
+      \strng{fullhash}{6403150f12baba4949930a1fccbe87f2}
+      \strng{fullhashraw}{6403150f12baba4949930a1fccbe87f2}
+      \strng{bibnamehash}{d31eaceff0d75a32eabdfa1f51abe624}
+      \strng{authorbibnamehash}{d31eaceff0d75a32eabdfa1f51abe624}
+      \strng{authornamehash}{769e512c22981f2a468dbc647bc07ef5}
+      \strng{authorfullhash}{6403150f12baba4949930a1fccbe87f2}
+      \strng{authorfullhashraw}{6403150f12baba4949930a1fccbe87f2}
+      \strng{nameabibnamehash}{d31eaceff0d75a32eabdfa1f51abe624}
+      \strng{nameanamehash}{769e512c22981f2a468dbc647bc07ef5}
+      \strng{nameafullhash}{6403150f12baba4949930a1fccbe87f2}
+      \strng{nameafullhashraw}{6403150f12baba4949930a1fccbe87f2}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2107.12305}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Moving Fast and Slow: Analysis of Representations and Post-processing in Speech-Driven Gesture Generation}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://people.kth.se/~ghe/pubs/pdf/kucherenko2021moving.pdf
+      \endverb
+      \verb{url}
+      \verb https://people.kth.se/~ghe/pubs/pdf/kucherenko2021moving.pdf
+      \endverb
+      \keyw{kucherenko2021movingfastslow}
+    \endentry
     \entry{kucherenko2021predictability}{article}{}{}
       \name{author}{5}{}{%
         {{hash=0c86af87f1864ca80d613fec481fecfe}{%
@@ -2008,7 +2176,7 @@
       \strng{nameanamehash}{769e512c22981f2a468dbc647bc07ef5}
       \strng{nameafullhash}{c6f4fa4a470b06fa7909787eaec5bf3e}
       \strng{nameafullhashraw}{c6f4fa4a470b06fa7909787eaec5bf3e}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -2810,7 +2978,7 @@
       \strng{nameanamehash}{d0f3ba778d44f98a792ff709a847cc49}
       \strng{nameafullhash}{e16e786b3feb95c6552bfbc9ed1a22da}
       \strng{nameafullhashraw}{e16e786b3feb95c6552bfbc9ed1a22da}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -2945,174 +3113,6 @@
       \verb https://dl.acm.org/doi/10.1145/3382507.3418838
       \endverb
       \keyw{yoon2020speechgesturebert}
-    \endentry
-    \entry{alexanderson2020stylegestures}{inproceedings}{}{}
-      \name{author}{4}{}{%
-        {{hash=a0fb79189832a3e05b717cc13cefb697}{%
-           family={Alexanderson},
-           familyi={A\bibinitperiod},
-           given={Simon},
-           giveni={S\bibinitperiod}}}%
-        {{hash=ab3459afd8b47494ddfdd243147c4fca}{%
-           family={Henter},
-           familyi={H\bibinitperiod},
-           given={Gustav\bibnamedelima Eje},
-           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=0c86af87f1864ca80d613fec481fecfe}{%
-           family={Kucherenko},
-           familyi={K\bibinitperiod},
-           given={Taras},
-           giveni={T\bibinitperiod}}}%
-        {{hash=360375b5fce1d04c3e8e15b273de2833}{%
-           family={Beskow},
-           familyi={B\bibinitperiod},
-           given={Jonas},
-           giveni={J\bibinitperiod}}}%
-      }
-      \name{namea}{4}{}{%
-        {{hash=a0fb79189832a3e05b717cc13cefb697}{%
-           family={Alexanderson},
-           familyi={A\bibinitperiod},
-           given={Simon},
-           giveni={S\bibinitperiod}}}%
-        {{hash=ab3459afd8b47494ddfdd243147c4fca}{%
-           family={Henter},
-           familyi={H\bibinitperiod},
-           given={Gustav\bibnamedelima Eje},
-           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=0c86af87f1864ca80d613fec481fecfe}{%
-           family={Kucherenko},
-           familyi={K\bibinitperiod},
-           given={Taras},
-           giveni={T\bibinitperiod}}}%
-        {{hash=360375b5fce1d04c3e8e15b273de2833}{%
-           family={Beskow},
-           familyi={B\bibinitperiod},
-           given={Jonas},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \strng{namehash}{d0f3ba778d44f98a792ff709a847cc49}
-      \strng{fullhash}{be85190b1e8a48c112d9940f8b1dd145}
-      \strng{fullhashraw}{be85190b1e8a48c112d9940f8b1dd145}
-      \strng{bibnamehash}{4c1af0298a3d63a6a05aacd20101769b}
-      \strng{authorbibnamehash}{4c1af0298a3d63a6a05aacd20101769b}
-      \strng{authornamehash}{d0f3ba778d44f98a792ff709a847cc49}
-      \strng{authorfullhash}{be85190b1e8a48c112d9940f8b1dd145}
-      \strng{authorfullhashraw}{be85190b1e8a48c112d9940f8b1dd145}
-      \strng{nameabibnamehash}{4c1af0298a3d63a6a05aacd20101769b}
-      \strng{nameanamehash}{d0f3ba778d44f98a792ff709a847cc49}
-      \strng{nameafullhash}{be85190b1e8a48c112d9940f8b1dd145}
-      \strng{nameafullhashraw}{be85190b1e8a48c112d9940f8b1dd145}
-      \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Computer Graphics Forum (Proc. Eurographics)}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{Style-Controllable Speech-Driven Gesture Synthesis Using Normalising Flows}
-      \field{usera}{C}
-      \field{userd}{english}
-      \field{userf}{english}
-      \field{year}{2020}
-      \field{dateera}{ce}
-      \field{pages}{487\bibrangedash 496}
-      \range{pages}{10}
-      \verb{urlraw}
-      \verb https://people.kth.se/~ghe/pubs/pdf/alexanderson2020style.pdf
-      \endverb
-      \verb{url}
-      \verb https://people.kth.se/~ghe/pubs/pdf/alexanderson2020style.pdf
-      \endverb
-      \keyw{alexanderson2020stylegestures}
-    \endentry
-    \entry{kucherenko2021movingfastslow}{article}{}{}
-      \name{author}{4}{}{%
-        {{hash=0c86af87f1864ca80d613fec481fecfe}{%
-           family={Kucherenko},
-           familyi={K\bibinitperiod},
-           given={Taras},
-           giveni={T\bibinitperiod}}}%
-        {{hash=360375b5fce1d04c3e8e15b273de2833}{%
-           family={Beskow},
-           familyi={B\bibinitperiod},
-           given={Jonas},
-           giveni={J\bibinitperiod}}}%
-        {{hash=71c06bff3401a4e6c4acf55ff2fc58c3}{%
-           family={Kjellström},
-           familyi={K\bibinitperiod},
-           given={Hedvig},
-           giveni={H\bibinitperiod}}}%
-        {{hash=ab3459afd8b47494ddfdd243147c4fca}{%
-           family={Henter},
-           familyi={H\bibinitperiod},
-           given={Gustav\bibnamedelima Eje},
-           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-      }
-      \name{namea}{4}{}{%
-        {{hash=0c86af87f1864ca80d613fec481fecfe}{%
-           family={Kucherenko},
-           familyi={K\bibinitperiod},
-           given={Taras},
-           giveni={T\bibinitperiod}}}%
-        {{hash=360375b5fce1d04c3e8e15b273de2833}{%
-           family={Beskow},
-           familyi={B\bibinitperiod},
-           given={Jonas},
-           giveni={J\bibinitperiod}}}%
-        {{hash=71c06bff3401a4e6c4acf55ff2fc58c3}{%
-           family={Kjellström},
-           familyi={K\bibinitperiod},
-           given={Hedvig},
-           giveni={H\bibinitperiod}}}%
-        {{hash=ab3459afd8b47494ddfdd243147c4fca}{%
-           family={Henter},
-           familyi={H\bibinitperiod},
-           given={Gustav\bibnamedelima Eje},
-           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \strng{namehash}{769e512c22981f2a468dbc647bc07ef5}
-      \strng{fullhash}{6403150f12baba4949930a1fccbe87f2}
-      \strng{fullhashraw}{6403150f12baba4949930a1fccbe87f2}
-      \strng{bibnamehash}{d31eaceff0d75a32eabdfa1f51abe624}
-      \strng{authorbibnamehash}{d31eaceff0d75a32eabdfa1f51abe624}
-      \strng{authornamehash}{769e512c22981f2a468dbc647bc07ef5}
-      \strng{authorfullhash}{6403150f12baba4949930a1fccbe87f2}
-      \strng{authorfullhashraw}{6403150f12baba4949930a1fccbe87f2}
-      \strng{nameabibnamehash}{d31eaceff0d75a32eabdfa1f51abe624}
-      \strng{nameanamehash}{769e512c22981f2a468dbc647bc07ef5}
-      \strng{nameafullhash}{6403150f12baba4949930a1fccbe87f2}
-      \strng{nameafullhashraw}{6403150f12baba4949930a1fccbe87f2}
-      \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint arXiv:2107.12305}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{Moving Fast and Slow: Analysis of Representations and Post-processing in Speech-Driven Gesture Generation}
-      \field{usera}{J}
-      \field{userd}{english}
-      \field{userf}{english}
-      \field{year}{2021}
-      \field{dateera}{ce}
-      \verb{urlraw}
-      \verb https://people.kth.se/~ghe/pubs/pdf/kucherenko2021moving.pdf
-      \endverb
-      \verb{url}
-      \verb https://people.kth.se/~ghe/pubs/pdf/kucherenko2021moving.pdf
-      \endverb
-      \keyw{kucherenko2021movingfastslow}
     \endentry
     \entry{SGDBottou2010LargeScaleML}{inproceedings}{}{}
       \name{author}{1}{}{%
