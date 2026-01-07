@@ -1,4 +1,5 @@
 \chapter{头部姿态在多模态级联架构中的引入}
+\ref{chap:model_architecture}
 
 \section{问题定义}
 \label{sec:problem}
@@ -47,91 +48,6 @@ FaceCapGes模型的输入由三种可同时实时获取的模态组成：语音�
 
 输入序列$\big(\bm{v}_{t-N:t}^{A},\, \bm{v}_{t-N:t}^{F},\, \bm{v}_{t-N:t}^{H}\big)$描述了用户在过去$N$帧内的语音与表情动态信息。模型通过学习其时序变化规律，逐帧生成对应的骨骼姿态输出$\hat{\bm{v}}_t^{B}$。在推理阶段，模型仅访问至时刻$t$的输入序列，无法访问任何未来帧信息，保证了生成过程的因果性与实时性。
 
-\subsection{学习目标与优化形式}
-\label{sec:loss}
-在训练阶段，给定来自多模态语音动作数据集（如 BEAT）的配对样本：
-\begin{equation}
-\big(\bm{v}_t^{A},\, \bm{v}_t^{F},\, \bm{v}_t^{H},\, \bm{v}_t^{B}\big),
-\end{equation}
-模型的学习目标是在不依赖未来帧的条件下，
-最小化预测姿态 $\hat{\bm{v}}_t^{B}$ 与真实姿态 $\bm{v}_t^{B}$ 之间的差异，
-从而生成自然、流畅且与语音节奏相匹配的上半身动作序列。
-
-假设模型在每个时间窗口中输出连续的 $M$ 帧预测结果，
-得到预测动作序列
-$\hat{\bm{g}} \in \mathbb{R}^{M \times 6 \times 47}$。
-综合考虑空间重构精度、时序平滑性以及动作分布一致性，
-总体优化目标定义为：
-\begin{equation}
-\mathcal{L}_{total} =
-\lambda_r  \mathcal{L}_{rec}
-+ \lambda_v \mathcal{L}_{vel}
-+ \lambda_a \mathcal{L}_{acc}
-+ \lambda_{adv} \mathcal{L}_{adv}.
-\label{eq:loss_total}
-\end{equation}
-
-其中 $\mathcal{L}_{rec}$ 衡量单帧姿态重构误差，
-$\mathcal{L}_{vel}$ 与 $\mathcal{L}_{acc}$ 分别约束速度与加速度的连续性,
-$\mathcal{L}_{adv}$ 表示对抗训练损失，将在第~\ref{sec:adv}中介绍。
-该组合设计在自回归预测过程中能够有效缓解抖动与速度漂移问题。
-
-\paragraph{姿态重构与时序平滑损失}
-为同时保证空间重构精度与时间连续性，
-我们采用基于 Huber 误差的重构损失形式，
-并分别作用于姿态、速度与加速度信号。
-
-给定任意预测序列 $\hat{\bm{x}}$ 及其对应的真实序列 $\bm{x}$，
-基础误差项定义为：
-\begin{equation}
-\mathcal{L}_{Huber}(\bm{x}, \hat{\bm{x}})
-=
-\beta \cdot
-\mathrm{SmoothL1}
-\left(
-\frac{\bm{x}}{\beta},
-\frac{\hat{\bm{x}}}{\beta}
-\right),
-\end{equation}
-其中 $\mathrm{SmoothL1}(\cdot)$ 表示平滑L1误差，$\beta$为平滑系数，本文中设为 $0.1$。
-
-在此基础上，
-姿态、速度与加速度重构损失分别定义为：
-\begin{align}
-\mathcal{L}_{rec} &= \mathcal{L}_{Huber}(\bm{g}, \hat{\bm{g}}), \\
-\mathcal{L}_{vel} &= \mathcal{L}_{Huber}(\bm{g}', \hat{\bm{g}}'), \\
-\mathcal{L}_{acc} &= \mathcal{L}_{Huber}(\bm{g}'', \hat{\bm{g}}''),
-\end{align}
-其中一阶与二阶时间差分 $\bm{g}'$、$\bm{g}''$ 定义为：
-\begin{equation}
-\bm{g}'_t = \bm{g}_t - \bm{g}_{t-1}, \quad
-\bm{g}''_t = \bm{g}'_t - \bm{g}'_{t-1}.
-\end{equation}
-
-该多尺度重构约束在自回归预测过程中
-能够有效缓解高频抖动与速度漂移问题，
-在保证运动学精度的同时提升生成序列的时间稳定性。
-
-\paragraph{对抗损失}
-\label{sec:adv}
-为进一步提升生成动作的自然度，
-引入基于判别器的对抗损失：
-\begin{equation}
-\mathcal{L}_{adv} = -\mathbb{E}[\log(Dis(\hat{\bm{g}}))],
-\end{equation}
-其中判别器 $Dis$ 以完整动作序列为输入，
-判断其是否来自真实数据分布。
-该损失从整体动力学分布层面约束生成结果，
-促进生成动作在节奏、加速度与能量变化等统计特性上
-与真实表演者保持一致。
-训练过程中通过交替优化生成器与判别器参数以维持稳定性。
-
-各损失项的权重系数在实验中设定为
-$\lambda_r = 5\times10^{2}$，
-$\lambda_v = 10^{3}$，
-$\lambda_a = 10^{3}$，
-$\lambda_{adv} = 10^{-1}$。
-
 \section{级联架构设计的继承}
 \label{sec:cascade}
 
@@ -169,6 +85,7 @@ $\lambda_{adv} = 10^{-1}$。
 编码器结构将在第~\ref{sec:head_encoder}~节详细说明。
 
 \subsection{输出模态继承（身体姿态解码）}
+\label{subsec:output_modality_decoding}
 
 在输入模态经过编码与融合后，模型需将多模态特征映射至对应的身体姿态空间。
 为实现层次化的动作生成与结构协调，本文将上半身的输出区域划分为两个互补分支：
@@ -177,7 +94,7 @@ $\lambda_{adv} = 10^{-1}$。
 上肢部分包含双臂及手部关节，负责生成与语音节奏及情绪表达相呼应的细节动作。
 最终的上半身姿态表示为两者的组合：
 \begin{equation}
-\bm{v}^B = \bm{v}^T \otimes \bm{v}^U,
+\bm{v}_t^{B} = \bm{v}_t^{T} \otimes \bm{v}_t^{U},
 \end{equation}
 其中$\otimes$表示通道维度拼接操作。
 
@@ -185,31 +102,62 @@ $\lambda_{adv} = 10^{-1}$。
 模型首先生成相对稳定的躯干姿态以确定整体方向，
 再以此为条件预测上肢动作，从而在实时生成中保持整体协调性与自然度。
 
-具体而言，来自语音、面部与头部编码器的特征
-$\bm{z}_t^{A}$、$\bm{z}_t^{F}$、$\bm{z}_t^{H}$会与历史姿态序列$(\bm{v}_{t-N}^{B}, \ldots, \bm{v}_t^{B})$拼接，组成多模态隐向量：
+\paragraph{融合输入的序列化表示}
+在时刻$t$，来自语音、面部与头部编码器的特征
+$\bm{z}_t^{A}$、$\bm{z}_t^{F}$、$\bm{z}_t^{H}$
+与历史动作上下文共同构成LSTM解码器的输入。
+为保持严格因果性，我们显式提供最近$N$帧的历史上半身姿态$\bm{v}_{t-N:t-1}^{B}$作为条件信息，并对当前时刻的动作输入使用占位符进行对齐。
+具体而言，定义历史动作对齐序列$\bm{s}_\tau$为：
 \begin{equation}
-\bm{z}_t^{fuse} = \bm{z}_t^{A} \otimes \bm{z}_t^{F} \otimes \bm{z}_t^{H} \otimes (\bm{v}_{t-N}^{B}, \ldots, \bm{v}_t^{B}),
+\bm{s}_\tau =
+\begin{cases}
+\bm{v}_\tau^{B}, & \tau \le t-1, \\
+\mathbf{0}, & \tau = t,
+\end{cases}
+\quad \tau \in \{t-N,\ldots,t\},
+\label{eq:history_padding}
 \end{equation}
-其中$\otimes$表示通道维度拼接操作，时间末帧采用零填充以对齐维度。
+则窗口内每一帧的融合输入向量可写为：
+\begin{equation}
+\bm{z}_\tau^{fuse} = \bm{z}_\tau^{A} \otimes \bm{z}_\tau^{F} \otimes \bm{z}_\tau^{H} \otimes \bm{s}_\tau,
+\quad \tau \in \{t-N,\ldots,t\},
+\label{eq:fuse_per_frame}
+\end{equation}
+并将其按时间维堆叠得到长度为$N{+}1$的因果上下文输入序列：
+\begin{equation}
+\bm{Z}_t^{fuse} = (\bm{z}_{t-N}^{fuse}, \ldots, \bm{z}_{t}^{fuse}).
+\label{eq:fuse_sequence}
+\end{equation}
 
-随后，$\{\bm{z}_0^{fuse}, \ldots, \bm{z}_N^{fuse}\}$经两个单向 LSTM 解码器，分别生成躯干与上肢的潜在特征：
+\paragraph{躯干与上肢的级联解码}
+随后，融合输入序列$\bm{Z}_t^{fuse}$分别送入躯干与上肢两路单向LSTM解码器，得到窗口内的输出序列：
 \begin{equation}
-\bm{z}^{T} = \mathrm{LSTM}_{T}(\bm{z}_0^{fuse}, \ldots, \bm{z}_N^{fuse}), \quad
-\bm{z}^{U} = \mathrm{LSTM}_{U}(\bm{z}_0^{fuse}, \ldots, \bm{z}_N^{fuse}),
+\bm{O}_t^{T} = \mathrm{LSTM}_{T}(\bm{Z}_t^{fuse}), \quad
+\bm{O}_t^{U} = \mathrm{LSTM}_{U}(\bm{Z}_t^{fuse}),
+\label{eq:lstm_outputs_seq}
 \end{equation}
-并通过独立的 MLP 模块还原为旋转参数：
+其中$\bm{O}_t^{T} = (\bm{o}_{t-N}^{T},\ldots,\bm{o}_{t}^{T})$，
+$\bm{O}_t^{U} = (\bm{o}_{t-N}^{U},\ldots,\bm{o}_{t}^{U})$。
+由于本文在时刻$t$的目标是预测当前帧动作，我们仅取序列末端输出作为当前帧的潜在表征：
 \begin{equation}
-\hat{\bm{v}}^{T} = \mathrm{MLP}_{T}(\bm{z}^{T}), \quad
-\hat{\bm{v}}^{U} = \mathrm{MLP}_{U}(\bm{z}^{U}).
+\bm{z}_t^{T} = \bm{o}_t^{T}, \quad
+\bm{z}_t^{U} = \bm{o}_t^{U}.
+\label{eq:last_step_repr}
 \end{equation}
-最终拼接得到当前帧的完整上半身姿态：
+最后，通过两路独立的MLP模块将潜在表征还原为旋转参数：
 \begin{equation}
-\hat{\bm{v}}^{B} = \hat{\bm{v}}^{T} \otimes \hat{\bm{v}}^{U}.
+\hat{\bm{v}}_t^{T} = \mathrm{MLP}_{T}(\bm{z}_t^{T}), \quad
+\hat{\bm{v}}_t^{U} = \mathrm{MLP}_{U}(\bm{z}_t^{U}),
+\label{eq:decode_tu}
+\end{equation}
+并拼接得到当前帧的完整上半身动作预测：
+\begin{equation}
+\hat{\bm{v}}_t^{B} = \hat{\bm{v}}_t^{T} \otimes \hat{\bm{v}}_t^{U}.
+\label{eq:decode_body}
 \end{equation}
 
-在推理阶段，解码器隐状态在时间步之间保持连续，
-与前述输入模态特征配合，使模型在保持因果性的同时具备自然的时间平滑性。
-由于该部分结构沿用自基线模型，本文不再赘述。
+上述内容描述了模型在一个因果上下文输入序列内完成对当前帧动作的解码过程。
+关于循环状态的传递方式、滑动窗口展开策略以及片段级优化目标，将在第\ref{sec:one_step_lstm}章与第\ref{sec:sliding_window_rollout}章中进一步说明。
 
 \section{头部姿态模态的引入}
 \label{sec:head_encoder}
@@ -291,26 +239,14 @@ $\bm{z}_t^{A}$、$\bm{z}_t^{F}$、$\bm{z}_t^{H}$会与历史姿态序列$(\bm{v}
 \end{figure*}
 
 \section{本章小结}
+\label{sec:chapter3_summary}
 
-本章围绕 FaceCapGes 的模型结构与训练策略，系统介绍了面向实时交互场景的语音驱动手势生成方法设计。
-首先，本文在任务设定上明确了严格的因果约束与逐帧在线生成要求，
-区别于依赖未来上下文的一次性离线生成方法，
-为后续模型结构与训练策略的选择奠定了基础。
+本章围绕 FaceCapGes 的模型结构设计，系统介绍了面向严格实时交互场景的多模态级联架构与关键输入输出模态设定。
+首先，本文在任务设定上明确了逐帧在线生成与严格因果约束：模型在任意时刻仅利用当前及过去帧的语音、面部与头部信息进行动作预测，从而区别于依赖未来上下文的一次性离线生成方法，并为后续结构设计提供了统一前提。
 
-在模型设计方面，本文基于 CaMN 的级联框架，引入语音、面部表情与头部姿态三种模态的协同建模方式，
-并详细说明了各模态在网络中的编码位置与作用。
-其中，本文将头部姿态作为独立输入模态系统性地引入实时手势生成任务，
-仅使用旋转信息，以提升跨场景泛化能力与时序连续性。
-同时，针对不同数据来源，给出了从面捕系统与骨架数据中获取头部姿态特征的统一处理方法。
+在模型结构方面，本文继承 CaMN 的级联框架，将语音、面部表情与身体动作视为具有层次关联的表达信号，并进一步系统性地引入头部姿态作为独立输入模态，以补充空间方向与节奏信息。
+同时，本文仅使用头部旋转信息进行建模，并给出了适用于不同数据来源（面部捕捉系统与数据集骨架数据）的统一特征获取与表示方式，从而提升跨场景泛化能力与时序连续性。
 
-在时序建模与训练策略上，
-本文采用滑动窗口的帧级自回归训练方式，
-使模型在训练阶段即暴露于自身历史预测分布，
-从而保证训练目标与在线推理过程的一致性。
-该设计在不依赖未来信息的前提下，
-增强了生成动作在时间维度上的连贯性与稳定性，
-为实时交互场景中的持续动作生成提供了有效支持。
-
-通过上述模型结构与训练策略的设计，
-FaceCapGes 在满足低延迟与因果约束的同时，
-为后续章节中的主观评估、定量分析与性能测试提供了清晰的方法基础。
+在解码端，本章说明了面向上半身骨骼姿态的层次化输出设计：将动作划分为躯干与上肢两路分支，并通过级联解码保持整体协调性与自然度。
+上述模型结构为后续章节提出的滑动窗口自回归展开策略与片段级优化目标提供了清晰的结构基础。
+下一章将进一步介绍模型在训练与推理阶段的统一展开过程，并证明该策略在严格因果约束下能够实现稳定的实时动作生成。

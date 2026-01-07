@@ -214,81 +214,152 @@
 \@writefile{toc}{\contentsline {paragraph}{用户配置层}{19}{paragraph*.33}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}手势生成模型层（FaceCapGes）}{19}{subsection.2.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}渲染驱动层}{19}{subsection.2.2.3}\protected@file@percent }
+\abx@aux@cite{0}{beatcamn}
+\abx@aux@segm{0}{0}{beatcamn}
 \pp@pagectr{footnote}{3}{35}{21}
 \@writefile{toc}{\contentsline {chapter}{\numberline {第 3 章}头部姿态在多模态级联架构中的引入}{21}{chapter.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}问题定义}{21}{section.3.1}\protected@file@percent }
 \newlabel{sec:problem}{{3.1}{21}{问题定义}{section.3.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}任务描述}{21}{subsection.3.1.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}输入与输出模态}{21}{subsection.3.1.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces 输入输出模态符号与维度}}{22}{table.caption.34}\protected@file@percent }
-\newlabel{tab:modalities}{{3.1}{22}{输入输出模态符号与维度}{table.caption.34}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}学习目标与优化形式}{22}{subsection.3.1.3}\protected@file@percent }
-\newlabel{sec:loss}{{3.1.3}{22}{学习目标与优化形式}{subsection.3.1.3}{}}
-\newlabel{eq:loss_total}{{3.3}{22}{学习目标与优化形式}{equation.3.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{姿态重构与时序平滑损失}{22}{paragraph*.35}\protected@file@percent }
-\abx@aux@cite{0}{beatcamn}
-\abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{mcneill_1992_hand}
 \abx@aux@segm{0}{0}{mcneill_1992_hand}
 \abx@aux@cite{0}{kendon_2004_gesture}
 \abx@aux@segm{0}{0}{kendon_2004_gesture}
-\newlabel{sec:adv}{{3.1.3}{23}{对抗损失}{paragraph*.36}{}}
-\@writefile{toc}{\contentsline {paragraph}{对抗损失}{23}{paragraph*.36}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}级联架构设计的继承}{23}{section.3.2}\protected@file@percent }
-\newlabel{sec:cascade}{{3.2}{23}{级联架构设计的继承}{section.3.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}级联架构的原理与理论背景}{23}{subsection.3.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}说话人ID分支移除}{24}{subsection.3.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}输入模态继承}{24}{subsection.3.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}输出模态继承（身体姿态解码）}{24}{subsection.3.2.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces 输入输出模态符号与维度}}{22}{table.caption.34}\protected@file@percent }
+\newlabel{tab:modalities}{{3.1}{22}{输入输出模态符号与维度}{table.caption.34}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}级联架构设计的继承}{22}{section.3.2}\protected@file@percent }
+\newlabel{sec:cascade}{{3.2}{22}{级联架构设计的继承}{section.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}级联架构的原理与理论背景}{22}{subsection.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}说话人ID分支移除}{22}{subsection.3.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}输入模态继承}{23}{subsection.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}输出模态继承（身体姿态解码）}{23}{subsection.3.2.4}\protected@file@percent }
+\newlabel{subsec:output_modality_decoding}{{3.2.4}{23}{输出模态继承（身体姿态解码）}{subsection.3.2.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{融合输入的序列化表示}{23}{paragraph*.35}\protected@file@percent }
 \abx@aux@cite{0}{rot6d}
 \abx@aux@segm{0}{0}{rot6d}
+\newlabel{eq:history_padding}{{3.5}{24}{融合输入的序列化表示}{equation.3.5}{}}
+\newlabel{eq:fuse_per_frame}{{3.6}{24}{融合输入的序列化表示}{equation.3.6}{}}
+\newlabel{eq:fuse_sequence}{{3.7}{24}{融合输入的序列化表示}{equation.3.7}{}}
+\@writefile{toc}{\contentsline {paragraph}{躯干与上肢的级联解码}{24}{paragraph*.36}\protected@file@percent }
+\newlabel{eq:lstm_outputs_seq}{{3.8}{24}{躯干与上肢的级联解码}{equation.3.8}{}}
+\newlabel{eq:last_step_repr}{{3.9}{24}{躯干与上肢的级联解码}{equation.3.9}{}}
+\newlabel{eq:decode_tu}{{3.10}{24}{躯干与上肢的级联解码}{equation.3.10}{}}
+\newlabel{eq:decode_body}{{3.11}{24}{躯干与上肢的级联解码}{equation.3.11}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}头部姿态模态的引入}{25}{section.3.3}\protected@file@percent }
 \newlabel{sec:head_encoder}{{3.3}{25}{头部姿态模态的引入}{section.3.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}输入特征与表示}{25}{subsection.3.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}特征获取方法}{26}{subsection.3.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}级联结构中的位置}{26}{subsection.3.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}特征获取方法}{25}{subsection.3.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}级联结构中的位置}{25}{subsection.3.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{编码器结构}{26}{paragraph*.37}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces 头部姿态编码器结构示意图}}{27}{figure.caption.38}\protected@file@percent }
-\newlabel{fig_headencoder}{{3.1}{27}{头部姿态编码器结构示意图}{figure.caption.38}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}模型整体结构}{27}{section.3.4}\protected@file@percent }
-\newlabel{sec:architecture}{{3.4}{27}{模型整体结构}{section.3.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces FaceCapGes 模型整体结构}}{27}{figure.caption.39}\protected@file@percent }
-\newlabel{fig_architecture}{{3.2}{27}{FaceCapGes 模型整体结构}{figure.caption.39}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}本章小结}{27}{section.3.5}\protected@file@percent }
-\pp@pagectr{footnote}{4}{43}{29}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第 4 章}基于滑动窗口的实时手势生成自回归训练}{29}{chapter.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}因果时序建模与训练策略}{29}{section.4.1}\protected@file@percent }
-\newlabel{sec:realtime}{{4.1}{29}{因果时序建模与训练策略}{section.4.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}时间建模结构改动与因果性约束}{29}{subsection.4.1.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces 双向与单向 LSTM 的因果性对比示意图}}{30}{figure.caption.40}\protected@file@percent }
-\newlabel{fig_lstmcompare}{{4.1}{30}{双向与单向 LSTM 的因果性对比示意图}{figure.caption.40}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}滑动窗口式自回归训练}{30}{subsection.4.1.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces 滑动窗口训练示意图}}{31}{figure.caption.41}\protected@file@percent }
-\newlabel{fig_slideWindow}{{4.2}{31}{滑动窗口训练示意图}{figure.caption.41}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}本章小结}{31}{section.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces 头部姿态编码器结构示意图}}{26}{figure.caption.38}\protected@file@percent }
+\newlabel{fig_headencoder}{{3.1}{26}{头部姿态编码器结构示意图}{figure.caption.38}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}模型整体结构}{26}{section.3.4}\protected@file@percent }
+\newlabel{sec:architecture}{{3.4}{26}{模型整体结构}{section.3.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces FaceCapGes 模型整体结构}}{26}{figure.caption.39}\protected@file@percent }
+\newlabel{fig_architecture}{{3.2}{26}{FaceCapGes 模型整体结构}{figure.caption.39}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}本章小结}{26}{section.3.5}\protected@file@percent }
+\newlabel{sec:chapter3_summary}{{3.5}{26}{本章小结}{section.3.5}{}}
+\pp@pagectr{footnote}{4}{42}{28}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第 4 章}基于滑动窗口的实时手势生成自回归训练}{28}{chapter.4}\protected@file@percent }
+\newlabel{chap:training_strategy}{{4}{28}{基于滑动窗口的实时手势生成自回归训练}{chapter.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}单步因果LSTM预测器}{28}{section.4.1}\protected@file@percent }
+\newlabel{sec:one_step_lstm}{{4.1}{28}{单步因果LSTM预测器}{section.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}LSTM基本概念与状态传递机制}{28}{subsection.4.1.1}\protected@file@percent }
+\newlabel{subsec:lstm_basics}{{4.1.1}{28}{LSTM基本概念与状态传递机制}{subsection.4.1.1}{}}
+\newlabel{eq:lstm_step}{{4.1}{29}{LSTM基本概念与状态传递机制}{equation.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}选择单向LSTM的因果性动机}{29}{subsection.4.1.2}\protected@file@percent }
+\newlabel{subsec:why_unilstm}{{4.1.2}{29}{选择单向LSTM的因果性动机}{subsection.4.1.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}双通路记忆：循环状态与显式历史上下文}{30}{subsection.4.1.3}\protected@file@percent }
+\newlabel{subsec:dual_path_memory}{{4.1.3}{30}{双通路记忆：循环状态与显式历史上下文}{subsection.4.1.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}窗口内预测过程的形式化表达}{31}{subsection.4.1.4}\protected@file@percent }
+\newlabel{subsec:window_forward_formalization}{{4.1.4}{31}{窗口内预测过程的形式化表达}{subsection.4.1.4}{}}
+\newlabel{eq:window_fuse_seq}{{4.2}{31}{窗口内预测过程的形式化表达}{equation.4.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{序列输入与跨步状态传递}{31}{paragraph*.40}\protected@file@percent }
+\newlabel{eq:lstm_seq_forward}{{4.4}{31}{序列输入与跨步状态传递}{equation.4.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{末端输出用于当前帧预测}{31}{paragraph*.41}\protected@file@percent }
+\newlabel{eq:last_step_output}{{4.5}{31}{末端输出用于当前帧预测}{equation.4.5}{}}
+\@writefile{toc}{\contentsline {paragraph}{动作解码与姿态拼接。}{32}{paragraph*.42}\protected@file@percent }
+\newlabel{eq:mlp_decode}{{4.6}{32}{动作解码与姿态拼接。}{equation.4.6}{}}
+\newlabel{eq:body_concat}{{4.7}{32}{动作解码与姿态拼接。}{equation.4.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}训练片段构造：基于CaMN的固定长度切割策略}{32}{section.4.2}\protected@file@percent }
+\newlabel{sec:segment_construction}{{4.2}{32}{训练片段构造：基于CaMN的固定长度切割策略}{section.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}固定长度片段定义}{32}{subsection.4.2.1}\protected@file@percent }
+\newlabel{subsec:fixed_length_segment}{{4.2.1}{32}{固定长度片段定义}{subsection.4.2.1}{}}
+\newlabel{eq:segment_length}{{4.8}{32}{固定长度片段定义}{equation.4.8}{}}
+\newlabel{eq:segment_definition}{{4.10}{32}{固定长度片段定义}{equation.4.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}重叠切割与样本覆盖}{33}{subsection.4.2.2}\protected@file@percent }
+\newlabel{subsec:overlap_sampling}{{4.2.2}{33}{重叠切割与样本覆盖}{subsection.4.2.2}{}}
+\newlabel{eq:segment_stride}{{4.11}{33}{重叠切割与样本覆盖}{equation.4.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}片段内部的滑动窗口展开策略}{33}{section.4.3}\protected@file@percent }
+\newlabel{sec:sliding_window_rollout}{{4.3}{33}{片段内部的滑动窗口展开策略}{section.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}前置动作帧与Warm-up阶段}{33}{subsection.4.3.1}\protected@file@percent }
+\newlabel{subsec:warmup_prefix_frames}{{4.3.1}{33}{前置动作帧与Warm-up阶段}{subsection.4.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}滑动窗口展开与逐帧自回归生成}{34}{subsection.4.3.2}\protected@file@percent }
+\newlabel{subsec:sliding_window_rollout_process}{{4.3.2}{34}{滑动窗口展开与逐帧自回归生成}{subsection.4.3.2}{}}
+\newlabel{eq:history_buffer}{{4.12}{34}{滑动窗口展开与逐帧自回归生成}{equation.4.12}{}}
+\newlabel{eq:one_step_predictor}{{4.14}{34}{滑动窗口展开与逐帧自回归生成}{equation.4.14}{}}
+\newlabel{eq:history_update}{{4.15}{34}{滑动窗口展开与逐帧自回归生成}{equation.4.15}{}}
+\newlabel{eq:generated_segment}{{4.16}{34}{滑动窗口展开与逐帧自回归生成}{equation.4.16}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}拼接生成序列与片段级输出}{35}{subsection.4.3.3}\protected@file@percent }
+\newlabel{subsec:segment_level_output}{{4.3.3}{35}{拼接生成序列与片段级输出}{subsection.4.3.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}片段级训练目标：监督损失与时序平滑约束}{35}{section.4.4}\protected@file@percent }
+\newlabel{sec:segment_losses}{{4.4}{35}{片段级训练目标：监督损失与时序平滑约束}{section.4.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}片段级生成序列与损失计算范围}{35}{subsection.4.4.1}\protected@file@percent }
+\newlabel{subsec:segment_level_loss_scope}{{4.4.1}{35}{片段级生成序列与损失计算范围}{subsection.4.4.1}{}}
+\newlabel{eq:gen_segment_seq}{{4.18}{35}{片段级生成序列与损失计算范围}{equation.4.18}{}}
+\newlabel{eq:gt_segment_seq}{{4.19}{35}{片段级生成序列与损失计算范围}{equation.4.19}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}总体优化目标}{36}{subsection.4.4.2}\protected@file@percent }
+\newlabel{subsec:total_objective}{{4.4.2}{36}{总体优化目标}{subsection.4.4.2}{}}
+\newlabel{eq:loss_total_seg}{{4.20}{36}{总体优化目标}{equation.4.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}姿态重构与时序平滑损失}{36}{subsection.4.4.3}\protected@file@percent }
+\newlabel{subsec:reconstruction_smoothness_loss}{{4.4.3}{36}{姿态重构与时序平滑损失}{subsection.4.4.3}{}}
+\newlabel{eq:huber_loss}{{4.21}{36}{姿态重构与时序平滑损失}{equation.4.21}{}}
+\newlabel{eq:rec_loss}{{4.22}{36}{姿态重构与时序平滑损失}{equation.4.22}{}}
+\newlabel{eq:vel_loss}{{4.23}{36}{姿态重构与时序平滑损失}{equation.4.23}{}}
+\newlabel{eq:acc_loss}{{4.24}{36}{姿态重构与时序平滑损失}{equation.4.24}{}}
+\newlabel{eq:diff_def}{{4.25}{36}{姿态重构与时序平滑损失}{equation.4.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.4}对抗损失}{36}{subsection.4.4.4}\protected@file@percent }
+\newlabel{subsec:adv_loss_overview}{{4.4.4}{36}{对抗损失}{subsection.4.4.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.5}损失权重设置}{37}{subsection.4.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}对抗训练：序列级判别器与前置动作掩码}{37}{section.4.5}\protected@file@percent }
+\newlabel{sec:adv_training}{{4.5}{37}{对抗训练：序列级判别器与前置动作掩码}{section.4.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}判别器输入：基于拼接片段的序列级判别}{37}{subsection.4.5.1}\protected@file@percent }
+\newlabel{subsec:disc_input}{{4.5.1}{37}{判别器输入：基于拼接片段的序列级判别}{subsection.4.5.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{前置动作帧的掩码策略}{37}{paragraph*.43}\protected@file@percent }
+\abx@aux@cite{0}{beatcamn}
+\abx@aux@segm{0}{0}{beatcamn}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}基于BCE的对抗损失定义}{38}{subsection.4.5.2}\protected@file@percent }
+\newlabel{subsec:bce_gan_loss}{{4.5.2}{38}{基于BCE的对抗损失定义}{subsection.4.5.2}{}}
+\newlabel{eq:disc_loss_bce}{{4.27}{38}{基于BCE的对抗损失定义}{equation.4.27}{}}
+\newlabel{eq:gen_adv_loss_bce}{{4.28}{38}{基于BCE的对抗损失定义}{equation.4.28}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}交替优化策略}{38}{subsection.4.5.3}\protected@file@percent }
+\newlabel{subsec:alternating_optimization}{{4.5.3}{38}{交替优化策略}{subsection.4.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}本章小结}{38}{section.4.6}\protected@file@percent }
+\newlabel{sec:chapter4_summary}{{4.6}{38}{本章小结}{section.4.6}{}}
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{SGDBottou2010LargeScaleML}
 \abx@aux@segm{0}{0}{SGDBottou2010LargeScaleML}
-\pp@pagectr{footnote}{5}{46}{32}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第 5 章}实验结果与分析}{32}{chapter.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}训练配置}{32}{section.5.1}\protected@file@percent }
-\newlabel{sec:implementation}{{5.1}{32}{训练配置}{section.5.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces BEAT 数据集的骨架拓扑结构与驱动范围}}{32}{figure.caption.42}\protected@file@percent }
-\newlabel{fig_beatbones}{{5.1}{32}{BEAT 数据集的骨架拓扑结构与驱动范围}{figure.caption.42}{}}
-\newlabel{train_param_setting}{{5.1}{32}{训练配置}{paragraph*.43}{}}
-\@writefile{toc}{\contentsline {paragraph}{训练配置}{32}{paragraph*.43}\protected@file@percent }
+\pp@pagectr{footnote}{5}{54}{40}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第 5 章}实验结果与分析}{40}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}训练配置}{40}{section.5.1}\protected@file@percent }
+\newlabel{sec:implementation}{{5.1}{40}{训练配置}{section.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces BEAT 数据集的骨架拓扑结构与驱动范围}}{40}{figure.caption.44}\protected@file@percent }
+\newlabel{fig_beatbones}{{5.1}{40}{BEAT 数据集的骨架拓扑结构与驱动范围}{figure.caption.44}{}}
+\newlabel{train_param_setting}{{5.1}{40}{训练配置}{paragraph*.45}{}}
+\@writefile{toc}{\contentsline {paragraph}{训练配置}{40}{paragraph*.45}\protected@file@percent }
 \abx@aux@cite{0}{emage}
 \abx@aux@segm{0}{0}{emage}
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{diffsheg}
 \abx@aux@segm{0}{0}{diffsheg}
-\@writefile{toc}{\contentsline {paragraph}{姿态表示}{33}{paragraph*.44}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{运行性能}{33}{paragraph*.45}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}实验配置}{33}{section.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}实验对比模型}{33}{subsection.5.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}跨模型评估设置}{33}{subsection.5.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{姿态表示}{41}{paragraph*.46}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{运行性能}{41}{paragraph*.47}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}实验配置}{41}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}实验对比模型}{41}{subsection.5.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}跨模型评估设置}{41}{subsection.5.2.2}\protected@file@percent }
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{diffsheg}
@@ -299,45 +370,45 @@
 \abx@aux@segm{0}{0}{unity}
 \abx@aux@cite{0}{unitymechanim}
 \abx@aux@segm{0}{0}{unitymechanim}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces 对比模型的输入输出模态}}{34}{table.caption.46}\protected@file@percent }
-\newlabel{tab:modalitycomparison}{{5.1}{34}{对比模型的输入输出模态}{table.caption.46}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}用户评估}{34}{section.5.3}\protected@file@percent }
-\newlabel{sec:userstudy}{{5.3}{34}{用户评估}{section.5.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}用户评估系统与实验配置}{34}{subsection.5.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{实验材料与呈现方式}{34}{paragraph*.47}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces 对比模型的输入输出模态}}{42}{table.caption.48}\protected@file@percent }
+\newlabel{tab:modalitycomparison}{{5.1}{42}{对比模型的输入输出模态}{table.caption.48}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}用户评估}{42}{section.5.3}\protected@file@percent }
+\newlabel{sec:userstudy}{{5.3}{42}{用户评估}{section.5.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}用户评估系统与实验配置}{42}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{实验材料与呈现方式}{42}{paragraph*.49}\protected@file@percent }
 \abx@aux@cite{0}{pico4}
 \abx@aux@segm{0}{0}{pico4}
-\@writefile{toc}{\contentsline {paragraph}{播放系统实现}{35}{paragraph*.48}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{实验界面与设备}{35}{paragraph*.49}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{实验流程与指导}{35}{paragraph*.50}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{实验材料与任务设计}{36}{paragraph*.51}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces 用户评估工具实机界面}}{36}{figure.caption.52}\protected@file@percent }
-\newlabel{fig:userstudy_app}{{5.2}{36}{用户评估工具实机界面}{figure.caption.52}{}}
+\@writefile{toc}{\contentsline {paragraph}{播放系统实现}{43}{paragraph*.50}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{实验界面与设备}{43}{paragraph*.51}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{实验流程与指导}{43}{paragraph*.52}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{实验材料与任务设计}{44}{paragraph*.53}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces 用户评估工具实机界面}}{44}{figure.caption.54}\protected@file@percent }
+\newlabel{fig:userstudy_app}{{5.2}{44}{用户评估工具实机界面}{figure.caption.54}{}}
 \abx@aux@cite{0}{LatinSquareToolkit}
 \abx@aux@segm{0}{0}{LatinSquareToolkit}
 \abx@aux@cite{0}{pico4}
 \abx@aux@segm{0}{0}{pico4}
-\@writefile{toc}{\contentsline {paragraph}{实验参与者}{37}{paragraph*.53}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{实验环境说明}{37}{paragraph*.54}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}结果与分析}{37}{subsection.5.3.2}\protected@file@percent }
-\newlabel{subsec:user_study_result}{{5.3.2}{37}{结果与分析}{subsection.5.3.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{总体测评结果}{37}{paragraph*.55}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{实验参与者}{45}{paragraph*.55}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{实验环境说明}{45}{paragraph*.56}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}结果与分析}{45}{subsection.5.3.2}\protected@file@percent }
+\newlabel{subsec:user_study_result}{{5.3.2}{45}{结果与分析}{subsection.5.3.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{总体测评结果}{45}{paragraph*.57}\protected@file@percent }
 \abx@aux@cite{0}{rot6d}
 \abx@aux@segm{0}{0}{rot6d}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces 用户评估总体主观排名结果}}{38}{figure.caption.56}\protected@file@percent }
-\newlabel{fig:userstudy}{{5.3}{38}{用户评估总体主观排名结果}{figure.caption.56}{}}
-\@writefile{toc}{\contentsline {paragraph}{平衡拉丁方实验结果}{38}{paragraph*.57}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces 平衡拉丁方设置下的主观排名结果}}{38}{figure.caption.58}\protected@file@percent }
-\newlabel{fig:userstudy_latin_square}{{5.4}{38}{平衡拉丁方设置下的主观排名结果}{figure.caption.58}{}}
-\@writefile{toc}{\contentsline {paragraph}{用户反馈分析}{38}{paragraph*.59}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{结果讨论}{39}{paragraph*.60}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}定性分析}{39}{section.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}生成动作平滑性}{39}{subsection.5.4.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces 生成动作效果对比}}{40}{figure.caption.61}\protected@file@percent }
-\newlabel{fig3}{{5.5}{40}{生成动作效果对比}{figure.caption.61}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}头部朝向与手势空间指向一致性}{40}{subsection.5.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces 头部朝向与手势指向一致性的动作对比}}{41}{figure.caption.62}\protected@file@percent }
-\newlabel{fig:headhand_alignment}{{5.6}{41}{头部朝向与手势指向一致性的动作对比}{figure.caption.62}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces 用户评估总体主观排名结果}}{46}{figure.caption.58}\protected@file@percent }
+\newlabel{fig:userstudy}{{5.3}{46}{用户评估总体主观排名结果}{figure.caption.58}{}}
+\@writefile{toc}{\contentsline {paragraph}{平衡拉丁方实验结果}{46}{paragraph*.59}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces 平衡拉丁方设置下的主观排名结果}}{46}{figure.caption.60}\protected@file@percent }
+\newlabel{fig:userstudy_latin_square}{{5.4}{46}{平衡拉丁方设置下的主观排名结果}{figure.caption.60}{}}
+\@writefile{toc}{\contentsline {paragraph}{用户反馈分析}{46}{paragraph*.61}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{结果讨论}{47}{paragraph*.62}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}定性分析}{47}{section.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}生成动作平滑性}{47}{subsection.5.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces 生成动作效果对比}}{48}{figure.caption.63}\protected@file@percent }
+\newlabel{fig3}{{5.5}{48}{生成动作效果对比}{figure.caption.63}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}头部朝向与手势空间指向一致性}{48}{subsection.5.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces 头部朝向与手势指向一致性的动作对比}}{49}{figure.caption.64}\protected@file@percent }
+\newlabel{fig:headhand_alignment}{{5.6}{49}{头部朝向与手势指向一致性的动作对比}{figure.caption.64}{}}
 \abx@aux@cite{0}{speech_gesture_generation}
 \abx@aux@segm{0}{0}{speech_gesture_generation}
 \abx@aux@cite{0}{beatcamn}
@@ -348,76 +419,76 @@
 \abx@aux@segm{0}{0}{beatalign}
 \abx@aux@cite{0}{speech_gesture_generation}
 \abx@aux@segm{0}{0}{speech_gesture_generation}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}客观评估指标与实现细节}{42}{section.5.5}\protected@file@percent }
-\newlabel{sec:objective_metrics}{{5.5}{42}{客观评估指标与实现细节}{section.5.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Fréchet Gesture Distance（FGD）}{42}{subsection.5.5.1}\protected@file@percent }
-\newlabel{subsec:fgd}{{5.5.1}{42}{Fréchet Gesture Distance（FGD）}{subsection.5.5.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}客观评估指标与实现细节}{50}{section.5.5}\protected@file@percent }
+\newlabel{sec:objective_metrics}{{5.5}{50}{客观评估指标与实现细节}{section.5.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Fréchet Gesture Distance（FGD）}{50}{subsection.5.5.1}\protected@file@percent }
+\newlabel{subsec:fgd}{{5.5.1}{50}{Fréchet Gesture Distance（FGD）}{subsection.5.5.1}{}}
 \abx@aux@cite{0}{SGDBottou2010LargeScaleML}
 \abx@aux@segm{0}{0}{SGDBottou2010LargeScaleML}
-\@writefile{toc}{\contentsline {paragraph}{FGD的模型结构与训练配置}{43}{paragraph*.63}\protected@file@percent }
-\newlabel{eq:fgd_ae_loss}{{5.4}{43}{FGD的模型结构与训练配置}{equation.5.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{用于FGD评估的骨架感知自编码器}{43}{paragraph*.64}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{FGD的模型结构与训练配置}{51}{paragraph*.65}\protected@file@percent }
+\newlabel{eq:fgd_ae_loss}{{5.4}{51}{FGD的模型结构与训练配置}{equation.5.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{用于FGD评估的骨架感知自编码器}{51}{paragraph*.66}\protected@file@percent }
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{beatalign}
 \abx@aux@segm{0}{0}{beatalign}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}Semantic Relevance Gesture Recall（SRGR）}{44}{subsection.5.5.2}\protected@file@percent }
-\newlabel{subsec:srgr}{{5.5.2}{44}{Semantic Relevance Gesture Recall（SRGR）}{subsection.5.5.2}{}}
-\@writefile{toc}{\contentsline {paragraph}{定义与原理}{44}{paragraph*.65}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.3}Beat Alignment（BA）}{44}{subsection.5.5.3}\protected@file@percent }
-\newlabel{subsec:ba}{{5.5.3}{44}{Beat Alignment（BA）}{subsection.5.5.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}Semantic Relevance Gesture Recall（SRGR）}{52}{subsection.5.5.2}\protected@file@percent }
+\newlabel{subsec:srgr}{{5.5.2}{52}{Semantic Relevance Gesture Recall（SRGR）}{subsection.5.5.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{定义与原理}{52}{paragraph*.67}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.3}Beat Alignment（BA）}{52}{subsection.5.5.3}\protected@file@percent }
+\newlabel{subsec:ba}{{5.5.3}{52}{Beat Alignment（BA）}{subsection.5.5.3}{}}
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
-\@writefile{toc}{\contentsline {paragraph}{定义与原理}{45}{paragraph*.66}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.4}L1范数}{45}{subsection.5.5.4}\protected@file@percent }
-\newlabel{subsec:l1div}{{5.5.4}{45}{L1范数}{subsection.5.5.4}{}}
-\@writefile{toc}{\contentsline {paragraph}{定义与原理}{46}{paragraph*.67}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.5}评估区域设定与公平性说明}{46}{subsection.5.5.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}定量评估结果}{46}{section.5.6}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces 定量评估结果}}{47}{table.caption.68}\protected@file@percent }
-\newlabel{tab1}{{5.2}{47}{定量评估结果}{table.caption.68}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.7}消融实验分析}{47}{section.5.7}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces 消融实验结果}}{47}{table.caption.69}\protected@file@percent }
-\newlabel{tab2}{{5.3}{47}{消融实验结果}{table.caption.69}{}}
-\@writefile{toc}{\contentsline {paragraph}{头部姿态输入的贡献}{47}{paragraph*.70}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{帧级自回归生成的优势}{48}{paragraph*.71}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{与基线模型 CaMN 的差异}{48}{paragraph*.72}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.8}性能评估}{48}{section.5.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.8.1}单帧推理性能}{48}{subsection.5.8.1}\protected@file@percent }
-\newlabel{sec:performance_test}{{5.8.1}{48}{单帧推理性能}{subsection.5.8.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{定义与原理}{53}{paragraph*.68}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.4}L1范数}{53}{subsection.5.5.4}\protected@file@percent }
+\newlabel{subsec:l1div}{{5.5.4}{53}{L1范数}{subsection.5.5.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{定义与原理}{54}{paragraph*.69}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.5}评估区域设定与公平性说明}{54}{subsection.5.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}定量评估结果}{54}{section.5.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces 定量评估结果}}{55}{table.caption.70}\protected@file@percent }
+\newlabel{tab1}{{5.2}{55}{定量评估结果}{table.caption.70}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}消融实验分析}{55}{section.5.7}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces 消融实验结果}}{55}{table.caption.71}\protected@file@percent }
+\newlabel{tab2}{{5.3}{55}{消融实验结果}{table.caption.71}{}}
+\@writefile{toc}{\contentsline {paragraph}{头部姿态输入的贡献}{55}{paragraph*.72}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{帧级自回归生成的优势}{56}{paragraph*.73}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{与基线模型 CaMN 的差异}{56}{paragraph*.74}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.8}性能评估}{56}{section.5.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.8.1}单帧推理性能}{56}{subsection.5.8.1}\protected@file@percent }
+\newlabel{sec:performance_test}{{5.8.1}{56}{单帧推理性能}{subsection.5.8.1}{}}
 \abx@aux@cite{0}{AppleARKitTrackingGuide}
 \abx@aux@segm{0}{0}{AppleARKitTrackingGuide}
-\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces 推理速度评估结果}}{49}{table.caption.73}\protected@file@percent }
-\newlabel{tab3}{{5.4}{49}{推理速度评估结果}{table.caption.73}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.8.2}端到端计算链路延迟}{49}{subsection.5.8.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces 推理速度评估结果}}{57}{table.caption.75}\protected@file@percent }
+\newlabel{tab3}{{5.4}{57}{推理速度评估结果}{table.caption.75}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.8.2}端到端计算链路延迟}{57}{subsection.5.8.2}\protected@file@percent }
 \abx@aux@cite{0}{AppleARKitTrackingGuide}
 \abx@aux@segm{0}{0}{AppleARKitTrackingGuide}
-\@writefile{toc}{\contentsline {paragraph}{远程推理部署的额外开销}{50}{paragraph*.74}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.8.3}系统更新率}{50}{subsection.5.8.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.8.4}帧率设定的可扩展性}{50}{subsection.5.8.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.9}本章小结}{51}{section.5.9}\protected@file@percent }
-\pp@pagectr{footnote}{6}{66}{52}
-\@writefile{toc}{\contentsline {chapter}{\numberline {第 6 章}结论}{52}{chapter.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}本文工作总结}{52}{section.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}未来工作展望}{52}{section.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}高层语义信息}{52}{subsection.6.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}面向未来趋势的预测性训练目标}{52}{subsection.6.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}本章小结}{53}{section.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{参考文献}{54}{chapter*.75}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{远程推理部署的额外开销}{58}{paragraph*.76}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.8.3}系统更新率}{58}{subsection.5.8.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.8.4}帧率设定的可扩展性}{58}{subsection.5.8.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.9}本章小结}{59}{section.5.9}\protected@file@percent }
+\pp@pagectr{footnote}{6}{74}{60}
+\@writefile{toc}{\contentsline {chapter}{\numberline {第 6 章}结论}{60}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}本文工作总结}{60}{section.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}未来工作展望}{60}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}高层语义信息}{60}{subsection.6.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}面向未来趋势的预测性训练目标}{60}{subsection.6.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}本章小结}{61}{section.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{参考文献}{62}{chapter*.77}\protected@file@percent }
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{diffsheg}
 \abx@aux@segm{0}{0}{diffsheg}
-\pp@pagectr{footnote}{7}{73}{59}
-\@writefile{toc}{\contentsline {chapter}{\numberline {附录 A}手势生成对比视频}{59}{appendix.A}\protected@file@percent }
-\newlabel{appendix:videos}{{A}{59}{手势生成对比视频}{appendix.A}{}}
-\pp@pagectr{footnote}{8}{74}{60}
-\@writefile{toc}{\contentsline {chapter}{\numberline {附录 B}代码与实现资源}{60}{appendix.B}\protected@file@percent }
-\newlabel{appendix:code}{{B}{60}{代码与实现资源}{appendix.B}{}}
-\@writefile{toc}{\contentsline {chapter}{致\quad 谢}{61}{section*.76}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{学术论文和科研成果目录}{62}{section*.78}\protected@file@percent }
+\pp@pagectr{footnote}{7}{81}{67}
+\@writefile{toc}{\contentsline {chapter}{\numberline {附录 A}手势生成对比视频}{67}{appendix.A}\protected@file@percent }
+\newlabel{appendix:videos}{{A}{67}{手势生成对比视频}{appendix.A}{}}
+\pp@pagectr{footnote}{8}{82}{68}
+\@writefile{toc}{\contentsline {chapter}{\numberline {附录 B}代码与实现资源}{68}{appendix.B}\protected@file@percent }
+\newlabel{appendix:code}{{B}{68}{代码与实现资源}{appendix.B}{}}
+\@writefile{toc}{\contentsline {chapter}{致\quad 谢}{69}{section*.78}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{学术论文和科研成果目录}{70}{section*.80}\protected@file@percent }
 \ttl@finishall
 \abx@aux@read@bbl@mdfivesum{AF92A68CF6EBD7A0B749749AC8EFF983}
 \abx@aux@defaultrefcontext{0}{mediapipefacemesh}{none/global//global/global/global}
@@ -464,4 +535,4 @@
 \abx@aux@defaultrefcontext{0}{LatinSquareToolkit}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{speech_gesture_generation}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{beatalign}{none/global//global/global/global}
-\gdef \@abspage@last{76}
+\gdef \@abspage@last{84}
