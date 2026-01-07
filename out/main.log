@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  7 JAN 2026 21:09
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  8 JAN 2026 01:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2682,83 +2682,67 @@ File: figures/SystemArchitecture.png Graphic file (type bmp)
 
 ] [18]) (contents/method_head_rotation.tex [19] [20]
 第 3 章
+[21
 
-LaTeX Warning: Reference `chap:model_architecture' on page 21 undefined on inpu
-t line 2.
-
-
-Overfull \hbox (6.57658pt too wide) in paragraph at lines 37--47
+]
+Overfull \hbox (6.57658pt too wide) in paragraph at lines 43--53
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[21
-
-] [22] [23] [24] [25]
+[22] [23] [24] [25]
 File: figures/Fig_headencoder.png Graphic file (type bmp)
 <figures/Fig_headencoder.png>
 File: figures/Fig_NeuroArchitecture.png Graphic file (type bmp)
 <figures/Fig_NeuroArchitecture.png>
  [26]) (contents/method_realtime.tex [27]
 第 4 章
-
-LaTeX Warning: Reference `chap:model_architecture' on page 28 undefined on inpu
-t line 4.
-
-
-LaTeX Warning: Reference `chap:model_architecture' on page 28 undefined on inpu
-t line 6.
-
 [28
 
-] [29]
+] [29] [30]
+Overfull \hbox (35.0095pt too wide) in paragraph at lines 132--135
+[]\TU/SimSun(0)/m/n/12.045 在 片 段 开 始 时 刻 $\OML/ntxmi/m/it/12.045 s[]$\TU/SimSun
+(0)/m/n/12.045 ，|  我 们 首 先 执 行 预 热 阶 段：|  将 片 段 的 前 $\OML/ntxmi/m/it/12.045 N$ 
+\TU/SimSun(0)/m/n/12.045 帧 真 实 动 作 $\LMS/ntxsy/m/n/12.045 f\OML/ntxmi/b/it/12.0
+45 v[]\OML/ntxmi/m/it/12.045 ; [] ; \OML/ntxmi/b/it/12.045 v[]\LMS/ntxsy/m/n/12
+.045 g$
+ []
 
-LaTeX Warning: Reference `sec:model_architecture' on page 30 undefined on input
- line 62.
-
-[30]
-
-LaTeX Warning: Reference `sec:model_architecture' on page 31 undefined on input
- line 76.
-
-[31] [32] [33] [34] [35] [36] [37]) (contents/evaluation.tex [38] [39]
+[31] [32] [33] [34] [35]) (contents/evaluation.tex [36]
 第 5 章
 File: figures/Fig_BEATBones.png Graphic file (type bmp)
 <figures/Fig_BEATBones.png>
-[40
+[37
 
 ]
 
-LaTeX Warning: Reference `sec:loss' on page 41 undefined on input line 63.
+LaTeX Warning: Reference `sec:loss' on page 38 undefined on input line 63.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[41] [42] [43]
+[38] [39] [40]
 File: figures/UserStudyImage.png Graphic file (type bmp)
 <figures/UserStudyImage.png>
- [44]
+ [41]
 File: figures/UserStudy_All.png Graphic file (type bmp)
 <figures/UserStudy_All.png>
- [45]
+ [42]
 File: figures/UserStudy_LatinSquare.png Graphic file (type bmp)
 <figures/UserStudy_LatinSquare.png>
- [46] [47]
+ [43] [44]
 File: figures/GeneratedPoseOverview.png Graphic file (type bmp)
 <figures/GeneratedPoseOverview.png>
 File: figures/Fig_HeadHandAlignment.png Graphic file (type bmp)
 <figures/Fig_HeadHandAlignment.png>
- [48] [49] [50] [51] [52] [53]
+ [45] [46] [47] [48] [49] [50]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[54] [55] [56] [57] [58]) (contents/conclusions.tex [59]
+[51] [52] [53] [54] [55]) (contents/conclusions.tex [56]
 第 6 章
-[60
+[57
 
-]) [61] [62
+]) [58] [59
 
 ]
 
@@ -2792,13 +2776,13 @@ Package fontspec Info:
 Package biblatex Warning: No driver for 'webpage'.
 (biblatex)                Using fallback driver on input line 63.
 
-[63]
+[60]
 Underfull \hbox (badness 6625) in paragraph at lines 63--63
 \TU/TeXGyreTermesX(0)/m/n/12.045 Speech-Driven Gesture Synthesis Using Normalis
 ing Flows[]C/OL[]//Computer
  []
 
-[64] [65] (contents/app_external_files.tex [66]
+[61] [62] (contents/app_external_files.tex [63]
 附录 A
 
 Overfull \hbox (11.03325pt too wide) in paragraph at lines 14--16
@@ -2807,13 +2791,13 @@ Overfull \hbox (11.03325pt too wide) in paragraph at lines 14--16
 ][][] []
  []
 
-[67
+[64
 
 ]
 附录 B
-) [68
+) [65
 
-] (contents/acknowledgements.tex) (contents/achievements.tex [69
+] (contents/acknowledgements.tex) (contents/achievements.tex [66
 
 
 
@@ -2822,7 +2806,7 @@ Overfull \hbox (11.03325pt too wide) in paragraph at lines 14--16
 \openout9 = `main.thm'.
 
 
-[70
+[67
 
 
 ] (e:\SJTU\SJTUPaper\out\main.aux)
@@ -2835,18 +2819,18 @@ L3 programming layer <2022/08/05>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EF13E9EB9C7E611E0D68E9F1F41F5EFB;16511.
+(rerunfilecheck)             Checksum: C64D240292AB8909FAD6600E24D9EA04;15749.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52189 strings out of 402986
- 1111299 string characters out of 5453884
- 2062731 words of memory out of 5000000
- 80143 multiletter control sequences out of 15000+600000
+ 52146 strings out of 402986
+ 1108813 string characters out of 5453884
+ 2062442 words of memory out of 5000000
+ 80100 multiletter control sequences out of 15000+600000
  706688 words of font info for 259 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,16n,124p,1183b,7469s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on e:\SJTU\SJTUPaper\out\main.pdf (84 pages).
+Output written on e:\SJTU\SJTUPaper\out\main.pdf (81 pages).
