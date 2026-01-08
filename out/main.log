@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  8 JAN 2026 13:48
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  8 JAN 2026 18:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2797,16 +2797,12 @@ Overfull \hbox (11.03325pt too wide) in paragraph at lines 14--16
 附录 B
 ) [64
 
-] (contents/acknowledgements.tex) (contents/achievements.tex [65
-
-
-
-])
+] (contents/achievements.tex)
 \tf@thm=\write9
 \openout9 = `main.thm'.
 
+ [65
 
-[66
 
 
 ] (e:\SJTU\SJTUPaper\out\main.aux)
@@ -2815,18 +2811,18 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6210328DF382ECC2B14292EAFBE5FDDF;16038.
+(rerunfilecheck)             Checksum: B7C161461743A9AAE0F12397DFF08914;15976.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52095 strings out of 402986
- 1105929 string characters out of 5453884
- 2063304 words of memory out of 5000000
- 80050 multiletter control sequences out of 15000+600000
+ 52086 strings out of 402986
+ 1105608 string characters out of 5453884
+ 2063222 words of memory out of 5000000
+ 80043 multiletter control sequences out of 15000+600000
  706688 words of font info for 259 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,16n,124p,1183b,7473s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on e:\SJTU\SJTUPaper\out\main.pdf (80 pages).
+Output written on e:\SJTU\SJTUPaper\out\main.pdf (79 pages).

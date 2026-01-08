@@ -132,6 +132,5 @@
 \contentsline {chapter}{参考文献}{58}{chapter*.65}%
 \contentsline {chapter}{\numberline {附录 A}手势生成对比视频}{63}{appendix.A}%
 \contentsline {chapter}{\numberline {附录 B}代码与实现资源}{64}{appendix.B}%
-\contentsline {chapter}{致\quad 谢}{65}{section*.66}%
-\contentsline {chapter}{学术论文和科研成果目录}{66}{section*.68}%
+\contentsline {chapter}{学术论文和科研成果目录}{65}{section*.66}%
 \contentsfinish 
