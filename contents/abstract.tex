@@ -2,32 +2,44 @@
 
 \begin{abstract}[zh]
 
-手势是交流中重要的细节补充与情感表达载体。面向虚拟人/数字形象的肢体控制中，传统方案往往依赖穿戴式检测设备或其他专用传感器，以稳定获取人体运动信息，但这类设备带来较高的使用门槛与部署成本。
+手势是人类交流中用于补充语义细节与传递情绪的重要非语言信号。
+在虚拟人/数字形象的实时控制中，传统动作捕捉往往依赖穿戴式设备，虽然精度高，但存在成本高、使用门槛高、便携性差等问题；相机动捕虽降低了硬件负担，却仍要求用户在镜头前持续表演手势，在远程交流、直播等长时间场景中会带来空间占用与体力消耗，并与键鼠操作产生冲突。
+近年来语音驱动手势生成技术为低门槛驱动提供了可能，但现有主流方法通常假设可获取完整语句或未来上下文，难以直接应用于用户逐字语音输入的在线实时交互环境，因此需要一种低延迟、可部署的实时手势生成方案。
 
-随着图像识别技术的发展，计算机能够通过相机识别用户动作并实现无穿戴的动捕式交互，在一定程度上降低了设备负担。然而，这类方案仍要求用户在镜头前实际表演手势动作；在远程交流或沉浸式场景中，手势作为情感表达工具往往伴随空间占用与体力消耗，人们需要投入较多精力活动肢体以增强说服力或表达效果，从而使虚拟世界中的手势表达依然显得繁琐。
+为解决上述问题，本论文提出 FaceCapGes：一种面向实时数字人驱动的帧级手势生成方法，仅使用可在线采集的三类信号：语音、面部表情与头部姿态，在不依赖未来输入的条件下逐帧生成上半身 3D 骨骼动作，从而让用户无需实际做出手势即可驱动虚拟形象获得自然的随语表达。本文的主要研究内容包括：
 
-近年来，手势与语言的关系被进一步分析，使得计算机能够从文本或语音生成与语义一致的手势动画，让数字人物在发言中融入更符合人类交流习惯的非语言表达。若将该技术用于用户的实时数字形象，则有望提供更轻便的手势控制方案：用户无需实际做出手势，只需在相机前说话即可，同时自然地产生语音、面部表情与头部旋转等信息。面部表情可补充情感线索，头部旋转可为手势朝向与叙事空间锚定提供指导，从而改进依赖空间方位与路径方向的手势推理；且这些信息的实时获取技术已相对成熟，具备良好的在线性能。
+(1) 提出 FaceCapGes 在线实时多模态手势生成框架，给出从信号采集、帧级推理到虚拟人驱动渲染的整体流程设计，并在严格因果约束下明确其可部署的实时生成机制。
 
-然而，当前协同语音手势生成技术通常以获取完整文本为前提，通过语义分析生成高精度手势，难以直接适配逐字输入的用户语音实时场景。因此，本论文提出FaceCapGes方法，基于语音、面部表情与头部旋转三种实时信息生成在线实时的3D手势骨骼动画。该方法可为用户的实时数字形象添加手势动画，无需用户实际做出手势动作；同时模型不依赖未来输入，能够在实时环境中提升虚拟形象的表达能力。
+(2) 在级联多模态架构中引入头部姿态作为新的实时输入模态，设计并实现轻量姿态编码与弱耦合融合策略，为手势提供节奏前瞻与空间锚定线索，从而增强动作节奏与空间指向一致性。
 
-以往研究已对面部表情、语音与手势的关系进行分析，并提出成熟的学习方法。本模型在现有级联架构基础上，增加头部姿态特征分析模块，同时引入滑动窗口机制以实现架构的实时运行。本模型所依赖的框架及额外添加模块性能开销低，与面部捕捉和头部姿态计算任务同时运行时，仍具备良好的实时性能。
+(3) 提出并实现在线实时手势生成的滑动窗口自回归训练策略，通过片段切割与窗口展开实现严格因果的逐帧生成，并结合片段级监督与对抗训练目标，提升实时生成的稳定性与时间连续性，缓解自回归漂移与抖动问题。
 
-主观评价结果表明，在自然性方面，本方法与当前主流方法相当；在响应速度上，具有显著优势。生成的手势与语音高度对齐，且具备良好的实时交互表现。此外，本模型可部署在 iPhone 等轻量设备上，只要输入格式兼容 ARKit 面部捕捉标准，就能广泛应用于各类实时互动场景。
+(4) 开展用户主观实验、客观指标测量与实时性能测试，并与代表性方法进行对比评估。实验结果表明，在严格因果约束下，本文方法 FaceCapGes 在真实性上表现良好，与现有扩散模型相当；同时在语调变化较快与头部朝向变化明显的片段中，能够生成更平滑且指向一致的动作，并具备满足实时交互场景需求的推理性能。
 
 \end{abstract}
 
 \begin{abstract}[en]
 
-Gestures are a crucial channel for enriching communication with complementary details and emotional expression. In the control of virtual humans or digital avatars, traditional approaches often rely on wearable sensing devices or other dedicated sensors to reliably capture human motion; however, such hardware introduces substantial barriers to use and deployment costs.
+Gestures are essential nonverbal signals in human communication, enriching semantic details and conveying affective states.
+In real-time control of virtual humans or digital avatars, conventional motion capture systems typically rely on wearable devices.
+Although accurate, such systems are costly, inconvenient to use, and lack portability.
+Camera-based capture reduces hardware requirements but still forces users to continuously perform gestures in front of a camera, which occupies physical space, causes fatigue during long-term scenarios such as remote communication and live streaming, and conflicts with keyboard--mouse interaction.
+Recently, speech-driven gesture generation has emerged as a low-barrier alternative; however, most existing approaches assume access to complete utterances or future context, making them difficult to deploy in online interactive settings where speech is streamed word by word.
+Therefore, a low-latency and deployable real-time gesture generation solution is required.
 
-With advances in visual recognition, camera-based systems can capture user movements and enable markerless, mocap-style interaction, partially reducing the dependence on wearables. Nevertheless, these approaches still require users to physically perform gestures in front of the camera. In remote communication or immersive scenarios, expressive gesturing often entails non-trivial spatial and physical effort: users must invest energy in moving their limbs to strengthen persuasion or convey emotions, which can make gestural expression in virtual worlds cumbersome.
+To address these challenges, this thesis proposes FaceCapGes, a frame-level gesture generation method for real-time avatar driving.
+FaceCapGes uses only three types of online-available signals---speech, facial expressions, and head pose---to generate upper-body 3D skeletal motions frame by frame without relying on future inputs, enabling users to drive avatars with natural co-speech gestures without physically performing them.
+The main contributions of this thesis are summarized as follows:
 
-Meanwhile, growing understanding of the relationship between gestures and language has enabled computers to generate semantically consistent gestures from text or speech, allowing digital characters to incorporate nonverbal behaviors that better match human conversational habits. If applied to a user’s real-time avatar, such techniques could provide a more lightweight control paradigm: instead of performing gestures, users only need to speak in front of a camera, naturally producing speech, facial expressions, and head rotations. Facial expressions can supplement affective cues, while head rotations can guide gesture orientation and narrative spatial anchoring, improving the inference of gestures that depend on spatial references and motion directions. Moreover, real-time capture of facial expressions and head pose is relatively mature and offers strong online performance.
+(1) A real-time multimodal gesture generation framework, FaceCapGes, is proposed, providing an overall pipeline design from signal acquisition and frame-level inference to avatar driving and rendering, and clarifying a deployable real-time generation mechanism under strict causality constraints.
 
-However, most existing co-speech gesture generation methods assume access to complete text and rely on semantic analysis to generate high-quality gestures, making them difficult to adapt to real-time scenarios with incremental, word-by-word user speech. To address this, we propose FaceCapGes, a method that generates online, real-time 3D skeletal gesture animations from three streams of real-time signals: speech, facial expressions, and head rotations. FaceCapGes can augment a user’s live digital avatar with expressive gestures without requiring the user to physically gesture, and it does not depend on future inputs, thereby enhancing avatar expressiveness in live interactive settings.
+(2) Head pose is introduced as a new real-time input modality in a cascaded multimodal architecture.
+A lightweight pose encoder and a weakly coupled fusion strategy are designed and implemented to provide rhythmic anticipation and spatial anchoring cues, thereby enhancing gesture timing and spatial pointing consistency.
 
-Prior work has analyzed the relationships among facial expressions, speech, and gestures, and has established effective learning paradigms. Building on existing cascaded architectures, our model introduces an additional head-pose feature analysis module and incorporates a sliding-window mechanism to enable real-time operation. The underlying framework and added modules incur low computational overhead, and the system maintains robust real-time performance even when running concurrently with facial capture and head-pose estimation.
+(3) A sliding-window autoregressive training strategy for online real-time gesture generation is proposed and implemented.
+By segmenting motion sequences and unfolding them with a sliding window, strictly causal frame-wise generation is achieved.
+Combined with segment-level supervision and adversarial objectives, the proposed strategy improves temporal stability and continuity, alleviating autoregressive drift and jitter.
 
-Subjective evaluations show that our method achieves naturalness comparable to current mainstream approaches, while providing a significant advantage in responsiveness. The generated gestures are tightly aligned with speech and demonstrate strong real-time interactive behavior. Furthermore, our model can be deployed on lightweight devices such as iPhones; as long as the input format is compatible with the ARKit facial capture standard, it can be broadly applied to a wide range of real-time interactive scenarios.
+(4) Subjective user studies, objective metric evaluation, and real-time performance tests are conducted, with comparative assessments against representative methods. The results demonstrate that, under strict causality constraints, FaceCapGes achieves strong realism comparable to existing diffusion-based models; moreover, in segments with rapid prosodic variations and noticeable head orientation changes, it generates smoother motions with more consistent spatial pointing, while maintaining inference efficiency sufficient for real-time interactive applications.
 
 \end{abstract}

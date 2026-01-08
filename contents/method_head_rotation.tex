@@ -1,4 +1,4 @@
-\chapter{多模态在线实时数字人驱动模型架构}
+\chapter{融合头部姿态的多模态级联手势生成模型架构}
 \label{chap:model_architecture}
 
 CaMN\cite{beatcamn}提供了语音驱动手势生成的基础级联框架，为实时数字人动作建模奠定了有效的结构基础。
@@ -26,7 +26,7 @@ CaMN\cite{beatcamn}提供了语音驱动手势生成的基础级联框架，为�
 各模态输入定义如下：
 $\bm{v}_{t}^{A}$表示语音模态在时刻$t$的特征向量，由麦克风信号经特征提取模块得到；
 $\bm{v}_{t}^{F}$表示面部模态的输入，为ARKit输出的52维标准化BlendShape系数；
-$\bm{v}_{t}^{H}$表示头部模态的输入，为ARKit得出的头部旋转矩阵经Rot6D表示；
+$\bm{v}_{t}^{H}$表示头部模态的输入，为ARKit得出的头部旋转；
 而$\hat{\bm{v}}_{t}^{B}$为生成模型在当前时刻预测的上半身骨骼姿态向量。
 %
 模型仅利用当前及过去$N$帧的输入信息估计$\hat{\bm{v}}_{t}^{B}$，
@@ -46,7 +46,7 @@ FaceCapGes模型的输入由三种可同时实时获取的模态组成：语音�
 \midrule
 语音特征 & $\bm{v}_t^{A}$ & $\mathbb{R}^{1067}$ & 由音频信号提取的时序特征（Mel频谱、短时能量、基频等） \\
 面部 BlendShape & $\bm{v}_t^{F}$ & $\mathbb{R}^{52}$ & ARKit输出的标准化表情权重向量 \\
-头部姿态 & $\bm{v}_t^{H}$ & $\mathbb{R}^{6}$ & 采用Rot6D表示的头部旋转参数 \\
+头部姿态 & $\bm{v}_t^{H}$ & $\mathbb{R}^{6}$ & 头部关节旋转状态 \\
 骨骼姿态（输出） & $\hat{\bm{v}}_t^{B}$ & $\mathbb{R}^{6 \times 47}$ & 上半身47个关节的旋转状态 \\
 \bottomrule
 \end{tabular}
@@ -87,7 +87,7 @@ FaceCapGes模型的输入由三种可同时实时获取的模态组成：语音�
 这两个编码器负责提取低层次语音节奏与表情动态信息，为后续模态融合提供稳定上下文表征。
 
 此外，系统在此基础上引入头部姿态模态$\bm{v}_t^{H}$，用于补充空间方向与节奏信号。
-其编码器$E_H$将Rot6D表示的头部旋转向量映射为紧凑潜在表征：
+其编码器$E_H$将头部旋转向量映射为紧凑潜在表征：
 \begin{equation}
 \bm{z}^{H}_t = E_H(\bm{v}_{t-N:t}^{H}),
 \end{equation}
@@ -207,7 +207,7 @@ $\bm{O}_t^{U} = (\bm{o}_{t-N}^{U},\ldots,\bm{o}_{t}^{U})$。
 我们在此配置下得到了更快的训练收敛。
 
 \paragraph{编码器结构}
-图~\ref{fig_headencoder} 所示为头部姿态编码器结构。该编码器由两层前馈网络组成，输入为Rot6D表示的6维向量：
+图~\ref{fig_headencoder} 所示为头部姿态编码器结构。该编码器由两层前馈网络组成，输入为Rot6D\cite{rot6d}表示的6维向量：
 \begin{equation}
 \bm{z}^{H}_t = E_H(\bm{v}^H_{t-N:t}),
 \end{equation}
