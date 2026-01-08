@@ -11,8 +11,7 @@
 \contentsline {subsection}{\numberline {1.4.1}面向AI虚拟形象的整句手势生成}{5}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}面向用户交互的在线实时手势生成}{5}{subsection.1.4.2}%
 \contentsline {section}{\numberline {1.5}本文研究目标}{6}{section.1.5}%
-\contentsline {section}{\numberline {1.6}本章小结}{7}{section.1.6}%
-\contentsline {section}{\numberline {1.7}论文组织架构}{7}{section.1.7}%
+\contentsline {section}{\numberline {1.6}论文组织架构}{7}{section.1.6}%
 \contentsline {chapter}{\numberline {第 2 章}多模态在线实时手势生成框架}{8}{chapter.2}%
 \contentsline {section}{\numberline {2.1}手势的定义}{8}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Kendon连续体}{8}{subsection.2.1.1}%
@@ -127,13 +126,12 @@
 \contentsline {section}{\numberline {5.9}本章小结}{54}{section.5.9}%
 \contentsline {chapter}{\numberline {第 6 章}结论}{55}{chapter.6}%
 \contentsline {section}{\numberline {6.1}本文工作总结}{55}{section.6.1}%
-\contentsline {section}{\numberline {6.2}未来工作展望}{55}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}高层语义信息}{55}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}面向未来趋势的预测性训练目标}{55}{subsection.6.2.2}%
-\contentsline {section}{\numberline {6.3}本章小结}{56}{section.6.3}%
-\contentsline {chapter}{参考文献}{57}{chapter*.65}%
-\contentsline {chapter}{\numberline {附录 A}手势生成对比视频}{62}{appendix.A}%
-\contentsline {chapter}{\numberline {附录 B}代码与实现资源}{63}{appendix.B}%
-\contentsline {chapter}{致\quad 谢}{64}{section*.66}%
-\contentsline {chapter}{学术论文和科研成果目录}{65}{section*.68}%
+\contentsline {section}{\numberline {6.2}未来工作展望}{56}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}高层语义信息}{56}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}面向未来趋势的预测性训练目标}{56}{subsection.6.2.2}%
+\contentsline {chapter}{参考文献}{58}{chapter*.65}%
+\contentsline {chapter}{\numberline {附录 A}手势生成对比视频}{63}{appendix.A}%
+\contentsline {chapter}{\numberline {附录 B}代码与实现资源}{64}{appendix.B}%
+\contentsline {chapter}{致\quad 谢}{65}{section*.66}%
+\contentsline {chapter}{学术论文和科研成果目录}{66}{section*.68}%
 \contentsfinish 
