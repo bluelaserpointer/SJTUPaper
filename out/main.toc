@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {1.4}在线实时手势生成与离线生成的差异}{5}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}面向AI虚拟形象的整句手势生成}{5}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}面向用户交互的在线实时手势生成}{5}{subsection.1.4.2}%
-\contentsline {section}{\numberline {1.5}本文研究目标}{6}{section.1.5}%
+\contentsline {section}{\numberline {1.5}本文研究目标与研究内容}{6}{section.1.5}%
 \contentsline {section}{\numberline {1.6}论文组织架构}{7}{section.1.6}%
 \contentsline {chapter}{\numberline {第 2 章}多模态在线实时手势生成框架}{8}{chapter.2}%
 \contentsline {section}{\numberline {2.1}手势的定义}{8}{section.2.1}%
@@ -102,12 +102,12 @@
 \contentsline {subsection}{\numberline {5.4.1}生成动作平滑性}{42}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}头部朝向与手势空间指向一致性}{43}{subsection.5.4.2}%
 \contentsline {section}{\numberline {5.5}客观评估指标与实现细节}{45}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Fréchet Gesture Distance（FGD）}{45}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.1}Fréchet手势距离（Fréchet Gesture Distance）}{45}{subsection.5.5.1}%
 \contentsline {paragraph}{FGD的模型结构与训练配置}{45}{paragraph*.53}%
 \contentsline {paragraph}{用于FGD评估的骨架感知自编码器}{46}{paragraph*.54}%
-\contentsline {subsection}{\numberline {5.5.2}Semantic Relevance Gesture Recall（SRGR）}{47}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.2}语义相关动作召回率（Semantic Relevance Gesture Recall）}{47}{subsection.5.5.2}%
 \contentsline {paragraph}{定义与原理}{47}{paragraph*.55}%
-\contentsline {subsection}{\numberline {5.5.3}Beat Alignment（BA）}{47}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.3}节奏对齐度（Beat Alignment）}{47}{subsection.5.5.3}%
 \contentsline {paragraph}{定义与原理}{48}{paragraph*.56}%
 \contentsline {subsection}{\numberline {5.5.4}L1范数}{48}{subsection.5.5.4}%
 \contentsline {paragraph}{定义与原理}{49}{paragraph*.57}%

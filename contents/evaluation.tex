@@ -424,14 +424,14 @@ DiffSHEG 虽能在其可获取的语音信息下生成较连贯的手势节奏�
 \label{sec:objective_metrics}
 
 为客观层面评价模型在动作自然性、节奏同步性与多样性等方面的表现，
-本文在客观评估中采用四项度量：Fréchet Gesture Distance（FGD）\cite{speech_gesture_generation}、语义相关动作召回率（Semantic Relevance Gesture Recall, SRGR）\cite{beatcamn}、节奏对齐度（Beat Alignment, BA）\cite{beatcamn, beatalign}以及L1范数（L1DIV）。
+本文在客观评估中采用四项度量：手势分布相似度（Fréchet Gesture Distance，FGD）\cite{speech_gesture_generation}、语义相关动作召回率（Semantic Relevance Gesture Recall，SRGR）\cite{beatcamn}、节奏对齐度（Beat Alignment，BA）\cite{beatcamn, beatalign}以及L1范数（L1DIV）。
 这些指标分别对应生成动作在分布一致性、语音同步性与变化丰富性等不同维度，
 共同构成对模型质量的综合评估体系。
 
-\subsection{Fréchet Gesture Distance（FGD）}
+\subsection{手势分布相似度（Fréchet Gesture Distance）}
 \label{subsec:fgd}
 
-FGD\cite{speech_gesture_generation}用于衡量生成手势分布与真实手势分布之间的统计距离，
+手势分布相似度（Fréchet Gesture Distance，FGD）\cite{speech_gesture_generation}用于衡量生成手势分布与真实手势分布之间的统计距离，
 灵感源自图像生成领域的Fréchet Inception Distance（FID）。
 不同于图像任务直接利用Inception网络特征，
 在动作生成领域，特征空间需由单独训练的动作自编码器定义。
@@ -514,10 +514,10 @@ A_{ij} =
 在本文的实验设置中，该设计有效提升了FGD评估的数值稳定性，
 并有效避免了在Rot6D表示条件下使用嵌入式自编码器时出现的极端FGD数值现象。
 
-\subsection{Semantic Relevance Gesture Recall（SRGR）}
+\subsection{语义相关动作召回率（Semantic Relevance Gesture Recall）}
 \label{subsec:srgr}
 
-SRGR指标（Semantic Relevance Gesture Recall）\cite{beatcamn}
+语义相关动作召回率（Semantic Relevance Gesture Recall，SRGR）\cite{beatcamn}
 用于衡量生成手势在语义相关时间段内与真实手势在数值层面的匹配程度。
 该指标关注的是语音语义触发的关键手势是否被正确生成，
 而非整体分布一致性或语音–手势节奏相关性。
@@ -561,10 +561,10 @@ SRGR通过对所有时间帧与关节进行统计，
 从而使 SRGR 更加关注语义相关手势的召回情况，
 而非对所有时间片段进行均匀统计。
 
-\subsection{Beat Alignment（BA）}
+\subsection{节奏对齐度（Beat Alignment）}
 \label{subsec:ba}
 
-Beat Alignment（BA）指标用于衡量语音节拍事件与手势关键动作事件在时间轴上的对齐程度，
+节奏对齐度（Beat Alignment，BA）指标用于衡量语音节拍事件与手势关键动作事件在时间轴上的对齐程度，
 反映模型在语音–手势时序同步性（temporal synchronization）方面的性能。
 本文采用 BEAT/CaMN 中使用的 BeatAlign 指标\cite{beatcamn}，其原始形式由 Li 等人提出于 AI Choreographer 工作中\cite{beatalign}，
 并可视为音频节拍与动作节拍集合之间的单向 Chamfer 相似度度量。
@@ -617,7 +617,7 @@ $\mathcal{B}_g = \{ t^g_m \}$，
 \subsection{L1范数}
 \label{subsec:l1div}
 
-L1范数（L1DIV）指标\cite{beatcamn}用于衡量模型生成手势序列的多样性，
+L1范数（L1DIV）\cite{beatcamn}用于衡量模型生成手势序列的多样性，
 即不同生成样本之间在动作空间中的差异程度。
 该指标反映模型在避免生成结果收敛到平均动作模式
 （mode collapse）的同时，

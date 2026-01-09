@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  8 JAN 2026 18:30
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  8 JAN 2026 23:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2811,7 +2811,7 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B7C161461743A9AAE0F12397DFF08914;15976.
+(rerunfilecheck)             Checksum: 914A95B838B1EE3D157CC64E96EDDA9D;16153.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
@@ -2819,7 +2819,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  52086 strings out of 402986
  1105608 string characters out of 5453884
- 2063222 words of memory out of 5000000
+ 2062238 words of memory out of 5000000
  80043 multiletter control sequences out of 15000+600000
  706688 words of font info for 259 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
