@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  8 JAN 2026 23:32
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  9 JAN 2026 14:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1469,6 +1469,11 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 \TPTL@width=\skip121
 )
+(D:\Programs\MiKTeX\tex/latex/hyphenat\hyphenat.sty
+Package: hyphenat 2009/09/02 v2.3c hyphenation utilities
+\langwohyphens=\language80
+LaTeX Info: Redefining \_ on input line 43.
+)
 (D:\Programs\MiKTeX\tex/latex/algorithm2e\algorithm2e.sty
 Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 299 replaced by U+FFFD.
@@ -2143,17 +2148,17 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip150
 )
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 210.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 213.
 
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 210.
-Package hyperref Info: Option `unicode' set `true' on input line 210.
-Package hyperref Info: Option `psdextra' set `true' on input line 210.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 213.
+Package hyperref Info: Option `unicode' set `true' on input line 213.
+Package hyperref Info: Option `psdextra' set `true' on input line 213.
 
 (D:\Programs\MiKTeX\tex/latex/hyperref\psdextra.def
 File: psdextra.def 2025-07-12 v7.01o Hyperref: Additions to PDF string support
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 210.
-Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 210
+Package hyperref Info: Option `breaklinks' set `true' on input line 213.
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 213
 .
 \g__sjtu_bookmark_int=\count560
 )
@@ -2590,100 +2595,103 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 (contents/abstract.tex [1
 
 
-] [2
+]
+Underfull \hbox (badness 1286) in paragraph at lines 39--42
+[]\TU/TeXGyreTermesX(0)/m/n/12.045 (3) A sliding-window autoregressive training
+ strategy for online real-time gesture
+ []
+
+[2
 
 
 ]) [3] (e:\SJTU\SJTUPaper\out\main.toc [4
 
 
-]
-[5] [6])
+] [5] [6])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [7] (e:\SJTU\SJTUPaper\out\main.lof)
+ [7]
+(e:\SJTU\SJTUPaper\out\main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
  [8
 
 
-]
-(e:\SJTU\SJTUPaper\out\main.lot)
+] (e:\SJTU\SJTUPaper\out\main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
  [9
 
 
-] [10
+]
+[10
 
 ] (contents/intro.tex
 第 1 章
 [1
 
-] [2] [3]
+] [2]
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 7.0pt on input line 116.
+(Font)              scaled to size 7.0pt on input line 83.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 5.0pt on input line 116.
+(Font)              scaled to size 5.0pt on input line 83.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.0pt on input line 116.
+(Font)              scaled to size 7.0pt on input line 83.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 5.0pt on input line 116.
+(Font)              scaled to size 5.0pt on input line 83.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.0pt on input line 116.
+(Font)              scaled to size 7.0pt on input line 83.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 5.0pt on input line 116.
+(Font)              scaled to size 5.0pt on input line 83.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.0pt on input line 116.
+(Font)              scaled to size 7.0pt on input line 83.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 5.0pt on input line 116.
+(Font)              scaled to size 5.0pt on input line 83.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.0pt on input line 116.
+(Font)              scaled to size 7.0pt on input line 83.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 5.0pt on input line 116.
+(Font)              scaled to size 5.0pt on input line 83.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.0pt on input line 116.
+(Font)              scaled to size 7.0pt on input line 83.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 5.0pt on input line 116.
+(Font)              scaled to size 5.0pt on input line 83.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.0pt on input line 116.
+(Font)              scaled to size 7.0pt on input line 83.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 5.0pt on input line 116.
+(Font)              scaled to size 5.0pt on input line 83.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 7.0pt on input line 116.
+(Font)              scaled to size 7.0pt on input line 83.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 5.0pt on input line 116.
+(Font)              scaled to size 5.0pt on input line 83.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 7.0pt on input line 116.
+(Font)              scaled to size 7.0pt on input line 83.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 5.0pt on input line 116.
+(Font)              scaled to size 5.0pt on input line 83.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 7.0pt on input line 116.
+(Font)              scaled to size 7.0pt on input line 83.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 5.0pt on input line 116.
- [4] [5] [6]) (contents/framework.tex [7]
+(Font)              scaled to size 5.0pt on input line 83.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3] [4] [5] [6]) (contents/framework.tex [7]
 第 2 章
 [8
 
-] [9] [10] [11]
-Overfull \hbox (24.4635pt too wide) in paragraph at lines 151--153
-[]\TU/SimSun(0)/m/n/12.045 本 文 使 用 的 表 示 方 法 为 \TU/TeXGyreTermesX(0)/m/n/12.045
- BlendShape \TU/SimSun(0)/m/n/12.045 权 重 模 型。| \TU/TeXGyreTermesX(0)/m/n/12.045
- Facial Action Coding System |\TU/SimSun(0)/m/n/12.045 （\TU/TeXGyreTermesX(0)/m
-/n/12.045 FACS\TU/SimSun(0)/m/n/12.045 ）|$[]$提
- []
-
+] [9] [10] [11] [12]
 File: figures/Fig_AUSample.png Graphic file (type bmp)
 <figures/Fig_AUSample.png>
-[12]
 File: figures/Fig_blendshapeEyeBlink.png Graphic file (type bmp)
 <figures/Fig_blendshapeEyeBlink.png>
  [13] [14] [15]
 File: figures/SystemArchitecture.png Graphic file (type bmp)
 <figures/SystemArchitecture.png>
- [16] [17]) (contents/method_head_rotation.tex [18]
+ [16] [17])
+(contents/method_head_rotation.tex [18]
 第 3 章
 [19
 
@@ -2701,16 +2709,7 @@ File: figures/Fig_NeuroArchitecture.png Graphic file (type bmp)
 第 4 章
 [26
 
-] [27] [28]
-Overfull \hbox (35.0095pt too wide) in paragraph at lines 132--135
-[]\TU/SimSun(0)/m/n/12.045 在 片 段 开 始 时 刻 $\OML/ntxmi/m/it/12.045 s[]$\TU/SimSun
-(0)/m/n/12.045 ，|  我 们 首 先 执 行 预 热 阶 段：|  将 片 段 的 前 $\OML/ntxmi/m/it/12.045 N$ 
-\TU/SimSun(0)/m/n/12.045 帧 真 实 动 作 $\LMS/ntxsy/m/n/12.045 f\OML/ntxmi/b/it/12.0
-45 v[]\OML/ntxmi/m/it/12.045 ; [] ; \OML/ntxmi/b/it/12.045 v[]\LMS/ntxsy/m/n/12
-.045 g$
- []
-
-[29] [30] [31] [32] [33]) (contents/evaluation.tex [34]
+] [27] [28] [29] [30] [31] [32] [33]) (contents/evaluation.tex [34]
 第 5 章
 File: figures/Fig_BEATBones.png Graphic file (type bmp)
 <figures/Fig_BEATBones.png>
@@ -2720,7 +2719,13 @@ File: figures/Fig_BEATBones.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[36] [37] [38]
+[36]
+Underfull \hbox (badness 2005) in paragraph at lines 114--119
+[]\TU/SimSun(0)/m/n/12.045 为 验 证 模 型 在 交 互 环 境 中 的 表 现，|  本 文 进 行 了 用 户 主 观 评 估
+ 实 验，|  比 较
+ []
+
+[37] [38]
 File: figures/UserStudyImage.png Graphic file (type bmp)
 <figures/UserStudyImage.png>
  [39]
@@ -2774,10 +2779,10 @@ Package fontspec Info:
 
 
 Package biblatex Warning: No driver for 'webpage'.
-(biblatex)                Using fallback driver on input line 63.
+(biblatex)                Using fallback driver on input line 65.
 
 
-Underfull \hbox (badness 6625) in paragraph at lines 63--63
+Underfull \hbox (badness 6625) in paragraph at lines 65--65
 \TU/TeXGyreTermesX(0)/m/n/12.045 Speech-Driven Gesture Synthesis Using Normalis
 ing Flows[]C/OL[]//Computer
  []
@@ -2811,18 +2816,18 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 914A95B838B1EE3D157CC64E96EDDA9D;16153.
+(rerunfilecheck)             Checksum: 8623E5F1623951B326E4B5E44408A6ED;15513.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52086 strings out of 402986
- 1105608 string characters out of 5453884
- 2062238 words of memory out of 5000000
- 80043 multiletter control sequences out of 15000+600000
- 706688 words of font info for 259 fonts, out of 8000000 for 9000
+ 52132 strings out of 402986
+ 1106419 string characters out of 5453884
+ 2064071 words of memory out of 5000000
+ 80085 multiletter control sequences out of 15000+600000
+ 706696 words of font info for 260 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 115i,16n,124p,1183b,7473s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,16n,124p,1183b,7463s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on e:\SJTU\SJTUPaper\out\main.pdf (79 pages).

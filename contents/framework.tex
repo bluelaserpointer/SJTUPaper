@@ -96,7 +96,7 @@ Baars等的实验\cite{FlapThoseHands}比较了无手势、仅使用节奏型手
 \paragraph{骨架结构的定义}
 在计算机动画与动作捕捉领域，身体姿态通常由骨架结构和关节旋转参数共同定义。骨架结构描述了人体各关节的拓扑关系及层级依赖；而每个姿态帧由一组关节旋转参数所确定，这些参数定义了相对于父节点的旋转变换。在不同的系统与任务中，骨架结构的具体形式往往有所差异，这种差异直接影响姿态数据的表示与学习方式。
 
-在不同的系统与任务中，骨架结构可以遵循各自的标准，因此，不同的数据集、3D模型或神经网络往往基于自身定义的关节层级与命名体系进行训练与标注。例如，AMASS数据集\cite{AMASS:2019}采用SMPL拓扑结构\cite{SMPL:2015}，BEAT数据集\cite{beatcamn}使用简化上半身骨架。近年来的自动骨骼绑定与骨架归一化方法，通过学习或优化关节对应关系，实现了不同拓扑之间的姿态重定向（pose retargeting）\cite{GleicherRetargetting1998,MartinelliSkeleton-AwareRetargeting2024}，从而消除了模型依赖于特定骨架结构的限制。
+在不同的系统与任务中，骨架结构可以遵循各自的标准，因此，不同的数据集、3D模型或神经网络往往基于自身定义的关节层级与命名体系进行训练与标注。例如，AMASS数据集\cite{AMASS:2019}采用Skinned Multi-Person Linear model（SMPL）\cite{SMPL:2015}的拓扑结构，BEAT数据集\cite{beatcamn}使用自身定义的简化上半身骨架。近年来的自动骨骼绑定与骨架归一化方法，通过学习或优化关节对应关系，实现了不同拓扑之间的姿态重定向（pose retargeting）\cite{GleicherRetargetting1998,MartinelliSkeleton-AwareRetargeting2024}，从而消除了模型依赖于特定骨架结构的限制。
 
 \paragraph {旋转参数的选取}
 在确定骨架结构之后，具体的关节状态可通过多种旋转参数进行描述。
@@ -148,19 +148,21 @@ Rot6D & 6 & 连续 & 神经网络 & 近期多数\cite{emage, Ao2023GestureDiffuC
 
 面部表情是非语言交流的重要组成部分，与语音、手势共同传递情感和态度信息。与身体动作不同，面部表情主要由皮肤形变和局部运动构成，无法通过骨骼旋转直接建模，因此需要专门的参数化表示方式。
 
-本文使用的表示方法为BlendShape权重模型。Facial Action Coding System（FACS）\cite{EkmanFriesenFACS1978}提出复杂表情可分解为若干可组合的基本动作单元（Action Units, AU），为表情的参数化表示提供了理论基础。
-受此启发，BlendShape 模型将面部表情表示为一组可线性叠加的形变基，每个基形对应一个权重控制的局部表情变化。复杂表情由多个基形的组合生成，其思想与FACS的动作单元体系相呼应。
+Facial Action Coding System（FACS）\cite{EkmanFriesenFACS1978}提出，复杂表情可以分解为若干可组合的基本动作单元（Action Units, AU），为将面部表情描述为一组可控参数提供了理论基础。
+在计算机图形与动画领域，BlendShape 模型进一步将这一思想具体化：其通过一组可线性叠加的形变基来表示面部表情，
+每个基形由对应的权重参数控制局部表情变化。通过调节多个基形的权重并进行组合，即可生成丰富的复杂表情，
+这与 FACS 将表情拆分为动作单元并进行组合的思路相一致。
 
-与基于骨骼的形变不同，BlendShape 直接在顶点层面定义几何偏移量，因此对网格拓扑结构高度依赖：每个基形的顶点偏移需与基础网格逐点对应。在具有相同网格结构的角色模型之间，BlendShape 集合可以直接复用；但若拓扑发生变化，偏移数据将无法一一对应，从而难以在不同模型间映射或重定向。这种拓扑依赖性限制了其跨模型的通用性。
+与基于骨骼的形变不同，BlendShape直接在顶点层面定义几何偏移量，因此对网格拓扑结构高度依赖：每个基形的顶点偏移需与基础网格逐点对应。在具有相同网格结构的角色模型之间，BlendShape集合可以直接复用；但若拓扑发生变化，偏移数据将无法一一对应，从而难以在不同模型间映射或重定向。这种拓扑依赖性限制了其跨模型的通用性。
 
-尽管如此，BlendShape 在表现精细面部表情和软组织形变方面具有显著优势。其标准化权重接口、实时可驱动性与渲染兼容性，使其成为虚拟人和表情捕捉系统的主流表示形式，并被广泛应用于如ARKit\cite{ARKitDocumentation} 等实时动画框架，以及主流渲染引擎中。
+尽管如此，BlendShape 在表现精细面部表情和软组织形变方面具有显著优势。其标准化权重接口、实时可驱动性与渲染兼容性，使其成为虚拟人和表情捕捉系统的主流表示形式，并被广泛应用于如Apple ARKit\cite{ARKitDocumentation} 等实时动画框架，以及主流渲染引擎中。
 
-图~\ref{fig:au_sample}来自~\cite{ozel_arkit_facs_cheatsheet}，展示FACS对闭眼睛的动作单元AU45的定义。
+图~\ref{fig:au_sample}来自文献~\cite{ozel_arkit_facs_cheatsheet}，展示FACS对闭眼睛的动作单元AU45的定义。
 
 \begin{figure}[h!t]
 \centering
 \includegraphics[width=0.95\linewidth]{figures/Fig_AUSample.png}
-\bicaption{FACS 中闭眼动作单元的定义}{Definition of Eye Closure Action Units in FACS}
+\bicaption{FACS 中闭眼动作单元的定义\cite{ozel_arkit_facs_cheatsheet}}{Definition of Eye Closure Action Units in FACS\cite{ozel_arkit_facs_cheatsheet}}
 \label{fig:au_sample}
 \end{figure}
 
@@ -290,7 +292,7 @@ ARKit在ARFaceAnchor中提供一个齐次变换矩阵$\mathbf{T}\in\mathbb{R}^{4
 
 本层提供的多模态信号经中间件处理后，以统一的数据接口传递至手势生成模型，实现语音、表情与头部姿态的实时融合输入。
 
-\subsection{手势生成模型层（FaceCapGes）}
+\subsection{手势生成模型层}
 
 FaceCapGes 模块作为系统的核心推理单元，接收来自信号采集与系统配置层的三类输入特征：语音特征、面部BlendShape系数以及头部姿态参数，并在不依赖未来帧的条件下，逐帧预测用户当前时刻的上半身骨骼姿态。
 
