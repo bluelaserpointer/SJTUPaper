@@ -10,7 +10,7 @@
 
 (1) 提出 FaceCapGes 在线实时多模态手势生成框架，给出从信号采集、帧级推理到虚拟人驱动渲染的整体流程设计，并在严格因果约束下明确其可部署的实时生成机制。
 
-(2) 在级联多模态架构中引入头部姿态作为新的实时输入模态，设计并实现轻量姿态编码与弱耦合融合策略，为手势提供节奏前瞻与空间锚定线索，从而增强动作节奏与空间指向一致性。
+(2) 在级联多模态架构中引入头部姿态作为新的实时输入模态，设计并实现姿态编码模块与弱耦合融合策略，为手势提供额外的节奏与朝向线索，从而增强动作节奏与空间指向一致性。
 
 (3) 提出并实现在线实时手势生成的滑动窗口自回归训练策略，通过片段切割与窗口展开实现严格因果的逐帧生成，并结合片段级监督与对抗训练目标，提升实时生成的稳定性与时间连续性，缓解自回归漂移与抖动问题。
 
@@ -33,8 +33,7 @@ The main contributions of this thesis are summarized as follows:
 
 (1) A real-time multimodal gesture generation framework, FaceCapGes, is proposed, providing an overall pipeline design from signal acquisition and frame-level inference to avatar driving and rendering, and clarifying a deployable real-time generation mechanism under strict causality constraints.
 
-(2) Head pose is introduced as a new real-time input modality in a cascaded multimodal architecture.
-A lightweight pose encoder and a weakly coupled fusion strategy are designed and implemented to provide rhythmic anticipation and spatial anchoring cues, thereby enhancing gesture timing and spatial pointing consistency.
+(2) We introduce head pose as a new real-time input modality in a cascaded multimodal architecture. A pose encoder and a weakly coupled fusion strategy are designed and implemented to provide additional rhythmic and orientation cues, improving gesture timing and spatial pointing consistency.
 
 (3) A sliding-window autoregressive training strategy for online real-time gesture generation is proposed and implemented.
 By segmenting motion sequences and unfolding them with a sliding window, strictly causal frame-wise generation is achieved.

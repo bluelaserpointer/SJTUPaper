@@ -1,10 +1,9 @@
-\contentsline {table}{\numberline {1.1}{\ignorespaces 离线与在线手势生成任务在约束与可利用信息上的对比}}{4}{table.caption.13}%
-\contentsline {table}{\numberline {2.1}{\ignorespaces 不同旋转表示方式的空间连续性与使用示例}}{12}{table.caption.17}%
-\contentsline {table}{\numberline {3.1}{\ignorespaces 输入输出模态符号与维度}}{20}{table.caption.24}%
-\contentsline {table}{\numberline {5.1}{\ignorespaces 对比模型的输入输出模态}}{37}{table.caption.35}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces 定量评估结果}}{50}{table.caption.57}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces 消融实验结果}}{50}{table.caption.58}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces 推理速度评估结果}}{52}{table.caption.62}%
+\contentsline {table}{\numberline {1.1}{\ignorespaces 两种虚拟人手势生成任务目标的设定差异}}{5}{table.caption.13}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces 输入输出模态符号与维度}}{20}{table.caption.23}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces 对比模型的输入输出模态}}{35}{table.caption.33}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces 定量评估结果}}{48}{table.caption.55}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces 消融实验结果}}{49}{table.caption.56}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces 推理速度评估结果}}{51}{table.caption.60}%
 \contentsfinish 
 \contentsfinish 
 \contentsfinish 

@@ -1,14 +1,14 @@
-\contentsline {figure}{\numberline {2.1}{\ignorespaces FACS 中闭眼动作单元的定义\blx@tocontentsinit {0}\cite {ozel_arkit_facs_cheatsheet}}}{13}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces BlendShape 在闭眼形变上的线性插值效果}}{13}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces 系统整体架构与数据流示意图}}{16}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.1}{\ignorespaces 头部姿态编码器结构示意图}}{24}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces FaceCapGes 模型整体结构}}{25}{figure.caption.29}%
-\contentsline {figure}{\numberline {5.1}{\ignorespaces BEAT 数据集的骨架拓扑结构与驱动范围}}{35}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces 用户评估工具实机界面}}{39}{figure.caption.41}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces 用户评估总体主观排名结果}}{41}{figure.caption.45}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces 平衡拉丁方设置下的主观排名结果}}{41}{figure.caption.47}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces 生成动作效果对比}}{43}{figure.caption.50}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces 头部朝向与手势指向一致性的动作对比}}{44}{figure.caption.51}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces BEAT 数据集的骨架拓扑结构与驱动范围}}{11}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces FACS 中闭眼动作单元的定义\blx@tocontentsinit {0}\cite {ozel_arkit_facs_cheatsheet}}}{12}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces BlendShape 在闭眼形变上的线性插值效果}}{13}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces 系统整体架构与数据流示意图}}{15}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 头部姿态编码器结构示意图}}{24}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces FaceCapGes 模型整体结构}}{24}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 用户评估工具实机界面}}{38}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces 用户评估总体主观排名结果}}{39}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces 平衡拉丁方设置下的主观排名结果}}{40}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces 生成动作效果对比}}{42}{figure.caption.48}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces 头部朝向与手势指向一致性的动作对比}}{43}{figure.caption.49}%
 \contentsfinish 
 \contentsfinish 
 \contentsfinish 

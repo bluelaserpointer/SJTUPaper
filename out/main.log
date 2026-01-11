@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  9 JAN 2026 14:57
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  11 JAN 2026 22:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2596,7 +2596,7 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 
 
 ]
-Underfull \hbox (badness 1286) in paragraph at lines 39--42
+Underfull \hbox (badness 1286) in paragraph at lines 38--41
 []\TU/TeXGyreTermesX(0)/m/n/12.045 (3) A sliding-window autoregressive training
  strategy for online real-time gesture
  []
@@ -2633,65 +2633,63 @@ Underfull \hbox (badness 1286) in paragraph at lines 39--42
 第 1 章
 [1
 
-] [2]
+] [2] [3] [4]
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 7.0pt on input line 83.
+(Font)              scaled to size 7.0pt on input line 161.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 5.0pt on input line 83.
+(Font)              scaled to size 5.0pt on input line 161.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.0pt on input line 83.
+(Font)              scaled to size 7.0pt on input line 161.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 5.0pt on input line 83.
+(Font)              scaled to size 5.0pt on input line 161.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.0pt on input line 83.
+(Font)              scaled to size 7.0pt on input line 161.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 5.0pt on input line 83.
+(Font)              scaled to size 5.0pt on input line 161.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.0pt on input line 83.
+(Font)              scaled to size 7.0pt on input line 161.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 5.0pt on input line 83.
+(Font)              scaled to size 5.0pt on input line 161.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.0pt on input line 83.
+(Font)              scaled to size 7.0pt on input line 161.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 5.0pt on input line 83.
+(Font)              scaled to size 5.0pt on input line 161.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.0pt on input line 83.
+(Font)              scaled to size 7.0pt on input line 161.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 5.0pt on input line 83.
+(Font)              scaled to size 5.0pt on input line 161.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.0pt on input line 83.
+(Font)              scaled to size 7.0pt on input line 161.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 5.0pt on input line 83.
+(Font)              scaled to size 5.0pt on input line 161.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 7.0pt on input line 83.
+(Font)              scaled to size 7.0pt on input line 161.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 5.0pt on input line 83.
+(Font)              scaled to size 5.0pt on input line 161.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 7.0pt on input line 83.
+(Font)              scaled to size 7.0pt on input line 161.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 5.0pt on input line 83.
+(Font)              scaled to size 5.0pt on input line 161.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 7.0pt on input line 83.
+(Font)              scaled to size 7.0pt on input line 161.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 5.0pt on input line 83.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[3] [4] [5] [6]) (contents/framework.tex [7]
+(Font)              scaled to size 5.0pt on input line 161.
+ [5] [6] [7]) (contents/framework.tex [8]
 第 2 章
-[8
+[9
 
-] [9] [10] [11] [12]
+] [10]
+File: figures/Fig_BEATBones.png Graphic file (type bmp)
+<figures/Fig_BEATBones.png>
+ [11]
 File: figures/Fig_AUSample.png Graphic file (type bmp)
 <figures/Fig_AUSample.png>
 File: figures/Fig_blendshapeEyeBlink.png Graphic file (type bmp)
 <figures/Fig_blendshapeEyeBlink.png>
- [13] [14] [15]
+ [12] [13] [14]
 File: figures/SystemArchitecture.png Graphic file (type bmp)
 <figures/SystemArchitecture.png>
- [16] [17])
-(contents/method_head_rotation.tex [18]
+ [15] [16] [17]) (contents/method_head_rotation.tex [18]
 第 3 章
 [19
 
@@ -2700,94 +2698,56 @@ Overfull \hbox (6.57658pt too wide) in paragraph at lines 43--53
  [][] 
  []
 
-[20] [21] [22] [23]
+[20] [21] [22]
 File: figures/Fig_headencoder.png Graphic file (type bmp)
 <figures/Fig_headencoder.png>
+ [23]
 File: figures/Fig_NeuroArchitecture.png Graphic file (type bmp)
 <figures/Fig_NeuroArchitecture.png>
- [24]) (contents/method_realtime.tex [25]
+) (contents/method_realtime.tex [24]
 第 4 章
-[26
+[25
 
-] [27] [28] [29] [30] [31] [32] [33]) (contents/evaluation.tex [34]
+] [26] [27] [28] [29] [30] [31] [32]) (contents/evaluation.tex [33]
 第 5 章
-File: figures/Fig_BEATBones.png Graphic file (type bmp)
-<figures/Fig_BEATBones.png>
-[35
+[34
 
 ]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[36]
-Underfull \hbox (badness 2005) in paragraph at lines 114--119
+Underfull \hbox (badness 2005) in paragraph at lines 104--109
 []\TU/SimSun(0)/m/n/12.045 为 验 证 模 型 在 交 互 环 境 中 的 表 现，|  本 文 进 行 了 用 户 主 观 评 估
  实 验，|  比 较
  []
 
-[37] [38]
+[35] [36] [37]
 File: figures/UserStudyImage.png Graphic file (type bmp)
 <figures/UserStudyImage.png>
- [39]
+ [38]
 File: figures/UserStudy_All.png Graphic file (type bmp)
 <figures/UserStudy_All.png>
- [40]
 File: figures/UserStudy_LatinSquare.png Graphic file (type bmp)
 <figures/UserStudy_LatinSquare.png>
- [41] [42]
+ [39] [40]
 File: figures/GeneratedPoseOverview.png Graphic file (type bmp)
 <figures/GeneratedPoseOverview.png>
+ [41]
 File: figures/Fig_HeadHandAlignment.png Graphic file (type bmp)
 <figures/Fig_HeadHandAlignment.png>
- [43] [44] [45] [46] [47] [48]
+ [42] [43] [44] [45] [46] [47] [48] [49]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[49] [50] [51] [52] [53]) (contents/conclusions.tex [54]
+[50] [51] [52]) (contents/conclusions.tex [53]
 第 6 章
-[55
+[54
 
-] [56]) [57] [58
+] [55]) [56] [57
 
-] [59] [60]
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "FangSong/BI" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "FangSong/B" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "FangSong/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FangSong(0)' created for font 'FangSong'
-(fontspec)             with options [Script={CJK}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
-
-
+]
 
 Package biblatex Warning: No driver for 'webpage'.
 (biblatex)                Using fallback driver on input line 65.
 
-
-Underfull \hbox (badness 6625) in paragraph at lines 65--65
-\TU/TeXGyreTermesX(0)/m/n/12.045 Speech-Driven Gesture Synthesis Using Normalis
-ing Flows[]C/OL[]//Computer
- []
-
-[61] (contents/app_external_files.tex [62]
+[58] (contents/app_external_files.tex [59]
 附录 A
 
 Overfull \hbox (11.03325pt too wide) in paragraph at lines 14--16
@@ -2796,17 +2756,17 @@ Overfull \hbox (11.03325pt too wide) in paragraph at lines 14--16
 ][][] []
  []
 
-[63
+[60
 
 ]
 附录 B
-) [64
+) [61
 
 ] (contents/achievements.tex)
 \tf@thm=\write9
 \openout9 = `main.thm'.
 
- [65
+ [62
 
 
 
@@ -2816,18 +2776,18 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8623E5F1623951B326E4B5E44408A6ED;15513.
+(rerunfilecheck)             Checksum: 87E93A41951C7D54FBA9B1A4DDE2E887;14486.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52132 strings out of 402986
- 1106419 string characters out of 5453884
- 2064071 words of memory out of 5000000
- 80085 multiletter control sequences out of 15000+600000
- 706696 words of font info for 260 fonts, out of 8000000 for 9000
+ 52004 strings out of 402986
+ 1099357 string characters out of 5453884
+ 2057414 words of memory out of 5000000
+ 79967 multiletter control sequences out of 15000+600000
+ 706656 words of font info for 255 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 115i,16n,124p,1183b,7463s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,16n,124p,1183b,7465s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on e:\SJTU\SJTUPaper\out\main.pdf (79 pages).
+Output written on e:\SJTU\SJTUPaper\out\main.pdf (76 pages).
