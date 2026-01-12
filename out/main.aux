@@ -93,13 +93,14 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}训练数据来源}{10}{section.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}骨架拓扑}{10}{subsection.2.2.1}\protected@file@percent }
 \newlabel{subsec:skeleton_topology}{{2.2.1}{10}{骨架拓扑}{subsection.2.2.1}{}}
+\newlabel{eq:body_pose_vector}{{2.1}{10}{骨架拓扑}{equation.2.1}{}}
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
-\newlabel{eq:body_pose_vector}{{2.1}{11}{骨架拓扑}{equation.2.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces BEAT 数据集的骨架拓扑结构与驱动范围}}{11}{figure.caption.16}\protected@file@percent }
 \newlabel{fig_beatbones}{{2.1}{11}{BEAT 数据集的骨架拓扑结构与驱动范围}{figure.caption.16}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}头部姿态参数}{11}{subsection.2.2.2}\protected@file@percent }
-\newlabel{eq:head_pose_vector}{{2.2}{11}{头部姿态参数}{equation.2.2}{}}
+\newlabel{eq:global_rotation_recursion}{{2.2}{11}{头部姿态参数}{equation.2.2}{}}
+\newlabel{eq:head_global_rotation_product}{{2.3}{11}{头部姿态参数}{equation.2.3}{}}
 \abx@aux@cite{0}{ARKitDocumentation}
 \abx@aux@segm{0}{0}{ARKitDocumentation}
 \abx@aux@cite{0}{EkmanFriesenFACS1978}
@@ -112,26 +113,27 @@
 \abx@aux@segm{0}{0}{ozel_arkit_facs_cheatsheet}
 \abx@aux@cite{0}{ozel_arkit_facs_cheatsheet}
 \abx@aux@segm{0}{0}{ozel_arkit_facs_cheatsheet}
+\newlabel{eq:head_pose_vector}{{2.4}{12}{头部姿态参数}{equation.2.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}面部参数}{12}{subsection.2.2.3}\protected@file@percent }
 \newlabel{sec:facial_expression_representation}{{2.2.3}{12}{面部参数}{subsection.2.2.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces FACS 中闭眼动作单元的定义\blx@tocontentsinit {0}\cite {ozel_arkit_facs_cheatsheet}}}{12}{figure.caption.17}\protected@file@percent }
 \newlabel{fig:au_sample}{{2.2}{12}{FACS 中闭眼动作单元的定义\cite {ozel_arkit_facs_cheatsheet}}{figure.caption.17}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces BlendShape 在闭眼形变上的线性插值效果}}{13}{figure.caption.18}\protected@file@percent }
 \newlabel{fig:bs_eyeblink}{{2.3}{13}{BlendShape 在闭眼形变上的线性插值效果}{figure.caption.18}{}}
-\newlabel{eq:face_vector}{{2.3}{13}{面部参数}{equation.2.3}{}}
+\newlabel{eq:face_vector}{{2.5}{13}{面部参数}{equation.2.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}旋转参数的选取}{13}{section.2.3}\protected@file@percent }
-\newlabel{eq:rot6d_conversion}{{2.7}{14}{旋转参数的选取}{equation.2.7}{}}
+\newlabel{eq:rot6d_conversion}{{2.9}{14}{旋转参数的选取}{equation.2.9}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.4}在线实时手势生成系统整体框架}{14}{section.2.4}\protected@file@percent }
 \newlabel{sec:system}{{2.4}{14}{在线实时手势生成系统整体框架}{section.2.4}{}}
 \abx@aux@cite{0}{ARKitDocumentation}
 \abx@aux@segm{0}{0}{ARKitDocumentation}
-\abx@aux@cite{0}{rot6d}
-\abx@aux@segm{0}{0}{rot6d}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces 系统整体架构与数据流示意图}}{15}{figure.caption.19}\protected@file@percent }
 \newlabel{fig:system_architecture}{{2.4}{15}{系统整体架构与数据流示意图}{figure.caption.19}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}信号采集与系统配置层}{15}{subsection.2.4.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{设备层}{15}{paragraph*.20}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{中间件层}{15}{paragraph*.21}\protected@file@percent }
+\abx@aux@cite{0}{rot6d}
+\abx@aux@segm{0}{0}{rot6d}
 \abx@aux@cite{0}{rot6d}
 \abx@aux@segm{0}{0}{rot6d}
 \@writefile{toc}{\contentsline {paragraph}{用户配置层}{16}{paragraph*.22}\protected@file@percent }
@@ -144,7 +146,7 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.3.1}虚拟人骨骼蒙皮渲染}{17}{subsubsection.2.4.3.1}\protected@file@percent }
 \newlabel{subsec:skinning_and_retargeting}{{2.4.3.1}{17}{虚拟人骨骼蒙皮渲染}{subsubsection.2.4.3.1}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.3.2}虚拟人面部表情驱动}{17}{subsubsection.2.4.3.2}\protected@file@percent }
-\newlabel{eq:blendshape}{{2.9}{17}{虚拟人面部表情驱动}{equation.2.9}{}}
+\newlabel{eq:blendshape}{{2.11}{17}{虚拟人面部表情驱动}{equation.2.11}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.5}本章小结}{17}{section.2.5}\protected@file@percent }
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
