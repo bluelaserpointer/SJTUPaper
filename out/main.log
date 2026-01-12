@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  12 JAN 2026 04:20
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  12 JAN 2026 23:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2691,14 +2691,12 @@ File: figures/SystemArchitecture.png Graphic file (type bmp)
 <figures/SystemArchitecture.png>
  [15] [16] [17]) (contents/method_head_rotation.tex [18]
 第 3 章
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [19
 
-]
-Overfull \hbox (6.57658pt too wide) in paragraph at lines 43--53
- [][] 
- []
-
-[20] [21] [22]
+] [20] [21] [22]
 File: figures/Fig_headencoder.png Graphic file (type bmp)
 <figures/Fig_headencoder.png>
  [23]
@@ -2776,16 +2774,16 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 87E93A41951C7D54FBA9B1A4DDE2E887;14486.
+(rerunfilecheck)             Checksum: A76B9839EF2651C7133D5B84041A732E;14500.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51987 strings out of 402986
- 1098365 string characters out of 5453884
- 2056485 words of memory out of 5000000
- 79950 multiletter control sequences out of 15000+600000
+ 51991 strings out of 402986
+ 1098460 string characters out of 5453884
+ 2056630 words of memory out of 5000000
+ 79954 multiletter control sequences out of 15000+600000
  706656 words of font info for 255 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,16n,124p,1183b,7465s stack positions out of 10000i,1000n,20000p,200000b,200000s

@@ -33,12 +33,12 @@
 \contentsline {chapter}{\numberline {第 3 章}融合头部姿态的多模态级联手势生成模型架构}{19}{chapter.3}%
 \contentsline {section}{\numberline {3.1}问题定义}{19}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}任务描述}{19}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}输入与输出模态}{20}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.2}输入与输出模态}{19}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}级联架构设计的继承}{20}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}级联架构的原理与理论背景}{20}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}说话人ID分支移除}{21}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}输入模态的解码}{21}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}身体姿态的解码}{22}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.2}说话人条件输入的简化}{20}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}输入模态的编码}{21}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}身体姿态的解码}{21}{subsection.3.2.4}%
 \contentsline {paragraph}{融合输入的序列化表示}{22}{paragraph*.24}%
 \contentsline {paragraph}{躯干与上肢的级联解码}{22}{paragraph*.25}%
 \contentsline {section}{\numberline {3.3}头部姿态模态在级联架构中的引入}{23}{section.3.3}%

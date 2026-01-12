@@ -150,30 +150,34 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.5}本章小结}{17}{section.2.5}\protected@file@percent }
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
+\abx@aux@cite{0}{beatcamn}
+\abx@aux@segm{0}{0}{beatcamn}
 \pp@pagectr{footnote}{3}{33}{19}
 \@writefile{toc}{\contentsline {chapter}{\numberline {第 3 章}融合头部姿态的多模态级联手势生成模型架构}{19}{chapter.3}\protected@file@percent }
 \newlabel{chap:model_architecture}{{3}{19}{融合头部姿态的多模态级联手势生成模型架构}{chapter.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}问题定义}{19}{section.3.1}\protected@file@percent }
 \newlabel{sec:problem}{{3.1}{19}{问题定义}{section.3.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}任务描述}{19}{subsection.3.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}输入与输出模态}{19}{subsection.3.1.2}\protected@file@percent }
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
 \abx@aux@cite{0}{mcneill_1992_hand}
 \abx@aux@segm{0}{0}{mcneill_1992_hand}
 \abx@aux@cite{0}{kendon_2004_gesture}
 \abx@aux@segm{0}{0}{kendon_2004_gesture}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}输入与输出模态}{20}{subsection.3.1.2}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces 输入输出模态符号与维度}}{20}{table.caption.23}\protected@file@percent }
 \newlabel{tab:modalities}{{3.1}{20}{输入输出模态符号与维度}{table.caption.23}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}级联架构设计的继承}{20}{section.3.2}\protected@file@percent }
 \newlabel{sec:cascade}{{3.2}{20}{级联架构设计的继承}{section.3.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}级联架构的原理与理论背景}{20}{subsection.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}说话人条件输入的简化}{20}{subsection.3.2.2}\protected@file@percent }
 \abx@aux@cite{0}{beatcamn}
 \abx@aux@segm{0}{0}{beatcamn}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}说话人ID分支移除}{21}{subsection.3.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}输入模态的解码}{21}{subsection.3.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}身体姿态的解码}{22}{subsection.3.2.4}\protected@file@percent }
-\newlabel{subsec:output_modality_decoding}{{3.2.4}{22}{身体姿态的解码}{subsection.3.2.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}输入模态的编码}{21}{subsection.3.2.3}\protected@file@percent }
+\newlabel{eq:head_pose_framewise_encode}{{3.3}{21}{输入模态的编码}{equation.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}身体姿态的解码}{21}{subsection.3.2.4}\protected@file@percent }
+\newlabel{subsec:output_modality_decoding}{{3.2.4}{21}{身体姿态的解码}{subsection.3.2.4}{}}
+\newlabel{eq:body_vector_concat}{{3.4}{22}{身体姿态的解码}{equation.3.4}{}}
 \@writefile{toc}{\contentsline {paragraph}{融合输入的序列化表示}{22}{paragraph*.24}\protected@file@percent }
 \newlabel{eq:history_padding}{{3.5}{22}{融合输入的序列化表示}{equation.3.5}{}}
 \newlabel{eq:fuse_per_frame}{{3.6}{22}{融合输入的序列化表示}{equation.3.6}{}}
@@ -188,6 +192,10 @@
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}头部姿态模态在级联架构中的引入}{23}{section.3.3}\protected@file@percent }
 \newlabel{sec:head_encoder}{{3.3}{23}{头部姿态模态在级联架构中的引入}{section.3.3}{}}
 \@writefile{toc}{\contentsline {paragraph}{编码器结构}{23}{paragraph*.26}\protected@file@percent }
+\newlabel{eq:head_encoder_h1}{{3.12}{23}{编码器结构}{equation.3.12}{}}
+\newlabel{eq:head_encoder_out}{{3.13}{23}{编码器结构}{equation.3.13}{}}
+\abx@aux@cite{0}{beatcamn}
+\abx@aux@segm{0}{0}{beatcamn}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces 头部姿态编码器结构示意图}}{24}{figure.caption.27}\protected@file@percent }
 \newlabel{fig_headencoder}{{3.1}{24}{头部姿态编码器结构示意图}{figure.caption.27}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.4}模型整体结构}{24}{section.3.4}\protected@file@percent }
@@ -420,7 +428,7 @@
 \newlabel{appendix:code}{{B}{61}{代码与实现资源}{appendix.B}{}}
 \@writefile{toc}{\contentsline {chapter}{学术论文和科研成果目录}{62}{section*.63}\protected@file@percent }
 \ttl@finishall
-\abx@aux@read@bbl@mdfivesum{D59E72FEEB8CA77AD656ACF138829776}
+\abx@aux@read@bbl@mdfivesum{A9B8AA52891F369F2154CC1D1A0D3354}
 \abx@aux@defaultrefcontext{0}{mediapipefacemesh}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{AppleARKitTrackingGuide}{none/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{kendon_2004_gesture}{none/global//global/global/global}
