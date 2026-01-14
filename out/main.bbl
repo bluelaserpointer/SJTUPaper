@@ -2137,8 +2137,8 @@
       \strng{nameanamehash}{49928457af9589b35cf4c7af52f4b90e}
       \strng{nameafullhash}{6153362954b8a277fd4bd0e38a7a2eac}
       \strng{nameafullhashraw}{6153362954b8a277fd4bd0e38a7a2eac}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv:2009.02119}

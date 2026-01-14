@@ -75,7 +75,7 @@ BEAT 是面向虚拟角色驱动的多模态动作数据集，核心优势在于
 系统在每一帧$t$输出该骨架上所有关节的局部旋转$\mathbf{r}^{(j)}_t$，从而构成虚拟人身体姿态的完整描述，形式化定义为：
 
 \begin{equation}
-\bm{v}^{B}_t = \left[\mathbf{r}^{(1)}_t,\mathbf{r}^{(2)}_t,\dots,\mathbf{r}^{(J)}_t\right]\in \mathbb{R}^{R \times J}.
+\bm{v}^{B}_t = \left[\mathbf{r}^{(1)}_t,\mathbf{r}^{(2)}_t,\dots,\mathbf{r}^{(J)}_t\right]\in \mathbb{R}^{R \times J}
 \label{eq:body_pose_vector}
 \end{equation}
 
@@ -114,7 +114,7 @@ $\mathbf{R}_t^{(j)}=\Phi(\mathbf{r}_t^{(j)})\in SO(3)$，
 则关节 $j$ 的全局旋转 $\mathbf{G}_t^{(j)}\in SO(3)$ 可递推定义为：
 \begin{equation}
 \mathbf{G}_t^{(r)} = \mathbf{R}_t^{(r)},\qquad
-\mathbf{G}_t^{(j)} = \mathbf{G}_t^{(p(j))}\mathbf{R}_t^{(j)}.
+\mathbf{G}_t^{(j)} = \mathbf{G}_t^{(p(j))}\mathbf{R}_t^{(j)}
 \label{eq:global_rotation_recursion}
 \end{equation}
 于是头部的绝对旋转为：
@@ -139,14 +139,13 @@ $\mathbf{R}_t^{(j)}=\Phi(\mathbf{r}_t^{(j)})\in SO(3)$，
 通常需要将面部形变定义为一组可控且可实时更新的参数向量，
 并使其能够稳定地映射到虚拟人网格模型的顶点形变上。
 
-在BEAT数据集中，面部参数由Apple ARKit\cite{ARKitDocumentation}定义的多个形变基组合表示，
-在计算机图形与动画领域中，这个形变基系统被称为BlendShape。
+在 BEAT 数据集中，面部参数表示为一组基于iOS设备的面捕工具Apple ARKit\cite{ARKitDocumentation} 的 BlendShape 系数向量。
+该向量的每一维对应一个 BlendShape 通道，并以标量权重刻画局部面部形变的强度；多个通道的线性组合可生成复杂表情。
 
 其思想来源于Facial Action Coding System（FACS）\cite{EkmanFriesenFACS1978}，
 将复杂表情分解为若干可组合的基本动作单元（Action Units, AU），
 从而为将面部表情描述为一组可控参数。
-BlendShape中，每个基形由一个标量权重控制局部表情变化。
-通过调节多个基形的权重并进行组合，即可生成丰富的复杂表情。
+
 BlendShape没有固定的规范，动捕软件、三维人物模型可自定义自己的形变基组合，
 但通常只有基于相同规范的系统间才可以复用面部参数。
 
@@ -158,7 +157,7 @@ BlendShape没有固定的规范，动捕软件、三维人物模型可自定义�
 \label{fig:au_sample}
 \end{figure}
 
-在BEAT数据集使用的Apple ARkit定义的BlendShape标准中，上述动作对应两种基形：闭左眼与闭右眼。
+在BEAT数据集使用的Apple ARkit\cite{ARKitDocumentation}定义的BlendShape标准中，上述动作对应两种基形：闭左眼与闭右眼。
 图~\ref{fig:bs_eyeblink}展示了两种的ARKit BlendShape基形在权重$w\!\in\![0,1]$下的线性插值效果（从张眼到闭眼），
 反映了BlendShape通过权重控制局部形变的基本机制。
 
@@ -171,10 +170,10 @@ BlendShape没有固定的规范，动捕软件、三维人物模型可自定义�
 
 设面部参数包含$K$个形变基，
 记形变基集合为$\mathcal{K}=\{1,2,\dots,K\}$，
-系统在每一帧$t$输出该所有的形变基权重$\mathbf{w}^{(k)}_t\in\![0,1]$，从而构成虚拟人面部的完整描述，形式化定义为：
+系统在每一帧$t$输出每个形变基权重$\mathbf{w}^{(k)}_t\in\![0,1]$，从而构成虚拟人面部的完整描述，形式化定义为：
 
 \begin{equation}
-\bm{v}^{F}_t = \left[\mathbf{w}^{(1)}_t,\mathbf{w}^{(2)}_t,\dots,\mathbf{w}^{(K)}_t\right]\in \mathbb{R}^{K}.
+\bm{v}^{F}_t = \left[\mathbf{w}^{(1)}_t,\mathbf{w}^{(2)}_t,\dots,\mathbf{w}^{(K)}_t\right]\in \mathbb{R}^{K}
 \label{eq:face_vector}
 \end{equation}
 
@@ -182,46 +181,48 @@ BlendShape没有固定的规范，动捕软件、三维人物模型可自定义�
 
 \section{旋转参数的选取}
 
-身体姿态的表示在训练时需要满足可学习性，具体为
-（1）没有数值跳动
-（2）不需要额外规范化，约束简单
+身体姿态的表示形式在训练阶段应具备良好的可学习性，主要体现在：
+（1）参数空间连续、不出现数值不连续或突变；
+（2）表示本身约束简洁，避免依赖额外的归一化或复杂的后处理。
 
-因此，我们需要将数据集的原始旋转参数格式（欧拉角）在预处理时进行转换。
+因此，我们需要将BEAT数据集的原始旋转表示（欧拉角）在预处理时进行转换。
 
-常见的关节旋转表示包括：
+常见的旋转表示包括：
 欧拉角（Euler Angles）、轴角表示（Axis-Angle）、四元数（Quaternion）、旋转矩阵（Rotation Matrix），
-以及近年来在神经网络回归任务中广泛使用的连续旋转表示，如$6$维旋转表示（Rot6D）。
+以及近年来在神经网络回归任务中广泛使用的连续旋转表示，如$6$维旋转表示（Rot6D\cite{rot6d}）。
 本文主要比较以下几种形式在工程系统中的适用性：
 
 \begin{itemize}
-    \item 欧拉角： 
-    参数维度低且直观，没有冗余信息，适合存储。
-    但存在万向节锁（gimbal lock）问题，且角度空间不连续，
-    在训练使用容易导致预测输出在临界角附近出现跳变，从而破坏实时动画的平滑性。
+    \item 欧拉角：
+    表达直观、维度低，便于存储；
+    但存在万向节锁（gimbal lock），且在角度接近边界时表现为不连续，
+    容易导致网络输出在临界角附近产生跳变，影响实时动画的平滑性。
     \item 轴角表示：
-    可用三维向量描述旋转，但在接近零旋转时存在不稳定性，
-    且角度周期性带来的不连续同样会对网络回归造成影响。
+    可用三维向量刻画旋转，但在接近零旋转时数值不稳定；
+    同时角度的周期性仍会引入不连续，对回归学习不利。
     \item 四元数：
-    能避免万向节锁并具有较好的数值性质，但其单位范数约束使得网络直接回归时需要额外规范化步骤；
-    同时四元数具有符号二义性（$\mathbf{q}$与$-\mathbf{q}$表示同一旋转），可能导致学习目标不一致。
+    可避免万向节锁，但需要满足单位范数约束，通常需在网络输出后进行归一化；
+    此外四元数存在符号二义性（$\mathbf{q}$ 与 $-\mathbf{q}$ 表示同一旋转），可能造成监督目标不一致。
     \item 旋转矩阵：
-    表达完整且无二义性，但需要满足正交约束与行列式为$1$的条件（$\mathrm{SO}(3)$群约束），
-    直接回归时需额外投影或正交化处理，否则难以保证输出有效性。
+    表达完备且无二义性，但输出必须满足正交约束与 $\det(\mathbf{R})=1$ 的 $\mathrm{SO}(3)$ 约束；
+    直接回归时往往需要额外的投影或正交化步骤以保证有效性。
 \end{itemize}
 
 综合考虑网络学习的稳定性、输出连续性与工程部署便利性，
-本文采用Rot6D作为关节局部旋转的统一表示形式。
+本文采用Rot6D\cite{rot6d}作为关节局部旋转的统一表示形式。
 Rot6D通过取旋转矩阵的前两列向量（记为$\mathbf{a},\mathbf{b}\in\mathbb{R}^3$）
 组成一个$6$维向量，并通过Gram-Schmidt正交化恢复完整的旋转矩阵，
 从而避免了显式的正交约束回归问题。
-具体而言，设模型输出的Rot6D为$\mathbf{r}=[\mathbf{a};\mathbf{b}]\in\mathbb{R}^6$，
-则可以按如下方式恢复旋转矩阵$\mathbf{R}\in\mathbb{R}^{3\times 3}$：
+具体而言，设模型输出的 Rot6D 为
+$\mathbf{r}=[\mathbf{a};\mathbf{b}]\in\mathbb{R}^6$，
+其中$[\mathbf{a};\mathbf{b}]$ 表示将 $\mathbf{a}$ 与 $\mathbf{b}$ 进行纵向拼接得到的六维向量。
+则可以按如下方式恢复旋转矩阵 $\mathbf{R}\in\mathbb{R}^{3\times 3}$：
 
 \begin{align}
-\mathbf{u}_1 &= \frac{\mathbf{a}}{\|\mathbf{a}\|}, \\
-\mathbf{u}_2 &= \frac{\mathbf{b} - (\mathbf{u}_1^\top\mathbf{b})\mathbf{u}_1}{\left\|\mathbf{b} - (\mathbf{u}_1^\top\mathbf{b})\mathbf{u}_1\right\|}, \\
-\mathbf{u}_3 &= \mathbf{u}_1 \times \mathbf{u}_2, \\
-\mathbf{R} &= [\mathbf{u}_1,\mathbf{u}_2,\mathbf{u}_3].
+\mathbf{u}_1 &= \frac{\mathbf{a}}{\|\mathbf{a}\|} \\
+\mathbf{u}_2 &= \frac{\mathbf{b} - (\mathbf{u}_1^\top\mathbf{b})\mathbf{u}_1}{\left\|\mathbf{b} - (\mathbf{u}_1^\top\mathbf{b})\mathbf{u}_1\right\|} \\
+\mathbf{u}_3 &= \mathbf{u}_1 \times \mathbf{u}_2 \\
+\mathbf{R} &= [\mathbf{u}_1,\mathbf{u}_2,\mathbf{u}_3]
 \label{eq:rot6d_conversion}
 \end{align}
 
@@ -235,9 +236,9 @@ Rot6D通过取旋转矩阵的前两列向量（记为$\mathbf{a},\mathbf{b}\in\m
 
 因此，本文采用Rot6D作为动作生成模型的训练目标。
 
-根据式\eqref{eq:body_pose_vector}，训练集中的身体姿态表示为：$\bm{v}^{B}_t \in \mathbb{R}^{6 \times 47}.$
+根据式\eqref{eq:body_pose_vector}，训练集中的身体姿态表示为：$\bm{v}^{B}_t \in \mathbb{R}^{6 \times 47}$
 
-又根据式\eqref{eq:head_pose_vector}，训练集中的头部姿态表示为：$\bm{v}^{H}_t \in \mathbb{R}^{6}.$
+又根据式\eqref{eq:head_pose_vector}，训练集中的头部姿态表示为：$\bm{v}^{H}_t \in \mathbb{R}^{6}$
 
 \section{在线实时手势生成系统整体框架}
 \label{sec:system}
@@ -258,7 +259,7 @@ FaceCapGes模型位于中间层，承担多模态输入到上半身姿态输出�
 该层位于系统整体架构的输入端，用于从用户端设备实时获取多模态信号，并在系统初始化阶段完成运行参数的配置。整体结构可划分为设备层、中间件层与用户配置层三个部分，如图~\ref{fig:system_architecture} 所示。
 
 \paragraph{设备层}
-设备层负责采集语音与视觉模态信号。语音信号由麦克风实时录制，采样率与帧移可根据运行设备性能调整；视觉信号由前置深度相机摄像头获取面部深度图与视频流，并作为ARKit面部追踪模块的输入。
+设备层负责采集语音与视觉模态信号。语音信号由麦克风实时录制，视觉信号由前置深度相机摄像头获取面部深度图与视频流，并作为ARKit面部追踪模块的输入。
 
 \paragraph{中间件层}
 中间件层通过Apple提供的ARKit框架\cite{ARKitDocumentation}，将设备层的原始图像流与深度图转化为结构化特征。ARKit输出两类主要数据：  
@@ -275,7 +276,7 @@ ARKit在ARFaceAnchor中提供一个齐次变换矩阵$\mathbf{T}\in\mathbb{R}^{4
 \end{bmatrix},
 \quad
 \mathbf{R}\in\mathbb{R}^{3\times3},\ 
-\mathbf{t}\in\mathbb{R}^{3\times1}.
+\mathbf{t}\in\mathbb{R}^{3\times1}
 \end{equation}
 其中左上角的$\mathbf{R}$为旋转矩阵，右上角的$\mathbf{t}$为平移向量。
 本研究从矩阵中提取旋转部分 $\mathbf{R}$，
