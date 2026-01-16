@@ -4,11 +4,12 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces 系统整体架构与数据流示意图}}{15}{figure.caption.19}%
 \contentsline {figure}{\numberline {3.1}{\ignorespaces 头部姿态编码器结构示意图}}{24}{figure.caption.27}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces FaceCapGes 模型整体结构}}{24}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.1}{\ignorespaces 用户评估工具实机界面}}{37}{figure.caption.44}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces 用户评估总体主观排名结果}}{38}{figure.caption.48}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces 平衡拉丁方设置下的主观排名结果}}{39}{figure.caption.50}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces 生成动作效果对比}}{41}{figure.caption.53}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces 头部朝向与手势指向一致性的动作对比}}{42}{figure.caption.54}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 片段内闭环自回归展开与滑动窗口生成示意}}{28}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 用户评估工具实机界面}}{37}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces 用户评估总体主观排名结果}}{38}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces 平衡拉丁方设置下的主观排名结果}}{39}{figure.caption.47}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces 生成动作效果对比}}{41}{figure.caption.50}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces 头部朝向与手势指向一致性的动作对比}}{42}{figure.caption.51}%
 \contentsfinish 
 \contentsfinish 
 \contentsfinish 

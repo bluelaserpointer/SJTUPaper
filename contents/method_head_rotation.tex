@@ -20,9 +20,9 @@
 形式上，可以将该任务定义为一个多模态时序映射函数：
 \begin{equation}
 \hat{\bm{v}}_{t}^{B} = f_\theta\!\big(\bm{v}_{t-N:t}^{A},\, \bm{v}_{t-N:t}^{F},\, \bm{v}_{t-N:t}^{H}\big),
+\label{eq:task_mapping_f}
 \end{equation}
-其中$f_\theta$表示由参数$\theta$控制的生成模型，$N$为历史窗口长度。
-%
+其中$f_\theta$表示由参数$\theta$控制的生成模型，$N$为历史窗口长度，本文实验中取$N=16$。
 各模态输入定义如下：
 $\bm{v}_{t}^{A}$表示语音模态在时刻$t$的特征向量，由麦克风信号经音频特征提取得到，采样率为16KHZ，与CaMN\cite{beatcamn}的提取方式一致；
 $\bm{v}_{t}^{F}$表示面部模态的输入，为ARKit输出的52维标准化BlendShape系数；
@@ -154,9 +154,11 @@ $\bm{z}_t^{A}$、$\bm{z}_t^{F}$、$\bm{z}_t^{H}$
 \bm{O}_t^{U} = \mathrm{LSTM}_{U}(\bm{Z}_t^{fuse}; \bm{O}_t^{T}),
 \label{eq:lstm_outputs_seq}
 \end{equation}
-其中$\bm{O}_t^{T} = (\bm{o}_{t-N}^{T},\ldots,\bm{o}_{t}^{T})$，
-$\bm{O}_t^{U} = (\bm{o}_{t-N}^{U},\ldots,\bm{o}_{t}^{U})$。
-由于本文在时刻$t$的目标是预测当前帧动作，我们仅取序列末端输出作为当前帧的潜在表征：
+其中上肢解码器以躯干分支的窗口内输出$\bm{O}_t^T$作为条件输入，以实现级联解码。
+
+由于本文在时刻$t$的目标是预测当前帧动作，我们仅取序列末端输出作为当前帧的潜在表征。
+当定义$\bm{O}_t^{T} = (\bm{o}_{t-N}^{T},\ldots,\bm{o}_{t}^{T})$，
+$\bm{O}_t^{U} = (\bm{o}_{t-N}^{U},\ldots,\bm{o}_{t}^{U})$时，当前帧的潜在表征表示为
 \begin{equation}
 \bm{z}_t^{T} = \bm{o}_t^{T}, \quad
 \bm{z}_t^{U} = \bm{o}_t^{U}
@@ -176,7 +178,7 @@ $\bm{O}_t^{U} = (\bm{o}_{t-N}^{U},\ldots,\bm{o}_{t}^{U})$。
 
 上述内容描述了模型在一个因果上下文输入序列内完成对当前帧动作的解码过程。
 
-需要说明的是，LSTM 在实现中维护隐藏状态与记忆单元状态以编码时间依赖，其形式化表达见第\ref{sec:one_step_lstm}节。
+需要说明的是，LSTM 在实现中维护隐藏状态与记忆单元状态以编码时间依赖，其形式化表达见第\ref{subsec:state_carry_over}节。
 
 \section{头部姿态模态在级联架构中的引入}
 \label{sec:head_encoder}
