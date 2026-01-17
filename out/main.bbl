@@ -1057,10 +1057,13 @@
       \field{langid}{english}
       \field{languageid}{english}
       \field{lansortorder}{4}
+      \field{month}{7}
       \field{title}{Semantic Gesticulator: Semantics-Aware Co-Speech Gesture Synthesis}
       \field{usera}{J}
       \field{userd}{english}
       \field{userf}{english}
+      \field{year}{2024}
+      \field{dateera}{ce}
       \verb{doi}
       \verb 10.1145/3658134
       \endverb
