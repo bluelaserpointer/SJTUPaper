@@ -72,7 +72,7 @@ BEAT 是面向虚拟角色驱动的多模态动作数据集，核心优势在于
 记关节集合为$\mathcal{J}=\{1,2,\dots,J\}$，
 每个关节$j\in\mathcal{J}$具有唯一的父节点$p(j)$，
 从而定义出一棵有根树结构。
-系统在每一帧$t$输出该骨架上所有关节的局部旋转$\mathbf{r}^{(j)}_t$，从而构成虚拟人身体姿态的完整描述，形式化定义为：
+系统在每一帧$t$输出该骨架上所有关节的局部旋转$\mathbf{r}^{(j)}_t$，从而构成虚拟人身体姿态的完整描述$\bm{v}^{B}_t$，形式化定义为：
 
 \begin{equation}
 \bm{v}^{B}_t = \left[\mathbf{r}^{(1)}_t,\mathbf{r}^{(2)}_t,\dots,\mathbf{r}^{(J)}_t\right]\in \mathbb{R}^{R \times J}
@@ -140,7 +140,7 @@ $\mathbf{R}_t^{(j)}=\Phi(\mathbf{r}_t^{(j)})\in SO(3)$，
 并使其能够稳定地映射到虚拟人网格模型的顶点形变上。
 
 在 BEAT 数据集中，面部参数表示为一组基于iOS设备的面捕工具Apple ARKit\cite{ARKitDocumentation} 的 BlendShape 系数向量。
-该向量的每一维对应一个 BlendShape 通道，并以标量权重刻画局部面部形变的强度；多个通道的线性组合可生成复杂表情。
+该向量的每一维对应一个 BlendShape 通道，并以标量权重刻画局部面部形变的强度，多个通道的线性组合可生成复杂表情。
 
 其思想来源于Facial Action Coding System（FACS）\cite{EkmanFriesenFACS1978}，
 将复杂表情分解为若干可组合的基本动作单元（Action Units, AU），
@@ -263,9 +263,10 @@ FaceCapGes模型位于中间层，承担多模态输入到上半身姿态输出�
 
 \paragraph{中间件层}
 中间件层通过Apple提供的ARKit框架\cite{ARKitDocumentation}，将设备层的原始图像流与深度图转化为结构化特征。ARKit输出两类主要数据：  
-(1) 面部表情特征
+\begin{enumerate}
+    \item 面部表情特征：
 ARKit提供52维BlendShape系数向量，用于描述关键肌肉群的局部形变状态。该特征能够反映用户的表情、口型与情感变化，并以帧级形式同步输出。  
-(2) 头部姿态特征
+    \item 头部姿态特征：
 ARKit在ARFaceAnchor中提供一个齐次变换矩阵$\mathbf{T}\in\mathbb{R}^{4\times4}$，
 用于描述人脸锚点相对会话世界坐标系的位姿：
 \begin{equation}
@@ -282,8 +283,9 @@ ARKit在ARFaceAnchor中提供一个齐次变换矩阵$\mathbf{T}\in\mathbb{R}^{4
 本研究从矩阵中提取旋转部分 $\mathbf{R}$，
 并将其转换为Rot6D~\cite{rot6d}表示形式，
 以提升旋转空间的连续性与模型训练的稳定性。
+\end{enumerate}
 
-同时，音频流在中间件层中被传入特征提取模块以生成时间序列特征。模型训练阶段使用Librosa库离线提取Mel频谱、短时能量与基频$F_0$等声学特征，以保证特征精度与一致性。系统运行阶段可由等价的实时特征提取模块（如torchaudio或TensorFlow Audio）逐帧生成对应特征，以实现端到端的低延迟运行。
+同时，音频流在中间件层中被传入特征提取模块以生成时间序列特征。模型训练阶段使用Librosa库\cite{librosa}离线提取Mel频谱、短时能量与基频$F_0$等声学特征，以保证特征精度与一致性。系统运行阶段可由等价的实时特征提取模块（如PyAudio\cite{pyaudio}）逐帧生成对应特征，以实现端到端的低延迟运行。
 
 \paragraph{用户配置层}
 用户配置层负责系统初始化阶段的模型与参数设定。用户可在应用中选择说话风格，对应加载不同说话人ID配置下的模型权重。该配置仅在系统启动时生效，不参与实时推理过程。
