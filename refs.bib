@@ -1,14 +1,80 @@
-@article{beatcamn,
-  title={BEAT: A Large-Scale Semantic and Emotional Multi-Modal Dataset for Conversational Gestures Synthesis},
-  author={Liu, Haiyang and Zhu, Zihao and Iwamoto, Naoya and Peng, Yichen and Li, Zhengqing and Zhou, You and Bozkurt, Elif and Zheng, Bo},
-  journal={arXiv preprint arXiv:2203.05297},
-  year={2022}}
+@article{lstm,
+author = {Hochreiter, Sepp and Schmidhuber, Jürgen},
+year = {1997},
+month = {11},
+pages = {1735-1780},
+title = {Long Short-Term Memory},
+volume = {9},
+journal = {Neural Computation},
+doi = {10.1162/neco.1997.9.8.1735}
+}
 
-@article{rot6d,
-  title={On the Continuity of Rotation Representations in Neural Networks}, 
-  author={Yi Zhou and Connelly Barnes and Jingwan Lu and Jimei Yang and Hao Li},
-  journal={arXiv preprint arXiv:1812.07035v4},
-  year={2020},
+@article{gan2014,
+author = {Goodfellow, Ian and Pouget-Abadie, Jean and Mirza, Mehdi and Xu, Bing and Warde-Farley, David and Ozair, Sherjil and Courville, Aaron and Yere, Yere},
+year = {2014},
+month = {06},
+title = {Generative Adversarial Networks},
+volume = {3},
+journal = {Advances in Neural Information Processing Systems},
+doi = {10.1145/3422622}
+}
+
+@inproceedings{vqvae,
+author = {van den Oord, Aaron and Vinyals, Oriol and Kavukcuoglu, Koray},
+title = {Neural discrete representation learning},
+year = {2017},
+isbn = {9781510860964},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+booktitle = {Proceedings of the 31st International Conference on Neural Information Processing Systems},
+pages = {6309–6318},
+numpages = {10},
+location = {Long Beach, California, USA},
+series = {NIPS'17}
+}
+
+@inproceedings{diffusion,
+author = {Ho, Jonathan and Jain, Ajay and Abbeel, Pieter},
+title = {Denoising diffusion probabilistic models},
+year = {2020},
+isbn = {9781713829546},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+booktitle = {Proceedings of the 34th International Conference on Neural Information Processing Systems},
+articleno = {574},
+numpages = {12},
+location = {Vancouver, BC, Canada},
+series = {NIPS '20}
+}
+
+@article{mediapipefacemesh,
+    title={Real-time facial surface geometry from monocular video on mobile gpus},
+    journal={arXiv:1907.06724},
+    author={Kartynnik, Yury and Ablavatski, Artsiom and Grishchenko, Ivan and Grundmann, Matthias},
+    year={2019}
+}
+
+@inproceedings{beatcamn,
+author = {Liu, Haiyang and Zhu, Zihao and Iwamoto, Naoya and Peng, Yichen and Li, Zhengqing and Zhou, You and Bozkurt, Elif and Zheng, Bo},
+title = {BEAT: A Large-Scale Semantic and Emotional Multi-modal Dataset for Conversational Gestures Synthesis},
+year = {2022},
+isbn = {978-3-031-20070-0},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+url = {https://doi.org/10.1007/978-3-031-20071-7_36},
+doi = {10.1007/978-3-031-20071-7_36},
+booktitle = {Computer Vision – ECCV 2022: 17th European Conference, Tel Aviv, Israel, October 23–27, 2022, Proceedings, Part VII},
+pages = {612–630},
+numpages = {19},
+location = {Tel Aviv, Israel}
+}
+
+@inproceedings{rot6d,
+title={On the Continuity of Rotation Representations in Neural Networks},
+author={Zhou, Yi and Barnes, Connelly and Jingwan, Lu and Jimei, Yang and Hao, Li},
+booktitle={The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month={6},
+year={2019}
 }
 
 @INPROCEEDINGS {body2hands,
@@ -77,11 +143,14 @@ numpages = {8},
 series = {IVA '21}
 }
 
-@article{emage,
-    title={Emage: Towards unified holistic co-speech gesture generation via expressive masked audio gesture modeling},
-    author={Liu, Haiyang and Zhu, Zihao and Becherini, Giorgio and Peng, Yichen and Su, Mingyang and Zhou, You and Zhe, Xuefei and Iwamoto, Naoya and Zheng, Bo and Black, Michael J.},
-    journal={arXiv:2401.00374},
-    year={2024}} 
+@INPROCEEDINGS{emage,
+  author={Liu, Haiyang and Zhu, Zihao and Becherini, Giorgio and Peng, Yichen and Su, Mingyang and Zhou, You and Zhe, Xuefei and Iwamoto, Naoya and Zheng, Bo and Black, Michael J.},
+  booktitle={2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, 
+  title={EMAGE: Towards Unified Holistic Co-Speech Gesture Generation via Expressive Masked Audio Gesture Modeling}, 
+  year={2024},
+  pages={1144-1154},
+  doi={10.1109/CVPR52733.2024.00115}
+}
 
 @inproceedings{diffsheg,
   title     = {DiffSHEG: A Diffusion-Based Approach for Real-Time Speech-driven Holistic 3D Expression and Gesture Generation},
@@ -90,14 +159,7 @@ series = {IVA '21}
   year      = {2024}
 }
 
-@article{mediapipefacemesh,
-    title={Real-time facial surface geometry from monocular video on mobile gpus},
-    journal={arXiv:1907.06724},
-    author={Kartynnik, Yury and Ablavatski, Artsiom and Grishchenko, Ivan and Grundmann, Matthias},
-    year={2019}} 
-
-
-@webpage{ARKitDocumentation,
+@manual{ARKitDocumentation,
     organization = {Apple Developer},
     year = {2024},
     title = {ARKit in iOS - Tracking and Visualizing Faces},
@@ -128,7 +190,8 @@ series = {IVA '21}
     title={Speech gesture generation from the TRIMODAL context of text, audio, and speaker identity},
     journal={arXiv:2009.02119},
     author={Yoon, Youngwoo and Cha, Bok and Lee, Joo-Haeng and Jang, Minsu and Lee, Jaeyeon and Kim, Jaehong and Lee, Geehyuk},
-    year={2020}} 
+    year={2020}
+} 
 
 @article{listen_denoise_action,
   title={Listen, Denoise, Action! Audio-Driven Motion Synthesis with Diffusion Models},
@@ -145,7 +208,7 @@ series = {IVA '21}
   pages={44:1--44:20}
 }
 
-@inproceedings{tamingDiffgesture,
+@inproceedings{zhu2023taming,
   title={Taming Diffusion Models for Audio-Driven Co-Speech Gesture Generation},
   author={Zhu, Lingting and Liu, Xian and Liu, Xuanyu and Qian, Rui and Liu, Ziwei and Yu, Lequan},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
@@ -170,6 +233,8 @@ author = {Krome, Niklas and Kopp, Stefan},
 title = {Towards Real-time Co-speech Gesture Generation in Online Interaction in Social XR},
 year = {2023},
 isbn = {9781450399944},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
 url = {https://doi.org/10.1145/3570945.3607315},
 doi = {10.1145/3570945.3607315},
 booktitle = {Proceedings of the 23rd ACM International Conference on Intelligent Virtual Agents},
@@ -184,12 +249,14 @@ author = {Rebol, Manuel and G\"{u}tl, Christian and Pietroszek, Krzysztof},
 title = {Real-time Gesture Animation Generation from Speech for Virtual Human Interaction},
 year = {2021},
 isbn = {9781450380959},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
 url = {https://doi.org/10.1145/3411763.3451554},
 doi = {10.1145/3411763.3451554},
 booktitle = {Extended Abstracts of the 2021 CHI Conference on Human Factors in Computing Systems},
 articleno = {197},
 numpages = {4},
-keywords = {Animation, Gestures, NUI},
+location = {Yokohama, Japan},
 series = {CHI EA '21}
 }
 
@@ -229,8 +296,7 @@ numpages = {7},
 series = {ICMI '22}
 }
 
-@inproceedings{
-gesturemotiongraph2023,
+@inproceedings{gesturemotiongraph2023,
 title={Gesture Motion Graphs for Few-Shot Speech-Driven Gesture Reenactment},
 author={Zeyu Zhao and Nan Gao and Zhi Zeng and Guixuan Zhang and Jie Liu and Shuwu Zhang},
 booktitle={GENEA: Generation and Evaluation of Non-verbal Behaviour for Embodied Agents Challenge 2023},
@@ -243,11 +309,14 @@ author = {Deichler, Anna and Mehta, Shivam and Alexanderson, Simon and Beskow, J
 title = {Diffusion-Based Co-Speech Gesture Generation Using Joint Text and Audio Representation},
 year = {2023},
 isbn = {9798400700552},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
 url = {https://doi.org/10.1145/3577190.3616117},
 doi = {10.1145/3577190.3616117},
 booktitle = {Proceedings of the 25th International Conference on Multimodal Interaction},
 pages = {755–762},
 numpages = {8},
+location = {Paris, France},
 series = {ICMI '23}
 }
 
@@ -281,15 +350,15 @@ numpages = {7}
     url = {https://amuse.is.tue.mpg.de},
 }
 
-@article{zhang2024SemanticGesticulator,
-  title={Semantic Gesticulator: Semantics-Aware Co-Speech Gesture Synthesis},
-  author={Zhang, Zeyi and Ao, Tenglong and Zhang, Yuyao and Gao, Qingzhe and Lin, Chuan and Chen, Baoquan and Liu, Libin},
-  journal={ACM Transactions on Graphics (TOG)},
-  volume={43},
-  number={4},
-  pages={1--17},
-  year={2024},
-  publisher={ACM New York, NY, USA}
+@article{Zhang2024SemanticGesture,
+  author = {Zhang, Zeyi and Ao, Tenglong and Zhang, Yuyao and Gao, Qingzhe and Lin, Chuan and Chen, Baoquan and Liu, Libin},
+  title = {Semantic Gesticulator: Semantics-Aware Co-Speech Gesture Synthesis},
+  journal = {ACM Trans. Graph.},
+  issue_date = {July 2024},
+  numpages = {17},
+  doi = {10.1145/3658134},
+  publisher = {ACM},
+  address = {New York, NY, USA},
 }
 
 @inproceedings{gesticulator2020,
@@ -299,12 +368,17 @@ numpages = {7}
   year={2020}
 }
 
-@inproceedings{SGDBottou2010LargeScaleML,
-  title={Large-Scale Machine Learning with Stochastic Gradient Descent},
-  author={L{\'e}on Bottou},
-  booktitle={International Conference on Computational Statistics},
-  year={2010},
-  url={https://api.semanticscholar.org/CorpusID:115963355}
+@InProceedings{SGDBottou2010LargeScaleML,
+author="Bottou, L{\'e}on",
+editor="Lechevallier, Yves
+and Saporta, Gilbert",
+title="Large-Scale Machine Learning with Stochastic Gradient Descent",
+booktitle="Proceedings of COMPSTAT'2010",
+year="2010",
+publisher="Physica-Verlag HD",
+address="Heidelberg",
+pages="177--186",
+isbn="978-3-7908-2604-3"
 }
 
 @misc{AppleARKitTrackingGuide,
@@ -313,14 +387,14 @@ numpages = {7}
   year      = {2019},
   url = {https://www.pluralsight.com/resources/blog/guides/introduction-to-augmented-reality-with-arkit},
 }
+
 @inproceedings{LatinSquareToolkit,
-  author    = {Valentin Schwind and Stefan Resch and Jessica Sehrt},
-  title     = {The HCI User Studies Toolkit: Supporting Study Designing and Planning for Undergraduates and Novice Researchers in Human-Computer Interaction},
-  booktitle = {Extended Abstracts of the 2023 CHI Conference on Human Factors in Computing Systems (CHI EA '23)},
-  year      = {2023},
-  pages     = {7},
-  publisher = {ACM},
-  doi       = {10.1145/3544549.3585890}
+author = {Schwind, Valentin and Resch, Stefan and Sehrt, Jessica},
+year = {2023},
+month = {4},
+pages = {1-7},
+title = {The HCI User Studies Toolkit: Supporting Study Designing and Planning for Undergraduates and Novice Researchers in Human-Computer Interaction},
+doi = {10.1145/3544549.3585890}
 }
 
 @misc{ozel_arkit_facs_cheatsheet,
@@ -347,6 +421,19 @@ numpages = {7}
   publisher = {Cambridge University Press},
   address   = {Cambridge, UK},
   isbn      = {9780521542937}
+}
+
+@article{MCCLAVE2000855,
+title = {Linguistic functions of head movements in the context of speech},
+journal = {Journal of Pragmatics},
+volume = {32},
+number = {7},
+pages = {855-878},
+year = {2000},
+issn = {0378-2166},
+doi = {https://doi.org/10.1016/S0378-2166(99)00079-X},
+url = {https://www.sciencedirect.com/science/article/pii/S037821669900079X},
+author = {Evelyn Z. McClave},
 }
 
 @inproceedings{ginosar2019speech2gesture,
@@ -400,14 +487,13 @@ numpages = {7}
   doi     = {}
 }
 
-@inproceedings{yoon2020speechgesturebert,
-  author    = {Youngwoo Yoon and Seokhyun Kim and Jaeyeon Lee and Taehwan Kim and Gerard Pons-Moll and Jinwook Kim},
-  title     = {Speech Gesture Generation from the Trimodal Context of Text, Audio, and Speaker Identity},
-  booktitle = {Proceedings of the 2020 ACM International Conference on Multimodal Interaction (ICMI)},
-  year      = {2020},
-  pages     = {22--30},
-  doi       = {10.1145/3382507.3418838},
-  url       = {https://dl.acm.org/doi/10.1145/3382507.3418838}
+@article{yoon2020speechgesturebert,
+  title={Speech Gesture Generation from the Trimodal Context of Text, Audio, and Speaker Identity},
+  author={Youngwoo Yoon and Bok Cha and Joo-Haeng Lee and Minsu Jang and Jaeyeon Lee and Jaehong Kim and Geehyuk Lee},
+  journal={ACM Transactions on Graphics},
+  year={2020},
+  volume={39},
+  number={6},
 }
 
 @inproceedings{alexanderson2023diffgesture,
@@ -465,16 +551,6 @@ numpages = {7}
   address   = {Palo Alto, California}
 }
 
-@article{hadar_1989_headmovement,
-  author    = {Hadar, Uri and Butterworth, Brian},
-  title     = {Iconic gestures, imagery, and word retrieval in speech},
-  journal   = {Semiotica},
-  volume    = {75},
-  number    = {1/2},
-  year      = {1989},
-  pages     = {63--83}
-}
-
 @article{esteve2017timing,
   title     = {The timing of head movements: The role of prosodic heads and edges},
   author    = {Esteve-Gibert, Núria and Prieto, Pilar and Pons, Xavier and Lœvenbruck, Hélène},
@@ -487,17 +563,22 @@ numpages = {7}
   publisher = {Acoustical Society of America}
 }
 
-@article{
-  Ao2023GestureDiffuCLIP,
-  author = {Ao, Tenglong and Zhang, Zeyi and Liu, Libin},
-  title = {GestureDiffuCLIP: Gesture Diffusion Model with CLIP Latents},
-  journal = {ACM Trans. Graph.},
-  issue_date = {August 2023},
-  numpages = {18},
-  doi = {10.1145/3592097},
-  publisher = {ACM},
-  address = {New York, NY, USA},
-  keywords = {co-speech gesture synthesis, multi-modality, style editing, diffusion models, CLIP}
+@article{Ao2023GestureDiffuCLIP,
+author = {Ao, Tenglong and Zhang, Zeyi and Liu, Libin},
+title = {GestureDiffuCLIP: Gesture Diffusion Model with CLIP Latents},
+year = {2023},
+issue_date = {August 2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {42},
+number = {4},
+issn = {0730-0301},
+url = {https://doi.org/10.1145/3592097},
+doi = {10.1145/3592097},
+journal = {ACM Trans. Graph.},
+month = {7},
+articleno = {42},
+numpages = {18},
 }
 
 @misc{fu2024mambagesture,
@@ -537,25 +618,28 @@ numpages = {7}
   title        = {Unity Editor [Computer Software]},
   organization = {Unity Technologies},
   url          = {https://unity.com/},
+  urldate      = {2026-01-15}
 }
 
 @manual{unitymechanim,
   title        = {Mechanim Animation System [Computer Software Module]},
   organization = {Unity Technologies},
   url          = {https://docs.unity3d.com/Manual/AnimationOverview.html},
+  urldate      = {2026-01-15}
 }
 
 @manual{pico4,
   title        = {PICO 4 All-in-One VR Headset [Hardware Device]},
   organization = {ByteDance Inc.},
   url          = {https://www.pico-interactive.com/},
+  urldate      = {2026-01-15}
 }
 
 @InProceedings{beatalign,
   author    = {Li, Ruilong and Yang, Shan and Ross, David A. and Kanazawa, Angjoo},
   title     = {AI Choreographer: Music Conditioned 3D Dance Generation With AIST++},
   booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-  month     = {October},
+  month     = {10},
   year      = {2021},
   pages     = {13401-13412}
 }
@@ -571,4 +655,34 @@ numpages = {7}
   url       = {https://aclanthology.org/2025.ccl-1.51.pdf},
   publisher = {中国中文信息学会计算语言学专业委员会},
   note      = {会议日期：2025年8月11日至14日；Language: Chinese}
+}
+
+@inproceedings{fid,
+author = {Heusel, Martin and Ramsauer, Hubert and Unterthiner, Thomas and Nessler, Bernhard and Hochreiter, Sepp},
+title = {GANs trained by a two time-scale update rule converge to a local nash equilibrium},
+year = {2017},
+isbn = {9781510860964},
+publisher = {Curran Associates Inc.},
+address = {Red Hook, NY, USA},
+booktitle = {Proceedings of the 31st International Conference on Neural Information Processing Systems},
+pages = {6629–6640},
+numpages = {12},
+location = {Long Beach, California, USA},
+series = {NIPS'17}
+}
+
+@inproceedings{librosa,
+author = {McFee, Brian and Raffel, Colin and Liang, Dawen and Ellis, Daniel and Mcvicar, Matt and Battenberg, Eric and Nieto, Oriol},
+year = {2015},
+month = {01},
+pages = {18-24},
+title = {librosa: Audio and Music Signal Analysis in Python},
+doi = {10.25080/Majora-7b98e3ed-003}
+}
+
+@manual{pyaudio,
+  author = {PortAudio Development Team},
+  title = {PyAudio: Python bindings for PortAudio},
+  url          = {https://people.csail.mit.edu/hubert/pyaudio/},
+  year      = {2009}
 }

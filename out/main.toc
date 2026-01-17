@@ -8,11 +8,12 @@
 \contentsline {subsection}{\numberline {1.2.2}规则驱动阶段}{4}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}数据驱动阶段}{4}{subsection.1.2.3}%
 \contentsline {subsection}{\numberline {1.2.4}多模态扩展阶段}{5}{subsection.1.2.4}%
-\contentsline {subsection}{\numberline {1.2.5}手势生成方法的总结}{5}{subsection.1.2.5}%
+\contentsline {subsection}{\numberline {1.2.5}在线实时生成尝试}{5}{subsection.1.2.5}%
+\contentsline {subsection}{\numberline {1.2.6}手势生成方法的总结}{5}{subsection.1.2.6}%
 \contentsline {paragraph}{时间前瞻性}{6}{paragraph*.14}%
 \contentsline {paragraph}{反映互动焦点}{6}{paragraph*.15}%
-\contentsline {section}{\numberline {1.3}本文研究目标与研究内容}{6}{section.1.3}%
-\contentsline {section}{\numberline {1.4}论文组织架构}{7}{section.1.4}%
+\contentsline {section}{\numberline {1.3}本文研究目标与研究内容}{7}{section.1.3}%
+\contentsline {section}{\numberline {1.4}论文组织架构}{8}{section.1.4}%
 \contentsline {chapter}{\numberline {第 2 章}虚拟人驱动的多模态在线实时手势生成框架}{9}{chapter.2}%
 \contentsline {section}{\numberline {2.1}需求分析}{9}{section.2.1}%
 \contentsline {section}{\numberline {2.2}训练数据来源}{10}{section.2.2}%
@@ -49,74 +50,77 @@
 \contentsline {section}{\numberline {4.1}连续输出序列的构建}{26}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}片段切割与前序动作帧}{26}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}闭环自回归展开与滑动窗口生成}{27}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}显式历史与隐式状态的跨步协同}{29}{subsection.4.1.3}%
-\contentsline {paragraph}{状态传递的形式化表示}{29}{paragraph*.30}%
-\contentsline {paragraph}{初始状态设置}{29}{paragraph*.31}%
-\contentsline {section}{\numberline {4.2}监督损失}{30}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}生成区间与损失计算范围}{30}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}总体优化目标}{30}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}姿态重构与时序平滑损失}{30}{subsection.4.2.3}%
-\contentsline {paragraph}{姿态重构损失}{31}{paragraph*.32}%
-\contentsline {paragraph}{速度与加速度平滑损失}{31}{paragraph*.33}%
-\contentsline {subsection}{\numberline {4.2.4}损失权重设置}{31}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}对抗训练}{31}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}片段级判别器输入}{31}{subsection.4.3.1}%
-\contentsline {paragraph}{前置动作帧的掩码策略}{32}{paragraph*.34}%
-\contentsline {subsection}{\numberline {4.3.2}对抗损失定义}{32}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}交替优化策略}{32}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}本章小结}{32}{section.4.4}%
-\contentsline {chapter}{\numberline {第 5 章}实验结果与分析}{33}{chapter.5}%
-\contentsline {section}{\numberline {5.1}训练配置}{33}{section.5.1}%
-\contentsline {section}{\numberline {5.2}实验配置}{34}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}实验对比模型}{34}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}跨模型评估设置}{34}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}用户评估}{35}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}用户评估系统与实验配置}{35}{subsection.5.3.1}%
-\contentsline {paragraph}{实验材料与呈现方式}{35}{paragraph*.36}%
-\contentsline {paragraph}{播放系统实现}{35}{paragraph*.37}%
-\contentsline {paragraph}{实验界面与设备}{36}{paragraph*.38}%
-\contentsline {paragraph}{实验流程与指导}{36}{paragraph*.39}%
-\contentsline {paragraph}{实验材料与任务设计}{36}{paragraph*.40}%
-\contentsline {paragraph}{实验参与者}{37}{paragraph*.42}%
-\contentsline {paragraph}{实验环境说明}{37}{paragraph*.43}%
-\contentsline {subsection}{\numberline {5.3.2}结果与分析}{38}{subsection.5.3.2}%
-\contentsline {paragraph}{总体测评结果}{38}{paragraph*.44}%
-\contentsline {paragraph}{平衡拉丁方实验结果}{38}{paragraph*.46}%
-\contentsline {paragraph}{用户反馈分析}{39}{paragraph*.48}%
-\contentsline {paragraph}{结果讨论}{39}{paragraph*.49}%
-\contentsline {section}{\numberline {5.4}定性分析}{40}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}生成动作平滑性}{40}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}头部朝向与手势空间指向一致性}{40}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}客观评估指标与实现细节}{43}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}手势分布相似度（Fréchet Gesture Distance）}{43}{subsection.5.5.1}%
-\contentsline {paragraph}{FGD的模型结构与训练配置}{43}{paragraph*.52}%
-\contentsline {paragraph}{用于FGD评估的骨架感知自编码器}{44}{paragraph*.53}%
-\contentsline {subsection}{\numberline {5.5.2}语义相关动作召回率（Semantic Relevance Gesture Recall）}{44}{subsection.5.5.2}%
-\contentsline {paragraph}{定义与原理}{45}{paragraph*.54}%
-\contentsline {subsection}{\numberline {5.5.3}节奏对齐度（Beat Alignment）}{45}{subsection.5.5.3}%
-\contentsline {paragraph}{定义与原理}{45}{paragraph*.55}%
-\contentsline {subsection}{\numberline {5.5.4}L1范数}{46}{subsection.5.5.4}%
+\contentsline {subsection}{\numberline {4.1.3}逐帧输入形式与历史缓冲机制}{29}{subsection.4.1.3}%
+\contentsline {paragraph}{历史动作缓存}{29}{paragraph*.30}%
+\contentsline {paragraph}{预热阶段与生成阶段}{29}{paragraph*.31}%
+\contentsline {paragraph}{训练时的逐帧展开与序列拼接}{29}{paragraph*.32}%
+\contentsline {subsection}{\numberline {4.1.4}显式历史与隐式状态的跨步协同}{30}{subsection.4.1.4}%
+\contentsline {paragraph}{状态传递的形式化表示}{30}{paragraph*.33}%
+\contentsline {paragraph}{初始状态设置}{30}{paragraph*.34}%
+\contentsline {section}{\numberline {4.2}监督损失}{31}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}生成区间与损失计算范围}{31}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}总体优化目标}{31}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}姿态重构与时序平滑损失}{31}{subsection.4.2.3}%
+\contentsline {paragraph}{姿态重构损失}{32}{paragraph*.35}%
+\contentsline {paragraph}{速度与加速度平滑损失}{32}{paragraph*.36}%
+\contentsline {subsection}{\numberline {4.2.4}损失权重设置}{32}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}对抗训练}{32}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}片段级判别器输入}{32}{subsection.4.3.1}%
+\contentsline {paragraph}{前置动作帧的掩码策略}{33}{paragraph*.37}%
+\contentsline {subsection}{\numberline {4.3.2}对抗损失定义}{33}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}交替优化策略}{33}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}本章小结}{33}{section.4.4}%
+\contentsline {chapter}{\numberline {第 5 章}实验结果与分析}{34}{chapter.5}%
+\contentsline {section}{\numberline {5.1}训练配置}{34}{section.5.1}%
+\contentsline {section}{\numberline {5.2}实验配置}{35}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}实验对比模型}{35}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}跨模型评估设置}{35}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}用户评估}{36}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}用户评估系统与实验配置}{36}{subsection.5.3.1}%
+\contentsline {paragraph}{实验材料与呈现方式}{36}{paragraph*.39}%
+\contentsline {paragraph}{播放系统实现}{37}{paragraph*.40}%
+\contentsline {paragraph}{实验界面与设备}{37}{paragraph*.41}%
+\contentsline {paragraph}{实验流程与指导}{37}{paragraph*.42}%
+\contentsline {paragraph}{实验材料与任务设计}{38}{paragraph*.43}%
+\contentsline {paragraph}{实验参与者}{38}{paragraph*.45}%
+\contentsline {subsection}{\numberline {5.3.2}结果与分析}{39}{subsection.5.3.2}%
+\contentsline {paragraph}{总体测评结果}{39}{paragraph*.46}%
+\contentsline {paragraph}{平衡拉丁方实验结果}{39}{paragraph*.48}%
+\contentsline {paragraph}{用户反馈分析}{39}{paragraph*.50}%
+\contentsline {paragraph}{结果讨论}{40}{paragraph*.51}%
+\contentsline {section}{\numberline {5.4}定性分析}{41}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}生成动作平滑性}{41}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}头部朝向与手势空间指向一致性}{41}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}客观评估指标与实现细节}{44}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}手势分布相似度（Fréchet Gesture Distance）}{44}{subsection.5.5.1}%
+\contentsline {paragraph}{FGD的模型结构与训练配置}{44}{paragraph*.54}%
+\contentsline {paragraph}{用于FGD评估的骨架感知自编码器}{45}{paragraph*.55}%
+\contentsline {subsection}{\numberline {5.5.2}语义相关动作召回率（Semantic Relevance Gesture Recall）}{46}{subsection.5.5.2}%
 \contentsline {paragraph}{定义与原理}{46}{paragraph*.56}%
-\contentsline {subsection}{\numberline {5.5.5}评估区域设定与公平性说明}{47}{subsection.5.5.5}%
-\contentsline {section}{\numberline {5.6}定量评估结果}{47}{section.5.6}%
-\contentsline {section}{\numberline {5.7}消融实验分析}{48}{section.5.7}%
-\contentsline {paragraph}{头部姿态输入的贡献}{48}{paragraph*.59}%
-\contentsline {paragraph}{帧级自回归生成的优势}{48}{paragraph*.60}%
-\contentsline {paragraph}{与基线模型 CaMN 的差异}{49}{paragraph*.61}%
-\contentsline {section}{\numberline {5.8}性能评估}{49}{section.5.8}%
-\contentsline {subsection}{\numberline {5.8.1}单帧推理性能}{49}{subsection.5.8.1}%
-\contentsline {subsection}{\numberline {5.8.2}端到端计算链路延迟}{50}{subsection.5.8.2}%
-\contentsline {paragraph}{远程推理部署的额外开销}{51}{paragraph*.63}%
-\contentsline {subsection}{\numberline {5.8.3}系统更新率}{51}{subsection.5.8.3}%
-\contentsline {subsection}{\numberline {5.8.4}帧率设定的可扩展性}{51}{subsection.5.8.4}%
-\contentsline {section}{\numberline {5.9}本章小结}{52}{section.5.9}%
-\contentsline {chapter}{\numberline {第 6 章}结论}{53}{chapter.6}%
-\contentsline {section}{\numberline {6.1}本文工作总结}{53}{section.6.1}%
-\contentsline {section}{\numberline {6.2}未来工作展望}{54}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}高层语义信息}{54}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}面向未来趋势的预测性训练目标}{54}{subsection.6.2.2}%
-\contentsline {chapter}{参考文献}{56}{chapter*.64}%
-\contentsline {chapter}{\numberline {附录 A}手势生成对比视频}{59}{appendix.A}%
-\contentsline {chapter}{\numberline {附录 B}代码与实现资源}{60}{appendix.B}%
-\contentsline {chapter}{学术论文和科研成果目录}{61}{section*.65}%
+\contentsline {subsection}{\numberline {5.5.3}节奏对齐度（Beat Alignment）}{46}{subsection.5.5.3}%
+\contentsline {paragraph}{定义与原理}{46}{paragraph*.57}%
+\contentsline {subsection}{\numberline {5.5.4}L1多样性}{47}{subsection.5.5.4}%
+\contentsline {paragraph}{定义与原理}{47}{paragraph*.58}%
+\contentsline {subsection}{\numberline {5.5.5}评估区域设定与公平性说明}{48}{subsection.5.5.5}%
+\contentsline {section}{\numberline {5.6}定量评估结果}{48}{section.5.6}%
+\contentsline {section}{\numberline {5.7}消融实验分析}{49}{section.5.7}%
+\contentsline {paragraph}{头部姿态输入的贡献}{49}{paragraph*.61}%
+\contentsline {paragraph}{帧级自回归生成的优势}{50}{paragraph*.62}%
+\contentsline {paragraph}{与基线模型 CaMN 的差异}{50}{paragraph*.63}%
+\contentsline {section}{\numberline {5.8}性能评估}{51}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}单帧推理性能}{51}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}端到端计算链路延迟}{51}{subsection.5.8.2}%
+\contentsline {paragraph}{远程推理部署的额外开销}{52}{paragraph*.65}%
+\contentsline {subsection}{\numberline {5.8.3}系统更新率}{52}{subsection.5.8.3}%
+\contentsline {subsection}{\numberline {5.8.4}帧率设定的可扩展性}{53}{subsection.5.8.4}%
+\contentsline {section}{\numberline {5.9}本章小结}{53}{section.5.9}%
+\contentsline {chapter}{\numberline {第 6 章}结论}{55}{chapter.6}%
+\contentsline {section}{\numberline {6.1}本文工作总结}{55}{section.6.1}%
+\contentsline {section}{\numberline {6.2}未来工作展望}{56}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}高层语义信息}{56}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}面向未来趋势的预测性训练目标}{56}{subsection.6.2.2}%
+\contentsline {chapter}{参考文献}{58}{chapter*.66}%
+\contentsline {chapter}{\numberline {附录 A}手势生成对比视频}{63}{appendix.A}%
+\contentsline {chapter}{\numberline {附录 B}代码与实现资源}{64}{appendix.B}%
+\contentsline {chapter}{学术论文和科研成果目录}{65}{section*.67}%
 \contentsfinish 

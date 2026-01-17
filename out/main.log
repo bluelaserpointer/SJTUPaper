@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  16 JAN 2026 19:39
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  17 JAN 2026 20:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2596,9 +2596,9 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 
 
 ]
-Underfull \hbox (badness 1286) in paragraph at lines 38--41
-[]\TU/TeXGyreTermesX(0)/m/n/12.045 (3) A sliding-window autoregressive training
- strategy for online real-time gesture
+Underfull \hbox (badness 1412) in paragraph at lines 38--39
+[]\TU/TeXGyreTermesX(0)/m/n/12.045 (3) We propose a sliding-window closed-loop 
+autoregressive training strategy for
  []
 
 [2
@@ -2632,48 +2632,48 @@ Underfull \hbox (badness 1286) in paragraph at lines 38--41
 [1
 
 
-] [2] [3] [4]
+] [2] [3] [4] [5]
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 7.0pt on input line 161.
+(Font)              scaled to size 7.0pt on input line 184.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 5.0pt on input line 161.
+(Font)              scaled to size 5.0pt on input line 184.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.0pt on input line 161.
+(Font)              scaled to size 7.0pt on input line 184.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 5.0pt on input line 161.
+(Font)              scaled to size 5.0pt on input line 184.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.0pt on input line 161.
+(Font)              scaled to size 7.0pt on input line 184.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 5.0pt on input line 161.
+(Font)              scaled to size 5.0pt on input line 184.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.0pt on input line 161.
+(Font)              scaled to size 7.0pt on input line 184.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 5.0pt on input line 161.
+(Font)              scaled to size 5.0pt on input line 184.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.0pt on input line 161.
+(Font)              scaled to size 7.0pt on input line 184.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 5.0pt on input line 161.
+(Font)              scaled to size 5.0pt on input line 184.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.0pt on input line 161.
+(Font)              scaled to size 7.0pt on input line 184.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 5.0pt on input line 161.
+(Font)              scaled to size 5.0pt on input line 184.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.0pt on input line 161.
+(Font)              scaled to size 7.0pt on input line 184.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 5.0pt on input line 161.
+(Font)              scaled to size 5.0pt on input line 184.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 7.0pt on input line 161.
+(Font)              scaled to size 7.0pt on input line 184.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 5.0pt on input line 161.
+(Font)              scaled to size 5.0pt on input line 184.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 7.0pt on input line 161.
+(Font)              scaled to size 7.0pt on input line 184.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 5.0pt on input line 161.
+(Font)              scaled to size 5.0pt on input line 184.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 7.0pt on input line 161.
+(Font)              scaled to size 7.0pt on input line 184.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 5.0pt on input line 161.
- [5] [6] [7]) (contents/framework.tex [8]
+(Font)              scaled to size 5.0pt on input line 184.
+ [6] [7]) (contents/framework.tex [8]
 第 2 章
 [9
 
@@ -2708,73 +2708,65 @@ File: figures/Fig_NeuroArchitecture.png Graphic file (type bmp)
 <figures/Fig_NeuroArchitecture.png>
  [24]) (contents/method_realtime.tex [25]
 第 4 章
-
-Underfull \hbox (badness 1803) in paragraph at lines 15--17
-[]\TU/SimSun(0)/m/n/12.045 为 提 高 训 练 样 本 覆 盖 率 并 增 强 模 型 对 不 同 对 齐 位 置 的 鲁 棒 性，
-|  我 们 参 考
- []
-
 [26
 
 ]
 File: figures/Fig_SlidingWindow.png Graphic file (type bmp)
 <figures/Fig_SlidingWindow.png>
- [27] [28] [29] [30] [31]) (contents/evaluation.tex [32]
+ [27] [28] [29] [30] [31] [32]) (contents/evaluation.tex [33]
 第 5 章
-[33
+[34
 
-]
-Underfull \hbox (badness 2005) in paragraph at lines 100--105
+] [35]
+Underfull \hbox (badness 2005) in paragraph at lines 111--116
 []\TU/SimSun(0)/m/n/12.045 为 验 证 模 型 在 交 互 环 境 中 的 表 现，|  本 文 进 行 了 用 户 主 观 评 估
  实 验，|  比 较
  []
 
-[34] [35] [36]
+[36] [37]
 File: figures/UserStudyImage.png Graphic file (type bmp)
 <figures/UserStudyImage.png>
- [37]
-File: figures/UserStudy_All.png Graphic file (type bmp)
-<figures/UserStudy_All.png>
-File: figures/UserStudy_LatinSquare.png Graphic file (type bmp)
-<figures/UserStudy_LatinSquare.png>
- [38] [39]
+ [38]
+File: figures/UserStudy_All_cn.png Graphic file (type bmp)
+<figures/UserStudy_All_cn.png>
+File: figures/UserStudy_LatinSquare_cn.png Graphic file (type bmp)
+<figures/UserStudy_LatinSquare_cn.png>
+ [39] [40]
 File: figures/GeneratedPoseOverview.png Graphic file (type bmp)
 <figures/GeneratedPoseOverview.png>
- [40]
+ [41]
 File: figures/Fig_HeadHandAlignment.png Graphic file (type bmp)
 <figures/Fig_HeadHandAlignment.png>
- [41] [42] [43] [44] [45] [46] [47] [48]
-[49] [50] [51]) (contents/conclusions.tex [52]
+ [42] [43] [44] [45] [46] [47] [48]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[49] [50] [51] [52] [53]) (contents/conclusions.tex [54]
 第 6 章
-[53
+[55
 
-] [54]) [55] [56
+] [56]) [57] [58
 
-]
-
-Package biblatex Warning: No driver for 'webpage'.
-(biblatex)                Using fallback driver on input line 65.
-
-[57] (contents/app_external_files.tex [58]
+] [59] [60] [61] (contents/app_external_files.tex [62]
 附录 A
 
-Overfull \hbox (11.03325pt too wide) in paragraph at lines 14--16
-[]$[][][][][] [] [] [] [][][][][] [] [][][][][][] [] [][][] [] [][][][][] [] []
-[][][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][] []
+Overfull \hbox (5.12325pt too wide) in paragraph at lines 13--14
+[][]$[][][][][] [] [] [] [][][][][] [] [][][][][][] [] [][][] [] [][][][][] [] 
+[][][][][][][] [] [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][] []
  []
 
-[59
+[63
 
 ]
 附录 B
-) [60
+) [64
 
 ] (contents/achievements.tex)
 \tf@thm=\write9
 \openout9 = `main.thm'.
 
- [61
+ [65
 
 
 
@@ -2784,18 +2776,18 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BEC53338709AC0FE8FFA4DE0B1EBF0A7;13253.
+(rerunfilecheck)             Checksum: C2C83D58E9CD8357F7B03C2A8105EB0A;13619.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51994 strings out of 402986
- 1099015 string characters out of 5453884
- 2057057 words of memory out of 5000000
- 79956 multiletter control sequences out of 15000+600000
+ 52066 strings out of 402986
+ 1102134 string characters out of 5453884
+ 2060959 words of memory out of 5000000
+ 80028 multiletter control sequences out of 15000+600000
  706656 words of font info for 255 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 115i,16n,124p,1183b,7465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 115i,16n,124p,1183b,7486s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on e:\SJTU\SJTUPaper\out\main.pdf (73 pages).
+Output written on e:\SJTU\SJTUPaper\out\main.pdf (77 pages).

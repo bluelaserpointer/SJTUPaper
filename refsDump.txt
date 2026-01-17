@@ -1,0 +1,30 @@
+@article{mediapipefacemesh,
+    title={Real-time facial surface geometry from monocular video on mobile gpus},
+    journal={arXiv:1907.06724},
+    author={Kartynnik, Yury and Ablavatski, Artsiom and Grishchenko, Ivan and Grundmann, Matthias},
+    year={2019}
+}
+似乎没有头部动作相关的陈述
+@article{hadar_1989_headmovement,
+  author    = {Hadar, Uri and Butterworth, Brian},
+  title     = {Iconic gestures, imagery, and word retrieval in speech},
+  journal   = {Semiotica},
+  volume    = {75},
+  number    = {1/2},
+  year      = {1989},
+  pages     = {63--83}
+}
+@article{beatcamn,
+  title={BEAT: A Large-Scale Semantic and Emotional Multi-Modal Dataset for Conversational Gestures Synthesis},
+  author={Liu, Haiyang and Zhu, Zihao and Iwamoto, Naoya and Peng, Yichen and Li, Zhengqing and Zhou, You and Bozkurt, Elif and Zheng, Bo},
+  journal={arXiv preprint arXiv:2203.05297},
+  year={2022}}
+
+
+这些网站类型引用需要找到规范的方式
+@webpage{ARKitDocumentation,
+    organization = {Apple Developer},
+    year = {2024},
+    title = {ARKit in iOS - Tracking and Visualizing Faces},
+    url = {https://developer.apple.com/documentation/arkit/arkit_in_ios/content_anchors/tracking_and_visualizing_faces}
+}

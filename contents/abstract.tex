@@ -12,7 +12,7 @@
 
 (2) 在级联多模态架构中引入头部姿态作为新的实时输入模态，设计并实现姿态编码模块与弱耦合融合策略，为手势提供额外的节奏与朝向线索，从而增强动作节奏与空间指向一致性。
 
-(3) 提出并实现在线实时手势生成的滑动窗口自回归训练策略，通过片段切割与窗口展开实现严格因果的逐帧生成，并结合片段级监督与对抗训练目标，提升实时生成的稳定性与时间连续性，缓解自回归漂移与抖动问题。
+(3) 提出并实现在线实时手势生成的滑动窗口闭环自回归训练策略，通过片段切割与逐帧窗口展开构造生成区间的连续输出序列，并在生成区间上定义片段级监督与对抗训练目标，使模型在自身生成历史条件下学习更稳定的连续输出，从而提升实时生成的时间一致性并缓解自回归漂移问题。
 
 (4) 开展用户主观实验、客观指标测量与实时性能测试，并与代表性方法进行对比评估。实验结果表明，在严格因果约束下，本文方法 FaceCapGes 在真实性上表现良好，与现有扩散模型相当；同时在语调变化较快与头部朝向变化明显的片段中，能够生成更平滑且指向一致的动作，并具备满足实时交互场景需求的推理性能。
 
@@ -35,9 +35,7 @@ The main contributions of this thesis are summarized as follows:
 
 (2) We introduce head pose as a new real-time input modality in a cascaded multimodal architecture. A pose encoder and a weakly coupled fusion strategy are designed and implemented to provide additional rhythmic and orientation cues, improving gesture timing and spatial pointing consistency.
 
-(3) A sliding-window autoregressive training strategy for online real-time gesture generation is proposed and implemented.
-By segmenting motion sequences and unfolding them with a sliding window, strictly causal frame-wise generation is achieved.
-Combined with segment-level supervision and adversarial objectives, the proposed strategy improves temporal stability and continuity, alleviating autoregressive drift and jitter.
+(3) We propose a sliding-window closed-loop autoregressive training strategy for online real-time gesture generation, where continuous output sequences are constructed via segment-wise sampling and frame-wise rollout, and segment-level supervised and adversarial objectives are applied on the generation interval to improve temporal consistency and reduce autoregressive drift.
 
 (4) Subjective user studies, objective metric evaluation, and real-time performance tests are conducted, with comparative assessments against representative methods. The results demonstrate that, under strict causality constraints, FaceCapGes achieves strong realism comparable to existing diffusion-based models; moreover, in segments with rapid prosodic variations and noticeable head orientation changes, it generates smoother motions with more consistent spatial pointing, while maintaining inference efficiency sufficient for real-time interactive applications.
 
