@@ -236,9 +236,11 @@ $\mathbf{r}=[\mathbf{a};\mathbf{b}]\in\mathbb{R}^6$，
 
 因此，本文采用Rot6D作为动作生成模型的训练目标。
 
-根据式\eqref{eq:body_pose_vector}，训练集中的身体姿态表示为：$\bm{v}^{B}_t \in \mathbb{R}^{6 \times 47}$
+根据式 \eqref{eq:body_pose_vector}，训练集中第 $t$ 帧的身体姿态可表示为
+$\bm{v}^{B}_t \in \mathbb{R}^{6 \times 47}$。
 
-又根据式\eqref{eq:head_pose_vector}，训练集中的头部姿态表示为：$\bm{v}^{H}_t \in \mathbb{R}^{6}$
+同样地，根据式 \eqref{eq:head_pose_vector}，训练集中第 $t$ 帧的头部姿态表示为
+$\bm{v}^{H}_t \in \mathbb{R}^{6}$。
 
 \section{在线实时手势生成系统整体框架}
 \label{sec:system}
