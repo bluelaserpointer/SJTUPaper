@@ -23,16 +23,16 @@
 \section{国内外研究现状}
 
 \subsection{手势分类体系与理论框架}
-早期语言学与手势研究对人类交流手势建立了较为系统的分类框架。
+早期语言学与手势研究对人类交流手势建立了较为系统的分类框架\cite{kendon_2004_gesture,mcneill_1992_hand}。
 一般而言，手势是与语音共同出现的身体动作信号，可承担语义补充、情感表达与互动调节等多重功能。
-这类动作通常具有明确的交际意图，从而区别于维持平衡、行走等以完成物理任务为主的功能性动作\cite{kendon_2004_gesture}。
-在 Kendon 等人的理论框架下，手势与语言并非两个相互独立的系统，而是被视为共享认知与表达过程的协同产物。
+这类动作通常具有明确的交际意图，从而区别于维持平衡、行走等以完成物理任务为主的功能性动作。
+在 Kendon 等人的理论框架\cite{kendon_2004_gesture}下，手势与语言并非两个相互独立的系统，而是被视为共享认知与表达过程的协同产物。
 
 需要说明的是，本文在广义层面使用“手势”一词时，其运动形式不局限于手部动作，
 也可扩展至头部运动与躯干姿态等与表达相关的上半身动作。
 
 \subsubsection{Kendon连续体}
-Kendon 连续体\cite{kendon_2004_gesture,mcneill_1992_hand}
+Kendon 连续体\cite{kendon_2004_gesture}
 从语言化/符号化程度的连续变化角度，将交际性手势置于以下谱系中：
 
 随语手势（gesticulation） %
@@ -114,7 +114,7 @@ McNeill\cite{mcneill_1992_hand}将随语手势进一步划分为四种基本类�
 
 \subsection{规则驱动阶段}
 
-早期的手势生成系统主要依赖语言学规则与专家知识构建\cite{behavior_expression_animation_toolkit,robot_behavior_toolkit,gesture_generation_by_imitation,gesture_and_speech_in_interaction}。
+早期的手势生成系统主要依赖语言学规则与专家知识构建\cite{behavior_expression_animation_toolkit,robot_behavior_toolkit,gesture_generation_by_imitation}。
 这类方法通过语义分类或韵律规则将语音片段映射为预定义的手势模板（如指示、肯定、节奏性动作），并以有限的动作库组合出手势序列。
 它们可在虚拟代理或机器人中实现基于语音的同步动作。
 然而，手势词典与语法规则的人工设计成本较高，难以覆盖自然语音中的多样变化，导致生成结果缺乏自然性与个体差异。
@@ -127,7 +127,7 @@ McNeill\cite{mcneill_1992_hand}将随语手势进一步划分为四种基本类�
 为解决语音与手势间的多对多映射问题，研究者引入了向量量化变分自编码器（Vector Quantized Variational AutoEncoder，VQ-VAE）\cite{vqvae, emage,Zhang2024SemanticGesture,wan-etal-2025-finegrained-spatiotemporal}与扩散模型\cite{diffusion, Ao2023GestureDiffuCLIP, listen_denoise_action, zhu2023taming,diffsheg,diffstylegesture,DiffTED2024,diffusion-self-supervised2023}，
 在保持自然性的同时提升了生成多样性与表现力。
 
-此外，对抗训练（GAN）\cite{gan2014}也被用于提升生成动作的真实感与时序结构一致性。
+此外，对抗训练（Generative Adversarial Networks，GAN）\cite{gan2014}也被用于提升生成动作的真实感与时序结构一致性。
 例如，Ferstl 等提出通过生成器与判别器对抗学习更符合真实分布的手势，
 从而在节奏组织与动作过渡上获得更自然的视觉效果\cite{GANsINGesture2020}。
 与仅依赖点对点重构损失相比，这类分布级约束能够在序列整体动力学统计特性上提供补充监督，
@@ -240,7 +240,7 @@ Rebol 等则提出了一种基于语音分段输入的实时手势动画生成�
 
 （1）自然度与运动学合理性：生成动作在速度、加速度、关节角度范围与时序连续性等方面应符合人体运动规律，并在整体观感上保持自然流畅，避免高频抖动与突变等不连续现象。
 
-（2）语音—动作同步性：生成动作的节奏变化需与语音韵律（如重音、停顿、能量变化）在时间轴上保持对齐，尤其体现在强调、停顿等处的动作起止与峰值对齐。
+（2）语音与动作的同步性：生成动作的节奏变化需与语音韵律（如重音、停顿、能量变化）在时间轴上保持对齐，尤其体现在强调、停顿等处的动作起止与峰值对齐。
 
 （3）多样性：在不同输入条件（语音韵律/说话风格）下，生成结果应具备足够的变化性，避免动作模板化。
 
