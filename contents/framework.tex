@@ -120,14 +120,14 @@ $\mathbf{R}_t^{(j)}=\Phi(\mathbf{r}_t^{(j)})\in SO(3)$，
 于是头部的绝对旋转为：
 \begin{equation}
 \mathbf{G}_t^{(h)} =
-\prod_{k\in \mathcal{P}(r\rightarrow h)} \mathbf{R}_t^{(k)},
+\prod_{k\in \mathcal{P}(r\rightarrow h)} \mathbf{R}_t^{(k)}
 \label{eq:head_global_rotation_product}
 \end{equation}
 其中 $\mathcal{P}(r\rightarrow h)$ 表示从根关节到头部关节的有序关节序列（包含 $r$ 与 $h$）。
 
 最后，将头部全局旋转再映射回与模型一致的旋转表示，得到头部姿态特征：
 \begin{equation}
-\bm{v}^{H}_t = \Psi\!\left(\mathbf{G}_t^{(h)}\right)\in\mathbb{R}^{R},
+\bm{v}^{H}_t = \Psi\!\left(\mathbf{G}_t^{(h)}\right)\in\mathbb{R}^{R}
 \label{eq:head_pose_vector}
 \end{equation}
 其中 $\Psi(\cdot)$ 为从旋转矩阵到所选旋转表示的映射，$R$ 为该表示的维度。
@@ -330,7 +330,7 @@ FaceCapGes输出的姿态数据通过统一接口传递至渲染与驱动模块�
 其中$P$为顶点数；给定$K$个BlendShape基形，其对应的顶点偏移为$\Delta \bm{v}_i \in \mathbb{R}^{P \times 3}$（$i=1,\dots,K$）。
 则时间帧$t$下的面部表情网格可表示为：
 \begin{equation}
-\bm{v}(t) = \bm{v}_0 + \sum_{i=1}^{K} w_t^{(i)}\Delta \bm{v}_i,
+\bm{v}(t) = \bm{v}_0 + \sum_{i=1}^{K} w_t^{(i)}\Delta \bm{v}_i
 \label{eq:blendshape}
 \end{equation}
 其中$w_t^{(i)}\in[0,1]$为第$i$个基形在帧$t$的权重系数。

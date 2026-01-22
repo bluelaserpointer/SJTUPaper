@@ -19,7 +19,7 @@
 
 形式上，可以将该任务定义为一个多模态时序映射函数：
 \begin{equation}
-\hat{\bm{v}}_{t}^{B} = f_\theta\!\big(\bm{v}_{t-N:t}^{A},\, \bm{v}_{t-N:t}^{F},\, \bm{v}_{t-N:t}^{H}\big),
+\hat{\bm{v}}_{t}^{B} = f_\theta\!\big(\bm{v}_{t-N:t}^{A},\, \bm{v}_{t-N:t}^{F},\, \bm{v}_{t-N:t}^{H}\big)
 \label{eq:task_mapping_f}
 \end{equation}
 其中$f_\theta$表示由参数$\theta$控制的生成模型，$N$为历史窗口长度，本文实验中取$N=16$。
@@ -109,7 +109,7 @@ FaceCapGes在继承其层次思想的同时，对输入模式、训练方式与�
 上肢部分包含双臂及手部关节，负责生成与语音节奏及情绪表达相呼应的细节动作。
 最终上半身姿态表示为两者的组合：
 \begin{equation}
-\bm{v}_t^{B} = [\bm{v}_t^{T}; \bm{v}_t^{U}],
+\bm{v}_t^{B} = [\bm{v}_t^{T}; \bm{v}_t^{U}]
 \label{eq:body_vector_concat}
 \end{equation}
 其中$[\cdot;\cdot]$表示在特征维度上的拼接。
@@ -128,20 +128,20 @@ $\bm{z}_t^{A}$、$\bm{z}_t^{F}$、$\bm{z}_t^{H}$
 \bm{s}_\tau =
 \begin{cases}
 \bm{v}_\tau^{B}, & \tau \le t-1, \\
-\mathbf{0}, & \tau = t,
+\mathbf{0}, & \tau = t
 \end{cases}
-\quad \tau \in \{t-N,\ldots,t\},
+\quad \tau \in \{t-N,\ldots,t\}
 \label{eq:history_padding}
 \end{equation}
 则窗口内每一帧的融合输入向量可写为：
 \begin{equation}
 \bm{z}_\tau^{fuse} = [\bm{z}_\tau^{A}; \bm{z}_\tau^{F}; \bm{z}_\tau^{H}; \bm{s}_\tau],
-\quad \tau \in \{t-N,\ldots,t\},
+\quad \tau \in \{t-N,\ldots,t\}
 \label{eq:fuse_per_frame}
 \end{equation}
 其中$[\cdot;\cdot]$表示在特征维度上的拼接。由此可得到长度为$N{+}1$的因果上下文输入序列：
 \begin{equation}
-\bm{Z}_t^{fuse} = (\bm{z}_{t-N}^{fuse}, \ldots, \bm{z}_{t}^{fuse}),
+\bm{Z}_t^{fuse} = (\bm{z}_{t-N}^{fuse}, \ldots, \bm{z}_{t}^{fuse})
 \label{eq:fuse_sequence}
 \end{equation}
 其中$(\cdot)$表示按时间顺序堆叠得到的序列。
@@ -151,7 +151,7 @@ $\bm{z}_t^{A}$、$\bm{z}_t^{F}$、$\bm{z}_t^{H}$
 将输入序列$\bm{Z}_t^{fuse}$分别送入躯干与上肢两路单向LSTM解码器，得到窗口内的输出序列：
 \begin{equation}
 \bm{O}_t^{T} = \mathrm{LSTM}_{T}(\bm{Z}_t^{fuse}), \quad
-\bm{O}_t^{U} = \mathrm{LSTM}_{U}(\bm{Z}_t^{fuse}; \bm{O}_t^{T}),
+\bm{O}_t^{U} = \mathrm{LSTM}_{U}(\bm{Z}_t^{fuse}; \bm{O}_t^{T})
 \label{eq:lstm_outputs_seq}
 \end{equation}
 其中上肢解码器以躯干分支的窗口内输出$\bm{O}_t^T$作为条件输入，以实现级联解码。
@@ -167,7 +167,7 @@ $\bm{O}_t^{U} = (\bm{o}_{t-N}^{U},\ldots,\bm{o}_{t}^{U})$时，当前帧的潜�
 最后，通过两路独立的两层MLP模块将潜在表征还原为旋转参数：
 \begin{equation}
 \hat{\bm{v}}_t^{T} = \mathrm{MLP}_{T}(\bm{z}_t^{T}), \quad
-\hat{\bm{v}}_t^{U} = \mathrm{MLP}_{U}(\bm{z}_t^{U}),
+\hat{\bm{v}}_t^{U} = \mathrm{MLP}_{U}(\bm{z}_t^{U})
 \label{eq:decode_tu}
 \end{equation}
 并根据式\eqref{eq:body_vector_concat}通过特征维度上的拼接得到当前帧的完整上半身动作预测：
@@ -205,7 +205,7 @@ $\bm{O}_t^{U} = (\bm{o}_{t-N}^{U},\ldots,\bm{o}_{t}^{U})$时，当前帧的潜�
 该编码器由两层前馈网络组成，输入为 Rot6D\cite{rot6d} 表示的6维向量。
 式\eqref{eq:head_pose_framewise_encode}中的 $E_H$ 的具体形式为：
 \begin{align}
-\bm{h}_1 &= \mathrm{ReLU}(W_1 \bm{v}^{H}_t + b_1), \label{eq:head_encoder_h1}\\
+\bm{h}_1 &= \mathrm{ReLU}(W_1 \bm{v}^{H}_t + b_1) \label{eq:head_encoder_h1}\\
 \bm{z}^{H}_t &= W_2 \bm{h}_1 + b_2 \label{eq:head_encoder_out}
 \end{align}
 网络维度设置为：输入 $6$，中间层 $36$，输出 $12$。

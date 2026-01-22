@@ -118,14 +118,14 @@ McNeill\cite{mcneill_1992_hand}将随语手势进一步划分为四种基本类�
 这类方法通过语义分类或韵律规则将语音片段映射为预定义的手势模板（如指示、肯定、节奏性动作），并以有限的动作库组合出手势序列。
 它们可在虚拟代理或机器人中实现基于语音的同步动作。
 然而，手势词典与语法规则的人工设计成本较高，难以覆盖自然语音中的多样变化，导致生成结果缺乏自然性与个体差异。
-
 \subsection{数据驱动阶段}
 
 随着大规模语音与动作配对数据的出现，研究者开始采用统计学习和深度神经网络模型学习语音与手势的映射关系。
 在此阶段，语音通常作为唯一输入模态，模型通过长短期记忆网络（Long Short-Term Memory, LSTM）\cite{lstm}、多层感知机（Multilayer Perceptron, MLP）等结构预测连续手势序列。
 
-为解决语音与手势间的多对多映射问题，研究者引入了向量量化变分自编码器（Vector Quantized Variational AutoEncoder，VQ-VAE）\cite{vqvae, emage,Zhang2024SemanticGesture,wan-etal-2025-finegrained-spatiotemporal}与扩散模型\cite{diffusion, Ao2023GestureDiffuCLIP, listen_denoise_action, zhu2023taming,diffsheg,diffstylegesture,DiffTED2024,diffusion-self-supervised2023}，
+为解决语音与手势间的多对多映射问题，研究者引入了向量量化变分自编码器（Vector Quantized Variational AutoEncoder，VQ-VAE）\cite{vqvae, emage,Zhang2024SemanticGesture,wan-etal-2025-finegrained-spatiotemporal}与扩散模型\cite{diffusion, Ao2023GestureDiffuCLIP, listen_denoise_action, zhu2023taming,diffsheg,diffstylegesture,DiffTED2024,diffusion-self-supervised2023,emoDiffGes}，
 在保持自然性的同时提升了生成多样性与表现力。
+其中，EmoDiffGes\cite{emoDiffGes}进一步将情绪因素纳入扩散式整体手势生成框架，使生成动作在韵律之外也能更好体现情感表达，从而提升了共语手势的表达一致性。
 
 此外，对抗训练（Generative Adversarial Networks，GAN）\cite{gan2014}也被用于提升生成动作的真实感与时序结构一致性。
 例如，Ferstl 等提出通过生成器与判别器对抗学习更符合真实分布的手势，
@@ -139,10 +139,14 @@ McNeill\cite{mcneill_1992_hand}将随语手势进一步划分为四种基本类�
 
 \subsection{多模态扩展阶段}
 
-为进一步提升动作表现力与语音理解能力，部分研究引入视觉模态或语言语义特征。
-例如，CaMN\cite{beatcamn}在语音输入的基础上融合面部捕捉信息以增强表现；
+为进一步提升动作表现力与跨模态对齐能力，部分研究在语音驱动的基础上引入视觉模态信息。
+例如，CaMN\cite{beatcamn}融合面部捕捉信息以增强表现；
 EMAGE\cite{emage}与DiffSHEG\cite{diffsheg}同时生成手势与面部动作；
 DiffTED\cite{DiffTED2024}实现了端到端的视频合成。
+
+除视觉信息外，语言语义与跨模态耦合建模也被用于增强语义一致的手势生成。
+SARGes\cite{SARGes}通过意图链（intent chain）将语句语义映射为更可控的手势意图标签，以提升语义对齐的可靠性；
+HOP\cite{cheng2025hop}则从异构拓扑的角度建模多模态纠缠关系，强化语音/语义与动作之间的结构化对齐，从而改善共语手势的协调性与一致性。
 
 这些方法在生成质量上取得了显著进展，但其多数仍依赖整句级输入与离线生成设定，为后续在线实时部署带来了新的挑战。
 

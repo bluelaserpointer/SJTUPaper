@@ -43,7 +43,7 @@
 在对抗训练阶段，判别器使用相同类型的 SGD 优化器，
 其学习率按权重系数 $w_d$ 缩放为
 \begin{equation}
-\mathrm{lr}_{d} = w_d \cdot \mathrm{lr}_{g},
+\mathrm{lr}_{d} = w_d \cdot \mathrm{lr}_{g}
 \end{equation}
 本文中设定 $w_d = 0.2$。
 
@@ -426,7 +426,7 @@ $\mathcal{N}(\bm{\mu}_r, \bm{\Sigma}_r)$ 与 $\mathcal{N}(\bm{\mu}_g, \bm{\Sigma
 \begin{equation}
 \mathrm{FGD} = 
 \|\bm{\mu}_r - \bm{\mu}_g\|_2^2 +
-\mathrm{Tr}(\bm{\Sigma}_r + \bm{\Sigma}_g - 2(\bm{\Sigma}_r \bm{\Sigma}_g)^{1/2}).
+\mathrm{Tr}(\bm{\Sigma}_r + \bm{\Sigma}_g - 2(\bm{\Sigma}_r \bm{\Sigma}_g)^{1/2})
 \end{equation}
 
 其中，$\mathrm{Tr}(\cdot)$为矩阵迹运算。
@@ -441,7 +441,7 @@ $\mathcal{N}(\bm{\mu}_r, \bm{\Sigma}_r)$ 与 $\mathcal{N}(\bm{\mu}_g, \bm{\Sigma
 \begin{equation}
 \mathcal{L}_{AE} = 
 \lambda_r \|\hat{\bm{g}} - \bm{g}\|_2^2 +
-\lambda_v \|\hat{\bm{g}}' - \bm{g}'\|_2^2,
+\lambda_v \|\hat{\bm{g}}' - \bm{g}'\|_2^2
 \label{eq:fgd_ae_loss}
 \end{equation}
 其中$\lambda_r = 1$, $\lambda_v = 0.1$，$\bm{g}'$为速度序列。
@@ -453,7 +453,7 @@ $\mathcal{N}(\bm{\mu}_r, \bm{\Sigma}_r)$ 与 $\mathcal{N}(\bm{\mu}_g, \bm{\Sigma
 基础学习率设为 $\mathrm{lr}_{base}=1.2\times 10^{-4}$，
 并按批大小线性缩放为
 \begin{equation}
-\mathrm{lr}=\mathrm{lr}_{base}\cdot \frac{B}{128}.
+\mathrm{lr}=\mathrm{lr}_{base}\cdot \frac{B}{128}
 \end{equation}
 训练过程中仅使用位置与速度重构损失（式（\ref{eq:fgd_ae_loss}）），不包含加速度或对抗项。
 自编码器共训练 400 个 epoch。
@@ -477,7 +477,7 @@ $\mathcal{N}(\bm{\mu}_r, \bm{\Sigma}_r)$ 与 $\mathcal{N}(\bm{\mu}_g, \bm{\Sigma
 A_{ij} =
 \begin{cases}
 1, & \text{若关节}i\text{与}j\text{在骨架拓扑中直接相连，或}i=j; \\
-0, & \text{否则}.
+0, & \text{否则}
 \end{cases}
 \end{equation}
 此外，设$W^{(l)} \in \mathbb{R}^{d_{l+1}\times d_l}$与$b^{(l)} \in \mathbb{R}^{d_{l+1}}$
@@ -487,7 +487,7 @@ A_{ij} =
 \mathbf{h}_i^{(l+1)} =
 \sigma\left(
 \sum_{j=1}^{J} A_{ij} W^{(l)} \mathbf{h}_j^{(l)} + b^{(l)}
-\right),
+\right)
 \end{equation}
 这种基于局部邻域的权重共享机制有助于保持人体运动的空间结构一致性，
 并在特征提取过程中缓解由旋转表示差异带来的数值尺度放大问题。
@@ -532,7 +532,7 @@ SRGR通过对所有时间帧与关节进行统计，
 \mathbb{I}
 \left(
 \|\mathbf{r}_{t,j} - \hat{\mathbf{r}}_{t,j}\| < \delta
-\right),
+\right)
 \end{equation}
 其中 $\mathbb{I}(\cdot)$ 为指示函数。
 
@@ -572,7 +572,7 @@ $\mathcal{B}_g = \{ t^g_m \}$，
 对于每一个语音节拍事件$t^s_k$，
 计算其与所有手势关键动作事件之间的最小时间偏差：
 \begin{equation}
-\Delta t_k = \min_{m} | t^s_k - t^g_m | .
+\Delta t_k = \min_{m} | t^s_k - t^g_m |
 \end{equation}
 随后采用高斯核函数将时间偏差映射为相似度分数，
 从而得到单个语音节拍的对齐得分。
@@ -583,7 +583,7 @@ $\mathcal{B}_g = \{ t^g_m \}$，
 \sum_{k}
 \exp\left(
 -\frac{(\Delta t_k)^2}{2\sigma^2}
-\right),
+\right)
 \end{equation}
 其中$\sigma$为时间尺度参数，本文中取$\sigma=0.3$，用于控制对齐容忍范围。
 
@@ -623,7 +623,7 @@ L1多样性通过计算不同生成样本之间在所有时间帧与关节上的
 \hat{\mathbf{r}}^{(i)}_{t,j}
 -
 \hat{\mathbf{r}}^{(k)}_{t,j}
-\right\|_1 .
+\right\|_1
 \end{equation}
 
 较高的L1多样性表明模型生成具有较强的多样性，
@@ -831,7 +831,7 @@ FaceCapGes 作为端到端实时手势生成框架的核心计算模块，其性
 在本地推理设置下，若将一次响应链路定义为单帧采集完成后立即进入后续计算，
 则计算链路延迟可近似表示为：
 \begin{equation}
-t_{\mathrm{e2e}} \approx t_{\mathrm{ARKit}} + t_{\mathrm{feat}} + t_{\mathrm{infer}} + t_{\mathrm{return}},
+t_{\mathrm{e2e}} \approx t_{\mathrm{ARKit}} + t_{\mathrm{feat}} + t_{\mathrm{infer}} + t_{\mathrm{return}}
 \end{equation}
 其中 $t_{\mathrm{ARKit}}\approx16.7\,\mathrm{ms}$，
 $t_{\mathrm{feat}}<1\,\mathrm{ms}$，
@@ -849,7 +849,7 @@ $t_{\mathrm{return}}<0.1\,\mathrm{ms}$。
 \begin{equation}
 t_{\mathrm{e2e}}^{\mathrm{remote}}
 \approx
-t_{\mathrm{ARKit}} + t_{\mathrm{feat}} + t_{\mathrm{net}} + t_{\mathrm{infer}} + t_{\mathrm{return}},
+t_{\mathrm{ARKit}} + t_{\mathrm{feat}} + t_{\mathrm{net}} + t_{\mathrm{infer}} + t_{\mathrm{return}}
 \end{equation}
 其中 $t_{\mathrm{net}}$ 表示网络传输与通信开销，
 其大小由网络条件与系统实现决定，本文不在此展开测量。
