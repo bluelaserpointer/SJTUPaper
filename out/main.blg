@@ -1,15 +1,15 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'out\main.blg'
-[129] biber-MSWIN64:342> INFO - === 
-[172] Biber.pm:421> INFO - Reading 'out\main.bcf'
-[369] Biber.pm:1002> INFO - Found 45 citekeys in bib section 0
-[386] Biber.pm:4487> INFO - Processing section 0
-[398] Biber.pm:4678> INFO - Looking for bibtex file 'refs.bib' for section 0
-[466] bibtex.pm:1713> INFO - LaTeX decoding ...
-[569] bibtex.pm:1519> INFO - Found BibTeX data source 'refs.bib'
-[1594] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1594] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1594] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[1595] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[1650] bbl.pm:676> INFO - Writing 'out\main.bbl' with encoding 'UTF-8'
-[1880] bbl.pm:779> INFO - Output to out\main.bbl
+[260] biber-MSWIN64:342> INFO - === 
+[368] Biber.pm:421> INFO - Reading 'out\main.bcf'
+[570] Biber.pm:1002> INFO - Found 45 citekeys in bib section 0
+[587] Biber.pm:4487> INFO - Processing section 0
+[611] Biber.pm:4678> INFO - Looking for bibtex file 'refs.bib' for section 0
+[691] bibtex.pm:1713> INFO - LaTeX decoding ...
+[792] bibtex.pm:1519> INFO - Found BibTeX data source 'refs.bib'
+[1848] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1848] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1848] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[1848] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[1943] bbl.pm:676> INFO - Writing 'out\main.bbl' with encoding 'UTF-8'
+[2168] bbl.pm:779> INFO - Output to out\main.bbl

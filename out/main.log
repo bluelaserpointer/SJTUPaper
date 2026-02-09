@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  22 JAN 2026 22:29
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  6 FEB 2026 01:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2595,42 +2595,43 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 (contents/abstract.tex [1
 
 
+] [2] [3
+
+
 ]
-Underfull \hbox (badness 1412) in paragraph at lines 38--39
+Underfull \hbox (badness 1412) in paragraph at lines 34--35
 []\TU/TeXGyreTermesX(0)/m/n/12.045 (3) We propose a sliding-window closed-loop 
 autoregressive training strategy for
  []
 
-[2
+) [4] (e:\SJTU\SJTUPaper\out\main.toc [5
 
 
-]) [3] (e:\SJTU\SJTUPaper\out\main.toc [4
-
-
-] [5])
+] [6])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [6]
+ [7]
 (e:\SJTU\SJTUPaper\out\main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [7
+ [8
 
 
 ] (e:\SJTU\SJTUPaper\out\main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
- [8
+ [9
 
 
 ]
-(contents/intro.tex
+[10
+
+] (contents/intro.tex
 第 1 章
 [1
-
 
 ] [2] [3] [4] [5]
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
@@ -2729,31 +2730,35 @@ File: figures/UserStudyImage.png Graphic file (type bmp)
  [39]
 File: figures/UserStudy_All_cn.png Graphic file (type bmp)
 <figures/UserStudy_All_cn.png>
+ [40]
 File: figures/UserStudy_LatinSquare_cn.png Graphic file (type bmp)
 <figures/UserStudy_LatinSquare_cn.png>
- [40] [41]
+ [41]
 File: figures/GeneratedPoseOverview.png Graphic file (type bmp)
 <figures/GeneratedPoseOverview.png>
  [42]
 File: figures/Fig_HeadHandAlignment.png Graphic file (type bmp)
 <figures/Fig_HeadHandAlignment.png>
- [43] [44] [45] [46] [47] [48] [49]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[50] [51] [52] [53] [54]) (contents/conclusions.tex [55]
+ [43] [44] [45] [46] [47] [48] [49] [50] [51]
+[52] [53] [54] [55]) (contents/conclusions.tex [56]
 第 6 章
-[56
+[57
 
-] [57]) [58]
+] [58]) [59]
 Underfull \hbox (badness 10000) in paragraph at lines 65--65
 []\TU/TeXGyreTermesX(0)/m/n/12.045 NYISZTOR K. Introduction to Augmented Realit
 y with ARKit[]EB/OL[].
  []
 
-[59
+[60
 
-] [60] [61] [62] (contents/app_external_files.tex [63]
+] [61] [62]
+Underfull \hbox (badness 8019) in paragraph at lines 65--65
+[]\TU/TeXGyreTermesX(0)/m/n/12.045 BOTTOU L. Large-Scale Machine Learning with 
+Stochastic Gradient De-
+ []
+
+[63] (contents/app_external_files.tex [64]
 附录 A
 
 Overfull \hbox (5.12325pt too wide) in paragraph at lines 13--14
@@ -2762,17 +2767,17 @@ Overfull \hbox (5.12325pt too wide) in paragraph at lines 13--14
 ][][][] []
  []
 
-[64
+[65
 
 ]
 附录 B
-) [65
+) [66
 
 ] (contents/achievements.tex)
 \tf@thm=\write9
 \openout9 = `main.thm'.
 
- [66
+ [67
 
 
 
@@ -2782,18 +2787,18 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B23926BC13013E148898865FAFBC7F2F;13698.
+(rerunfilecheck)             Checksum: DCF159E2B44A70A8CFD52C687F1EFDA8;13658.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52055 strings out of 402986
- 1101203 string characters out of 5453884
- 2058141 words of memory out of 5000000
- 80017 multiletter control sequences out of 15000+600000
+ 52076 strings out of 402986
+ 1102586 string characters out of 5453884
+ 2057301 words of memory out of 5000000
+ 80038 multiletter control sequences out of 15000+600000
  706656 words of font info for 255 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,16n,124p,1183b,7490s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on e:\SJTU\SJTUPaper\out\main.pdf (78 pages).
+Output written on e:\SJTU\SJTUPaper\out\main.pdf (81 pages).

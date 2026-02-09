@@ -19,7 +19,7 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
-    \entry{mediapipefacemesh}{article}{}{}
+    \entry{mediapipefacemesh}{inproceedings}{}{}
       \name{author}{4}{}{%
         {{hash=37772eda308fc43ed0997d30b5d826f6}{%
            family={Kartynnik},
@@ -67,6 +67,12 @@
       \list{language}{1}{%
         {english}%
       }
+      \list{location}{1}{%
+        {Long Beach, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
       \strng{namehash}{f720016bf9599fbe5103e12414d52e30}
       \strng{fullhash}{20862ec123fa6e1df0240c9ff7ec6c53}
       \strng{fullhashraw}{20862ec123fa6e1df0240c9ff7ec6c53}
@@ -83,12 +89,13 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv:1907.06724}
+      \field{booktitle}{Third Workshop on Computer Vision for Augmented and Virtual Reality (CV4AR/VR)}
       \field{langid}{english}
       \field{languageid}{english}
       \field{lansortorder}{4}
-      \field{title}{Real-time facial surface geometry from monocular video on mobile gpus}
-      \field{usera}{J}
+      \field{series}{In conjunction with CVPR 2019}
+      \field{title}{Real-time Facial Surface Geometry from Monocular Video on Mobile GPUs}
+      \field{usera}{C}
       \field{userd}{english}
       \field{userf}{english}
       \field{year}{2019}
@@ -494,9 +501,6 @@
       \list{language}{1}{%
         {english}%
       }
-      \list{location}{1}{%
-        {New York, NY}%
-      }
       \list{publisher}{1}{%
         {ACM}%
       }
@@ -559,9 +563,6 @@
       }
       \list{language}{1}{%
         {english}%
-      }
-      \list{location}{1}{%
-        {New York, NY}%
       }
       \list{publisher}{1}{%
         {ACM}%
@@ -749,9 +750,6 @@
       \list{language}{1}{%
         {english}%
       }
-      \list{location}{1}{%
-        {Red Hook, NY, USA}%
-      }
       \list{publisher}{1}{%
         {Curran Associates Inc.}%
       }
@@ -894,9 +892,6 @@
       }
       \list{language}{1}{%
         {english}%
-      }
-      \list{location}{1}{%
-        {Piscataway, NJ}%
       }
       \list{publisher}{1}{%
         {IEEE}%
@@ -1084,9 +1079,6 @@
       \list{language}{1}{%
         {chinese}%
       }
-      \list{location}{1}{%
-        {济南，中国}%
-      }
       \list{publisher}{1}{%
         {中国中文信息学会计算语言学专业委员会}%
       }
@@ -1159,9 +1151,6 @@
       }
       \list{language}{1}{%
         {english}%
-      }
-      \list{location}{1}{%
-        {Red Hook, NY, USA}%
       }
       \list{publisher}{1}{%
         {Curran Associates Inc.}%
@@ -1423,9 +1412,6 @@
       \list{language}{1}{%
         {english}%
       }
-      \list{location}{1}{%
-        {Piscataway, NJ}%
-      }
       \list{publisher}{1}{%
         {IEEE}%
       }
@@ -1526,9 +1512,6 @@
       }
       \list{language}{1}{%
         {english}%
-      }
-      \list{location}{1}{%
-        {Piscataway, NJ}%
       }
       \list{publisher}{1}{%
         {IEEE}%
@@ -1658,9 +1641,6 @@
       \list{language}{1}{%
         {english}%
       }
-      \list{location}{1}{%
-        {Darmstadt, Germany}%
-      }
       \list{publisher}{1}{%
         {International Joint Conferences on Artificial Intelligence Organization}%
       }
@@ -1759,9 +1739,6 @@
       \list{language}{1}{%
         {english}%
       }
-      \list{location}{1}{%
-        {Piscataway, NJ}%
-      }
       \list{publisher}{1}{%
         {IEEE}%
       }
@@ -1843,9 +1820,6 @@
       }
       \list{language}{1}{%
         {english}%
-      }
-      \list{location}{1}{%
-        {New York, NY, USA}%
       }
       \list{publisher}{1}{%
         {Association for Computing Machinery}%
@@ -2257,9 +2231,6 @@
       \list{language}{1}{%
         {english}%
       }
-      \list{location}{1}{%
-        {Berlin, Heidelberg}%
-      }
       \list{publisher}{1}{%
         {Springer-Verlag}%
       }
@@ -2373,9 +2344,6 @@
       \list{language}{1}{%
         {english}%
       }
-      \list{location}{1}{%
-        {New York, NY, USA}%
-      }
       \list{publisher}{1}{%
         {Association for Computing Machinery}%
       }
@@ -2411,7 +2379,7 @@
       \range{pages}{9}
       \keyw{SARGes}
     \endentry
-    \entry{cheng2025hop}{article}{}{}
+    \entry{cheng2025hop}{inproceedings}{}{}
       \name{author}{5}{}{%
         {{hash=359884beb661e57a035aa4f349c1d4a5}{%
            family={Cheng},
@@ -2485,16 +2453,18 @@
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint arXiv:2503.01175}
+      \field{booktitle}{2025 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}
       \field{langid}{english}
       \field{languageid}{english}
       \field{lansortorder}{4}
       \field{title}{HOP: Heterogeneous Topology-based Multimodal Entanglement for Co-Speech Gesture Generation}
-      \field{usera}{J}
+      \field{usera}{C}
       \field{userd}{english}
       \field{userf}{english}
       \field{year}{2025}
       \field{dateera}{ce}
+      \field{pages}{906\bibrangedash 916}
+      \range{pages}{11}
       \keyw{cheng2025hop}
     \endentry
     \entry{towards_realtime_co_speech_gesture_generation}{inproceedings}{}{}
@@ -2524,9 +2494,6 @@
       }
       \list{language}{1}{%
         {english}%
-      }
-      \list{location}{1}{%
-        {New York, NY, USA}%
       }
       \list{publisher}{1}{%
         {Association for Computing Machinery}%
@@ -2598,9 +2565,6 @@
       }
       \list{language}{1}{%
         {english}%
-      }
-      \list{location}{1}{%
-        {New York, NY, USA}%
       }
       \list{publisher}{1}{%
         {Association for Computing Machinery}%
@@ -2837,9 +2801,6 @@
       }
       \list{language}{1}{%
         {english}%
-      }
-      \list{location}{1}{%
-        {Piscataway, NJ}%
       }
       \list{publisher}{1}{%
         {IEEE}%
@@ -4002,9 +3963,6 @@
       \list{language}{1}{%
         {english}%
       }
-      \list{location}{1}{%
-        {Heidelberg}%
-      }
       \list{publisher}{1}{%
         {Physica-Verlag HD}%
       }
@@ -4112,9 +4070,6 @@
       }
       \list{language}{1}{%
         {english}%
-      }
-      \list{location}{1}{%
-        {New York, NY, USA}%
       }
       \list{publisher}{1}{%
         {Association for Computing Machinery}%
@@ -4227,6 +4182,9 @@
       \list{language}{1}{%
         {english}%
       }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
       \strng{namehash}{49928457af9589b35cf4c7af52f4b90e}
       \strng{fullhash}{6153362954b8a277fd4bd0e38a7a2eac}
       \strng{fullhashraw}{6153362954b8a277fd4bd0e38a7a2eac}
@@ -4243,14 +4201,18 @@
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv:2009.02119}
+      \field{issn}{0730-0301}
+      \field{journaltitle}{ACM Trans. Graph.}
       \field{langid}{english}
       \field{languageid}{english}
       \field{lansortorder}{4}
-      \field{title}{Speech gesture generation from the TRIMODAL context of text, audio, and speaker identity}
+      \field{month}{11}
+      \field{number}{6}
+      \field{title}{Speech gesture generation from the trimodal context of text, audio, and speaker identity}
       \field{usera}{J}
       \field{userd}{english}
       \field{userf}{english}
+      \field{volume}{39}
       \field{year}{2020}
       \field{dateera}{ce}
       \keyw{speech_gesture_generation}
@@ -4302,9 +4264,6 @@
       }
       \list{language}{1}{%
         {english}%
-      }
-      \list{location}{1}{%
-        {Piscataway, NJ}%
       }
       \list{publisher}{1}{%
         {IEEE}%
@@ -4398,9 +4357,6 @@
       }
       \list{language}{1}{%
         {english}%
-      }
-      \list{location}{1}{%
-        {Red Hook, NY, USA}%
       }
       \list{publisher}{1}{%
         {Curran Associates Inc.}%
