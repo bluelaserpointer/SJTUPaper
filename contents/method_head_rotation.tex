@@ -18,10 +18,12 @@
 目标是在实时条件下，根据用户当前时刻的语音、面部表情与头部姿态信息，预测其对应的上半身骨骼姿态。模型需能够逐帧生成与语音节奏、面部动态和头部转动方向协调的自然手势动作，而不依赖未来的输入帧或整句语音信息。
 
 形式上，可以将该任务定义为一个多模态时序映射函数：
+
 \begin{equation}
 \hat{\bm{v}}_{t}^{B} = f_\theta\!\big(\bm{v}_{t-N:t}^{A},\, \bm{v}_{t-N:t}^{F},\, \bm{v}_{t-N:t}^{H}\big)
 \label{eq:task_mapping_f}
 \end{equation}
+
 其中$f_\theta$表示由参数$\theta$控制的生成模型，$N$为历史窗口长度，本文实验中取$N=16$。
 各模态输入定义如下：
 $\bm{v}_{t}^{A}$表示语音模态在时刻$t$的特征向量，由麦克风信号经音频特征提取得到，采样率为16KHZ，与CaMN\cite{beatcamn}的提取方式一致；
@@ -84,19 +86,23 @@ FaceCapGes在继承其层次思想的同时，对输入模式、训练方式与�
 面部编码器 $E_F$ 采用较浅的 $8$ 层 TCN 结构以捕捉面部表情的短时动态变化，并在第 $8$ 层将语音嵌入与面部特征进行通道维拼接融合，以增强面部表情变化与语音节奏之间的对应关系；编码器末端同样使用两层 MLP 进行特征映射与输出压缩，最终得到面部潜在表示 $\bm{z}^{F}_t \in \mathbb{R}^{32}$。
 
 语音编码器 $E_A$ 与面部编码器 $E_F$ 的输出定义为：
+
 \begin{equation}
 \bm{z}^{A}_t = E_A(\bm{v}_{t-N:t}^{A}), \quad
 \bm{z}^{F}_t = E_F(\bm{v}_{t-N:t}^{F}; \bm{z}^{A}_t)
 \end{equation}
+
 以上两个编码器负责提取低层次语音节奏与表情动态信息，为后续模态融合提供稳定上下文表征。
 
 此外，系统在此基础上引入头部姿态模态$\bm{v}^{H}_t$，用于补充空间方向与节奏信号。
 由于本文实现的头部姿态编码器$E_H$采用逐帧前馈映射，
 其在因果窗口$t\!-\!N:t$内对每一帧独立提取潜在表征：
+
 \begin{equation}
 \bm{z}^{H}_t = E_H(\bm{v}^{H}_t)
 \label{eq:head_pose_framewise_encode}
 \end{equation}
+
 其中，$\bm{z}^{H}_t \in \mathbb R^{12}$。头部姿态编码器$E_H$的结构将在第~\ref{sec:head_encoder}~节详细说明。
 
 \subsection{身体姿态的解码}
@@ -108,22 +114,24 @@ FaceCapGes在继承其层次思想的同时，对输入模式、训练方式与�
 躯干部分包含脊椎的三个主要控制关节，用于确定身体的姿态基准与运动节奏；
 上肢部分包含双臂及手部关节，负责生成与语音节奏及情绪表达相呼应的细节动作。
 最终上半身姿态表示为两者的组合：
+
 \begin{equation}
 \bm{v}_t^{B} = [\bm{v}_t^{T}; \bm{v}_t^{U}]
 \label{eq:body_vector_concat}
 \end{equation}
+
 其中$[\cdot;\cdot]$表示在特征维度上的拼接。
 
 该分层设计继承了CaMN的层次预测思路：
 模型首先生成相对稳定的躯干姿态以确定整体方向，
 再以此为条件预测上肢动作，从而在实时生成中保持整体协调性与自然度。
 
-\paragraph{融合输入的序列化表示}
 在时刻$t$，来自语音、面部与头部编码器的特征
 $\bm{z}_t^{A}$、$\bm{z}_t^{F}$、$\bm{z}_t^{H}$
 与历史动作上下文共同构成LSTM解码器的输入。
 为保持严格因果性，我们显式提供最近$N$帧的历史上半身姿态$\bm{v}_{t-N:t-1}^{B}$作为条件信息，并对当前时刻的动作输入使用占位符进行对齐。
 具体而言，定义历史动作对齐序列$\bm{s}_\tau$为：
+
 \begin{equation}
 \bm{s}_\tau =
 \begin{cases}
@@ -133,44 +141,54 @@ $\bm{z}_t^{A}$、$\bm{z}_t^{F}$、$\bm{z}_t^{H}$
 \quad \tau \in \{t-N,\ldots,t\}
 \label{eq:history_padding}
 \end{equation}
+
 则窗口内每一帧的融合输入向量可写为：
+
 \begin{equation}
 \bm{z}_\tau^{fuse} = [\bm{z}_\tau^{A}; \bm{z}_\tau^{F}; \bm{z}_\tau^{H}; \bm{s}_\tau],
 \quad \tau \in \{t-N,\ldots,t\}
 \label{eq:fuse_per_frame}
 \end{equation}
+
 其中$[\cdot;\cdot]$表示在特征维度上的拼接。由此可得到长度为$N{+}1$的因果上下文输入序列：
+
 \begin{equation}
 \bm{Z}_t^{fuse} = (\bm{z}_{t-N}^{fuse}, \ldots, \bm{z}_{t}^{fuse})
 \label{eq:fuse_sequence}
 \end{equation}
+
 其中$(\cdot)$表示按时间顺序堆叠得到的序列。
 
+随后，将输入序列$\bm{Z}_t^{fuse}$分别送入躯干与上肢两路单向LSTM解码器，得到窗口内的输出序列：
 
-\paragraph{躯干与上肢的级联解码}
-将输入序列$\bm{Z}_t^{fuse}$分别送入躯干与上肢两路单向LSTM解码器，得到窗口内的输出序列：
 \begin{equation}
 \bm{O}_t^{T} = \mathrm{LSTM}_{T}(\bm{Z}_t^{fuse}), \quad
 \bm{O}_t^{U} = \mathrm{LSTM}_{U}(\bm{Z}_t^{fuse}; \bm{O}_t^{T})
 \label{eq:lstm_outputs_seq}
 \end{equation}
+
 其中上肢解码器以躯干分支的窗口内输出$\bm{O}_t^T$作为条件输入，以实现级联解码。
 
 由于本文在时刻$t$的目标是预测当前帧动作，我们仅取序列末端输出作为当前帧的潜在表征。
 当定义$\bm{O}_t^{T} = (\bm{o}_{t-N}^{T},\ldots,\bm{o}_{t}^{T})$，
 $\bm{O}_t^{U} = (\bm{o}_{t-N}^{U},\ldots,\bm{o}_{t}^{U})$时，当前帧的潜在表征表示为
+
 \begin{equation}
 \bm{z}_t^{T} = \bm{o}_t^{T}, \quad
 \bm{z}_t^{U} = \bm{o}_t^{U}
 \label{eq:last_step_repr}
 \end{equation}
+
 最后，通过两路独立的两层MLP模块将潜在表征还原为旋转参数：
+
 \begin{equation}
 \hat{\bm{v}}_t^{T} = \mathrm{MLP}_{T}(\bm{z}_t^{T}), \quad
 \hat{\bm{v}}_t^{U} = \mathrm{MLP}_{U}(\bm{z}_t^{U})
 \label{eq:decode_tu}
 \end{equation}
+
 并根据式\eqref{eq:body_vector_concat}通过特征维度上的拼接得到当前帧的完整上半身动作预测：
+
 \begin{equation}
 \hat{\bm{v}}_t^{B} = [\hat{\bm{v}}_t^{T}; \hat{\bm{v}}_t^{U}]
 \label{eq:decode_body}
@@ -185,8 +203,11 @@ $\bm{O}_t^{U} = (\bm{o}_{t-N}^{U},\ldots,\bm{o}_{t}^{U})$时，当前帧的潜�
 
 在级联架构设计中，我们考察了头部姿态特征与其他模态的多种组合方式。%
 具体而言，分别尝试了：%
-(1) 将头部姿态特征在编码阶段与语音或面部特征进行早期融合；%
-(2) 在解码阶段以前两者的嵌入结果为条件，预测头部姿态特征作为辅助信号。%
+
+（1）将头部姿态特征在编码阶段与语音或面部特征进行早期融合。%
+
+（2）在解码阶段以前两者的嵌入结果为条件，预测头部姿态特征作为辅助信号。%
+
 实验结果显示，这两种交互方式均未带来显著性能提升，%
 观察到了训练收敛速度的下降。%
 
@@ -204,10 +225,12 @@ $\bm{O}_t^{U} = (\bm{o}_{t-N}^{U},\ldots,\bm{o}_{t}^{U})$时，当前帧的潜�
 图~\ref{fig_headencoder}所示为头部姿态编码器结构。
 该编码器由两层前馈网络组成，输入为 Rot6D\cite{rot6d} 表示的6维向量。
 式\eqref{eq:head_pose_framewise_encode}中的 $E_H$ 的具体形式为：
+
 \begin{align}
 \bm{h}_1 &= \mathrm{ReLU}(W_1 \bm{v}^{H}_t + b_1) \label{eq:head_encoder_h1}\\
 \bm{z}^{H}_t &= W_2 \bm{h}_1 + b_2 \label{eq:head_encoder_out}
 \end{align}
+
 网络维度设置为：输入 $6$，中间层 $36$，输出 $12$。
 在特征层面，其输出将与语音、面部嵌入在通道维拼接后输入解码器，
 时间依赖由后续单向时序解码器在因果窗口内进行建模。

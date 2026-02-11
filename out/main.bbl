@@ -3818,59 +3818,6 @@
       \field{dateera}{ce}
       \keyw{librosa}
     \endentry
-    \entry{pyaudio}{online}{}{}
-      \name{author}{1}{}{%
-        {{hash=4856d28044d573fee5c70d8f0f17aaa9}{%
-           family={Team},
-           familyi={T\bibinitperiod},
-           given={PortAudio\bibnamedelima Development},
-           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-      }
-      \name{namea}{1}{}{%
-        {{hash=4856d28044d573fee5c70d8f0f17aaa9}{%
-           family={Team},
-           familyi={T\bibinitperiod},
-           given={PortAudio\bibnamedelima Development},
-           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \strng{namehash}{4856d28044d573fee5c70d8f0f17aaa9}
-      \strng{fullhash}{4856d28044d573fee5c70d8f0f17aaa9}
-      \strng{fullhashraw}{4856d28044d573fee5c70d8f0f17aaa9}
-      \strng{bibnamehash}{4856d28044d573fee5c70d8f0f17aaa9}
-      \strng{authorbibnamehash}{4856d28044d573fee5c70d8f0f17aaa9}
-      \strng{authornamehash}{4856d28044d573fee5c70d8f0f17aaa9}
-      \strng{authorfullhash}{4856d28044d573fee5c70d8f0f17aaa9}
-      \strng{authorfullhashraw}{4856d28044d573fee5c70d8f0f17aaa9}
-      \strng{nameabibnamehash}{4856d28044d573fee5c70d8f0f17aaa9}
-      \strng{nameanamehash}{4856d28044d573fee5c70d8f0f17aaa9}
-      \strng{nameafullhash}{4856d28044d573fee5c70d8f0f17aaa9}
-      \strng{nameafullhashraw}{4856d28044d573fee5c70d8f0f17aaa9}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{PyAudio: Python bindings for PortAudio}
-      \field{urlday}{15}
-      \field{urlmonth}{1}
-      \field{urlyear}{2026}
-      \field{usera}{EB}
-      \field{userd}{english}
-      \field{userf}{english}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://people.csail.mit.edu/hubert/pyaudio/
-      \endverb
-      \verb{url}
-      \verb https://people.csail.mit.edu/hubert/pyaudio/
-      \endverb
-      \keyw{pyaudio}
-    \endentry
     \entry{unity}{online}{}{}
       \list{institution}{1}{%
         {Unity Technologies}%
@@ -4392,6 +4339,59 @@
       \field{pages}{6629\bibrangedash 6640}
       \range{pages}{12}
       \keyw{fid}
+    \endentry
+    \entry{pyaudio}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=4856d28044d573fee5c70d8f0f17aaa9}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={PortAudio\bibnamedelima Development},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=4856d28044d573fee5c70d8f0f17aaa9}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={PortAudio\bibnamedelima Development},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{4856d28044d573fee5c70d8f0f17aaa9}
+      \strng{fullhash}{4856d28044d573fee5c70d8f0f17aaa9}
+      \strng{fullhashraw}{4856d28044d573fee5c70d8f0f17aaa9}
+      \strng{bibnamehash}{4856d28044d573fee5c70d8f0f17aaa9}
+      \strng{authorbibnamehash}{4856d28044d573fee5c70d8f0f17aaa9}
+      \strng{authornamehash}{4856d28044d573fee5c70d8f0f17aaa9}
+      \strng{authorfullhash}{4856d28044d573fee5c70d8f0f17aaa9}
+      \strng{authorfullhashraw}{4856d28044d573fee5c70d8f0f17aaa9}
+      \strng{nameabibnamehash}{4856d28044d573fee5c70d8f0f17aaa9}
+      \strng{nameanamehash}{4856d28044d573fee5c70d8f0f17aaa9}
+      \strng{nameafullhash}{4856d28044d573fee5c70d8f0f17aaa9}
+      \strng{nameafullhashraw}{4856d28044d573fee5c70d8f0f17aaa9}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{PyAudio: Python bindings for PortAudio}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{usera}{EB}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://people.csail.mit.edu/hubert/pyaudio/
+      \endverb
+      \verb{url}
+      \verb https://people.csail.mit.edu/hubert/pyaudio/
+      \endverb
+      \keyw{pyaudio}
     \endentry
   \enddatalist
 \endrefsection

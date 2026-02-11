@@ -35,16 +35,20 @@
 优化器采用随机梯度下降（Stochastic Gradient Descent，SGD）~\cite{SGDBottou2010LargeScaleML}。
 基础学习率设置为 $\mathrm{lr}_{base}=2.5\times10^{-4}$，
 并根据批大小$B$按线性规则缩放为
+
 \begin{equation}
 \mathrm{lr}_{g} = \mathrm{lr}_{base}\cdot \frac{B}{128}
 \end{equation}
+
 其中 $B$为批大小，$\mathrm{lr}_{g}$ 为生成器（手势生成网络）的实际学习率。
 
 在对抗训练阶段，判别器使用相同类型的 SGD 优化器，
 其学习率按权重系数 $w_d$ 缩放为
+
 \begin{equation}
 \mathrm{lr}_{d} = w_d \cdot \mathrm{lr}_{g}
 \end{equation}
+
 本文中设定 $w_d = 0.2$。
 
 为防止早期训练阶段的不稳定，
@@ -175,13 +179,11 @@ VR 用户则在沉浸式环境中逐一观看三段动画。
 研究人员向参与者说明了三项主观评价标准的含义，
 确保所有被试对评分维度理解一致：
 
-\begin{enumerate}
-    \item 真实性：整体动作是否自然流畅，是否存在明显的违和感，如朝向异常或突然抖动；
+（1）真实性：整体动作是否自然流畅，是否存在明显的违和感，如朝向异常或突然抖动。
 
-    \item 同步性：手势动作与语调、语音节奏是否协调一致；
+（2）同步性：手势动作与语调、语音节奏是否协调一致。
 
-    \item 多样性：手势是否丰富多变，避免长时间静止或重复单一动作。
-\end{enumerate}
+（3）多样性：手势是否丰富多变，避免长时间静止或重复单一动作。
 
 在实验过程中，
 桌面版通过线上远程环境执行，
@@ -425,6 +427,7 @@ $\mathcal{N}(\bm{\mu}_r, \bm{\Sigma}_r)$ 与 $\mathcal{N}(\bm{\mu}_g, \bm{\Sigma
 其中，$\mathcal{N}(\cdot)$为高斯分布，$\bm{\mu}$与$\bm{\Sigma}$分别为嵌入特征的均值向量与协方差矩阵。
 
 此时，FGD定义为：
+
 \begin{equation}
 \mathrm{FGD} = 
 \|\bm{\mu}_r - \bm{\mu}_g\|_2^2 +
@@ -440,12 +443,14 @@ $\mathcal{N}(\bm{\mu}_r, \bm{\Sigma}_r)$ 与 $\mathcal{N}(\bm{\mu}_g, \bm{\Sigma
 本文在每位说话人的训练集上分别训练一组评估用自编码器，以避免跨说话人分布差异对指标的干扰。
 自编码器输入为以Rot6D表示的上半身骨架序列，
 训练目标为最小化位置与速度的重构误差：
+
 \begin{equation}
 \mathcal{L}_{AE} = 
 \lambda_r \|\hat{\bm{g}} - \bm{g}\|_2^2 +
 \lambda_v \|\hat{\bm{g}}' - \bm{g}'\|_2^2
 \label{eq:fgd_ae_loss}
 \end{equation}
+
 其中$\lambda_r = 1$, $\lambda_v = 0.1$，$\bm{g}'$为速度序列。
 
 训练配置如下：
@@ -454,9 +459,11 @@ $\mathcal{N}(\bm{\mu}_r, \bm{\Sigma}_r)$ 与 $\mathcal{N}(\bm{\mu}_g, \bm{\Sigma
 优化器采用 SGD\cite{SGDBottou2010LargeScaleML}，
 基础学习率设为 $\mathrm{lr}_{base}=1.2\times 10^{-4}$，
 并按批大小线性缩放为
+
 \begin{equation}
 \mathrm{lr}=\mathrm{lr}_{base}\cdot \frac{B}{128}
 \end{equation}
+
 训练过程中仅使用位置与速度重构损失（式（\ref{eq:fgd_ae_loss}）），不包含加速度或对抗项。
 自编码器共训练 400 个 epoch。
 
@@ -475,6 +482,7 @@ $\mathcal{N}(\bm{\mu}_r, \bm{\Sigma}_r)$ 与 $\mathcal{N}(\bm{\mu}_g, \bm{\Sigma
 通过聚合其邻域$\mathcal{N}(i)$内相邻关节$j$的特征$\mathbf{h}_j^{(l)}$进行更新，
 其中$A_{ij}$表示骨架邻接矩阵中节点$j$到节点$i$的连接权重，
 即
+
 \begin{equation}
 A_{ij} =
 \begin{cases}
@@ -482,15 +490,18 @@ A_{ij} =
 0, & \text{否则}
 \end{cases}
 \end{equation}
+
 此外，设$W^{(l)} \in \mathbb{R}^{d_{l+1}\times d_l}$与$b^{(l)} \in \mathbb{R}^{d_{l+1}}$
 分别为第$l$层的可学习权重矩阵与偏置项。设$\sigma(\cdot)$为非线性激活函数，在本文实现中取为双曲正切函数$\tanh(\cdot)$。
 上述局部邻域聚合过程可形式化表示为：
+
 \begin{equation}
 \mathbf{h}_i^{(l+1)} =
 \sigma\left(
 \sum_{j=1}^{J} A_{ij} W^{(l)} \mathbf{h}_j^{(l)} + b^{(l)}
 \right)
 \end{equation}
+
 这种基于局部邻域的权重共享机制有助于保持人体运动的空间结构一致性，
 并在特征提取过程中缓解由旋转表示差异带来的数值尺度放大问题。
 
@@ -525,6 +536,7 @@ $\|\mathbf{r}_{t,j} - \hat{\mathbf{r}}_{t,j}\|_1 < \delta$，
 SRGR通过对所有时间帧与关节进行统计，
 并引入语义相关性权重 $\lambda_t$，
 定义为：
+
 \begin{equation}
 \mathrm{SRGR} =
 \frac{1}{T J}
@@ -536,6 +548,7 @@ SRGR通过对所有时间帧与关节进行统计，
 \|\mathbf{r}_{t,j} - \hat{\mathbf{r}}_{t,j}\| < \delta
 \right)
 \end{equation}
+
 其中 $\mathbb{I}(\cdot)$ 为指示函数。
 
 语义相关性权重 $\lambda_t$ 用于强调语音中语义显著时间片段
@@ -573,12 +586,15 @@ $\mathcal{B}_g = \{ t^g_m \}$，
 
 对于每一个语音节拍事件$t^s_k$，
 计算其与所有手势关键动作事件之间的最小时间偏差：
+
 \begin{equation}
 \Delta t_k = \min_{m} | t^s_k - t^g_m |
 \end{equation}
+
 随后采用高斯核函数将时间偏差映射为相似度分数，
 从而得到单个语音节拍的对齐得分。
 最终BA指标定义为：
+
 \begin{equation}
 \mathrm{BA} =
 \frac{1}{|\mathcal{B}_s|}
@@ -587,6 +603,7 @@ $\mathcal{B}_g = \{ t^g_m \}$，
 -\frac{(\Delta t_k)^2}{2\sigma^2}
 \right)
 \end{equation}
+
 其中$\sigma$为时间尺度参数，本文中取$\sigma=0.3$，用于控制对齐容忍范围。
 
 该定义可视为从语音节拍集合到手势节拍集合的单向 Chamfer 相似度，
@@ -614,6 +631,7 @@ $T$ 为序列总帧数，$J$ 为关节数量。
 L1多样性通过计算不同生成样本之间在所有时间帧与关节上的平均 L1 距离，
 来刻画生成动作分布的离散程度。
 其数学形式定义为：
+
 \begin{equation}
 \mathrm{L1DIV} =
 \frac{1}{N(N-1)}
@@ -639,10 +657,9 @@ L1多样性通过计算不同生成样本之间在所有时间帧与关节上的
 为保证跨方法的可比性，
 本文在所有定量评估指标中分别报告两种评估区域：
 
-\begin{enumerate}
-    \item 上半身（含头部）：包含头部与上半身全部关节旋转；
-    \item 上半身（不含头部）：在计算指标时移除头部关节的旋转分量，仅统计身体与手臂部分。
-\end{enumerate}
+（1）上半身（含头部）：包含头部与上半身全部关节旋转。
+
+（1）上半身（不含头部）：在计算指标时移除头部关节的旋转分量，仅统计身体与手臂部分。
 
 具体而言，在计算 FGD、SRGR、BA 与 L1DIV 时，
 我们将头部关节的旋转维度从指标计算中排除，
@@ -692,22 +709,21 @@ FaceCapGes 在所有指标上均优于 CaMN。
 
 本节通过消融实验分析本文关键设计对性能的贡献，围绕两个核心问题展开：
 
-\begin{enumerate}
-\item 头部姿态输入的作用：头部姿态作为非语言模态，是否能为手势生成提供有效的空间指向与时序线索；
-\item 闭环长期生成稳定性：帧级自回归生成与滑动窗口展开训练是否能抑制闭环运行中的误差累积与长期漂移，从而提升长序列生成的稳定性与分布一致性。
-\end{enumerate}
+（1）头部姿态输入的作用：头部姿态作为非语言模态，是否能为手势生成提供有效的空间指向与时序线索。
+
+（2）闭环长期生成稳定性：帧级自回归生成与滑动窗口展开训练是否能抑制闭环运行中的误差累积与长期漂移，从而提升长序列生成的稳定性与分布一致性。
 
 为评估上述问题，我们构造以下模型变体：
 
-\begin{enumerate}
-\item 移除头部姿态：在完整模型结构与训练策略不变的情况下，去除头部姿态输入，仅保留语音与面部相关特征，用以检验头部模态的贡献；
-\item 移除语音模态、移除面部模态：使用与上述变体相似的设置，仅移除目标模态，用以单独验证此模态的贡献；
-\item 离线解码：在输入模态与完整模型保持一致（包含头部姿态）的前提下，
+（1）移除头部姿态：在完整模型结构与训练策略不变的情况下，去除头部姿态输入，仅保留语音与面部相关特征，用以检验头部模态的贡献.
+
+（2）移除语音模态、移除面部模态：使用与上述变体相似的设置，仅移除目标模态，用以单独验证此模态的贡献。
+
+（3）离线解码：在输入模态与完整模型保持一致（包含头部姿态）的前提下，
 将本文的帧级闭环机制（滑动窗口展开、预测写回与递推状态传递）替换为离线片段级范式：
 训练阶段仅对固定长度片段进行切割与监督，模型通过与基线一致的双向LSTM对整段片段一次性解码输出动作序列；
 推理阶段同样以整段连续输入为单位进行一次性解码输出。
 该变体在结构与超参数上尽量沿用 CaMN 的离线设定，仅将输入模态对齐并统一采用 Rot6D 表示，以减少额外变量干扰。
-\end{enumerate}
 
 我们选择以 CaMN 风格的“离线解码”变体作为对照，一方面是因为本文方法由 CaMN 逐步改进而来，
 该离线分支可在最小改动（模态对齐与 Rot6D 统一）下构造；
@@ -848,34 +864,37 @@ FaceCapGes 作为端到端实时手势生成框架的核心计算模块，其性
 系统端到端延迟可按时间顺序拆解为数据采集、特征提取、模型推理与结果返回四个核心阶段。
 各阶段性能消耗及瓶颈分析如下：
 
-\begin{enumerate}
-    \item 数据采集阶段：
+（1）数据采集阶段：
 依赖设备端传感器实时捕获多模态信号，主要耗时来源于 ARKit 面部与头部姿态追踪。
 根据官方文档标注，在 iOS 设备上 ARKit 的目标追踪帧率为 $60\,\mathrm{FPS}$~\cite{AppleARKitTrackingGuide}，
 对应输入更新周期约为 $16.7\,\mathrm{ms}$。
 该阶段耗时由设备端硬件算力与系统负载决定。
-    \item 特征提取阶段：
+
+（2）特征提取阶段：
 将原始传感器数据转换为模型可识别的结构化特征（语音 Mel 频谱、面部 BlendShape 系数、头部 Rot6D 旋转参数）。
 测试原型中采用 Librosa\cite{librosa} 对测试集音频进行离线特征提取，
 93015 帧数据的总计算耗时约 61 秒，对应的平均单帧计算成本约为 $0.66\,\mathrm{ms}$。
 需要注意的是，该统计不包含实时 I/O 与缓冲管理等系统开销，
 但可用于估计音频特征提取的计算量级。
 实际部署时可替换为 PyAudio\cite{pyaudio} 等实时流式提取工具，因此该阶段预计不构成主要性能瓶颈。
-    \item 模型推理阶段：
+
+（3）模型推理阶段：
 为端到端流程的核心计算环节，结合第~\ref{sec:performance_test}节的模型推理性能测试，
 在单张 RTX4090 硬件、
 无批处理（批大小=1）配置下，
 单帧推理耗时为 $6.07\,\mathrm{ms}$。
 该阶段耗时与硬件算力强相关，是由神经网络结构设计决定的主要性能变量。
-    \item 结果返回阶段：
+
+（4）结果返回阶段：
 将模型输出的骨骼姿态参数传输至渲染引擎，耗时可忽略（通常低于0.1毫秒），不构成性能瓶颈。
-\end{enumerate}
 
 在本地推理设置下，若将一次响应链路定义为单帧采集完成后立即进入后续计算，
 则计算链路延迟可近似表示为：
+
 \begin{equation}
 t_{\mathrm{e2e}} \approx t_{\mathrm{ARKit}} + t_{\mathrm{feat}} + t_{\mathrm{infer}} + t_{\mathrm{return}}
 \end{equation}
+
 其中 $t_{\mathrm{ARKit}}\approx16.7\,\mathrm{ms}$，
 $t_{\mathrm{feat}}<1\,\mathrm{ms}$，
 $t_{\mathrm{infer}}=6.07\,\mathrm{ms}$，
@@ -889,11 +908,13 @@ $t_{\mathrm{return}}<0.1\,\mathrm{ms}$。
 在移动端等算力受限的平台上，
 模型推理可部署于远程服务器并通过网络进行输入输出传输。
 此时端到端延迟需进一步加上网络往返与序列化开销：
+
 \begin{equation}
 t_{\mathrm{e2e}}^{\mathrm{remote}}
 \approx
 t_{\mathrm{ARKit}} + t_{\mathrm{feat}} + t_{\mathrm{net}} + t_{\mathrm{infer}} + t_{\mathrm{return}}
 \end{equation}
+
 其中 $t_{\mathrm{net}}$ 表示网络传输与通信开销，
 其大小由网络条件与系统实现决定，本文不在此展开测量。
 

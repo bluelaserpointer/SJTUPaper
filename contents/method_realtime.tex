@@ -16,6 +16,7 @@
 我们参考CaMN\cite{beatcamn}采用带重叠的滑动切割方式从长序列中提取训练片段。
 
 具体而言，片段起始位置$s_k$按固定步长$\Delta$滑动：
+
 \begin{equation}
 s_k = 1 + (k-1)\Delta
 \label{eq:segment_stride}
@@ -23,6 +24,7 @@ s_k = 1 + (k-1)\Delta
 
 设片段长度为$L$帧，原始动作序列为$\{\bm{v}_t^B\}_{t=1}^{T}$，以及对应的多模态输入特征序列为$\{\bm{z}_t^A, \bm{z}_t^F, \bm{z}_t^H\}_{t=1}^{T}$，
 由式\eqref{eq:segment_stride}可得到一组相互重叠的训练片段$\{\bm{V}_k^B, \bm{Z}_k\}$：
+
 \begin{align}
 \bm{V}_k^B &= (\bm{v}_{s_k}^B, \bm{v}_{s_k+1}^B, \ldots, \bm{v}_{s_k+L-1}^B)\\
 \bm{Z}_k &= \left(\{ \bm{z}_{s_k:t}^A \}_{t=s_k}^{s_k+L-1},\ \{ \bm{z}_{s_k:t}^F \}_{t=s_k}^{s_k+L-1},\ \{ \bm{z}_{s_k:t}^H \}_{t=s_k}^{s_k+L-1}\right)
@@ -39,28 +41,34 @@ s_k = 1 + (k-1)\Delta
 设前置动作帧长度为$\ell_p$，生成区间长度为$M$。
 为保证生成阶段的首步预测具有完整的历史动作条件，前置动作帧长度需满足$\ell_p \ge N$。
 本文取最小可行值$\ell_p = N$，因此片段长度为
+
 \begin{equation}
 L=\ell_p+M=N+M
 \label{eq:segment_length_prefix}
 \end{equation}
+
 本文固定片段总长度为$L=34$，因此生成区间长度为$M=L-N=18$。
 
 为便于后续描述，我们将第$k$个训练片段按时间划分为前置动作帧区间与生成区间。
 前置动作帧定义为
+
 \begin{equation}
 \bm{V}_k^{pre}
 =
 (\bm{v}_{s_k}^B,\ \bm{v}_{s_k+1}^B,\ \ldots,\ \bm{v}_{s_k+N-1}^B)
 \label{eq:pre_segment_def}
 \end{equation}
+
 其用于提供片段起始处的历史条件并初始化生成过程；
 生成区间对应的真实动作序列定义为
+
 \begin{equation}
 \bm{V}_k^{gen}
 =
 (\bm{v}_{s_k+N}^B,\ \bm{v}_{s_k+N+1}^B,\ \ldots,\ \bm{v}_{s_k+L-1}^B)
 \label{eq:gt_gen_segment_def}
 \end{equation}
+
 该区间为模型需要逐帧预测并参与后续训练目标计算的部分。
 需要强调的是，前置动作帧在训练阶段取自真实动作序列，作为可观测上下文条件用于初始化历史缓存，其本身不作为生成目标。
 
@@ -86,24 +94,28 @@ L=\ell_p+M=N+M
 其中第一条虚线标记片段起点，第一条与第二条虚线之间为前置动作帧区间，第三条虚线标记片段终点。
 
 \begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{figures/Fig_SlidingWindow.png}
     \bicaption
     {片段内闭环自回归展开与滑动窗口生成示意}
     {Illustration of closed-loop autoregressive rollout and sliding-window generation within a segment}
-    \centering
-    \includegraphics[width=\linewidth]{figures/Fig_SlidingWindow.png}
     \label{fig:rollout_timeline}
 \end{figure}
 
 为形式化描述上述过程，我们在片段内部采用滑动窗口方式对单步预测器进行展开。
 设生成阶段第$m$步对应的全局时间索引为
+
 \begin{equation}
 t = s_k + N + m - 1, \quad m = 1, 2, \ldots, M
 \end{equation}
+
 在时间步$t$，模型构造长度为$N{+}1$的因果上下文窗口，
 其历史动作部分由最近$N$帧可用动作组成：
+
 \begin{equation}
 (\tilde{\bm{v}}_{t-N}^B, \ldots, \tilde{\bm{v}}_{t-1}^B)
 \end{equation}
+
 其中$\tilde{\bm{v}}$表示当前可用的动作帧：
 在生成初期，它们取自真实前置动作帧；
 随着生成推进，历史动作序列中的元素将逐步被模型预测结果所替换。
@@ -115,12 +127,14 @@ t = s_k + N + m - 1, \quad m = 1, 2, \ldots, M
 
 通过在片段内部重复上述滑动窗口展开过程$M$次，
 模型能够逐帧生成一个长度为$M$的连续输出序列：
+
 \begin{equation}
 \hat{\bm{V}}_k^{gen}
 =
 (\hat{\bm{v}}_{s_k+N}^B,\ \hat{\bm{v}}_{s_k+N+1}^B,\ \ldots,\ \hat{\bm{v}}_{s_k+L-1}^B)
 \label{eq:generated_segment}
 \end{equation}
+
 其与真实生成区间$\bm{V}_k^{gen}$（其定义见式\eqref{eq:gt_gen_segment_def}）在时间上对齐，并作为后续序列级训练目标的输入。
 
 \subsection{逐帧输入形式与历史缓冲机制}
@@ -132,10 +146,12 @@ t = s_k + N + m - 1, \quad m = 1, 2, \ldots, M
 
 \paragraph{历史动作缓存}
 我们维护一个历史动作缓存$\mathcal{H}$，用于存储当前可用的最近$N$帧动作：
+
 \begin{equation}
 \mathcal{H}_{t-1} = (\tilde{\bm{v}}_{t-N}^{B}, \ldots, \tilde{\bm{v}}_{t-1}^{B})
 \label{eq:history_buffer_stream}
 \end{equation}
+
 其中$\tilde{\bm{v}}$表示当前可用的动作帧：在预热阶段取真实前置动作帧，在生成阶段则逐步由模型预测结果覆盖。
 在时间步$t$，我们将缓存中的历史动作与当前可观测多模态输入共同组织为长度为$N{+}1$的因果上下文窗口，
 并构造融合输入序列$\bm{Z}_t^{fuse}$（其定义见式\eqref{eq:fuse_sequence}）。
@@ -147,10 +163,12 @@ $(\tilde{\bm{v}}_{t-N}^{B}, \ldots, \tilde{\bm{v}}_{t-1}^{B}, \mathbf{0})$
 在片段起点$s_k$，我们首先进行预热阶段：将前置动作帧$\bm{V}_k^{pre}$写入历史动作缓存$\mathcal{H}$，并同步读取对应的多模态输入特征。
 预热阶段不产生生成输出，其作用是为生成阶段构造完整的历史动作条件。
 生成阶段开始后，模型在每个时间步调用单步预测器，得到当前帧动作预测$\hat{\bm{v}}_{t}^{B}$，并将其写回历史动作缓存：
+
 \begin{equation}
 \mathcal{H}_{t} = (\tilde{\bm{v}}_{t-N+1}^{B}, \ldots, \tilde{\bm{v}}_{t-1}^{B}, \hat{\bm{v}}_{t}^{B})
 \label{eq:history_update_stream}
 \end{equation}
+
 从而使后续预测逐步在模型自身生成的历史条件下进行。
 
 \paragraph{训练时的逐帧展开与序列拼接}
@@ -176,6 +194,7 @@ $(\tilde{\bm{v}}_{t-N}^{B}, \ldots, \tilde{\bm{v}}_{t-1}^{B}, \mathbf{0})$
 
 需要说明的是，式\eqref{eq:lstm_outputs_seq}为简化记号省略了LSTM的递推状态输入。
 在实现中，两路LSTM在时间步$t$的输出序列与状态更新可显式写为：
+
 \begin{align}
 \bm{O}_t^{T},\ (\bm{h}_t^{T},\bm{c}_t^{T})
 &= \mathrm{LSTM}_{T}\!\left(\bm{Z}_t^{fuse},\ \bm{h}_{t-1}^{T},\ \bm{c}_{t-1}^{T}\right)
@@ -184,6 +203,7 @@ $(\tilde{\bm{v}}_{t-N}^{B}, \ldots, \tilde{\bm{v}}_{t-1}^{B}, \mathbf{0})$
 &= \mathrm{LSTM}_{U}\!\left(\bm{Z}_t^{fuse},\ \bm{h}_{t-1}^{U},\ \bm{c}_{t-1}^{U};\ \bm{O}_t^{T}\right)
 \label{eq:lstm_state_forward_U}
 \end{align}
+
 在片段内展开过程中，我们在每一步预测后保留更新得到的$(\bm{h}_t^{T},\bm{c}_t^{T})$与$(\bm{h}_t^{U},\bm{c}_t^{U})$，
 并将其作为下一时间步的初始状态输入，从而实现跨步递推状态传递。
 
@@ -217,6 +237,7 @@ $(\bm{h}_0^{U},\bm{c}_0^{U})=\mathbf{0}$，
 \label{subsec:total_objective}
 
 综合考虑空间重构精度、时序平滑性以及动作分布一致性，本文的总体优化目标定义为：
+
 \begin{equation}
 \mathcal{L}_{total} =
 \lambda_r  \mathcal{L}_{rec}
@@ -225,6 +246,7 @@ $(\bm{h}_0^{U},\bm{c}_0^{U})=\mathbf{0}$，
 + \lambda_{adv} \mathcal{L}_{adv}
 \label{eq:loss_total_seg}
 \end{equation}
+
 其中$\mathcal{L}_{rec}$衡量生成区间的姿态重构误差，
 $\mathcal{L}_{vel}$与$\mathcal{L}_{acc}$分别约束速度与加速度的连续性，
 $\mathcal{L}_{adv}$表示对抗训练损失，将在第\ref{sec:adv_training}节中进一步介绍。
@@ -234,6 +256,7 @@ $\mathcal{L}_{adv}$表示对抗训练损失，将在第\ref{sec:adv_training}节
 
 为同时保证空间重构精度与时间连续性，我们采用基于Huber误差的重构损失形式，并分别作用于姿态、速度与加速度信号。
 给定任意预测序列$\hat{\bm{X}}$及其对应的真实序列$\bm{X}$，基础误差项定义为：
+
 \begin{equation}
 \mathcal{L}_{Huber}(\bm{X}, \hat{\bm{X}})
 =
@@ -245,10 +268,12 @@ $\mathcal{L}_{adv}$表示对抗训练损失，将在第\ref{sec:adv_training}节
 \right)
 \label{eq:huber_loss}
 \end{equation}
+
 其中$\mathrm{SmoothL1}(\cdot)$表示平滑L1误差，$\beta$为平滑系数，本文中设为$0.1$。
 
 \paragraph{姿态重构损失}
 生成区间的姿态重构损失定义为：
+
 \begin{equation}
 \mathcal{L}_{rec} = \mathcal{L}_{Huber}(\bm{V}_k^{gen},\ \hat{\bm{V}}_k^{gen})
 \label{eq:rec_loss}
@@ -257,12 +282,15 @@ $\mathcal{L}_{adv}$表示对抗训练损失，将在第\ref{sec:adv_training}节
 \paragraph{速度与加速度平滑损失}
 为约束时间平滑性，我们进一步对生成区间的速度与加速度信号施加同类误差约束。
 首先定义一阶与二阶时间差分算子$\nabla(\cdot)$与$\nabla^2(\cdot)$，对任意序列$\bm{X}$有：
+
 \begin{align}
 \nabla \bm{X}_t &= \bm{X}_t - \bm{X}_{t-1}\\
 \nabla^2 \bm{X}_t &= \nabla \bm{X}_t - \nabla \bm{X}_{t-1}
 \label{eq:diff_def}
 \end{align}
+
 对应地，生成区间的速度与加速度损失定义为：
+
 \begin{align}
 \mathcal{L}_{vel} &= \mathcal{L}_{Huber}(\nabla \bm{V}_k^{gen},\ \nabla \hat{\bm{V}}_k^{gen})
 \label{eq:vel_loss}\\
@@ -307,18 +335,22 @@ Dis(\bm{V}) \in (0,1)
 \label{subsec:bce_gan_loss}
 
 判别器的训练目标是区分真实序列与生成序列，其损失定义为：
+
 \begin{equation}
 \mathcal{L}_{D} =
 -\mathbb{E}_{\bm{V}_k^{gen}}\big[\log Dis(\bm{V}_k^{gen})\big]
 -\mathbb{E}_{\hat{\bm{V}}_k^{gen}}\big[\log \big(1 - Dis(\hat{\bm{V}}_k^{gen})\big)\big]
 \label{eq:disc_loss_bce}
 \end{equation}
+
 生成器则希望其输出被判别器判定为真实，从而对应的对抗损失为：
+
 \begin{equation}
 \mathcal{L}_{adv} =
 -\mathbb{E}_{\hat{\bm{V}}_k^{gen}}\big[\log Dis(\hat{\bm{V}}_k^{gen})\big]
 \label{eq:gen_adv_loss_bce}
 \end{equation}
+
 其中$\mathbb{E}_{\bm{V}_k^{gen}}$与$\mathbb{E}_{\hat{\bm{V}}_k^{gen}}$分别表示对真实序列与生成序列的采样期望。
 该对抗目标从分布层面鼓励生成序列在整体运动统计特性上接近真实数据，从而补充监督损失在局部误差上的约束。
 
