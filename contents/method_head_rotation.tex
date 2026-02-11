@@ -221,7 +221,6 @@ $\bm{O}_t^{U} = (\bm{o}_{t-N}^{U},\ldots,\bm{o}_{t}^{U})$时，当前帧的潜�
 同时头部姿态特征不参与其它输入模态的编码过程。%
 我们在此配置下得到了更快的训练收敛。
 
-\paragraph{编码器结构}
 图~\ref{fig_headencoder}所示为头部姿态编码器结构。
 该编码器由两层前馈网络组成，输入为 Rot6D\cite{rot6d} 表示的6维向量。
 式\eqref{eq:head_pose_framewise_encode}中的 $E_H$ 的具体形式为：
