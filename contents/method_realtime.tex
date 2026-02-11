@@ -23,11 +23,11 @@ s_k = 1 + (k-1)\Delta
 \end{equation}
 
 设片段长度为$L$帧，原始动作序列为$\{\bm{v}_t^B\}_{t=1}^{T}$，以及对应的多模态输入特征序列为$\{\bm{z}_t^A, \bm{z}_t^F, \bm{z}_t^H\}_{t=1}^{T}$，
-由式\eqref{eq:segment_stride}可得到一组相互重叠的训练片段$\{\bm{V}_k^B, \bm{Z}_k\}$：
+由式\eqref{eq:segment_stride}可得到一组片段之间相互重叠的训练片段$\{\bm{V}_k^B, \bm{Z}^{in}_k\}$：
 
 \begin{align}
 \bm{V}_k^B &= (\bm{v}_{s_k}^B, \bm{v}_{s_k+1}^B, \ldots, \bm{v}_{s_k+L-1}^B)\\
-\bm{Z}_k &= \left(\{ \bm{z}_{s_k:t}^A \}_{t=s_k}^{s_k+L-1},\ \{ \bm{z}_{s_k:t}^F \}_{t=s_k}^{s_k+L-1},\ \{ \bm{z}_{s_k:t}^H \}_{t=s_k}^{s_k+L-1}\right)
+\bm{Z}^{in}_k &= \left(\{ \bm{z}_{s_k:t}^A \}_{t=s_k}^{s_k+L-1},\ \{ \bm{z}_{s_k:t}^F \}_{t=s_k}^{s_k+L-1},\ \{ \bm{z}_{s_k:t}^H \}_{t=s_k}^{s_k+L-1}\right)
 \label{eq:segment_definition_prefix}
 \end{align}
 
@@ -226,7 +226,7 @@ $(\bm{h}_0^{U},\bm{c}_0^{U})=\mathbf{0}$，
 
 在动作表示上，单帧动作$\bm{v}_t^B$由$J$个关节的旋转表示拼接构成（见式\eqref{eq:body_pose_vector}），其中每个关节的旋转表示维度为$R$。
 为便于序列损失计算，本文将$\bm{v}_t^B$在关节维度上展平为$d=RJ$维向量，
-因此$\bm{V}_k^{gen},\hat{\bm{V}}_k^{gen}\in\mathbb{R}^{M\times d}$，其中$d=RJ$。
+因此$\bm{V}_k^{gen},\hat{\bm{V}}_k^{gen}\in\mathbb{R}^{M\times d}$。
 
 \subsection{总体优化目标}
 \label{subsec:total_objective}

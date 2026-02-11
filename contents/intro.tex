@@ -54,7 +54,7 @@ $\rightarrow$ 手语（sign language）%
 其含义往往依赖当前的口语与语境，脱离它们时通常难以传达清晰含义。%
 
 相对而言，连续体右侧的手势更接近文化中约定俗成的符号，可以脱离口语独立传达含义。%
-例如，表达称赞的拍手动作，或表示"请保持安静"的嘴前竖起食指的动作。
+例如，表达称赞的拍手动作，或表示“请保持安静”的嘴前竖起食指的动作。
 这些被视为象征手势，通常不在手势生成领域的研究对象中。
 
 因此，本文将研究范围限定为随语手势的学习与生成。
@@ -116,14 +116,14 @@ McNeill\cite{mcneill_1992_hand}将随语手势进一步划分为四种基本类�
 
 早期的手势生成系统主要依赖语言学规则与专家知识构建\cite{behavior_expression_animation_toolkit,robot_behavior_toolkit,gesture_generation_by_imitation}。
 这类方法通过语义分类或韵律规则将语音片段映射为预定义的手势模板（如指示、肯定、节奏性动作），并以有限的动作库组合出手势序列。
-它们可在虚拟代理或机器人中实现基于语音的同步动作。
+它们可在虚拟人或机器人中实现基于语音的同步动作。
 然而，手势词典与语法规则的人工设计成本较高，难以覆盖自然语音中的多样变化，导致生成结果缺乏自然性与个体差异。
 \subsection{数据驱动阶段}
 
 随着大规模语音与动作配对数据的出现，研究者开始采用统计学习和深度神经网络模型学习语音与手势的映射关系。
 在此阶段，语音通常作为唯一输入模态，模型通过长短期记忆网络（Long Short-Term Memory, LSTM）\cite{lstm}、多层感知机（Multilayer Perceptron, MLP）等结构预测连续手势序列。
 
-为解决语音与手势间的多对多映射问题，研究者引入了向量量化变分自编码器（Vector Quantized Variational AutoEncoder，VQ-VAE）\cite{vqvae, emage,Zhang2024SemanticGesture,wan-etal-2025-finegrained-spatiotemporal}与扩散模型\cite{diffusion, Ao2023GestureDiffuCLIP, listen_denoise_action, zhu2023taming,diffsheg,diffstylegesture,DiffTED2024,diffusion-self-supervised2023,emoDiffGes}，
+为解决语音与手势间的多对多映射问题，研究者引入了向量量化变分自编码器（Vector Quantized Variational Autoencoder，VQ-VAE）\cite{vqvae, emage,Zhang2024SemanticGesture,wan-etal-2025-finegrained-spatiotemporal}与扩散模型\cite{diffusion, Ao2023GestureDiffuCLIP, listen_denoise_action, zhu2023taming,diffsheg,diffstylegesture,DiffTED2024,diffusion-self-supervised2023,emoDiffGes}，
 在保持自然性的同时提升了生成多样性与表现力。
 其中，EmoDiffGes\cite{emoDiffGes}进一步将情绪因素纳入扩散式整体手势生成框架，使生成动作在韵律之外也能更好体现情感表达，从而提升了共语手势的表达一致性。
 
