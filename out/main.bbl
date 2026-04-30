@@ -1371,9 +1371,6 @@
       \field{dateera}{ce}
       \field{pages}{38\bibrangedash 45}
       \range{pages}{8}
-      \verb{doi}
-      \verb 10.11907/rjdk.241406
-      \endverb
       \keyw{wen2025multimodal_gesture}
     \endentry
     \entry{wganImproved}{inproceedings}{}{}
@@ -2061,6 +2058,7 @@
       \field{languageid}{english}
       \field{lansortorder}{4}
       \field{month}{10}
+      \field{number}{7}
       \field{title}{EmoDiffGes: Emotion‐Aware Co‐Speech Holistic Gesture Generation with Progressive Synergistic Diffusion}
       \field{usera}{J}
       \field{userd}{english}
@@ -2068,6 +2066,8 @@
       \field{volume}{44}
       \field{year}{2025}
       \field{dateera}{ce}
+      \field{pages}{e70261}
+      \range{pages}{-1}
       \keyw{emoDiffGes}
     \endentry
     \entry{PersonaGesture}{article}{}{}
@@ -2753,6 +2753,7 @@
       \field{langid}{english}
       \field{languageid}{chinese}
       \field{lansortorder}{1}
+      \field{number}{1}
       \field{title}{基于时空增强生成模型的协同音频人体全身动作生成}
       \field{usera}{J}
       \field{userd}{chinese}
@@ -2760,8 +2761,8 @@
       \field{volume}{38}
       \field{year}{2026}
       \field{dateera}{ce}
-      \field{pages}{211}
-      \range{pages}{1}
+      \field{pages}{211\bibrangedash 224}
+      \range{pages}{14}
       \keyw{Spatial-tempEnhancedGenerationModel}
     \endentry
     \entry{liu2025multimodal}{patent}{}{}
@@ -2793,9 +2794,6 @@
            family={章威},
            familyi={章\bibinitperiod}}}%
       }
-      \list{institution}{1}{%
-        {江西师范大学}%
-      }
       \list{language}{1}{%
         {chinese}%
       }
@@ -2819,10 +2817,8 @@
       \field{languageid}{chinese}
       \field{lansortorder}{1}
       \field{month}{12}
-      \field{note}{申请号: 202511775153.8}
-      \field{number}{CN121214502A}
+      \field{number}{202511775153.8}
       \field{title}{一种多模态时序融合语音驱动手势生成方法}
-      \field{type}{发明专利申请}
       \field{usera}{P}
       \field{userd}{chinese}
       \field{userf}{chinese}
@@ -3056,6 +3052,12 @@
       \list{language}{1}{%
         {english}%
       }
+      \list{location}{1}{%
+        {Washington, DC, USA}%
+      }
+      \list{publisher}{1}{%
+        {AAAI Press}%
+      }
       \strng{namehash}{a4b7f8ab1c34daf30bbe9dd39e3e9c72}
       \strng{fullhash}{a05152ab7a497b655c155e42e17d8fb8}
       \strng{fullhashraw}{a05152ab7a497b655c155e42e17d8fb8}
@@ -3076,13 +3078,16 @@
       \field{langid}{english}
       \field{languageid}{english}
       \field{lansortorder}{4}
-      \field{note}{AAAI-26}
+      \field{number}{31}
       \field{title}{Streaming Generation of Co-Speech Gestures via Accelerated Rolling Diffusion}
       \field{usera}{C}
       \field{userd}{english}
       \field{userf}{english}
+      \field{volume}{40}
       \field{year}{2026}
       \field{dateera}{ce}
+      \field{pages}{26054\bibrangedash 26061}
+      \range{pages}{8}
       \keyw{Vu2026RollingDiffusion}
     \endentry
     \entry{HoleGest2025}{inproceedings}{}{}
@@ -5348,6 +5353,66 @@
       \field{year}{2025}
       \field{dateera}{ce}
       \keyw{librosa}
+    \endentry
+    \entry{lstm}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=41b31e29fb2bdbf9f5c9c1b0d5b3e815}{%
+           family={Hochreiter},
+           familyi={H\bibinitperiod},
+           given={Sepp},
+           giveni={S\bibinitperiod}}}%
+        {{hash=288bdbcfe1b91ad7484d7a24f74f99ed}{%
+           family={Schmidhuber},
+           familyi={S\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=41b31e29fb2bdbf9f5c9c1b0d5b3e815}{%
+           family={Hochreiter},
+           familyi={H\bibinitperiod},
+           given={Sepp},
+           giveni={S\bibinitperiod}}}%
+        {{hash=288bdbcfe1b91ad7484d7a24f74f99ed}{%
+           family={Schmidhuber},
+           familyi={S\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{417a848243e595e742d2bfabbab6ea78}
+      \strng{fullhash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{fullhashraw}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{bibnamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authorbibnamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authornamehash}{417a848243e595e742d2bfabbab6ea78}
+      \strng{authorfullhash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{authorfullhashraw}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{nameabibnamehash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{nameanamehash}{417a848243e595e742d2bfabbab6ea78}
+      \strng{nameafullhash}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \strng{nameafullhashraw}{4c2e1e2e1ac91e1df9d4f7b85ebe39b4}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neural Computation}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{month}{11}
+      \field{title}{Long Short-Term Memory}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{9}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \field{pages}{1735\bibrangedash 1780}
+      \range{pages}{46}
+      \keyw{lstm}
     \endentry
     \entry{unity}{online}{}{}
       \list{institution}{1}{%
