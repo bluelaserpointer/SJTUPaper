@@ -1,17 +1,17 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'out\main.blg'
-[123] biber-MSWIN64:342> INFO - === 
-[165] Biber.pm:421> INFO - Reading 'out\main.bcf'
-[362] Biber.pm:1002> INFO - Found 62 citekeys in bib section 0
-[379] Biber.pm:4487> INFO - Processing section 0
-[391] Biber.pm:4678> INFO - Looking for bibtex file 'refs.bib' for section 0
-[457] bibtex.pm:1713> INFO - LaTeX decoding ...
-[592] bibtex.pm:1519> INFO - Found BibTeX data source 'refs.bib'
-[1939] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1939] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1939] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[1939] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[2006] bbl.pm:676> INFO - Writing 'out\main.bbl' with encoding 'UTF-8'
-[2263] bbl.pm:779> INFO - Output to out\main.bbl
-[2263] Biber.pm:132> WARN - Duplicate entry key: 'fu2024mambagesture' in file 'refs.bib', skipping ...
-[2263] Biber.pm:134> INFO - WARNINGS: 1
+[128] biber-MSWIN64:342> INFO - === 
+[172] Biber.pm:421> INFO - Reading 'out\main.bcf'
+[396] Biber.pm:1002> INFO - Found 62 citekeys in bib section 0
+[413] Biber.pm:4487> INFO - Processing section 0
+[425] Biber.pm:4678> INFO - Looking for bibtex file 'refs.bib' for section 0
+[500] bibtex.pm:1713> INFO - LaTeX decoding ...
+[635] bibtex.pm:1519> INFO - Found BibTeX data source 'refs.bib'
+[2045] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2045] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2045] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[2045] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[2119] bbl.pm:676> INFO - Writing 'out\main.bbl' with encoding 'UTF-8'
+[2385] bbl.pm:779> INFO - Output to out\main.bbl
+[2385] Biber.pm:132> WARN - Duplicate entry key: 'fu2024mambagesture' in file 'refs.bib', skipping ...
+[2385] Biber.pm:134> INFO - WARNINGS: 1

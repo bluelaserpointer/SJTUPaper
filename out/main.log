@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  30 APR 2026 12:50
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.22)  2 MAY 2026 16:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2714,7 +2714,7 @@ File: figures/Fig_NeuroArchitecture.png Graphic file (type bmp)
 
 Overfull \hbox (21.93237pt too wide) in paragraph at lines 15--17
 []\TU/SimSun(0)/m/n/12.045 为 提 高 训 练 样 本 的 覆 盖 率 并 增 强 模 型 对 不 同 对 齐 位 置 的 鲁 棒 
-性，|  我 们 参 考 \TU/TeXGyreTermesX(0)/m/n/12.045 CaMN$[]$\TU/SimSun(0)/m/n/12.045 
+性，|  本 文 参 考 \TU/TeXGyreTermesX(0)/m/n/12.045 CaMN$[]$\TU/SimSun(0)/m/n/12.045 
 采
  []
 
@@ -2741,11 +2741,8 @@ File: figures/GeneratedPoseOverview.png Graphic file (type bmp)
 <figures/GeneratedPoseOverview.png>
 File: figures/Fig_HeadHandAlignment.png Graphic file (type bmp)
 <figures/Fig_HeadHandAlignment.png>
- [44] [45] [46] [47] [48] [49]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[50] [51] [52] [53] [54] [55] [56]) (contents/conclusions.tex [57]
+ [44] [45] [46] [47] [48] [49] [50]
+[51] [52] [53] [54] [55] [56]) (contents/conclusions.tex [57]
 第 6 章
 [58
 
@@ -2814,10 +2811,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52093 strings out of 402986
- 1104053 string characters out of 5453884
- 2059704 words of memory out of 5000000
- 80048 multiletter control sequences out of 15000+600000
+ 52081 strings out of 402986
+ 1103253 string characters out of 5453884
+ 2059635 words of memory out of 5000000
+ 80036 multiletter control sequences out of 15000+600000
  706696 words of font info for 260 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  115i,16n,124p,1183b,7471s stack positions out of 10000i,1000n,20000p,200000b,200000s

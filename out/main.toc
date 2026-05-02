@@ -17,13 +17,13 @@
 \contentsline {subsection}{\numberline {2.2.2}头部姿态参数}{12}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}面部参数}{13}{subsection.2.2.3}%
 \contentsline {section}{\numberline {2.3}旋转参数的选取}{14}{section.2.3}%
-\contentsline {section}{\numberline {2.4}在线实时手势生成系统整体框架}{16}{section.2.4}%
+\contentsline {section}{\numberline {2.4}在线实时手势生成系统整体框架}{15}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}设备层与中间件层}{16}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}手势生成模型层}{17}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}渲染驱动层}{18}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.3}渲染驱动层}{17}{subsection.2.4.3}%
 \contentsline {subsubsection}{\numberline {2.4.3.1}虚拟人骨骼蒙皮渲染}{18}{subsubsection.2.4.3.1}%
 \contentsline {subsubsection}{\numberline {2.4.3.2}虚拟人面部表情驱动}{18}{subsubsection.2.4.3.2}%
-\contentsline {section}{\numberline {2.5}本章小结}{19}{section.2.5}%
+\contentsline {section}{\numberline {2.5}本章小结}{18}{section.2.5}%
 \contentsline {chapter}{\numberline {第 3 章}融合头部姿态的多模态级联手势生成模型架构}{20}{chapter.3}%
 \contentsline {section}{\numberline {3.1}问题定义}{20}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}任务描述}{20}{subsection.3.1.1}%
@@ -75,17 +75,17 @@
 \contentsline {section}{\numberline {5.5}客观评估指标与实现细节}{46}{section.5.5}%
 \contentsline {subsection}{\numberline {5.5.1}手势分布相似度（Fréchet Gesture Distance）}{46}{subsection.5.5.1}%
 \contentsline {subsection}{\numberline {5.5.2}语义相关动作召回率（Semantic Relevance Gesture Recall）}{48}{subsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.5.3}节奏对齐度（Beat Alignment）}{49}{subsection.5.5.3}%
-\contentsline {subsection}{\numberline {5.5.4}L1多样性（L1 Diversity）}{50}{subsection.5.5.4}%
+\contentsline {subsection}{\numberline {5.5.3}节奏对齐度（Beat Alignment）}{48}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}L1多样性（L1 Diversity）}{49}{subsection.5.5.4}%
 \contentsline {subsection}{\numberline {5.5.5}评估区域设定与公平性说明}{50}{subsection.5.5.5}%
 \contentsline {section}{\numberline {5.6}定量评估结果}{50}{section.5.6}%
 \contentsline {section}{\numberline {5.7}消融实验分析}{51}{section.5.7}%
 \contentsline {section}{\numberline {5.8}性能评估}{54}{section.5.8}%
 \contentsline {subsection}{\numberline {5.8.1}单帧推理性能}{54}{subsection.5.8.1}%
-\contentsline {subsection}{\numberline {5.8.2}端到端计算链路延迟}{55}{subsection.5.8.2}%
+\contentsline {subsection}{\numberline {5.8.2}端到端计算链路延迟}{54}{subsection.5.8.2}%
 \contentsline {subsection}{\numberline {5.8.3}系统更新率}{56}{subsection.5.8.3}%
 \contentsline {subsection}{\numberline {5.8.4}帧率设定的可扩展性}{56}{subsection.5.8.4}%
-\contentsline {section}{\numberline {5.9}本章小结}{57}{section.5.9}%
+\contentsline {section}{\numberline {5.9}本章小结}{56}{section.5.9}%
 \contentsline {chapter}{\numberline {第 6 章}结论}{58}{chapter.6}%
 \contentsline {section}{\numberline {6.1}本文工作总结}{58}{section.6.1}%
 \contentsline {section}{\numberline {6.2}未来工作展望}{59}{section.6.2}%
