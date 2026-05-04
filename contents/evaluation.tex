@@ -57,6 +57,30 @@
 从第 11 个训练轮次起加入判别器并交替优化生成器与判别器参数。
 整体训练共进行 375 个训练轮次。
 
+主要训练超参数汇总见表~\ref{tab:training_config}。
+
+\begin{table}[h]
+\centering
+\bicaption{FaceCapGes 训练配置参数}{Training Configuration Parameters for FaceCapGes}
+\label{tab:training_config}
+\begin{tabular}{lll}
+\toprule
+\textbf{参数} & \textbf{符号} & \textbf{值} \\
+\midrule
+历史动作窗口长度 & $N$ & 16 帧 \\
+训练片段总长度   & $L$ & 34 帧 \\
+生成区间长度     & $M$ & 18 帧 \\
+滑动窗口步长     &     & 10 帧 \\
+批大小           & $B$ & 256 \\
+优化器           &     & SGD \\
+基础学习率       & $\mathrm{lr}_{base}$ & $2.5\times10^{-4}$ \\
+判别器学习率权重 & $w_d$ & 0.2 \\
+对抗训练起始轮次 &     & 第 11 轮 \\
+总训练轮次       &     & 375 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \section{实验配置}
 
 \subsection{实验对比模型}
