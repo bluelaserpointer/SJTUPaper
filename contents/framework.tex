@@ -306,7 +306,7 @@ ARKit 在 ARFaceAnchor 中提供一个齐次变换矩阵 $\mathbf{T}\in\mathbb{R
 
 \subsection{手势生成模型层}
 
-FaceCapGes 模块作为系统的核心推理单元，接收来自信号采集的三类输入特征：语音特征、面部BlendShape系数以及头部姿态参数，并在不依赖未来帧的条件下，逐帧预测用户当前时刻的上半身骨骼姿态。
+FaceCapGes 模块作为系统的核心推理单元，接收来自信号采集的三类输入特征：语音特征、面部BlendShape系数以及头部姿态参数，并在不依赖未来帧的条件下，逐帧预测用户当前时刻的上半身骨骼姿态。模型的内部结构如图~\ref{fig_architecture}~所示，其详细设计将在第~\ref{chap:model_architecture}~章展开介绍。
 
 生成的骨骼姿态采用Rot6D\cite{rot6d}连续旋转表示形式，覆盖上半身47个关节的旋转参数。模型内部通过级联多模态编码结构提取时序相关特征，并利用单向长短期记忆网络（Long Short-Term Memory, LSTM）\cite{lstm}解码器完成时间依赖建模，从而在保持实时性的同时，生成与语音节奏、表情变化及头部朝向高度一致的自然手势。
 

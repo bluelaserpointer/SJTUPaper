@@ -12,7 +12,7 @@
 
 （2）在级联多模态架构中引入头部姿态作为新的实时输入模态，设计并实现姿态编码模块与弱耦合融合策略，为手势提供额外的节奏与朝向线索，从而增强动作节奏与空间指向一致性。
 
-（3）在在线实时逐帧生成任务中，针对训练与推理阶段的输入分布不一致问题，通过滑动窗口展开构造连续生成区间，比较teacher forcing与free-running两种训练策略，验证free-running能更有效缓解exposure bias，并在生成区间上定义片段级监督与对抗训练目标，提升实时生成的时间一致性。
+（3）在在线实时逐帧生成任务中，针对训练与推理阶段的输入分布不一致问题，通过滑动窗口展开构造连续生成区间，比较teacher forcing（训练时以真实历史帧为条件）与free-running（训练时以模型自身预测输出为条件）两种训练策略，验证free-running能更有效缓解exposure bias（训练与推理阶段输入分布不一致导致的性能退化）。
 
 （4）开展用户主观实验、客观指标测量与实时性能测试，并与代表性方法进行对比评估。实验结果表明，在严格因果约束下，本文方法 FaceCapGes 在真实性上表现良好，与现有扩散模型相当；同时在语调变化较快与头部朝向变化明显的片段中，能够生成更平滑且指向一致的动作，并具备满足实时交互场景需求的推理性能。
 
@@ -27,11 +27,11 @@ Recent advances in speech-driven gesture generation have shown promise for low-b
 
 To address these limitations, this thesis proposes FaceCapGes, a frame-level gesture generation method for real-time digital human control. The proposed approach relies only on three types of signals that can be captured online: speech, facial expressions, and head pose. Under a strictly causal setting, FaceCapGes generates upper-body 3D skeletal motions in a frame-by-frame manner, where the model performs inference using only current and past observable inputs, without access to future speech or complete utterances. This enables users to drive expressive virtual avatars without physically performing gestures, while maintaining natural speech-synchronized motion. The main contributions of this work are summarized as follows:
 
-(1) We propose FaceCapGes, a real-time multimodal gesture generation framework, providing an overall pipeline design from signal acquisition and frame-level inference to avatar driving and rendering, and clarifying a deployable real-time generation mechanism under strict causality constraints.
+(1) FaceCapGes is proposed as a real-time multimodal gesture generation framework, providing an overall pipeline design from signal acquisition and frame-level inference to avatar driving and rendering, and clarifying a deployable real-time generation mechanism under strict causality constraints.
 
-(2) We introduce head pose as a new real-time input modality in a cascaded multimodal architecture. A pose encoder and a weakly coupled fusion strategy are designed and implemented to provide additional rhythmic and orientation cues, improving gesture timing and spatial pointing consistency.
+(2) Head pose is introduced as a new real-time input modality in a cascaded multimodal architecture. A pose encoder and a weakly coupled fusion strategy are designed and implemented to provide additional rhythmic and orientation cues, improving gesture timing and spatial pointing consistency.
 
-(3) We propose a sliding-window closed-loop autoregressive training strategy for online real-time gesture generation, where continuous output sequences are constructed via segment-wise sampling and frame-wise rollout, and segment-level supervised and adversarial objectives are applied on the generation interval to improve temporal consistency and reduce autoregressive drift.
+(3) To address the discrepancy between input distributions during the training and inference stages in online real-time frame-by-frame generation, a sliding window unfolding method is employed to construct continuous generation intervals. This study compares two training strategies: Teacher Forcing (conditioning on ground-truth history frames) and Free-running (conditioning on the model’s own predicted outputs). The results demonstrate that the Free-running strategy more effectively alleviates exposure bias, which refers to the performance degradation caused by inconsistent input distributions between training and inference.
 
 (4) Subjective user studies, objective metric evaluation, and real-time performance tests are conducted, with comparative assessments against representative methods. The results demonstrate that, under strict causality constraints, FaceCapGes achieves strong realism comparable to existing diffusion-based models; moreover, in segments with rapid prosodic variations and noticeable head orientation changes, it generates smoother motions with more consistent spatial pointing, while maintaining inference efficiency sufficient for real-time interactive applications.
 

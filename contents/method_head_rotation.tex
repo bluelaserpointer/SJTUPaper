@@ -1,11 +1,12 @@
-\chapter{融合头部姿态的多模态级联手势生成模型架构}
+\chapter{面向多模态手势生成的头部姿态融合}
 \label{chap:model_architecture}
 
-本章将介绍多模态编码、特征融合以及身体姿态解码的整体结构。
-本方法参考基线模型 CaMN\cite{beatcamn} 的级联解码设计，
-在保留其核心思想的同时对离线时序建模进行在线实时适配，
-使模型能够在严格因果约束下仅依赖当前与历史信息稳定生成。
-与此同时，本方法额外引入头部姿态模态以补充空间方向线索与节奏一致性，并构建对应编码器以学习补充表征。
+本章在级联多模态手势生成架构中引入头部姿态作为新的输入模态，并设计对应的编码模块与融合策略。
+本章对应图~\ref{fig:system_architecture}~中的手势生成模型层（FaceCapGes），对该模块的内部结构进行详细描述。
+
+头部姿态作为非语言模态，能够为手势生成提供额外的空间方向线索与节奏信息，是本章相对于基线模型CaMN\cite{beatcamn}的核心改进点。
+在此基础上，本章进一步对基线模型的离线时序建模进行在线实时适配，使整体架构能够在严格因果约束下仅依赖当前与历史信息稳定生成。
+本章将依次介绍多模态编码、特征融合以及身体姿态解码的整体结构。
 
 \section{问题定义}
 \label{sec:problem}
@@ -252,6 +253,8 @@ $\bm{O}_t^{U} = (\bm{o}_{t-N}^{U},\ldots,\bm{o}_{t}^{U})$时，当前帧的潜�
 \bicaption{FaceCapGes 模型整体结构}{Overall Architecture of FaceCapGes}
 \label{fig_architecture}
 \end{figure*}
+
+头部姿态输入对生成质量的具体影响将在第\ref{subsec:ablation}节的消融实验中，结合完整训练策略统一评估。
 
 \section{本章小结}
 \label{sec:chapter3_summary}
