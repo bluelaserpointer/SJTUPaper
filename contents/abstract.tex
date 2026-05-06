@@ -4,13 +4,13 @@
 
 手势是人类交流中用于补充语义细节与传递情绪的重要非语言信号。
 在虚拟人/数字形象的实时控制中，传统动作捕捉往往依赖穿戴式设备，虽然精度高，但存在成本高、使用门槛高、便携性差等问题；相机动捕虽降低了硬件负担，却仍要求用户在镜头前持续表演手势，在远程交流、直播等长时间场景中会带来空间占用与体力消耗，并与键鼠操作产生冲突。
-近年来语音驱动手势生成技术为低门槛驱动提供了可能，但现有主流方法通常假设离线生成设定，依赖完整语句或未来上下文进行推理，因而难以直接应用于用户逐字语音输入、需在严格因果约束下进行流式推理的在线实时交互环境。
+近年来语音驱动手势生成技术为低门槛驱动提供了可能，但现有主流方法通常假设离线生成设定，依赖完整语句或未来上下文进行推理，因而难以直接应用于用户逐字语音输入、需在严格因果约束（即"在线"设定：模型推理时仅可访问当前及历史信号，而不依赖未来语音帧）下进行流式推理的在线实时交互环境。
 
 为解决上述问题，本论文提出 FaceCapGes（Face Capture Gesture）：一种面向实时数字人驱动的帧级手势生成方法，仅使用可在线采集的三类信号——语音、面部表情与头部姿态，在严格因果约束下逐帧生成上半身三维骨骼动作，其中模型在推理过程中仅依赖当前及历史可观测输入，而不使用未来语音或整句上下文信息，从而使用户无需实际做出手势即可驱动虚拟形象获得自然的随语表达。本文的主要研究内容包括：
 
 （1）提出 FaceCapGes 在线实时多模态手势生成框架，给出从信号采集、帧级推理到虚拟人驱动渲染的整体流程设计，并在严格因果约束下明确其可部署的实时生成机制。
 
-（2）在级联多模态架构中引入头部姿态作为新的实时输入模态，设计并实现姿态编码模块与弱耦合融合策略，为手势提供额外的节奏与朝向线索，从而增强动作节奏与空间指向一致性。
+（2）在已有的多模态级联手势生成架构的基础上，将头部姿态作为新的实时输入模态引入，设计轻量姿态编码器与弱耦合拼接融合策略，以提供额外的节奏与朝向线索。
 
 （3）在在线实时逐帧生成任务中，针对训练与推理阶段的输入分布不一致问题，通过滑动窗口展开构造连续生成区间，比较teacher forcing（训练时以真实历史帧为条件）与free-running（训练时以模型自身预测输出为条件）两种训练策略，验证free-running能更有效缓解exposure bias（训练与推理阶段输入分布不一致导致的性能退化）。
 
@@ -29,7 +29,7 @@ To address these limitations, this thesis proposes FaceCapGes (Face Capture Gest
 
 (1) FaceCapGes is proposed as a real-time multimodal gesture generation framework, providing an overall pipeline design from signal acquisition and frame-level inference to avatar driving and rendering, and clarifying a deployable real-time generation mechanism under strict causality constraints.
 
-(2) Head pose is introduced as a new real-time input modality in a cascaded multimodal architecture. A pose encoder and a weakly coupled fusion strategy are designed and implemented to provide additional rhythmic and orientation cues, improving gesture timing and spatial pointing consistency.
+(2) Head pose is introduced as a new real-time input modality in a cascaded multimodal architecture. A lightweight pose encoder and a weakly coupled fusion strategy are proposed to provide additional rhythmic and orientation cues, improving gesture timing and spatial pointing consistency.
 
 (3) To address the discrepancy between input distributions during the training and inference stages in online real-time frame-by-frame generation, a sliding window unfolding method is employed to construct continuous generation intervals. This study compares two training strategies: Teacher Forcing (conditioning on ground-truth history frames) and Free-running (conditioning on the model’s own predicted outputs). The results demonstrate that the Free-running strategy more effectively alleviates exposure bias, which refers to the performance degradation caused by inconsistent input distributions between training and inference.
 
