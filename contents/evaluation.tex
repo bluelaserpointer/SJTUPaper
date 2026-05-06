@@ -40,7 +40,7 @@
 \mathrm{lr}_{g} = \mathrm{lr}_{base}\cdot \frac{B}{128}
 \end{equation}
 
-其中 $B$为批大小，$\mathrm{lr}_{g}$ 为生成器（手势生成网络）的实际学习率。
+其中 $B$为批大小，$\mathrm{lr}_{g}$ 为生成器的实际学习率。
 
 在对抗训练阶段，判别器使用相同类型的 SGD 优化器，
 其学习率按权重系数 $w_d$ 缩放为
@@ -163,7 +163,7 @@ BVH是一种通用的动作捕捉数据格式，
 
 本系统当前支持的虚拟人3D模型，
 需同时具备骨骼绑定，
-和与ARKit~\cite{ARKitDocumentation}兼容的BlendShape参数。
+以及与ARKit~\cite{ARKitDocumentation}兼容的BlendShape参数。
 基于此约束，本系统采用BEAT数据集提供的公开的男女两名演讲者3D模型，二者均满足兼容要求，可实现身体与面部的联合驱动。
 此外，经过Unity\cite{unity}的Mecanim\cite{unitymechanim}自动骨骼绑定系统匹配，
 可自动配对模型生成的BVH文件中定义的骨骼层级与虚拟人模型的骨骼节点，
@@ -517,7 +517,7 @@ A_{ij} =
 \begin{equation}
 \mathbf{h}_i^{(l+1)} =
 \sigma\left(
-\sum_{j=1}^{J} A_{ij} W^{(l)} \mathbf{h}_j^{(l)} + b^{(l)}
+\sum_{j \in \mathcal{N}(i)} A_{ij} W^{(l)} \mathbf{h}_j^{(l)} + b^{(l)}
 \right)
 \end{equation}
 
@@ -716,7 +716,7 @@ FaceCapGes 在所有指标上均优于 CaMN。
 表明其生成动作具备良好多样性。
 但这一结论与用户主观评分存在一定出入：DiffSHEG在多样性上主观排名更高。
 
-这个现象可能来自于L1多样性的局限性：它主要衡量空间偏离程度，
+这一现象可能来自于L1多样性的局限性：它主要衡量空间偏离程度，
 不能直接体现动作的颗粒度，或用户感知上的丰富性。
 虽然本模型在动作结构上更丰富，但用户普遍认为DiffSHEG的动作更活跃，
 在合理的时机做出了更多吸引注意的动作。

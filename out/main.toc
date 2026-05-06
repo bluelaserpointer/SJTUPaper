@@ -4,13 +4,13 @@
 \contentsline {subsection}{\numberline {1.2.1}手势分类体系与理论框架}{2}{subsection.1.2.1}%
 \contentsline {subsubsection}{\numberline {1.2.1.1}Kendon连续体}{2}{subsubsection.1.2.1.1}%
 \contentsline {subsubsection}{\numberline {1.2.1.2}随语手势的分类}{3}{subsubsection.1.2.1.2}%
-\contentsline {subsubsection}{\numberline {1.2.1.3}头部手势的分类}{3}{subsubsection.1.2.1.3}%
+\contentsline {subsubsection}{\numberline {1.2.1.3}头部动作的功能分类}{3}{subsubsection.1.2.1.3}%
 \contentsline {subsection}{\numberline {1.2.2}语音驱动手势生成方法综述}{4}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}头部姿态作为输入模态的价值与应用潜力}{6}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}在线实时手势生成的任务范式与训练策略分析}{7}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.4}在线实时手势生成的任务范式与训练策略}{7}{subsection.1.2.4}%
 \contentsline {section}{\numberline {1.3}本文研究目标与研究内容}{7}{section.1.3}%
 \contentsline {section}{\numberline {1.4}论文组织架构}{8}{section.1.4}%
-\contentsline {chapter}{\numberline {第 2 章}在线实时手势生成系统的数据表示与端到端框架}{10}{chapter.2}%
+\contentsline {chapter}{\numberline {第 2 章}在线实时手势生成系统的需求分析、数据表示与端到端框架}{10}{chapter.2}%
 \contentsline {section}{\numberline {2.1}需求分析}{10}{section.2.1}%
 \contentsline {section}{\numberline {2.2}训练数据来源}{11}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}骨架拓扑}{11}{subsection.2.2.1}%
@@ -48,8 +48,7 @@
 \contentsline {subsection}{\numberline {4.2.3}姿态重构与时序平滑损失}{33}{subsection.4.2.3}%
 \contentsline {section}{\numberline {4.3}对抗训练}{34}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}片段级判别器输入}{34}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}对抗损失定义}{34}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}交替优化策略}{35}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.2}对抗损失与优化策略}{34}{subsection.4.3.2}%
 \contentsline {section}{\numberline {4.4}本章小结}{35}{section.4.4}%
 \contentsline {chapter}{\numberline {第 5 章}实验结果与分析}{36}{chapter.5}%
 \contentsline {section}{\numberline {5.1}训练超参数设置}{36}{section.5.1}%
@@ -85,8 +84,8 @@
 \contentsline {chapter}{\numberline {第 6 章}结论}{59}{chapter.6}%
 \contentsline {section}{\numberline {6.1}本文工作总结}{59}{section.6.1}%
 \contentsline {section}{\numberline {6.2}未来工作展望}{60}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}高层语义信息}{60}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}面向未来趋势的预测性训练目标}{60}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.1}引入高层语义信息的生成能力扩展}{60}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}基于手势趋势预测的前瞻性训练目标}{60}{subsection.6.2.2}%
 \contentsline {chapter}{参考文献}{62}{chapter*.32}%
 \contentsline {chapter}{\numberline {附录 A}手势生成对比视频}{69}{appendix.A}%
 \contentsline {chapter}{\numberline {附录 B}代码与实现资源}{70}{appendix.B}%
