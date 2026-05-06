@@ -28,7 +28,7 @@
 \contentsline {section}{\numberline {3.1}问题定义}{20}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}任务描述}{20}{subsection.3.1.1}%
 \contentsline {subsection}{\numberline {3.1.2}输入与输出模态}{21}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}级联架构设计的继承}{21}{section.3.2}%
+\contentsline {section}{\numberline {3.2}本文对级联架构的扩展}{21}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}级联架构的原理与理论背景}{21}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}说话人条件输入的简化}{22}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}输入模态的编码}{22}{subsection.3.2.3}%
